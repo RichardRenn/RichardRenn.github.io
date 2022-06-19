@@ -23,21 +23,7 @@
   </url>
   
   <url>
-    <loc>https://richardrenn.github.io/Server-Redis-Multi-Instance.html</loc>
-    
-    <lastmod>2021-04-01T08:00:16.017Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://richardrenn.github.io/Server-SSH-Key.html</loc>
-    
-    <lastmod>2021-04-01T08:00:16.017Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://richardrenn.github.io/hello-world.html</loc>
     
     <lastmod>2021-04-01T08:00:16.017Z</lastmod>
     
@@ -51,9 +37,30 @@
   </url>
   
   <url>
+    <loc>https://richardrenn.github.io/hello-world.html</loc>
+    
+    <lastmod>2021-04-01T08:00:16.017Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://richardrenn.github.io/Server-Redis-Multi-Instance.html</loc>
+    
+    <lastmod>2021-04-01T08:00:16.017Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://richardrenn.github.io/categories/index.html</loc>
     
     <lastmod>2021-04-01T08:00:16.017Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://richardrenn.github.io/Python-OpenCV-Image-PIL-Image.html</loc>
+    
+    <lastmod>2021-04-01T08:00:16.016Z</lastmod>
     
   </url>
   
@@ -72,7 +79,7 @@
   </url>
   
   <url>
-    <loc>https://richardrenn.github.io/Python-OpenCV-Image-PIL-Image.html</loc>
+    <loc>https://richardrenn.github.io/Python-Virtualenv.html</loc>
     
     <lastmod>2021-04-01T08:00:16.016Z</lastmod>
     
@@ -86,14 +93,14 @@
   </url>
   
   <url>
-    <loc>https://richardrenn.github.io/Server-Gunicorn-Configuration.html</loc>
+    <loc>https://richardrenn.github.io/Server-Nginx-Configuration.html</loc>
     
     <lastmod>2021-04-01T08:00:16.016Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://richardrenn.github.io/Server-Nginx-Configuration.html</loc>
+    <loc>https://richardrenn.github.io/Server-Gunicorn-Configuration.html</loc>
     
     <lastmod>2021-04-01T08:00:16.016Z</lastmod>
     
@@ -107,35 +114,7 @@
   </url>
   
   <url>
-    <loc>https://richardrenn.github.io/Python-Virtualenv.html</loc>
-    
-    <lastmod>2021-04-01T08:00:16.016Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://richardrenn.github.io/Linux-Msconfig.html</loc>
-    
-    <lastmod>2021-04-01T08:00:16.015Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://richardrenn.github.io/Python-Celery-Calling-Tasks.html</loc>
-    
-    <lastmod>2021-04-01T08:00:16.015Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://richardrenn.github.io/Python-Closure.html</loc>
-    
-    <lastmod>2021-04-01T08:00:16.015Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://richardrenn.github.io/Python-Decorator.html</loc>
     
     <lastmod>2021-04-01T08:00:16.015Z</lastmod>
     
@@ -149,7 +128,21 @@
   </url>
   
   <url>
+    <loc>https://richardrenn.github.io/Python-Closure.html</loc>
+    
+    <lastmod>2021-04-01T08:00:16.015Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://richardrenn.github.io/Python-Function-Scope.html</loc>
+    
+    <lastmod>2021-04-01T08:00:16.015Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://richardrenn.github.io/Python-Decorator.html</loc>
     
     <lastmod>2021-04-01T08:00:16.015Z</lastmod>
     
@@ -163,14 +156,14 @@
   </url>
   
   <url>
-    <loc>https://richardrenn.github.io/Git-Configuration.html</loc>
+    <loc>https://richardrenn.github.io/Linux-Msconfig.html</loc>
     
-    <lastmod>2021-04-01T08:00:16.014Z</lastmod>
+    <lastmod>2021-04-01T08:00:16.015Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://richardrenn.github.io/GitHub-Branch-Workflow.html</loc>
+    <loc>https://richardrenn.github.io/Git-Configuration.html</loc>
     
     <lastmod>2021-04-01T08:00:16.014Z</lastmod>
     
@@ -185,6 +178,13 @@
   
   <url>
     <loc>https://richardrenn.github.io/GitHub-Pull-Request-Workflow.html</loc>
+    
+    <lastmod>2021-04-01T08:00:16.014Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://richardrenn.github.io/GitHub-Branch-Workflow.html</loc>
     
     <lastmod>2021-04-01T08:00:16.014Z</lastmod>
     

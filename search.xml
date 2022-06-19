@@ -45,67 +45,6 @@
       </tags>
   </entry>
   <entry>
-    <title>GitHub教程 - 分支工作流程</title>
-    <url>/GitHub-Branch-Workflow.html</url>
-    <content><![CDATA[<h2 id="1-更新代码"><a href="#1-更新代码" class="headerlink" title="1.更新代码"></a>1.更新代码</h2><blockquote>
-<p>进入代码目录，更新代码</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~/workspace/sourcecode/richardrenn/slark</span><br><span class="line">git pull origin master</span><br><span class="line">*git pull upstream master</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>*查看所有远端库情况</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git remote -v</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">origin        git@github.com:RichardRenn/slark.git (fetch)</span><br><span class="line">origin        git@github.com:RichardRenn/slark.git (push)</span><br><span class="line">upstream        git@github.com:southflower/slark.git (fetch)</span><br><span class="line">upstream        git@github.com:southflower/slark.git (push)</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>*查看所有分支情况，可看到当前的分支是origin/master</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git branch -a</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">* master</span><br><span class="line">  remotes/origin/HEAD -&gt; origin/master</span><br><span class="line">  remotes/origin/master</span><br><span class="line">  remotes/origin/release</span><br><span class="line">  remotes/upstream/master</span><br><span class="line">  remotes/upstream/release</span><br></pre></td></tr></table></figure>
-
-<h2 id="2-新建分支"><a href="#2-新建分支" class="headerlink" title="2.新建分支"></a>2.新建分支</h2><blockquote>
-<p>本地新建分支，并切换到新建的分支</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git checkout -b dev</span><br></pre></td></tr></table></figure>
-
-<h2 id="3-推送分支"><a href="#3-推送分支" class="headerlink" title="3.推送分支"></a>3.推送分支</h2><blockquote>
-<p>推送新分支到远端库和上游库，冒号前的是本地分支名，冒号后的是远程分支名</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git push origin dev:dev</span><br><span class="line">git push upstream dev:dev</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>此时再敲git branch -a 就可以看到已经在远端库和上游库都建好了分支</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">* dev</span><br><span class="line">  master</span><br><span class="line">  remotes/origin/HEAD -&gt; origin/master</span><br><span class="line">  remotes/origin/dev</span><br><span class="line">  remotes/origin/master</span><br><span class="line">  remotes/origin/release</span><br><span class="line">  remotes/upstream/dev</span><br><span class="line">  remotes/upstream/master</span><br><span class="line">  remotes/upstream/release</span><br></pre></td></tr></table></figure>
-
-<h2 id="4-提交修改"><a href="#4-提交修改" class="headerlink" title="4.提交修改"></a>4.提交修改</h2><blockquote>
-<p>在本地的dev分支修改文件并提交推送到远端库</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git add [file]</span><br><span class="line">git commit -m <span class="string">"something"</span></span><br><span class="line">git push origin dev</span><br><span class="line">*git push upstream dev   <span class="comment"># 这一步直接推送到上游库的dev分支，可以省一次PR</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="5-提交PR"><a href="#5-提交PR" class="headerlink" title="5.提交PR"></a>5.提交PR</h2><blockquote>
-<p>在网页通过PR的方式将dev代码推送到上游库的dev分支</p>
-</blockquote>
-<h2 id="6-分支合入"><a href="#6-分支合入" class="headerlink" title="6.分支合入"></a>6.分支合入</h2><blockquote>
-<p>等dev调试稳定后再通过PR的方式将上游库的dev分支merge到其master分支，即可上线</p>
-</blockquote>
-<hr>
-<ul>
-<li>PR操作可以参考<a href="/GitHub-Pull-Request-Workflow.html">&gt;&gt;传送门 - Pull Request 工作流程&lt;&lt;</a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>GitHub教程</category>
-      </categories>
-      <tags>
-        <tag>Git</tag>
-        <tag>GitHub</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>GitHub - 存储大文件</title>
     <url>/GitHub-Large-File-Storage.html</url>
     <content><![CDATA[<h2 id="问题的产生"><a href="#问题的产生" class="headerlink" title="问题的产生"></a>问题的产生</h2><blockquote>
@@ -152,60 +91,51 @@
       </tags>
   </entry>
   <entry>
-    <title>Linux开机启动项目录rc.d</title>
-    <url>/Linux-Msconfig.html</url>
-    <content><![CDATA[<p>本文以/init.d/redis-server-2脚本为例，介绍如何自定义开机启动项。</p>
-<blockquote>
-<p>/etc/init.d目录下是所有的启动脚本，我们可以通过以下命令来运行。</p>
+    <title>GitHub教程 - Pull Request 工作流程</title>
+    <url>/GitHub-Pull-Request-Workflow.html</url>
+    <content><![CDATA[<h2 id="1-Fork仓库"><a href="#1-Fork仓库" class="headerlink" title="1.Fork仓库"></a>1.Fork仓库</h2><blockquote>
+<p>先在github上将源仓库fork到自己的仓库</p>
 </blockquote>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">/etc/init.d/脚本名 参数</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">源仓库：git@github.com:southflower/slark.git</span><br><span class="line">fork后：git@github.com:RichardRenn/slark.git</span><br></pre></td></tr></table></figure>
 
-<h2 id="1-先查看下自己的开机启动级别"><a href="#1-先查看下自己的开机启动级别" class="headerlink" title="1.先查看下自己的开机启动级别"></a>1.先查看下自己的开机启动级别</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">Runlevel</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>显示   N  2<br>则当前的级别是2级,那么所有开机启动项就是在/etc/rc2.d目录下。</p>
+<h2 id="2-检出代码"><a href="#2-检出代码" class="headerlink" title="2.检出代码"></a>2.检出代码</h2><blockquote>
+<p>在本地检出fork后的仓库代码</p>
 </blockquote>
-<h2 id="2-查看下原来的redis启动序号"><a href="#2-查看下原来的redis启动序号" class="headerlink" title="2.查看下原来的redis启动序号"></a>2.查看下原来的redis启动序号</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ls -l /etc/rc2.d</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~/workspace/sourcecode/richardrenn</span><br><span class="line">git <span class="built_in">clone</span> git@github.com:RichardRenn/slark.git ./slark</span><br></pre></td></tr></table></figure>
 
-<blockquote>
-<p>这个目录下都是软链接（符号链接），链接到/etc/init.d目录。<br>显示格式如下：S/K + 序号 + 脚本名</p>
+<h2 id="3-关联上游源仓库"><a href="#3-关联上游源仓库" class="headerlink" title="3.关联上游源仓库"></a>3.关联上游源仓库</h2><blockquote>
+<p>进入代码目录，加入上游源仓库关联</p>
 </blockquote>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">lrwxrwxrwx 1 root root  22 Dec  2 15:37 S20redis-server -&gt; ../init.d/redis-server</span><br><span class="line">lrwxrwxrwx 1 root root  18 Aug 24  2017 S99rc.local -&gt; ../init.d/rc.local</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> ./slark</span><br><span class="line">git remote add upstream git@github.com:southflower/slark.git</span><br></pre></td></tr></table></figure>
 
-<blockquote>
-<p>启动序号是20<br>S开头是开机时的脚本启动顺序，按序号从小到大启动。<br>K开头表示是关机时的脚本关闭顺序，按序号从大到小关闭。</p>
+<h2 id="4-更新代码"><a href="#4-更新代码" class="headerlink" title="4.更新代码"></a>4.更新代码</h2><blockquote>
+<p>更新源仓库代码到本地仓库</p>
 </blockquote>
-<h2 id="3-将启动脚本软链接到开机启动目录下"><a href="#3-将启动脚本软链接到开机启动目录下" class="headerlink" title="3.将启动脚本软链接到开机启动目录下"></a>3.将启动脚本软链接到开机启动目录下</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ln -s /etc/init.d/redis-server-2 /etc/rc2.d/S20redis-server-2</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git fetch upstream</span><br><span class="line">git merge upstream/master</span><br></pre></td></tr></table></figure>
 
-<blockquote>
-<p>注意：如果两个redis有主从关系的话即需要有先后启动顺序，就需要适当的增大序号，如21</p>
+<h2 id="5-提交代码"><a href="#5-提交代码" class="headerlink" title="5.提交代码"></a>5.提交代码</h2><blockquote>
+<p>在本地仓库中，修改代码后提交到自己的远端仓库</p>
 </blockquote>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ln -s /etc/init.d/redis-server-2 /etc/rc2.d/S21redis-server-2</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git add .</span><br><span class="line">git commit -m <span class="string">"anything"</span></span><br><span class="line">git push origin master</span><br></pre></td></tr></table></figure>
 
-<blockquote>
-<p>*也可以使用update-rc.d命令，效果相同：</p>
+<h2 id="6-提交PR"><a href="#6-提交PR" class="headerlink" title="6.提交PR"></a>6.提交PR</h2><blockquote>
+<p>在github网页上提交PR<br>在自己的仓库界面点击”New Pull Request”</p>
 </blockquote>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">update-rc.d -f redis-server-2 defaults 20</span><br></pre></td></tr></table></figure>
-
-<h2 id="4-取消开机启动"><a href="#4-取消开机启动" class="headerlink" title="4.取消开机启动"></a>4.取消开机启动</h2><blockquote>
-<p>方法一：使用update-rc.d命令</p>
+<p><img src="/images/GitHub-Pull-Request-Workflow/pull-request.png" alt="pull-request"></p>
+<h2 id="7-PR合入"><a href="#7-PR合入" class="headerlink" title="7.PR合入"></a>7.PR合入</h2><blockquote>
+<p>然后待源仓库的作者将你的PR合入即可</p>
 </blockquote>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">update-rc.d -f redis-server-slark remove</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>方法二：直接删除软链接</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">rm -f /etc/rc2.d/S20redis-server-slark</span><br></pre></td></tr></table></figure>
-
-<h2 id="5-关于rc-local"><a href="#5-关于rc-local" class="headerlink" title="5.关于rc.local"></a>5.关于rc.local</h2><blockquote>
-<p>rc.local也是开机启动脚本，从ls -l /etc/rc2.d 命令的输出结果也可以看出，它的启动序号是99。<br>所以rc.local里的内容是在所有更高级别的初始化脚本(rc1.d rc2.d …)运行之后再执行的。</p>
-</blockquote>
+<hr>
+<ul>
+<li>带分支的工作方式可以参考<a href="/GitHub-Branch-Workflow.html">&gt;&gt;传送门 - 分支工作流程&lt;&lt;</a></li>
+</ul>
 ]]></content>
       <categories>
-        <category>Linux</category>
+        <category>GitHub教程</category>
       </categories>
       <tags>
-        <tag>Linux</tag>
+        <tag>Git</tag>
+        <tag>GitHub</tag>
       </tags>
   </entry>
   <entry>
@@ -277,6 +207,41 @@
       </tags>
   </entry>
   <entry>
+    <title>Python - 浅拷贝和深拷贝解析</title>
+    <url>/Python-Copy-Deepcopy.html</url>
+    <content><![CDATA[<h2 id="1-浅拷贝和深拷贝的区别"><a href="#1-浅拷贝和深拷贝的区别" class="headerlink" title="1.浅拷贝和深拷贝的区别"></a>1.浅拷贝和深拷贝的区别</h2><blockquote>
+<p>浅拷贝(copy)：仅拷贝对象，但不拷贝此对象内的子对象。<br>深拷贝(deepcopy)：完全拷贝对象，包括其内部的子对象。</p>
+</blockquote>
+<h2 id="2-举例理解"><a href="#2-举例理解" class="headerlink" title="2.举例理解"></a>2.举例理解</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># -*- coding:utf-8 -*-</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> copy</span><br><span class="line"></span><br><span class="line">a = &#123;<span class="number">0</span>:<span class="number">1</span>, <span class="number">1</span>:[<span class="number">1</span>,<span class="number">2</span>]&#125;</span><br><span class="line"></span><br><span class="line">a1 = copy.copy(a)  <span class="comment"># 浅拷贝</span></span><br><span class="line">a2 = copy.deepcopy(a)  <span class="comment"># 深拷贝</span></span><br><span class="line"></span><br><span class="line">a[<span class="number">1</span>].append(<span class="number">3</span>)</span><br><span class="line">print(a, <span class="string">'%x'</span> % id(a), <span class="string">'%x'</span> % id(a[<span class="number">1</span>]))  <span class="comment"># 使用16进制格式化输出id值</span></span><br><span class="line">print(a1, <span class="string">'%x'</span> % id(a1), <span class="string">'%x'</span> % id(a1[<span class="number">1</span>]))</span><br><span class="line">print(a2, <span class="string">'%x'</span> % id(a2), <span class="string">'%x'</span> % id(a2[<span class="number">1</span>]))</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">输出结果：</span><br><span class="line">&#123;0: 1, 1: [1, 2, 3]&#125; 220a8caf2d0 220aa969e08</span><br><span class="line">&#123;0: 1, 1: [1, 2, 3]&#125; 220a8caf318 220aa969e08</span><br><span class="line">&#123;0: 1, 1: [1, 2]&#125; 220aa937c18 220aa969ec8</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>从输出结果进行分析：<br>1.a、a1、a2三者的id值不同。说明不论深浅拷贝都能得到新的对象。<br>2.a1[1]和a[1]的id值相同，a2[1]和a[1]的id值不同。说明浅拷贝不能拷贝子对象，执行浅拷贝得到的对象a1的子对象和原对象a的子对象使用的是相同的一块内存，但是执行深拷贝得到的对象a2却和原对象a完全独立。这也是为什么当a[1].append(3)后，a1[1]也跟着变了，而a2[1]却没变。</p>
+</blockquote>
+<hr>
+<h2 id="3-a-copy-和copy-copy-a-的区别"><a href="#3-a-copy-和copy-copy-a-的区别" class="headerlink" title="3.a.copy()和copy.copy(a)的区别"></a>3.a.copy()和copy.copy(a)的区别</h2><blockquote>
+<p>虽然两者都是浅拷贝，但是copy.copy()能够拷贝的对象更多，即某些对象本身是没有copy属性的，比如元组(tuple)。<br>如果将上例中的a值替换为a = (1, [1,2])，那么执行a1 = a.copy()时是会报错的：</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># -*- coding:utf-8 -*-</span></span><br><span class="line"></span><br><span class="line">a = (<span class="number">1</span>, [<span class="number">1</span>,<span class="number">2</span>])</span><br><span class="line">a1 = a.copy()</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">AttributeError: &apos;tuple&apos; object has no attribute &apos;copy&apos;</span><br></pre></td></tr></table></figure>
+
+<h2 id="4-手写字典深拷贝"><a href="#4-手写字典深拷贝" class="headerlink" title="4.手写字典深拷贝"></a>4.手写字典深拷贝</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">deep_copy</span><span class="params">(x)</span>:</span></span><br><span class="line">    <span class="string">'''仅适用于子对象是字典的情况'''</span></span><br><span class="line">    x1 = &#123;&#125;</span><br><span class="line">    <span class="keyword">for</span> k, v <span class="keyword">in</span> x.items():</span><br><span class="line">        <span class="keyword">if</span> isinstance(v, dict):  <span class="comment"># 当子对象是字典类型时递归执行</span></span><br><span class="line">            x1[k] = deep_copy(v)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            x1[k] = v</span><br><span class="line">    <span class="keyword">return</span> x1</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>如果子对象是数组或者元组的话，只要在赋值前价格数据类型判断，然后根据不同的类型赋值给不同的变量即可兼容。</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>浅拷贝和深拷贝</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Python - 闭包</title>
     <url>/Python-Closure.html</url>
     <content><![CDATA[<h2 id="1-闭包的概念"><a href="#1-闭包的概念" class="headerlink" title="1.闭包的概念"></a>1.闭包的概念</h2><blockquote>
@@ -329,6 +294,29 @@
       </tags>
   </entry>
   <entry>
+    <title>Python - 函数作用域</title>
+    <url>/Python-Function-Scope.html</url>
+    <content><![CDATA[<h2 id="1-函数作用域"><a href="#1-函数作用域" class="headerlink" title="1.函数作用域"></a>1.函数作用域</h2><blockquote>
+<p>L：local 函数内部作用域；</p>
+<p>E：enclosing 函数内部与它的内嵌函数之间；</p>
+<p>G：global 全局作用域，在同一个.py文件最外层；</p>
+<p>B：build-in 解释器内置作用域。</p>
+</blockquote>
+<h2 id="2-对象查找顺序"><a href="#2-对象查找顺序" class="headerlink" title="2.对象查找顺序"></a>2.对象查找顺序</h2><blockquote>
+<p>L &gt; E &gt; G &gt; B</p>
+</blockquote>
+<h2 id="3-举例解释"><a href="#3-举例解释" class="headerlink" title="3.举例解释"></a>3.举例解释</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># -*- conding: utf-8 -*-</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># G</span></span><br><span class="line">pass_line = <span class="number">60</span> </span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">func</span><span class="params">(score)</span>:</span></span><br><span class="line">    <span class="comment"># E</span></span><br><span class="line">    pass_line = <span class="number">90</span> </span><br><span class="line">    result = <span class="string">"yes"</span> <span class="keyword">if</span> score &gt;= pass_line <span class="keyword">else</span> <span class="string">"no"</span></span><br><span class="line">    print(result)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">inner_func</span><span class="params">()</span>:</span></span><br><span class="line">        <span class="comment"># L</span></span><br><span class="line">        <span class="comment"># score = 81</span></span><br><span class="line">        print(score)</span><br><span class="line"></span><br><span class="line">    inner_func()</span><br><span class="line"></span><br><span class="line">    print(max(<span class="number">1</span>,<span class="number">2</span>))  <span class="comment"># B</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">func(<span class="number">80</span>)</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>函数作用域</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Python - 装饰器</title>
     <url>/Python-Decorator.html</url>
     <content><![CDATA[<h2 id="1-装饰器的概念"><a href="#1-装饰器的概念" class="headerlink" title="1.装饰器的概念"></a>1.装饰器的概念</h2><blockquote>
@@ -362,64 +350,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Python - 浅拷贝和深拷贝解析</title>
-    <url>/Python-Copy-Deepcopy.html</url>
-    <content><![CDATA[<h2 id="1-浅拷贝和深拷贝的区别"><a href="#1-浅拷贝和深拷贝的区别" class="headerlink" title="1.浅拷贝和深拷贝的区别"></a>1.浅拷贝和深拷贝的区别</h2><blockquote>
-<p>浅拷贝(copy)：仅拷贝对象，但不拷贝此对象内的子对象。<br>深拷贝(deepcopy)：完全拷贝对象，包括其内部的子对象。</p>
-</blockquote>
-<h2 id="2-举例理解"><a href="#2-举例理解" class="headerlink" title="2.举例理解"></a>2.举例理解</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># -*- coding:utf-8 -*-</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> copy</span><br><span class="line"></span><br><span class="line">a = &#123;<span class="number">0</span>:<span class="number">1</span>, <span class="number">1</span>:[<span class="number">1</span>,<span class="number">2</span>]&#125;</span><br><span class="line"></span><br><span class="line">a1 = copy.copy(a)  <span class="comment"># 浅拷贝</span></span><br><span class="line">a2 = copy.deepcopy(a)  <span class="comment"># 深拷贝</span></span><br><span class="line"></span><br><span class="line">a[<span class="number">1</span>].append(<span class="number">3</span>)</span><br><span class="line">print(a, <span class="string">'%x'</span> % id(a), <span class="string">'%x'</span> % id(a[<span class="number">1</span>]))  <span class="comment"># 使用16进制格式化输出id值</span></span><br><span class="line">print(a1, <span class="string">'%x'</span> % id(a1), <span class="string">'%x'</span> % id(a1[<span class="number">1</span>]))</span><br><span class="line">print(a2, <span class="string">'%x'</span> % id(a2), <span class="string">'%x'</span> % id(a2[<span class="number">1</span>]))</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">输出结果：</span><br><span class="line">&#123;0: 1, 1: [1, 2, 3]&#125; 220a8caf2d0 220aa969e08</span><br><span class="line">&#123;0: 1, 1: [1, 2, 3]&#125; 220a8caf318 220aa969e08</span><br><span class="line">&#123;0: 1, 1: [1, 2]&#125; 220aa937c18 220aa969ec8</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>从输出结果进行分析：<br>1.a、a1、a2三者的id值不同。说明不论深浅拷贝都能得到新的对象。<br>2.a1[1]和a[1]的id值相同，a2[1]和a[1]的id值不同。说明浅拷贝不能拷贝子对象，执行浅拷贝得到的对象a1的子对象和原对象a的子对象使用的是相同的一块内存，但是执行深拷贝得到的对象a2却和原对象a完全独立。这也是为什么当a[1].append(3)后，a1[1]也跟着变了，而a2[1]却没变。</p>
-</blockquote>
-<hr>
-<h2 id="3-a-copy-和copy-copy-a-的区别"><a href="#3-a-copy-和copy-copy-a-的区别" class="headerlink" title="3.a.copy()和copy.copy(a)的区别"></a>3.a.copy()和copy.copy(a)的区别</h2><blockquote>
-<p>虽然两者都是浅拷贝，但是copy.copy()能够拷贝的对象更多，即某些对象本身是没有copy属性的，比如元组(tuple)。<br>如果将上例中的a值替换为a = (1, [1,2])，那么执行a1 = a.copy()时是会报错的：</p>
-</blockquote>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># -*- coding:utf-8 -*-</span></span><br><span class="line"></span><br><span class="line">a = (<span class="number">1</span>, [<span class="number">1</span>,<span class="number">2</span>])</span><br><span class="line">a1 = a.copy()</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">AttributeError: &apos;tuple&apos; object has no attribute &apos;copy&apos;</span><br></pre></td></tr></table></figure>
-
-<h2 id="4-手写字典深拷贝"><a href="#4-手写字典深拷贝" class="headerlink" title="4.手写字典深拷贝"></a>4.手写字典深拷贝</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">deep_copy</span><span class="params">(x)</span>:</span></span><br><span class="line">    <span class="string">'''仅适用于子对象是字典的情况'''</span></span><br><span class="line">    x1 = &#123;&#125;</span><br><span class="line">    <span class="keyword">for</span> k, v <span class="keyword">in</span> x.items():</span><br><span class="line">        <span class="keyword">if</span> isinstance(v, dict):  <span class="comment"># 当子对象是字典类型时递归执行</span></span><br><span class="line">            x1[k] = deep_copy(v)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            x1[k] = v</span><br><span class="line">    <span class="keyword">return</span> x1</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>如果子对象是数组或者元组的话，只要在赋值前价格数据类型判断，然后根据不同的类型赋值给不同的变量即可兼容。</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>Python</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-        <tag>浅拷贝和深拷贝</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Python - 函数作用域</title>
-    <url>/Python-Function-Scope.html</url>
-    <content><![CDATA[<h2 id="1-函数作用域"><a href="#1-函数作用域" class="headerlink" title="1.函数作用域"></a>1.函数作用域</h2><blockquote>
-<p>L：local 函数内部作用域；</p>
-<p>E：enclosing 函数内部与它的内嵌函数之间；</p>
-<p>G：global 全局作用域，在同一个.py文件最外层；</p>
-<p>B：build-in 解释器内置作用域。</p>
-</blockquote>
-<h2 id="2-对象查找顺序"><a href="#2-对象查找顺序" class="headerlink" title="2.对象查找顺序"></a>2.对象查找顺序</h2><blockquote>
-<p>L &gt; E &gt; G &gt; B</p>
-</blockquote>
-<h2 id="3-举例解释"><a href="#3-举例解释" class="headerlink" title="3.举例解释"></a>3.举例解释</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># -*- conding: utf-8 -*-</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># G</span></span><br><span class="line">pass_line = <span class="number">60</span> </span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">func</span><span class="params">(score)</span>:</span></span><br><span class="line">    <span class="comment"># E</span></span><br><span class="line">    pass_line = <span class="number">90</span> </span><br><span class="line">    result = <span class="string">"yes"</span> <span class="keyword">if</span> score &gt;= pass_line <span class="keyword">else</span> <span class="string">"no"</span></span><br><span class="line">    print(result)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">inner_func</span><span class="params">()</span>:</span></span><br><span class="line">        <span class="comment"># L</span></span><br><span class="line">        <span class="comment"># score = 81</span></span><br><span class="line">        print(score)</span><br><span class="line"></span><br><span class="line">    inner_func()</span><br><span class="line"></span><br><span class="line">    print(max(<span class="number">1</span>,<span class="number">2</span>))  <span class="comment"># B</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">func(<span class="number">80</span>)</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>Python</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-        <tag>函数作用域</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Python - 数组切片、更新、排序</title>
     <url>/Python-List-Slice.html</url>
     <content><![CDATA[<h2 id="1-数组切片"><a href="#1-数组切片" class="headerlink" title="1.数组切片"></a>1.数组切片</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">l = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>]</span><br><span class="line"></span><br><span class="line">l[:]  <span class="comment"># 所有元素 </span></span><br><span class="line"><span class="comment"># [1, 2, 3, 4, 5, 6, 7, 8, 9]</span></span><br><span class="line"></span><br><span class="line">l[<span class="number">0</span>]  <span class="comment"># 第一个元素</span></span><br><span class="line"><span class="comment"># 1</span></span><br><span class="line"></span><br><span class="line">l[<span class="number">1</span>:<span class="number">3</span>]  <span class="comment"># 第2~4个元素，不包括第4个</span></span><br><span class="line"><span class="comment"># [2, 3]</span></span><br><span class="line"></span><br><span class="line">l[<span class="number">3</span>:]  <span class="comment"># 第4~最后一个元素</span></span><br><span class="line"><span class="comment"># [4, 5, 6, 7, 8, 9]</span></span><br><span class="line"></span><br><span class="line">l[:<span class="number">3</span>]  <span class="comment"># 第1~4个元素，不包括第4个</span></span><br><span class="line"><span class="comment"># [1, 2, 3]</span></span><br><span class="line"></span><br><span class="line">l[:<span class="number">-1</span>]  <span class="comment"># 第1~最后一个元素，不包括最后一个</span></span><br><span class="line"><span class="comment"># [1, 2, 3, 4, 5, 6, 7, 8]</span></span><br><span class="line"></span><br><span class="line">l[<span class="number">2</span>:<span class="number">-1</span>:<span class="number">2</span>]  <span class="comment"># 从第3~最后一个元素中每隔2个步长取一个，不包括最后一个元素</span></span><br><span class="line"><span class="comment"># [3, 5, 7]</span></span><br><span class="line"></span><br><span class="line">l[::<span class="number">3</span>]  <span class="comment"># 每隔3个步长取一个元素</span></span><br><span class="line"><span class="comment"># [1, 4, 7]</span></span><br></pre></td></tr></table></figure>
@@ -438,6 +368,103 @@
         <tag>Python</tag>
         <tag>数组</tag>
         <tag>数组切片</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>GitHub教程 - 分支工作流程</title>
+    <url>/GitHub-Branch-Workflow.html</url>
+    <content><![CDATA[<h2 id="1-更新代码"><a href="#1-更新代码" class="headerlink" title="1.更新代码"></a>1.更新代码</h2><blockquote>
+<p>进入代码目录，更新代码</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~/workspace/sourcecode/richardrenn/slark</span><br><span class="line">git pull origin master</span><br><span class="line">*git pull upstream master</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>*查看所有远端库情况</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git remote -v</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">origin        git@github.com:RichardRenn/slark.git (fetch)</span><br><span class="line">origin        git@github.com:RichardRenn/slark.git (push)</span><br><span class="line">upstream        git@github.com:southflower/slark.git (fetch)</span><br><span class="line">upstream        git@github.com:southflower/slark.git (push)</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>*查看所有分支情况，可看到当前的分支是origin/master</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git branch -a</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">* master</span><br><span class="line">  remotes/origin/HEAD -&gt; origin/master</span><br><span class="line">  remotes/origin/master</span><br><span class="line">  remotes/origin/release</span><br><span class="line">  remotes/upstream/master</span><br><span class="line">  remotes/upstream/release</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-新建分支"><a href="#2-新建分支" class="headerlink" title="2.新建分支"></a>2.新建分支</h2><blockquote>
+<p>本地新建分支，并切换到新建的分支</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git checkout -b dev</span><br></pre></td></tr></table></figure>
+
+<h2 id="3-推送分支"><a href="#3-推送分支" class="headerlink" title="3.推送分支"></a>3.推送分支</h2><blockquote>
+<p>推送新分支到远端库和上游库，冒号前的是本地分支名，冒号后的是远程分支名</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git push origin dev:dev</span><br><span class="line">git push upstream dev:dev</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>此时再敲git branch -a 就可以看到已经在远端库和上游库都建好了分支</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">* dev</span><br><span class="line">  master</span><br><span class="line">  remotes/origin/HEAD -&gt; origin/master</span><br><span class="line">  remotes/origin/dev</span><br><span class="line">  remotes/origin/master</span><br><span class="line">  remotes/origin/release</span><br><span class="line">  remotes/upstream/dev</span><br><span class="line">  remotes/upstream/master</span><br><span class="line">  remotes/upstream/release</span><br></pre></td></tr></table></figure>
+
+<h2 id="4-提交修改"><a href="#4-提交修改" class="headerlink" title="4.提交修改"></a>4.提交修改</h2><blockquote>
+<p>在本地的dev分支修改文件并提交推送到远端库</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git add [file]</span><br><span class="line">git commit -m <span class="string">"something"</span></span><br><span class="line">git push origin dev</span><br><span class="line">*git push upstream dev   <span class="comment"># 这一步直接推送到上游库的dev分支，可以省一次PR</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="5-提交PR"><a href="#5-提交PR" class="headerlink" title="5.提交PR"></a>5.提交PR</h2><blockquote>
+<p>在网页通过PR的方式将dev代码推送到上游库的dev分支</p>
+</blockquote>
+<h2 id="6-分支合入"><a href="#6-分支合入" class="headerlink" title="6.分支合入"></a>6.分支合入</h2><blockquote>
+<p>等dev调试稳定后再通过PR的方式将上游库的dev分支merge到其master分支，即可上线</p>
+</blockquote>
+<hr>
+<ul>
+<li>PR操作可以参考<a href="/GitHub-Pull-Request-Workflow.html">&gt;&gt;传送门 - Pull Request 工作流程&lt;&lt;</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>GitHub教程</category>
+      </categories>
+      <tags>
+        <tag>Git</tag>
+        <tag>GitHub</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python - 图片处理 - OpenCV图片与PIL.Image对象互相转化</title>
+    <url>/Python-OpenCV-Image-PIL-Image.html</url>
+    <content><![CDATA[<h2 id="1-起因"><a href="#1-起因" class="headerlink" title="1.起因"></a>1.起因</h2><blockquote>
+<p>因项目需要对视频封面图片作以下处理：宽高比不为一的图片处理成两端模糊填充的正方形，使得呈现如下效果:</p>
+</blockquote>
+<!-- ![source_image.png](/images/Python-OpenCV-Image-PIL-Image/source_image.png) -->
+<p><img src="/images/Python-OpenCV-Image-PIL-Image/target_image.jpg" alt="target_image.jpg"></p>
+<h2 id="2-思路"><a href="#2-思路" class="headerlink" title="2.思路"></a>2.思路</h2><ul>
+<li>使用PIL库对图片作裁减和放大处理;</li>
+<li>上一步得到的图片转化到OpenCV图像做高斯模糊处理(因为PIL模块的图片模糊滤镜强度不够);</li>
+<li>上一步处理好的图片转化为PIL.Image,将原图居中合成进来;</li>
+<li>处理好的图片保存到本地或者转化为内存中的文件对象作其它操作: 上传下载等.</li>
+</ul>
+<h2 id="3-代码实现"><a href="#3-代码实现" class="headerlink" title="3.代码实现"></a>3.代码实现</h2><blockquote>
+<p>涉及到的代码库 Pillow==4.3.0, opencv-python==4.1.0.25, numpy==1.16.0</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">from</span> io <span class="keyword">import</span> BytesIO</span><br><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> Image</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">crop_img_on_ratio</span><span class="params">(img, ratio)</span>:</span></span><br><span class="line">    <span class="string">"""按比例裁减图片"""</span></span><br><span class="line">    ratio_w, ratio_h = ratio</span><br><span class="line">    img_w, img_h = img.size</span><br><span class="line">    <span class="keyword">if</span> img_h/img_w &gt;= ratio_h/ratio_w:</span><br><span class="line">        h = int(img_w*ratio_h/ratio_w)</span><br><span class="line">        box = (<span class="number">0</span>, int((img_h-h)/<span class="number">2</span>), img_w, int((img_h+h)/<span class="number">2</span>))</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        w = int(img_h*ratio_w/ratio_h)</span><br><span class="line">        box = (int((img_w-w)/<span class="number">2</span>), <span class="number">0</span>, int((img_w+w)/<span class="number">2</span>), img_h)</span><br><span class="line">    <span class="keyword">return</span> img.crop(box)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">mix_img_icon</span><span class="params">(img, icon)</span>:</span></span><br><span class="line">    <span class="string">"""图片图标合成，居中"""</span></span><br><span class="line">    img_w, img_h = img.size</span><br><span class="line">    icon_w, icon_h = icon.size</span><br><span class="line">    box = (int((img_w-icon_w)/<span class="number">2</span>), int((img_h-icon_h)/<span class="number">2</span>))</span><br><span class="line">    <span class="keyword">if</span> icon.format == <span class="string">'PNG'</span>:</span><br><span class="line">        img.paste(icon, box=box, mask=icon)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        img.paste(icon, box=box)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_blur_image</span><span class="params">(img)</span>:</span></span><br><span class="line">    <span class="string">"""宽高比不为1的图片处理成两端模糊填充的正方形"""</span></span><br><span class="line">    w, h = img.size  <span class="comment"># 获取图片宽高</span></span><br><span class="line">    a = max(w, h)  <span class="comment"># 获取正方形边长</span></span><br><span class="line">    crop_img = crop_img_on_ratio(img, (<span class="number">1</span>, <span class="number">1</span>))  <span class="comment"># 裁减为正方形</span></span><br><span class="line">    scale_img = crop_img.resize((a, a), resample=Image.ANTIALIAS)  <span class="comment"># 等比放大</span></span><br><span class="line">    cv_img = cv2.cvtColor(np.asarray(scale_img), cv2.COLOR_RGB2BGR)  <span class="comment"># 转化为 opencv image</span></span><br><span class="line">    cv_gb_img = cv2.GaussianBlur(cv_img, (<span class="number">0</span>, <span class="number">0</span>), <span class="number">7</span>)  <span class="comment"># opencv 高斯模糊</span></span><br><span class="line">    gb_img = Image.fromarray(cv2.cvtColor(cv_gb_img, cv2.COLOR_BGR2RGB))  <span class="comment"># 转化为PIL.Image</span></span><br><span class="line">    mix_img_icon(gb_img, img)  <span class="comment"># 将原图合成进来</span></span><br><span class="line">    <span class="keyword">return</span> gb_img</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</span><br><span class="line">    <span class="comment"># 从本地读取图片</span></span><br><span class="line">    source_img = Image.open(<span class="string">'/path/to/source_image.jpg'</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 从url读取图片</span></span><br><span class="line">    source_img = Image.open(BytesIO(requests.get(<span class="string">'http://url/for/source_image.jpg'</span>).content))</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># 获取模糊后的图片</span></span><br><span class="line">    blur_img = get_blur_image(source_img)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 图片保存到本地</span></span><br><span class="line">    gb_img.save(<span class="string">'/path/to/target_image.jpg'</span>, <span class="string">"JPEG"</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 图片保存为内存中的类文件对象</span></span><br><span class="line">    img_file = BytesIO()</span><br><span class="line">    image.save(img_file, <span class="string">"JPEG"</span>)</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="4-引申"><a href="#4-引申" class="headerlink" title="4.引申"></a>4.引申</h2><blockquote>
+<p>PIL模块可以对图片作很多滤镜操作达到不同效果:</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> ImageFilter</span><br><span class="line"></span><br><span class="line">target_img = source_img.filter(ImageFilter.BLUR)  <span class="comment"># 模糊</span></span><br><span class="line">target_img = source_img.filter(ImageFilter.CONTOUR)  <span class="comment"># 轮廓</span></span><br><span class="line">target_img = source_img.filter(ImageFilter.EDGE_ENHANCE)  <span class="comment"># 边界加强</span></span><br><span class="line">target_img = source_img.filter(ImageFilter.EDGE_ENHANCE_MORE)  <span class="comment"># 边界加强(阀值更大)</span></span><br><span class="line">target_img = source_img.filter(ImageFilter.EMBOSS)  <span class="comment"># 模糊滤镜</span></span><br><span class="line">target_img = source_img.filter(ImageFilter.FIND_EDGES)  <span class="comment"># 边界</span></span><br><span class="line">target_img = source_img.filter(ImageFilter.SMOOTH)  <span class="comment"># 平滑</span></span><br><span class="line">target_img = source_img.filter(ImageFilter.SMOOTH_MORE)  <span class="comment"># 平滑(阀值更大)</span></span><br><span class="line">target_img = source_img.filter(ImageFilter.SHARPEN)  <span class="comment"># 锐化</span></span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>OpenCV</tag>
+        <tag>Pillow</tag>
+        <tag>图片处理</tag>
       </tags>
   </entry>
   <entry>
@@ -540,29 +567,36 @@
       </tags>
   </entry>
   <entry>
-    <title>Python - 图片处理 - OpenCV图片与PIL.Image对象互相转化</title>
-    <url>/Python-OpenCV-Image-PIL-Image.html</url>
-    <content><![CDATA[<h2 id="1-起因"><a href="#1-起因" class="headerlink" title="1.起因"></a>1.起因</h2><blockquote>
-<p>因项目需要对视频封面图片作以下处理：宽高比不为一的图片处理成两端模糊填充的正方形，使得呈现如下效果:</p>
-</blockquote>
-<!-- ![source_image.png](/images/Python-OpenCV-Image-PIL-Image/source_image.png) -->
-<p><img src="/images/Python-OpenCV-Image-PIL-Image/target_image.jpg" alt="target_image.jpg"></p>
-<h2 id="2-思路"><a href="#2-思路" class="headerlink" title="2.思路"></a>2.思路</h2><ul>
-<li>使用PIL库对图片作裁减和放大处理;</li>
-<li>上一步得到的图片转化到OpenCV图像做高斯模糊处理(因为PIL模块的图片模糊滤镜强度不够);</li>
-<li>上一步处理好的图片转化为PIL.Image,将原图居中合成进来;</li>
-<li>处理好的图片保存到本地或者转化为内存中的文件对象作其它操作: 上传下载等.</li>
-</ul>
-<h2 id="3-代码实现"><a href="#3-代码实现" class="headerlink" title="3.代码实现"></a>3.代码实现</h2><blockquote>
-<p>涉及到的代码库 Pillow==4.3.0, opencv-python==4.1.0.25, numpy==1.16.0</p>
-</blockquote>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">from</span> io <span class="keyword">import</span> BytesIO</span><br><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> Image</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">crop_img_on_ratio</span><span class="params">(img, ratio)</span>:</span></span><br><span class="line">    <span class="string">"""按比例裁减图片"""</span></span><br><span class="line">    ratio_w, ratio_h = ratio</span><br><span class="line">    img_w, img_h = img.size</span><br><span class="line">    <span class="keyword">if</span> img_h/img_w &gt;= ratio_h/ratio_w:</span><br><span class="line">        h = int(img_w*ratio_h/ratio_w)</span><br><span class="line">        box = (<span class="number">0</span>, int((img_h-h)/<span class="number">2</span>), img_w, int((img_h+h)/<span class="number">2</span>))</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        w = int(img_h*ratio_w/ratio_h)</span><br><span class="line">        box = (int((img_w-w)/<span class="number">2</span>), <span class="number">0</span>, int((img_w+w)/<span class="number">2</span>), img_h)</span><br><span class="line">    <span class="keyword">return</span> img.crop(box)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">mix_img_icon</span><span class="params">(img, icon)</span>:</span></span><br><span class="line">    <span class="string">"""图片图标合成，居中"""</span></span><br><span class="line">    img_w, img_h = img.size</span><br><span class="line">    icon_w, icon_h = icon.size</span><br><span class="line">    box = (int((img_w-icon_w)/<span class="number">2</span>), int((img_h-icon_h)/<span class="number">2</span>))</span><br><span class="line">    <span class="keyword">if</span> icon.format == <span class="string">'PNG'</span>:</span><br><span class="line">        img.paste(icon, box=box, mask=icon)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        img.paste(icon, box=box)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_blur_image</span><span class="params">(img)</span>:</span></span><br><span class="line">    <span class="string">"""宽高比不为1的图片处理成两端模糊填充的正方形"""</span></span><br><span class="line">    w, h = img.size  <span class="comment"># 获取图片宽高</span></span><br><span class="line">    a = max(w, h)  <span class="comment"># 获取正方形边长</span></span><br><span class="line">    crop_img = crop_img_on_ratio(img, (<span class="number">1</span>, <span class="number">1</span>))  <span class="comment"># 裁减为正方形</span></span><br><span class="line">    scale_img = crop_img.resize((a, a), resample=Image.ANTIALIAS)  <span class="comment"># 等比放大</span></span><br><span class="line">    cv_img = cv2.cvtColor(np.asarray(scale_img), cv2.COLOR_RGB2BGR)  <span class="comment"># 转化为 opencv image</span></span><br><span class="line">    cv_gb_img = cv2.GaussianBlur(cv_img, (<span class="number">0</span>, <span class="number">0</span>), <span class="number">7</span>)  <span class="comment"># opencv 高斯模糊</span></span><br><span class="line">    gb_img = Image.fromarray(cv2.cvtColor(cv_gb_img, cv2.COLOR_BGR2RGB))  <span class="comment"># 转化为PIL.Image</span></span><br><span class="line">    mix_img_icon(gb_img, img)  <span class="comment"># 将原图合成进来</span></span><br><span class="line">    <span class="keyword">return</span> gb_img</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</span><br><span class="line">    <span class="comment"># 从本地读取图片</span></span><br><span class="line">    source_img = Image.open(<span class="string">'/path/to/source_image.jpg'</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 从url读取图片</span></span><br><span class="line">    source_img = Image.open(BytesIO(requests.get(<span class="string">'http://url/for/source_image.jpg'</span>).content))</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># 获取模糊后的图片</span></span><br><span class="line">    blur_img = get_blur_image(source_img)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 图片保存到本地</span></span><br><span class="line">    gb_img.save(<span class="string">'/path/to/target_image.jpg'</span>, <span class="string">"JPEG"</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 图片保存为内存中的类文件对象</span></span><br><span class="line">    img_file = BytesIO()</span><br><span class="line">    image.save(img_file, <span class="string">"JPEG"</span>)</span><br></pre></td></tr></table></figure>
+    <title>Python - virtualenv虚拟环境配置</title>
+    <url>/Python-Virtualenv.html</url>
+    <content><![CDATA[<h2 id="1-安装"><a href="#1-安装" class="headerlink" title="1.安装"></a>1.安装</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pip install virtualenv</span><br></pre></td></tr></table></figure>
 
-<hr>
-<h2 id="4-引申"><a href="#4-引申" class="headerlink" title="4.引申"></a>4.引申</h2><blockquote>
-<p>PIL模块可以对图片作很多滤镜操作达到不同效果:</p>
+<h2 id="2-创建虚拟环境"><a href="#2-创建虚拟环境" class="headerlink" title="2.创建虚拟环境"></a>2.创建虚拟环境</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> git@github.com:RichardRenn/happy.git /var/www/happy <span class="comment"># 克隆项目代码</span></span><br><span class="line"><span class="built_in">cd</span> /var/www/happy <span class="comment"># 进入项目目录</span></span><br><span class="line">virtualenv venv <span class="comment"># 创建虚拟环境目录./venv</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="3-激活并进入虚拟环境"><a href="#3-激活并进入虚拟环境" class="headerlink" title="3.激活并进入虚拟环境"></a>3.激活并进入虚拟环境</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">source</span> ./venv/bin/activate</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>当看到命令行前面显示(venv)标志时即表示已进入虚拟环境</p>
 </blockquote>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> ImageFilter</span><br><span class="line"></span><br><span class="line">target_img = source_img.filter(ImageFilter.BLUR)  <span class="comment"># 模糊</span></span><br><span class="line">target_img = source_img.filter(ImageFilter.CONTOUR)  <span class="comment"># 轮廓</span></span><br><span class="line">target_img = source_img.filter(ImageFilter.EDGE_ENHANCE)  <span class="comment"># 边界加强</span></span><br><span class="line">target_img = source_img.filter(ImageFilter.EDGE_ENHANCE_MORE)  <span class="comment"># 边界加强(阀值更大)</span></span><br><span class="line">target_img = source_img.filter(ImageFilter.EMBOSS)  <span class="comment"># 模糊滤镜</span></span><br><span class="line">target_img = source_img.filter(ImageFilter.FIND_EDGES)  <span class="comment"># 边界</span></span><br><span class="line">target_img = source_img.filter(ImageFilter.SMOOTH)  <span class="comment"># 平滑</span></span><br><span class="line">target_img = source_img.filter(ImageFilter.SMOOTH_MORE)  <span class="comment"># 平滑(阀值更大)</span></span><br><span class="line">target_img = source_img.filter(ImageFilter.SHARPEN)  <span class="comment"># 锐化</span></span><br></pre></td></tr></table></figure>
+<h2 id="4-安装需求库"><a href="#4-安装需求库" class="headerlink" title="4.安装需求库"></a>4.安装需求库</h2><blockquote>
+<p>同在普通环境下的安装命令是相同的，只不过所有的库都会被安装到虚拟环境目录下</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pip install [module-name]</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>*也可以从需求库依赖文件安装所需库</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pip install -r requirements.txt</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>需求库依赖文件可以从任何一个虚拟环境中导出，导出命令如下：</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pip freeze &gt; requirements.txt</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><em>推荐保持依赖文件为最新状态，并存放在项目代码目录下，可以很方便地在新机器上安装部署项目虚拟环境。</em></p>
+</blockquote>
+<h2 id="5-退出虚拟环境"><a href="#5-退出虚拟环境" class="headerlink" title="5.退出虚拟环境"></a>5.退出虚拟环境</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">deactivate</span><br></pre></td></tr></table></figure>
 
 ]]></content>
       <categories>
@@ -570,9 +604,7 @@
       </categories>
       <tags>
         <tag>Python</tag>
-        <tag>OpenCV</tag>
-        <tag>Pillow</tag>
-        <tag>图片处理</tag>
+        <tag>virtualenv</tag>
       </tags>
   </entry>
   <entry>
@@ -609,6 +641,63 @@
       </tags>
   </entry>
   <entry>
+    <title>Linux开机启动项目录rc.d</title>
+    <url>/Linux-Msconfig.html</url>
+    <content><![CDATA[<p>本文以/init.d/redis-server-2脚本为例，介绍如何自定义开机启动项。</p>
+<blockquote>
+<p>/etc/init.d目录下是所有的启动脚本，我们可以通过以下命令来运行。</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">/etc/init.d/脚本名 参数</span><br></pre></td></tr></table></figure>
+
+<h2 id="1-先查看下自己的开机启动级别"><a href="#1-先查看下自己的开机启动级别" class="headerlink" title="1.先查看下自己的开机启动级别"></a>1.先查看下自己的开机启动级别</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">Runlevel</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>显示   N  2<br>则当前的级别是2级,那么所有开机启动项就是在/etc/rc2.d目录下。</p>
+</blockquote>
+<h2 id="2-查看下原来的redis启动序号"><a href="#2-查看下原来的redis启动序号" class="headerlink" title="2.查看下原来的redis启动序号"></a>2.查看下原来的redis启动序号</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ls -l /etc/rc2.d</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>这个目录下都是软链接（符号链接），链接到/etc/init.d目录。<br>显示格式如下：S/K + 序号 + 脚本名</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">lrwxrwxrwx 1 root root  22 Dec  2 15:37 S20redis-server -&gt; ../init.d/redis-server</span><br><span class="line">lrwxrwxrwx 1 root root  18 Aug 24  2017 S99rc.local -&gt; ../init.d/rc.local</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>启动序号是20<br>S开头是开机时的脚本启动顺序，按序号从小到大启动。<br>K开头表示是关机时的脚本关闭顺序，按序号从大到小关闭。</p>
+</blockquote>
+<h2 id="3-将启动脚本软链接到开机启动目录下"><a href="#3-将启动脚本软链接到开机启动目录下" class="headerlink" title="3.将启动脚本软链接到开机启动目录下"></a>3.将启动脚本软链接到开机启动目录下</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ln -s /etc/init.d/redis-server-2 /etc/rc2.d/S20redis-server-2</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>注意：如果两个redis有主从关系的话即需要有先后启动顺序，就需要适当的增大序号，如21</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ln -s /etc/init.d/redis-server-2 /etc/rc2.d/S21redis-server-2</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>*也可以使用update-rc.d命令，效果相同：</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">update-rc.d -f redis-server-2 defaults 20</span><br></pre></td></tr></table></figure>
+
+<h2 id="4-取消开机启动"><a href="#4-取消开机启动" class="headerlink" title="4.取消开机启动"></a>4.取消开机启动</h2><blockquote>
+<p>方法一：使用update-rc.d命令</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">update-rc.d -f redis-server-slark remove</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>方法二：直接删除软链接</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">rm -f /etc/rc2.d/S20redis-server-slark</span><br></pre></td></tr></table></figure>
+
+<h2 id="5-关于rc-local"><a href="#5-关于rc-local" class="headerlink" title="5.关于rc.local"></a>5.关于rc.local</h2><blockquote>
+<p>rc.local也是开机启动脚本，从ls -l /etc/rc2.d 命令的输出结果也可以看出，它的启动序号是99。<br>所以rc.local里的内容是在所有更高级别的初始化脚本(rc1.d rc2.d …)运行之后再执行的。</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>服务器配置 - Nginx+Gunicorn+Supervisor+Flask</title>
     <url>/Server-Configuration.html</url>
     <content><![CDATA[<h2 id="1-为服务器添加ssh公钥验证"><a href="#1-为服务器添加ssh公钥验证" class="headerlink" title="1.为服务器添加ssh公钥验证"></a>1.<a href="/Server-SSH-Key.html">为服务器添加ssh公钥验证</a></h2><h2 id="2-Git安装配置"><a href="#2-Git安装配置" class="headerlink" title="2.Git安装配置"></a>2.<a href="/Git-Configuration.html">Git安装配置</a></h2><h2 id="3-Redis安装配置"><a href="#3-Redis安装配置" class="headerlink" title="3.Redis安装配置"></a>3.<a href="/Server-Redis-Configuration.html">Redis安装配置</a></h2><h2 id="4-Nginx安装配置"><a href="#4-Nginx安装配置" class="headerlink" title="4.Nginx安装配置"></a>4.<a href="/Server-Nginx-Configuration.html">Nginx安装配置</a></h2><h2 id="5-配置Python虚拟环境"><a href="#5-配置Python虚拟环境" class="headerlink" title="5.配置Python虚拟环境"></a>5.<a href="/Python-Virtualenv.html">配置Python虚拟环境</a></h2><h2 id="6-Gunicorn安装配置"><a href="#6-Gunicorn安装配置" class="headerlink" title="6.Gunicorn安装配置"></a>6.<a href="/Server-Gunicorn-Configuration.html">Gunicorn安装配置</a></h2><h2 id="7-Supervisor安装配置"><a href="#7-Supervisor安装配置" class="headerlink" title="7.Supervisor安装配置"></a>7.<a href="/Server-Supervisor-Configuration.html">Supervisor安装配置</a></h2>]]></content>
@@ -618,44 +707,6 @@
       <tags>
         <tag>Linux</tag>
         <tag>服务器</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Python - Gunicorn安装配置</title>
-    <url>/Server-Gunicorn-Configuration.html</url>
-    <content><![CDATA[<h2 id="1-安装"><a href="#1-安装" class="headerlink" title="1.安装"></a>1.安装</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /var/www/happy <span class="comment"># 进入项目代码目录</span></span><br><span class="line"><span class="built_in">source</span> venv/bin/activate <span class="comment"># 激活并进入虚拟环境</span></span><br><span class="line">pip install gunicorn <span class="comment"># 在虚拟环境中安装gunicorn</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="2-使用gunicorn启动Flask项目"><a href="#2-使用gunicorn启动Flask项目" class="headerlink" title="2.使用gunicorn启动Flask项目"></a>2.使用gunicorn启动Flask项目</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">gunicorn -w4 -b127.0.0.1:8003 happy:app</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>这里的happy是Flask项目的app名<br>-w4 等同于 –workers=4，意为同时启动四个worker<br>-b127.0.0.1:8003 等同于 –bind=127.0.0.1:8003，用于指定绑定的服务器ip和端口</p>
-</blockquote>
-<h2 id="3-关闭进程"><a href="#3-关闭进程" class="headerlink" title="3.关闭进程"></a>3.关闭进程</h2><blockquote>
-<p>Ctrl+C即可。</p>
-</blockquote>
-<blockquote>
-<p>后台进程可以使用以下命令查看进程号(pid):</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ps -ef | grep gunicorn</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>关闭进程命令：</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">kill</span> [pid]</span><br></pre></td></tr></table></figure>
-
-<hr>
-<ul>
-<li>推荐使用supervisor来管理gunicorn进程，优点是启动、停止、重启都很方便，并且支持自动重启被意外停止的进程，可以参考<a href="/Server-Supervisor-Configuration.html">&gt;&gt;传送门 - Supervisor安装配置&lt;&lt;</a>。</li>
-</ul>
-]]></content>
-      <categories>
-        <category>Python</category>
-      </categories>
-      <tags>
-        <tag>Linux</tag>
-        <tag>Python</tag>
-        <tag>服务器</tag>
-        <tag>Gunicorn</tag>
       </tags>
   </entry>
   <entry>
@@ -711,6 +762,44 @@
       </tags>
   </entry>
   <entry>
+    <title>Python - Gunicorn安装配置</title>
+    <url>/Server-Gunicorn-Configuration.html</url>
+    <content><![CDATA[<h2 id="1-安装"><a href="#1-安装" class="headerlink" title="1.安装"></a>1.安装</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /var/www/happy <span class="comment"># 进入项目代码目录</span></span><br><span class="line"><span class="built_in">source</span> venv/bin/activate <span class="comment"># 激活并进入虚拟环境</span></span><br><span class="line">pip install gunicorn <span class="comment"># 在虚拟环境中安装gunicorn</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="2-使用gunicorn启动Flask项目"><a href="#2-使用gunicorn启动Flask项目" class="headerlink" title="2.使用gunicorn启动Flask项目"></a>2.使用gunicorn启动Flask项目</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">gunicorn -w4 -b127.0.0.1:8003 happy:app</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>这里的happy是Flask项目的app名<br>-w4 等同于 –workers=4，意为同时启动四个worker<br>-b127.0.0.1:8003 等同于 –bind=127.0.0.1:8003，用于指定绑定的服务器ip和端口</p>
+</blockquote>
+<h2 id="3-关闭进程"><a href="#3-关闭进程" class="headerlink" title="3.关闭进程"></a>3.关闭进程</h2><blockquote>
+<p>Ctrl+C即可。</p>
+</blockquote>
+<blockquote>
+<p>后台进程可以使用以下命令查看进程号(pid):</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ps -ef | grep gunicorn</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>关闭进程命令：</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">kill</span> [pid]</span><br></pre></td></tr></table></figure>
+
+<hr>
+<ul>
+<li>推荐使用supervisor来管理gunicorn进程，优点是启动、停止、重启都很方便，并且支持自动重启被意外停止的进程，可以参考<a href="/Server-Supervisor-Configuration.html">&gt;&gt;传送门 - Supervisor安装配置&lt;&lt;</a>。</li>
+</ul>
+]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>Linux</tag>
+        <tag>服务器</tag>
+        <tag>Gunicorn</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>服务器配置 - Redis安装配置</title>
     <url>/Server-Redis-Configuration.html</url>
     <content><![CDATA[<h2 id="1-安装"><a href="#1-安装" class="headerlink" title="1.安装"></a>1.安装</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">apt-get install redis-server</span><br></pre></td></tr></table></figure>
@@ -748,6 +837,127 @@
         <tag>服务器</tag>
         <tag>Redis</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>服务器搭建 - 为服务器添加ssh公钥验证</title>
+    <url>/Server-SSH-Key.html</url>
+    <content><![CDATA[<h2 id="1-生成密钥对"><a href="#1-生成密钥对" class="headerlink" title="1.生成密钥对"></a>1.生成密钥对</h2><blockquote>
+<p>在本地运行如下命令：</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -b 4096 -C <span class="string">"your_email@example.com"</span></span><br></pre></td></tr></table></figure>
+
+<p>如果不想设置密码的话直接三次回车即可，和git生成密钥的命令相同。</p>
+<blockquote>
+<p>生成的密钥对位置在 ~/.ssh，查看下公钥，下一步要用到。</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">cat ~/.ssh/id_rsa.pub</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>内容类似下面这样</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQC+am2s/r1n+xsipi/4H2ll8p3McdhQCLBwJGNbkaxpeWKtdbiUbqAWeNt/OF13VsyWLs5lb6J2I3J6GlCcEGMGOFc4gzLTP9e/TmXeyFlBMZkuSJTbsXvL9Q/tff/8Tgt4aVAeOAgSd2jdDEvALegap4nrMHVLP8sOQlNFBMPjy1r0cW/Afp32gCtPOpQRuIkQdOnWUkzjObGanhYnX470UNsvgQ+IyikhS5tiKPqkT317v6yFV4doeZgfNYtcgpLVZcVxkItTLS1h75d4h4MD2JVRk2nBGSLp5j2WIji4Tiy++LblV1Y5Y2wRcfefdXCIMT3jMNAcyhuCaNfaD/Q== your_email@example.com</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-添加到服务器"><a href="#2-添加到服务器" class="headerlink" title="2.添加到服务器"></a>2.添加到服务器</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh root@server_ip <span class="comment"># 登陆服务器</span></span><br><span class="line">mkdir .ssh <span class="comment"># 创建.ssh目录</span></span><br><span class="line">vim .ssh/authorized_keys <span class="comment"># 创建已验证的密钥记录文件</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>在vim编辑器中按i键，把上一步的公钥拷贝进来，多个公钥的话换行隔开即可。<br>然后按ESC键退出编辑模式，输入:wq回车即可保存文件。<br>这样以后输入ssh root@ip命令就可以不用输入密码直接进去了。</p>
+</blockquote>
+<a id="more"></a>
+
+<h2 id="3-更快捷地登陆"><a href="#3-更快捷地登陆" class="headerlink" title="3.更快捷地登陆"></a>3.更快捷地登陆</h2><p>完成上面的配置后，还可以通过对本地ssh进行配置以进一步简化登陆操作。</p>
+<blockquote>
+<p>在本地打开~/.ssh/config 文件</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim ~/.ssh/config</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>添加如下配置内容:</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Host happy</span><br><span class="line">Hostname 139.xxx.xxx.xxx</span><br><span class="line">User root</span><br><span class="line">IdentityFile ~/.ssh/id_rsa</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>以后在本地直接输入以下命令就可登陆远程服务器</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh happy</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>多个服务器配置只需换行隔开即可。</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>服务器搭建</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+        <tag>ssh</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python - Supervisor安装配置</title>
+    <url>/Server-Supervisor-Configuration.html</url>
+    <content><![CDATA[<h2 id="1-安装"><a href="#1-安装" class="headerlink" title="1.安装"></a>1.安装</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pip install supervisor</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-初始化启动配置文件"><a href="#2-初始化启动配置文件" class="headerlink" title="2.初始化启动配置文件"></a>2.初始化启动配置文件</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">echo_supervisord_conf &gt; /etc/supervisord.conf</span><br><span class="line">vim /etc/supervisord.conf</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>最后面加上下面这两行内容，这样就可以从/etc/supervisor目录下自动加载所有的conf文件了。</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[include]</span><br><span class="line">files = /etc/supervisor/*.conf</span><br></pre></td></tr></table></figure>
+
+<h2 id="3-新建项目配置文件"><a href="#3-新建项目配置文件" class="headerlink" title="3.新建项目配置文件"></a>3.新建项目配置文件</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mkdir /var/<span class="built_in">log</span>/supervisor</span><br><span class="line">mkdir /etc/supervisor</span><br><span class="line">vim /etc/supervisor/happydev.conf</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>内容如下：</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[program:happydev]</span><br><span class="line">directory = /var/www/happydev ;</span><br><span class="line">command = /var/www/happydev/venv/bin/gunicorn -w4 -b127.0.0.1:8003 --timeout 120  happy:app ;</span><br><span class="line">autostart = true ;</span><br><span class="line">startsecs = 5 ;</span><br><span class="line">autorestart = true ;</span><br><span class="line">startretries = 3 ;</span><br><span class="line">user = root ;</span><br><span class="line">redirect_stderr = true ;</span><br><span class="line">stdout_logfile_maxbytes = 100MB ;</span><br><span class="line">stdout_logfile_backups = 10 ;</span><br><span class="line">stdout_logfile = /var/log/supervisor/happydev.log ;</span><br><span class="line">environment = HAPPY_CONFIG_FILE=&quot;/var/www/happydev/happy/config/staging.py&quot;,HAPPY_PATH=&quot;/var/www/happydev&quot; ;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>这里管理的进程是使用gunicorn启动的Flask项目，关于gunicorn的使用可以参考<a href="/Server-Gunicorn-Configuration.html">&gt;&gt;传送门 - Gunicorn安装配置&lt;&lt;</a>。</p>
+</blockquote>
+<h2 id="4-启动suprervisord"><a href="#4-启动suprervisord" class="headerlink" title="4.启动suprervisord"></a>4.启动suprervisord</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">supervisord -c /etc/supervisord.conf</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>到这一步supervisor已经正常工作了。</p>
+</blockquote>
+<hr>
+<h2 id="5-常用命令"><a href="#5-常用命令" class="headerlink" title="5.常用命令"></a>5.常用命令</h2><h4 id="5-1-停止supervisor主进程"><a href="#5-1-停止supervisor主进程" class="headerlink" title="5.1.停止supervisor主进程"></a>5.1.停止supervisor主进程</h4><blockquote>
+<p>查看supervisord进程号(pid)：</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ps aux | grep supervisord</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>关闭进程：</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">kill</span> [pid]</span><br></pre></td></tr></table></figure>
+
+<h4 id="5-2-启动单个项目进程"><a href="#5-2-启动单个项目进程" class="headerlink" title="5.2.启动单个项目进程"></a>5.2.启动单个项目进程</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">supervisorctl start happydev</span><br></pre></td></tr></table></figure>
+
+<h4 id="5-3-停止单个项目进程"><a href="#5-3-停止单个项目进程" class="headerlink" title="5.3.停止单个项目进程"></a>5.3.停止单个项目进程</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">supervisorctl stop happydev</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>注意：使用此命令停止的进程不会被自动重启机制重新启动</p>
+</blockquote>
+<h4 id="5-4-重启单个项目进程"><a href="#5-4-重启单个项目进程" class="headerlink" title="5.4.重启单个项目进程"></a>5.4.重启单个项目进程</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">supervisorctl restart happydev</span><br></pre></td></tr></table></figure>
+
+<h4 id="5-5-重新加载单个项目"><a href="#5-5-重新加载单个项目" class="headerlink" title="5.5.重新加载单个项目"></a>5.5.重新加载单个项目</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">supervisorctl remove happydev <span class="comment"># 移除happydev项目</span></span><br><span class="line">supervisorctl reread <span class="comment"># 重新读取所有配置文件</span></span><br><span class="line">supervisorctl add happydev <span class="comment"># 添加happydev项目</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="5-6-查看所有项目进程的运行状态"><a href="#5-6-查看所有项目进程的运行状态" class="headerlink" title="5.6.查看所有项目进程的运行状态"></a>5.6.查看所有项目进程的运行状态</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">supervisorctl status</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>Linux</tag>
+        <tag>服务器</tag>
+        <tag>Supervisor</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/hello-world.html</url>
+    <content><![CDATA[<h2 id="博客访问地址-Coding"><a href="#博客访问地址-Coding" class="headerlink" title="博客访问地址 - Coding"></a><span class="exturl" data-url="aHR0cHM6Ly9yaWNoYXJkcmVubi5jb2RpbmcubWUv" title="https://richardrenn.coding.me/">博客访问地址 - Coding<i class="fa fa-external-link"></i></span></h2><h2 id="博客访问地址-Github"><a href="#博客访问地址-Github" class="headerlink" title="博客访问地址 - Github"></a><a href="https://richardrenn.github.io/">博客访问地址 - Github</a></h2><h2 id="博客访问地址-Gitee"><a href="#博客访问地址-Gitee" class="headerlink" title="博客访问地址 - Gitee"></a><span class="exturl" data-url="aHR0cHM6Ly9yaWNoYXJkcmVubi5naXRlZS5pby8=" title="https://richardrenn.gitee.io/">博客访问地址 - Gitee<i class="fa fa-external-link"></i></span></h2>]]></content>
   </entry>
   <entry>
     <title>服务器配置 - Redis单机多实例配置</title>
@@ -818,216 +1028,6 @@
         <tag>Linux</tag>
         <tag>服务器</tag>
         <tag>Redis</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>GitHub教程 - Pull Request 工作流程</title>
-    <url>/GitHub-Pull-Request-Workflow.html</url>
-    <content><![CDATA[<h2 id="1-Fork仓库"><a href="#1-Fork仓库" class="headerlink" title="1.Fork仓库"></a>1.Fork仓库</h2><blockquote>
-<p>先在github上将源仓库fork到自己的仓库</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">源仓库：git@github.com:southflower/slark.git</span><br><span class="line">fork后：git@github.com:RichardRenn/slark.git</span><br></pre></td></tr></table></figure>
-
-<h2 id="2-检出代码"><a href="#2-检出代码" class="headerlink" title="2.检出代码"></a>2.检出代码</h2><blockquote>
-<p>在本地检出fork后的仓库代码</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~/workspace/sourcecode/richardrenn</span><br><span class="line">git <span class="built_in">clone</span> git@github.com:RichardRenn/slark.git ./slark</span><br></pre></td></tr></table></figure>
-
-<h2 id="3-关联上游源仓库"><a href="#3-关联上游源仓库" class="headerlink" title="3.关联上游源仓库"></a>3.关联上游源仓库</h2><blockquote>
-<p>进入代码目录，加入上游源仓库关联</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> ./slark</span><br><span class="line">git remote add upstream git@github.com:southflower/slark.git</span><br></pre></td></tr></table></figure>
-
-<h2 id="4-更新代码"><a href="#4-更新代码" class="headerlink" title="4.更新代码"></a>4.更新代码</h2><blockquote>
-<p>更新源仓库代码到本地仓库</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git fetch upstream</span><br><span class="line">git merge upstream/master</span><br></pre></td></tr></table></figure>
-
-<h2 id="5-提交代码"><a href="#5-提交代码" class="headerlink" title="5.提交代码"></a>5.提交代码</h2><blockquote>
-<p>在本地仓库中，修改代码后提交到自己的远端仓库</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git add .</span><br><span class="line">git commit -m <span class="string">"anything"</span></span><br><span class="line">git push origin master</span><br></pre></td></tr></table></figure>
-
-<h2 id="6-提交PR"><a href="#6-提交PR" class="headerlink" title="6.提交PR"></a>6.提交PR</h2><blockquote>
-<p>在github网页上提交PR<br>在自己的仓库界面点击”New Pull Request”</p>
-</blockquote>
-<p><img src="/images/GitHub-Pull-Request-Workflow/pull-request.png" alt="pull-request"></p>
-<h2 id="7-PR合入"><a href="#7-PR合入" class="headerlink" title="7.PR合入"></a>7.PR合入</h2><blockquote>
-<p>然后待源仓库的作者将你的PR合入即可</p>
-</blockquote>
-<hr>
-<ul>
-<li>带分支的工作方式可以参考<a href="/GitHub-Branch-Workflow.html">&gt;&gt;传送门 - 分支工作流程&lt;&lt;</a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>GitHub教程</category>
-      </categories>
-      <tags>
-        <tag>Git</tag>
-        <tag>GitHub</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>服务器搭建 - 为服务器添加ssh公钥验证</title>
-    <url>/Server-SSH-Key.html</url>
-    <content><![CDATA[<h2 id="1-生成密钥对"><a href="#1-生成密钥对" class="headerlink" title="1.生成密钥对"></a>1.生成密钥对</h2><blockquote>
-<p>在本地运行如下命令：</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -b 4096 -C <span class="string">"your_email@example.com"</span></span><br></pre></td></tr></table></figure>
-
-<p>如果不想设置密码的话直接三次回车即可，和git生成密钥的命令相同。</p>
-<blockquote>
-<p>生成的密钥对位置在 ~/.ssh，查看下公钥，下一步要用到。</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">cat ~/.ssh/id_rsa.pub</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>内容类似下面这样</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQC+am2s/r1n+xsipi/4H2ll8p3McdhQCLBwJGNbkaxpeWKtdbiUbqAWeNt/OF13VsyWLs5lb6J2I3J6GlCcEGMGOFc4gzLTP9e/TmXeyFlBMZkuSJTbsXvL9Q/tff/8Tgt4aVAeOAgSd2jdDEvALegap4nrMHVLP8sOQlNFBMPjy1r0cW/Afp32gCtPOpQRuIkQdOnWUkzjObGanhYnX470UNsvgQ+IyikhS5tiKPqkT317v6yFV4doeZgfNYtcgpLVZcVxkItTLS1h75d4h4MD2JVRk2nBGSLp5j2WIji4Tiy++LblV1Y5Y2wRcfefdXCIMT3jMNAcyhuCaNfaD/Q== your_email@example.com</span><br></pre></td></tr></table></figure>
-
-<h2 id="2-添加到服务器"><a href="#2-添加到服务器" class="headerlink" title="2.添加到服务器"></a>2.添加到服务器</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh root@server_ip <span class="comment"># 登陆服务器</span></span><br><span class="line">mkdir .ssh <span class="comment"># 创建.ssh目录</span></span><br><span class="line">vim .ssh/authorized_keys <span class="comment"># 创建已验证的密钥记录文件</span></span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>在vim编辑器中按i键，把上一步的公钥拷贝进来，多个公钥的话换行隔开即可。<br>然后按ESC键退出编辑模式，输入:wq回车即可保存文件。<br>这样以后输入ssh root@ip命令就可以不用输入密码直接进去了。</p>
-</blockquote>
-<a id="more"></a>
-
-<h2 id="3-更快捷地登陆"><a href="#3-更快捷地登陆" class="headerlink" title="3.更快捷地登陆"></a>3.更快捷地登陆</h2><p>完成上面的配置后，还可以通过对本地ssh进行配置以进一步简化登陆操作。</p>
-<blockquote>
-<p>在本地打开~/.ssh/config 文件</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim ~/.ssh/config</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>添加如下配置内容:</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Host happy</span><br><span class="line">Hostname 139.xxx.xxx.xxx</span><br><span class="line">User root</span><br><span class="line">IdentityFile ~/.ssh/id_rsa</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>以后在本地直接输入以下命令就可登陆远程服务器</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh happy</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>多个服务器配置只需换行隔开即可。</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>服务器搭建</category>
-      </categories>
-      <tags>
-        <tag>Linux</tag>
-        <tag>ssh</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Python - virtualenv虚拟环境配置</title>
-    <url>/Python-Virtualenv.html</url>
-    <content><![CDATA[<h2 id="1-安装"><a href="#1-安装" class="headerlink" title="1.安装"></a>1.安装</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pip install virtualenv</span><br></pre></td></tr></table></figure>
-
-<h2 id="2-创建虚拟环境"><a href="#2-创建虚拟环境" class="headerlink" title="2.创建虚拟环境"></a>2.创建虚拟环境</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> git@github.com:RichardRenn/happy.git /var/www/happy <span class="comment"># 克隆项目代码</span></span><br><span class="line"><span class="built_in">cd</span> /var/www/happy <span class="comment"># 进入项目目录</span></span><br><span class="line">virtualenv venv <span class="comment"># 创建虚拟环境目录./venv</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="3-激活并进入虚拟环境"><a href="#3-激活并进入虚拟环境" class="headerlink" title="3.激活并进入虚拟环境"></a>3.激活并进入虚拟环境</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">source</span> ./venv/bin/activate</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>当看到命令行前面显示(venv)标志时即表示已进入虚拟环境</p>
-</blockquote>
-<h2 id="4-安装需求库"><a href="#4-安装需求库" class="headerlink" title="4.安装需求库"></a>4.安装需求库</h2><blockquote>
-<p>同在普通环境下的安装命令是相同的，只不过所有的库都会被安装到虚拟环境目录下</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pip install [module-name]</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>*也可以从需求库依赖文件安装所需库</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pip install -r requirements.txt</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>需求库依赖文件可以从任何一个虚拟环境中导出，导出命令如下：</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pip freeze &gt; requirements.txt</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p><em>推荐保持依赖文件为最新状态，并存放在项目代码目录下，可以很方便地在新机器上安装部署项目虚拟环境。</em></p>
-</blockquote>
-<h2 id="5-退出虚拟环境"><a href="#5-退出虚拟环境" class="headerlink" title="5.退出虚拟环境"></a>5.退出虚拟环境</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">deactivate</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>Python</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-        <tag>virtualenv</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/hello-world.html</url>
-    <content><![CDATA[<h2 id="博客访问地址-Coding"><a href="#博客访问地址-Coding" class="headerlink" title="博客访问地址 - Coding"></a><span class="exturl" data-url="aHR0cHM6Ly9yaWNoYXJkcmVubi5jb2RpbmcubWUv" title="https://richardrenn.coding.me/">博客访问地址 - Coding<i class="fa fa-external-link"></i></span></h2><h2 id="博客访问地址-Github"><a href="#博客访问地址-Github" class="headerlink" title="博客访问地址 - Github"></a><a href="https://richardrenn.github.io/">博客访问地址 - Github</a></h2><h2 id="博客访问地址-Gitee"><a href="#博客访问地址-Gitee" class="headerlink" title="博客访问地址 - Gitee"></a><span class="exturl" data-url="aHR0cHM6Ly9yaWNoYXJkcmVubi5naXRlZS5pby8=" title="https://richardrenn.gitee.io/">博客访问地址 - Gitee<i class="fa fa-external-link"></i></span></h2>]]></content>
-  </entry>
-  <entry>
-    <title>Python - Supervisor安装配置</title>
-    <url>/Server-Supervisor-Configuration.html</url>
-    <content><![CDATA[<h2 id="1-安装"><a href="#1-安装" class="headerlink" title="1.安装"></a>1.安装</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pip install supervisor</span><br></pre></td></tr></table></figure>
-
-<h2 id="2-初始化启动配置文件"><a href="#2-初始化启动配置文件" class="headerlink" title="2.初始化启动配置文件"></a>2.初始化启动配置文件</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">echo_supervisord_conf &gt; /etc/supervisord.conf</span><br><span class="line">vim /etc/supervisord.conf</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>最后面加上下面这两行内容，这样就可以从/etc/supervisor目录下自动加载所有的conf文件了。</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[include]</span><br><span class="line">files = /etc/supervisor/*.conf</span><br></pre></td></tr></table></figure>
-
-<h2 id="3-新建项目配置文件"><a href="#3-新建项目配置文件" class="headerlink" title="3.新建项目配置文件"></a>3.新建项目配置文件</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mkdir /var/<span class="built_in">log</span>/supervisor</span><br><span class="line">mkdir /etc/supervisor</span><br><span class="line">vim /etc/supervisor/happydev.conf</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>内容如下：</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[program:happydev]</span><br><span class="line">directory = /var/www/happydev ;</span><br><span class="line">command = /var/www/happydev/venv/bin/gunicorn -w4 -b127.0.0.1:8003 --timeout 120  happy:app ;</span><br><span class="line">autostart = true ;</span><br><span class="line">startsecs = 5 ;</span><br><span class="line">autorestart = true ;</span><br><span class="line">startretries = 3 ;</span><br><span class="line">user = root ;</span><br><span class="line">redirect_stderr = true ;</span><br><span class="line">stdout_logfile_maxbytes = 100MB ;</span><br><span class="line">stdout_logfile_backups = 10 ;</span><br><span class="line">stdout_logfile = /var/log/supervisor/happydev.log ;</span><br><span class="line">environment = HAPPY_CONFIG_FILE=&quot;/var/www/happydev/happy/config/staging.py&quot;,HAPPY_PATH=&quot;/var/www/happydev&quot; ;</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>这里管理的进程是使用gunicorn启动的Flask项目，关于gunicorn的使用可以参考<a href="/Server-Gunicorn-Configuration.html">&gt;&gt;传送门 - Gunicorn安装配置&lt;&lt;</a>。</p>
-</blockquote>
-<h2 id="4-启动suprervisord"><a href="#4-启动suprervisord" class="headerlink" title="4.启动suprervisord"></a>4.启动suprervisord</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">supervisord -c /etc/supervisord.conf</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>到这一步supervisor已经正常工作了。</p>
-</blockquote>
-<hr>
-<h2 id="5-常用命令"><a href="#5-常用命令" class="headerlink" title="5.常用命令"></a>5.常用命令</h2><h4 id="5-1-停止supervisor主进程"><a href="#5-1-停止supervisor主进程" class="headerlink" title="5.1.停止supervisor主进程"></a>5.1.停止supervisor主进程</h4><blockquote>
-<p>查看supervisord进程号(pid)：</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ps aux | grep supervisord</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>关闭进程：</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">kill</span> [pid]</span><br></pre></td></tr></table></figure>
-
-<h4 id="5-2-启动单个项目进程"><a href="#5-2-启动单个项目进程" class="headerlink" title="5.2.启动单个项目进程"></a>5.2.启动单个项目进程</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">supervisorctl start happydev</span><br></pre></td></tr></table></figure>
-
-<h4 id="5-3-停止单个项目进程"><a href="#5-3-停止单个项目进程" class="headerlink" title="5.3.停止单个项目进程"></a>5.3.停止单个项目进程</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">supervisorctl stop happydev</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>注意：使用此命令停止的进程不会被自动重启机制重新启动</p>
-</blockquote>
-<h4 id="5-4-重启单个项目进程"><a href="#5-4-重启单个项目进程" class="headerlink" title="5.4.重启单个项目进程"></a>5.4.重启单个项目进程</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">supervisorctl restart happydev</span><br></pre></td></tr></table></figure>
-
-<h4 id="5-5-重新加载单个项目"><a href="#5-5-重新加载单个项目" class="headerlink" title="5.5.重新加载单个项目"></a>5.5.重新加载单个项目</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">supervisorctl remove happydev <span class="comment"># 移除happydev项目</span></span><br><span class="line">supervisorctl reread <span class="comment"># 重新读取所有配置文件</span></span><br><span class="line">supervisorctl add happydev <span class="comment"># 添加happydev项目</span></span><br></pre></td></tr></table></figure>
-
-<h4 id="5-6-查看所有项目进程的运行状态"><a href="#5-6-查看所有项目进程的运行状态" class="headerlink" title="5.6.查看所有项目进程的运行状态"></a>5.6.查看所有项目进程的运行状态</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">supervisorctl status</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>Python</category>
-      </categories>
-      <tags>
-        <tag>Linux</tag>
-        <tag>Python</tag>
-        <tag>服务器</tag>
-        <tag>Supervisor</tag>
       </tags>
   </entry>
 </search>
