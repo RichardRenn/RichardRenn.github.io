@@ -114,15 +114,15 @@
   <meta name="description" content="介绍如何配置iPython实现在命令行直接调试Odoo(OE)代码。">
 <meta name="keywords" content="Python,iPython,odoo,OE,openerp">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Python - 配置iPython直接调试Odoo(openerp)代码">
+<meta property="og:title" content="Python - 配置iPython直接在命令行调试Odoo(openerp)代码">
 <meta property="og:url" content="https://richardrenn.github.io/Python-iPython-Odoo-OE.html">
 <meta property="og:site_name" content="灰帽子">
 <meta property="og:description" content="介绍如何配置iPython实现在命令行直接调试Odoo(OE)代码。">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://richardrenn.github.io/images/Python-iPython/ipython_oe_run.png">
-<meta property="og:updated_time" content="2022-06-14T14:40:06.450Z">
+<meta property="og:updated_time" content="2022-06-19T08:37:12.614Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Python - 配置iPython直接调试Odoo(openerp)代码">
+<meta name="twitter:title" content="Python - 配置iPython直接在命令行调试Odoo(openerp)代码">
 <meta name="twitter:description" content="介绍如何配置iPython实现在命令行直接调试Odoo(OE)代码。">
 <meta name="twitter:image" content="https://richardrenn.github.io/images/Python-iPython/ipython_oe_run.png">
 
@@ -143,7 +143,7 @@
   };
 </script>
 
-  <title>Python - 配置iPython直接调试Odoo(openerp)代码 | 灰帽子 - 任令仓的技术博客</title>
+  <title>Python - 配置iPython直接在命令行调试Odoo(openerp)代码 | 灰帽子 - 任令仓的技术博客</title>
   
 
 
@@ -155,7 +155,7 @@
     var _hmt = _hmt || [];
     (function() {
       var hm = document.createElement("script");
-      hm.src = "https://hm.baidu.com/hm.js?068c1a961fe4f097e6f9e89db8d97f12";
+      hm.src = "https://hm.baidu.com/hm.js?71c15b11b6fdd919e28010278bb1ba66";
       var s = document.getElementsByTagName("script")[0];
       s.parentNode.insertBefore(hm, s);
     })();
@@ -434,7 +434,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">Python - 配置iPython直接调试Odoo(openerp)代码
+          <h2 class="post-title" itemprop="name headline">Python - 配置iPython直接在命令行调试Odoo(openerp)代码
 
               
             
@@ -477,7 +477,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2022-06-14 22:40:06" itemprop="dateModified" datetime="2022-06-14T22:40:06+08:00">2022-06-14</time>
+                <time title="修改时间：2022-06-19 16:37:12" itemprop="dateModified" datetime="2022-06-19T16:37:12+08:00">2022-06-19</time>
               
             
           </span>
@@ -518,7 +518,7 @@
 
           
           
-             <span id="/Python-iPython-Odoo-OE.html" class="leancloud_visitors" data-flag-title="Python - 配置iPython直接调试Odoo(openerp)代码">
+             <span id="/Python-iPython-Odoo-OE.html" class="leancloud_visitors" data-flag-title="Python - 配置iPython直接在命令行调试Odoo(openerp)代码">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -588,7 +588,7 @@
 
 <h3 id="2-2-查看配置文件位置"><a href="#2-2-查看配置文件位置" class="headerlink" title="2.2 *查看配置文件位置"></a>2.2 *查看配置文件位置</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ipython profile locate apple</span><br></pre></td></tr></table></figure>
 
-<h2 id="3-修改配置文件"><a href="#3-修改配置文件" class="headerlink" title="3.修改配置文件"></a>3.修改配置文件</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim ~/.ipython/profile_apple/ipython_config.py</span><br></pre></td></tr></table></figure>
+<h2 id="3-创建预加载OE配置文件"><a href="#3-创建预加载OE配置文件" class="headerlink" title="3.创建预加载OE配置文件"></a>3.创建预加载OE配置文件</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim ~/.ipython/profile_apple/startup/00-load-oe.py</span><br></pre></td></tr></table></figure>
 
 <blockquote>
 <p>内容如下：</p>
@@ -659,7 +659,7 @@
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
     
-    <a href="https://richardrenn.github.io/Python-iPython-Odoo-OE.html" title="Python - 配置iPython直接调试Odoo(openerp)代码">https://richardrenn.github.io/Python-iPython-Odoo-OE.html</a>
+    <a href="https://richardrenn.github.io/Python-iPython-Odoo-OE.html" title="Python - 配置iPython直接在命令行调试Odoo(openerp)代码">https://richardrenn.github.io/Python-iPython-Odoo-OE.html</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC8="><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</span> 许可协议。转载请注明出处！</li>
@@ -865,7 +865,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#0-先看效果"><span class="nav-text">0.先看效果</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-安装ipython"><span class="nav-text">1.安装ipython</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-创建ipython配置文件"><span class="nav-text">2.创建ipython配置文件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-列出所有配置文件"><span class="nav-text">2.1 *列出所有配置文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-查看配置文件位置"><span class="nav-text">2.2 *查看配置文件位置</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-修改配置文件"><span class="nav-text">3.修改配置文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-启动ipython"><span class="nav-text">4.启动ipython</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-测试Odoo-OE-代码"><span class="nav-text">5.测试Odoo(OE)代码</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#0-先看效果"><span class="nav-text">0.先看效果</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-安装ipython"><span class="nav-text">1.安装ipython</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-创建ipython配置文件"><span class="nav-text">2.创建ipython配置文件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-列出所有配置文件"><span class="nav-text">2.1 *列出所有配置文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-查看配置文件位置"><span class="nav-text">2.2 *查看配置文件位置</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-创建预加载OE配置文件"><span class="nav-text">3.创建预加载OE配置文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-启动ipython"><span class="nav-text">4.启动ipython</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-测试Odoo-OE-代码"><span class="nav-text">5.测试Odoo(OE)代码</span></a></li></ol></div>
             
 
           </div>

@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://richardrenn.github.io/Python-iPython-Odoo-OE.html</loc>
+    
+    <lastmod>2022-06-19T08:37:12.614Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://richardrenn.github.io/about/index.html</loc>
     
     <lastmod>2022-06-14T15:47:17.975Z</lastmod>
@@ -9,16 +16,23 @@
   </url>
   
   <url>
-    <loc>https://richardrenn.github.io/Python-iPython-Odoo-OE.html</loc>
+    <loc>https://richardrenn.github.io/tags/index.html</loc>
     
-    <lastmod>2022-06-14T14:40:06.450Z</lastmod>
+    <lastmod>2021-04-01T08:00:16.022Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://richardrenn.github.io/tags/index.html</loc>
+    <loc>https://richardrenn.github.io/Server-Redis-Multi-Instance.html</loc>
     
-    <lastmod>2021-04-01T08:00:16.022Z</lastmod>
+    <lastmod>2021-04-01T08:00:16.017Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://richardrenn.github.io/Server-SSH-Key.html</loc>
+    
+    <lastmod>2021-04-01T08:00:16.017Z</lastmod>
     
   </url>
   
@@ -37,23 +51,23 @@
   </url>
   
   <url>
-    <loc>https://richardrenn.github.io/Server-SSH-Key.html</loc>
-    
-    <lastmod>2021-04-01T08:00:16.017Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://richardrenn.github.io/Server-Redis-Multi-Instance.html</loc>
-    
-    <lastmod>2021-04-01T08:00:16.017Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://richardrenn.github.io/categories/index.html</loc>
     
     <lastmod>2021-04-01T08:00:16.017Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://richardrenn.github.io/Python-OpenCV-Image-PIL-Image.html</loc>
+    
+    <lastmod>2021-04-01T08:00:16.016Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://richardrenn.github.io/Python-OpenCV-Snapshot.html</loc>
+    
+    <lastmod>2021-04-01T08:00:16.016Z</lastmod>
     
   </url>
   
@@ -66,6 +80,13 @@
   
   <url>
     <loc>https://richardrenn.github.io/Python-Virtualenv.html</loc>
+    
+    <lastmod>2021-04-01T08:00:16.016Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://richardrenn.github.io/Server-Configuration.html</loc>
     
     <lastmod>2021-04-01T08:00:16.016Z</lastmod>
     
@@ -86,28 +107,7 @@
   </url>
   
   <url>
-    <loc>https://richardrenn.github.io/Python-OpenCV-Image-PIL-Image.html</loc>
-    
-    <lastmod>2021-04-01T08:00:16.016Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://richardrenn.github.io/Server-Redis-Configuration.html</loc>
-    
-    <lastmod>2021-04-01T08:00:16.016Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://richardrenn.github.io/Server-Configuration.html</loc>
-    
-    <lastmod>2021-04-01T08:00:16.016Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://richardrenn.github.io/Python-OpenCV-Snapshot.html</loc>
     
     <lastmod>2021-04-01T08:00:16.016Z</lastmod>
     
@@ -121,14 +121,7 @@
   </url>
   
   <url>
-    <loc>https://richardrenn.github.io/Python-Copy-Deepcopy.html</loc>
-    
-    <lastmod>2021-04-01T08:00:16.015Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://richardrenn.github.io/Python-Decorator.html</loc>
+    <loc>https://richardrenn.github.io/Linux-Msconfig.html</loc>
     
     <lastmod>2021-04-01T08:00:16.015Z</lastmod>
     
@@ -142,14 +135,7 @@
   </url>
   
   <url>
-    <loc>https://richardrenn.github.io/Linux-Msconfig.html</loc>
-    
-    <lastmod>2021-04-01T08:00:16.015Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://richardrenn.github.io/Python-List-Slice.html</loc>
+    <loc>https://richardrenn.github.io/Python-Decorator.html</loc>
     
     <lastmod>2021-04-01T08:00:16.015Z</lastmod>
     
@@ -163,6 +149,20 @@
   </url>
   
   <url>
+    <loc>https://richardrenn.github.io/Python-Copy-Deepcopy.html</loc>
+    
+    <lastmod>2021-04-01T08:00:16.015Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://richardrenn.github.io/Python-List-Slice.html</loc>
+    
+    <lastmod>2021-04-01T08:00:16.015Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://richardrenn.github.io/Git-Configuration.html</loc>
     
     <lastmod>2021-04-01T08:00:16.014Z</lastmod>
@@ -170,14 +170,14 @@
   </url>
   
   <url>
-    <loc>https://richardrenn.github.io/GitHub-Large-File-Storage.html</loc>
+    <loc>https://richardrenn.github.io/GitHub-Branch-Workflow.html</loc>
     
     <lastmod>2021-04-01T08:00:16.014Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://richardrenn.github.io/GitHub-Branch-Workflow.html</loc>
+    <loc>https://richardrenn.github.io/GitHub-Large-File-Storage.html</loc>
     
     <lastmod>2021-04-01T08:00:16.014Z</lastmod>
     

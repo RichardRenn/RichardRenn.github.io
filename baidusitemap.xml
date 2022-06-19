@@ -2,7 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://richardrenn.github.io/Python-iPython-Odoo-OE.html</loc>
-    <lastmod>2022-06-14</lastmod>
+    <lastmod>2022-06-19</lastmod>
+  </url>
+  <url>
+    <loc>https://richardrenn.github.io/Server-Redis-Multi-Instance.html</loc>
+    <lastmod>2021-04-01</lastmod>
+  </url>
+  <url>
+    <loc>https://richardrenn.github.io/Server-SSH-Key.html</loc>
+    <lastmod>2021-04-01</lastmod>
   </url>
   <url>
     <loc>https://richardrenn.github.io/Server-Supervisor-Configuration.html</loc>
@@ -13,11 +21,11 @@
     <lastmod>2021-04-01</lastmod>
   </url>
   <url>
-    <loc>https://richardrenn.github.io/Server-SSH-Key.html</loc>
+    <loc>https://richardrenn.github.io/Python-OpenCV-Image-PIL-Image.html</loc>
     <lastmod>2021-04-01</lastmod>
   </url>
   <url>
-    <loc>https://richardrenn.github.io/Server-Redis-Multi-Instance.html</loc>
+    <loc>https://richardrenn.github.io/Python-OpenCV-Snapshot.html</loc>
     <lastmod>2021-04-01</lastmod>
   </url>
   <url>
@@ -29,6 +37,10 @@
     <lastmod>2021-04-01</lastmod>
   </url>
   <url>
+    <loc>https://richardrenn.github.io/Server-Configuration.html</loc>
+    <lastmod>2021-04-01</lastmod>
+  </url>
+  <url>
     <loc>https://richardrenn.github.io/Server-Gunicorn-Configuration.html</loc>
     <lastmod>2021-04-01</lastmod>
   </url>
@@ -37,19 +49,7 @@
     <lastmod>2021-04-01</lastmod>
   </url>
   <url>
-    <loc>https://richardrenn.github.io/Python-OpenCV-Image-PIL-Image.html</loc>
-    <lastmod>2021-04-01</lastmod>
-  </url>
-  <url>
     <loc>https://richardrenn.github.io/Server-Redis-Configuration.html</loc>
-    <lastmod>2021-04-01</lastmod>
-  </url>
-  <url>
-    <loc>https://richardrenn.github.io/Server-Configuration.html</loc>
-    <lastmod>2021-04-01</lastmod>
-  </url>
-  <url>
-    <loc>https://richardrenn.github.io/Python-OpenCV-Snapshot.html</loc>
     <lastmod>2021-04-01</lastmod>
   </url>
   <url>
@@ -57,11 +57,7 @@
     <lastmod>2021-04-01</lastmod>
   </url>
   <url>
-    <loc>https://richardrenn.github.io/Python-Copy-Deepcopy.html</loc>
-    <lastmod>2021-04-01</lastmod>
-  </url>
-  <url>
-    <loc>https://richardrenn.github.io/Python-Decorator.html</loc>
+    <loc>https://richardrenn.github.io/Linux-Msconfig.html</loc>
     <lastmod>2021-04-01</lastmod>
   </url>
   <url>
@@ -69,11 +65,7 @@
     <lastmod>2021-04-01</lastmod>
   </url>
   <url>
-    <loc>https://richardrenn.github.io/Linux-Msconfig.html</loc>
-    <lastmod>2021-04-01</lastmod>
-  </url>
-  <url>
-    <loc>https://richardrenn.github.io/Python-List-Slice.html</loc>
+    <loc>https://richardrenn.github.io/Python-Decorator.html</loc>
     <lastmod>2021-04-01</lastmod>
   </url>
   <url>
@@ -81,15 +73,23 @@
     <lastmod>2021-04-01</lastmod>
   </url>
   <url>
+    <loc>https://richardrenn.github.io/Python-Copy-Deepcopy.html</loc>
+    <lastmod>2021-04-01</lastmod>
+  </url>
+  <url>
+    <loc>https://richardrenn.github.io/Python-List-Slice.html</loc>
+    <lastmod>2021-04-01</lastmod>
+  </url>
+  <url>
     <loc>https://richardrenn.github.io/Git-Configuration.html</loc>
     <lastmod>2021-04-01</lastmod>
   </url>
   <url>
-    <loc>https://richardrenn.github.io/GitHub-Large-File-Storage.html</loc>
+    <loc>https://richardrenn.github.io/GitHub-Branch-Workflow.html</loc>
     <lastmod>2021-04-01</lastmod>
   </url>
   <url>
-    <loc>https://richardrenn.github.io/GitHub-Branch-Workflow.html</loc>
+    <loc>https://richardrenn.github.io/GitHub-Large-File-Storage.html</loc>
     <lastmod>2021-04-01</lastmod>
   </url>
   <url>
