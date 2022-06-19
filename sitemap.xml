@@ -79,13 +79,6 @@
   </url>
   
   <url>
-    <loc>https://richardrenn.github.io/Python-Virtualenv.html</loc>
-    
-    <lastmod>2021-04-01T08:00:16.016Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://richardrenn.github.io/Server-Configuration.html</loc>
     
     <lastmod>2021-04-01T08:00:16.016Z</lastmod>
@@ -114,7 +107,21 @@
   </url>
   
   <url>
+    <loc>https://richardrenn.github.io/Python-Virtualenv.html</loc>
+    
+    <lastmod>2021-04-01T08:00:16.016Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://richardrenn.github.io/Linux-Msconfig.html</loc>
+    
+    <lastmod>2021-04-01T08:00:16.015Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://richardrenn.github.io/Python-Celery-Calling-Tasks.html</loc>
     
     <lastmod>2021-04-01T08:00:16.015Z</lastmod>
     
@@ -128,13 +135,6 @@
   </url>
   
   <url>
-    <loc>https://richardrenn.github.io/Python-Copy-Deepcopy.html</loc>
-    
-    <lastmod>2021-04-01T08:00:16.015Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://richardrenn.github.io/Python-Decorator.html</loc>
     
     <lastmod>2021-04-01T08:00:16.015Z</lastmod>
@@ -142,7 +142,7 @@
   </url>
   
   <url>
-    <loc>https://richardrenn.github.io/Python-List-Slice.html</loc>
+    <loc>https://richardrenn.github.io/Python-Copy-Deepcopy.html</loc>
     
     <lastmod>2021-04-01T08:00:16.015Z</lastmod>
     
@@ -156,7 +156,7 @@
   </url>
   
   <url>
-    <loc>https://richardrenn.github.io/Python-Celery-Calling-Tasks.html</loc>
+    <loc>https://richardrenn.github.io/Python-List-Slice.html</loc>
     
     <lastmod>2021-04-01T08:00:16.015Z</lastmod>
     

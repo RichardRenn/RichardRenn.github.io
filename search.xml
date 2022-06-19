@@ -106,6 +106,52 @@
       </tags>
   </entry>
   <entry>
+    <title>GitHub - 存储大文件</title>
+    <url>/GitHub-Large-File-Storage.html</url>
+    <content><![CDATA[<h2 id="问题的产生"><a href="#问题的产生" class="headerlink" title="问题的产生"></a>问题的产生</h2><blockquote>
+<p>我在GitHub上有一个仓库用来存放收集到的各种技术类书籍的电子版，但是众所周知GitHub默认情况下是不支持存储超过100M的单个文件的（其实超过50M时就会有Warning）。<br>当我push比较大的PDF版的书籍（比如<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL1JpY2hhcmRSZW5uL0Jvb2tzL2Jsb2IvbWFzdGVyL0phdmFTY3JpcHQvSmF2YVNjcmlwdC1ET00lRTclQkMlOTYlRTclQTglOEIlRTglODklQkElRTYlOUMlQUYtJUU0JUI4JUFEJUU2JTk2JTg3JUU3JUFDJUFDMiVFNyU4OSU4OC5wZGY=" title="https://github.com/RichardRenn/Books/blob/master/JavaScript/JavaScript-DOM%E7%BC%96%E7%A8%8B%E8%89%BA%E6%9C%AF-%E4%B8%AD%E6%96%87%E7%AC%AC2%E7%89%88.pdf">JavaScript-DOM编程艺术-中文第2版.pdf<i class="fa fa-external-link"></i></span>）时就会抛Error：</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">remote: error: File xxx is 109.19 MB; this exceeds GitHub&apos;s file size limit of 100.00 MB</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/GitHub-Large-File-Storage/error-file-size-limit.png" alt="error-file-size-limit"></p>
+<blockquote>
+<p>下面是使用Git大文件存储扩展LFS来使GitHub支持大文件的版本管理的步骤：</p>
+</blockquote>
+<h2 id="1-安装lfs"><a href="#1-安装lfs" class="headerlink" title="1.安装lfs"></a>1.安装lfs</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git lfs install</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-添加想要被托管的大文件"><a href="#2-添加想要被托管的大文件" class="headerlink" title="2.添加想要被托管的大文件"></a>2.添加想要被托管的大文件</h2><blockquote>
+<p>也可以直接添加一类文件，比如我的PDF文件</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git lfs track <span class="string">"*.pdf"</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>同时把仓库根目录下的.gitattributes也加入到git管理下</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git add .gitattributes</span><br></pre></td></tr></table></figure>
+
+<h2 id="3-正常提交"><a href="#3-正常提交" class="headerlink" title="3. 正常提交"></a>3. 正常提交</h2><blockquote>
+<p>和正常的git提交命令一样</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git add file.pdf</span><br><span class="line">git commit -m <span class="string">"Add new JS book"</span></span><br><span class="line">git push origin master</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/GitHub-Large-File-Storage/git-push-successfully.png" alt="git-push-successfully"></p>
+<blockquote>
+<p>以上就是全部的步骤，下面是福利~</p>
+</blockquote>
+<hr>
+<h2 id="福利-书架"><a href="#福利-书架" class="headerlink" title="福利 - 书架"></a>福利 - 书架</h2><blockquote>
+<p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL1JpY2hhcmRSZW5uL0Jvb2tz" title="https://github.com/RichardRenn/Books">&gt;&gt;传送门 - 我的书架&lt;&lt;<i class="fa fa-external-link"></i></span><br>有需要的同学可以下载下来，哦，最好是挑对自己有用书籍下载单个文件，因为整个仓库可能会有几十个G。</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>GitHub教程</category>
+      </categories>
+      <tags>
+        <tag>Git</tag>
+        <tag>GitHub</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Linux开机启动项目录rc.d</title>
     <url>/Linux-Msconfig.html</url>
     <content><![CDATA[<p>本文以/init.d/redis-server-2脚本为例，介绍如何自定义开机启动项。</p>
@@ -160,264 +206,6 @@
       </categories>
       <tags>
         <tag>Linux</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>GitHub - 存储大文件</title>
-    <url>/GitHub-Large-File-Storage.html</url>
-    <content><![CDATA[<h2 id="问题的产生"><a href="#问题的产生" class="headerlink" title="问题的产生"></a>问题的产生</h2><blockquote>
-<p>我在GitHub上有一个仓库用来存放收集到的各种技术类书籍的电子版，但是众所周知GitHub默认情况下是不支持存储超过100M的单个文件的（其实超过50M时就会有Warning）。<br>当我push比较大的PDF版的书籍（比如<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL1JpY2hhcmRSZW5uL0Jvb2tzL2Jsb2IvbWFzdGVyL0phdmFTY3JpcHQvSmF2YVNjcmlwdC1ET00lRTclQkMlOTYlRTclQTglOEIlRTglODklQkElRTYlOUMlQUYtJUU0JUI4JUFEJUU2JTk2JTg3JUU3JUFDJUFDMiVFNyU4OSU4OC5wZGY=" title="https://github.com/RichardRenn/Books/blob/master/JavaScript/JavaScript-DOM%E7%BC%96%E7%A8%8B%E8%89%BA%E6%9C%AF-%E4%B8%AD%E6%96%87%E7%AC%AC2%E7%89%88.pdf">JavaScript-DOM编程艺术-中文第2版.pdf<i class="fa fa-external-link"></i></span>）时就会抛Error：</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">remote: error: File xxx is 109.19 MB; this exceeds GitHub&apos;s file size limit of 100.00 MB</span><br></pre></td></tr></table></figure>
-
-<p><img src="/images/GitHub-Large-File-Storage/error-file-size-limit.png" alt="error-file-size-limit"></p>
-<blockquote>
-<p>下面是使用Git大文件存储扩展LFS来使GitHub支持大文件的版本管理的步骤：</p>
-</blockquote>
-<h2 id="1-安装lfs"><a href="#1-安装lfs" class="headerlink" title="1.安装lfs"></a>1.安装lfs</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git lfs install</span><br></pre></td></tr></table></figure>
-
-<h2 id="2-添加想要被托管的大文件"><a href="#2-添加想要被托管的大文件" class="headerlink" title="2.添加想要被托管的大文件"></a>2.添加想要被托管的大文件</h2><blockquote>
-<p>也可以直接添加一类文件，比如我的PDF文件</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git lfs track <span class="string">"*.pdf"</span></span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>同时把仓库根目录下的.gitattributes也加入到git管理下</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git add .gitattributes</span><br></pre></td></tr></table></figure>
-
-<h2 id="3-正常提交"><a href="#3-正常提交" class="headerlink" title="3. 正常提交"></a>3. 正常提交</h2><blockquote>
-<p>和正常的git提交命令一样</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git add file.pdf</span><br><span class="line">git commit -m <span class="string">"Add new JS book"</span></span><br><span class="line">git push origin master</span><br></pre></td></tr></table></figure>
-
-<p><img src="/images/GitHub-Large-File-Storage/git-push-successfully.png" alt="git-push-successfully"></p>
-<blockquote>
-<p>以上就是全部的步骤，下面是福利~</p>
-</blockquote>
-<hr>
-<h2 id="福利-书架"><a href="#福利-书架" class="headerlink" title="福利 - 书架"></a>福利 - 书架</h2><blockquote>
-<p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL1JpY2hhcmRSZW5uL0Jvb2tz" title="https://github.com/RichardRenn/Books">&gt;&gt;传送门 - 我的书架&lt;&lt;<i class="fa fa-external-link"></i></span><br>有需要的同学可以下载下来，哦，最好是挑对自己有用书籍下载单个文件，因为整个仓库可能会有几十个G。</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>GitHub教程</category>
-      </categories>
-      <tags>
-        <tag>Git</tag>
-        <tag>GitHub</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>GitHub教程 - Pull Request 工作流程</title>
-    <url>/GitHub-Pull-Request-Workflow.html</url>
-    <content><![CDATA[<h2 id="1-Fork仓库"><a href="#1-Fork仓库" class="headerlink" title="1.Fork仓库"></a>1.Fork仓库</h2><blockquote>
-<p>先在github上将源仓库fork到自己的仓库</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">源仓库：git@github.com:southflower/slark.git</span><br><span class="line">fork后：git@github.com:RichardRenn/slark.git</span><br></pre></td></tr></table></figure>
-
-<h2 id="2-检出代码"><a href="#2-检出代码" class="headerlink" title="2.检出代码"></a>2.检出代码</h2><blockquote>
-<p>在本地检出fork后的仓库代码</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~/workspace/sourcecode/richardrenn</span><br><span class="line">git <span class="built_in">clone</span> git@github.com:RichardRenn/slark.git ./slark</span><br></pre></td></tr></table></figure>
-
-<h2 id="3-关联上游源仓库"><a href="#3-关联上游源仓库" class="headerlink" title="3.关联上游源仓库"></a>3.关联上游源仓库</h2><blockquote>
-<p>进入代码目录，加入上游源仓库关联</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> ./slark</span><br><span class="line">git remote add upstream git@github.com:southflower/slark.git</span><br></pre></td></tr></table></figure>
-
-<h2 id="4-更新代码"><a href="#4-更新代码" class="headerlink" title="4.更新代码"></a>4.更新代码</h2><blockquote>
-<p>更新源仓库代码到本地仓库</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git fetch upstream</span><br><span class="line">git merge upstream/master</span><br></pre></td></tr></table></figure>
-
-<h2 id="5-提交代码"><a href="#5-提交代码" class="headerlink" title="5.提交代码"></a>5.提交代码</h2><blockquote>
-<p>在本地仓库中，修改代码后提交到自己的远端仓库</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git add .</span><br><span class="line">git commit -m <span class="string">"anything"</span></span><br><span class="line">git push origin master</span><br></pre></td></tr></table></figure>
-
-<h2 id="6-提交PR"><a href="#6-提交PR" class="headerlink" title="6.提交PR"></a>6.提交PR</h2><blockquote>
-<p>在github网页上提交PR<br>在自己的仓库界面点击”New Pull Request”</p>
-</blockquote>
-<p><img src="/images/GitHub-Pull-Request-Workflow/pull-request.png" alt="pull-request"></p>
-<h2 id="7-PR合入"><a href="#7-PR合入" class="headerlink" title="7.PR合入"></a>7.PR合入</h2><blockquote>
-<p>然后待源仓库的作者将你的PR合入即可</p>
-</blockquote>
-<hr>
-<ul>
-<li>带分支的工作方式可以参考<a href="/GitHub-Branch-Workflow.html">&gt;&gt;传送门 - 分支工作流程&lt;&lt;</a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>GitHub教程</category>
-      </categories>
-      <tags>
-        <tag>Git</tag>
-        <tag>GitHub</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Python - 闭包</title>
-    <url>/Python-Closure.html</url>
-    <content><![CDATA[<h2 id="1-闭包的概念"><a href="#1-闭包的概念" class="headerlink" title="1.闭包的概念"></a>1.闭包的概念</h2><blockquote>
-<p>闭包(closure):<br>内部函数中对enclosing作用域中的变量进行引用，这个内部函数就称为闭包。</p>
-</blockquote>
-<blockquote>
-<p>关于enclosing作用域相关的知识可以参考<a href="/Python-Function-Scope.html">&gt;&gt;传送门 - Python函数作用域&lt;&lt;</a>。</p>
-</blockquote>
-<h2 id="2-举例解释"><a href="#2-举例解释" class="headerlink" title="2.举例解释"></a>2.举例解释</h2><blockquote>
-<p>首先要理解python中的函数也是一个对象，它是有属性和返回值的，而在函数执行完后其内部变量会被解释器回收。</p>
-</blockquote>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># G</span></span><br><span class="line">pass_line = <span class="number">60</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">func</span><span class="params">(score)</span>:</span></span><br><span class="line">    <span class="comment"># E</span></span><br><span class="line">    print(<span class="string">"%x"</span> % id(score)) <span class="comment"># 以16进制打印score的id值</span></span><br><span class="line">    pass_line = <span class="number">90</span></span><br><span class="line">    result = <span class="string">"yes"</span> <span class="keyword">if</span> score &gt;= pass_line <span class="keyword">else</span> <span class="string">"no"</span></span><br><span class="line">    print(result)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">inner_func</span><span class="params">()</span>:</span>  <span class="comment"># score在E作用域中，inner_func就是个闭包, 有__closure__属性</span></span><br><span class="line">        <span class="comment"># L</span></span><br><span class="line">        print(score)</span><br><span class="line">    print(inner_func.__closure__)</span><br><span class="line">    <span class="keyword">return</span> inner_func</span><br><span class="line"></span><br><span class="line">f = func(<span class="number">80</span>) <span class="comment"># 语句1 func()返回了一个函数对象inner_func</span></span><br><span class="line">f() <span class="comment"># 语句2 此时f即inner_func</span></span><br><span class="line">print(f.__closure__)</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">运行结果：</span><br><span class="line">6e7e6ac0</span><br><span class="line">no</span><br><span class="line">(&lt;cell at 0x000001FC0B9AB6A8: int object at 0x000000006E7E6AC0&gt;,)</span><br><span class="line">80</span><br><span class="line">(&lt;cell at 0x0000019CDFBDB6A8: int object at 0x000000006E7E6AC0&gt;,)</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>两个本来语句1运行完之后，func内部的变量都已经被回收了，那么这个 80为什么还可以被语句2打印出来呢？<br>注意下这个现象f.__closure__这个元组的第一个元素的id和score变量的id值相同。<br>说明如果内部函数中对enclosing作用域中的变量进行引用之后，这个变量就会被添加到inner_func的__closure__属性这个元组中，这样因为有了这个添加到元组的引用，score变量就不会被回收了，再调用f函数时，就会在它的__closure__属性中查找score变量，这样就自然而然的可以引用了。</p>
-</blockquote>
-<p>理解了这个例子就可以搞懂Python的闭包了。</p>
-<hr>
-<h2 id="3-一个简单的应用"><a href="#3-一个简单的应用" class="headerlink" title="3.一个简单的应用"></a>3.一个简单的应用</h2><blockquote>
-<p>下面的代码就是应用闭包达到了自定pass_line的目的</p>
-</blockquote>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">func</span><span class="params">(pass_line)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">inner_func</span><span class="params">(score)</span>:</span>  <span class="comment"># score在E作用域中，inner_func就是个闭包, 有__closure__属性</span></span><br><span class="line">        result = <span class="string">"yes"</span> <span class="keyword">if</span> score &gt;= pass_line <span class="keyword">else</span> <span class="string">"no"</span>  <span class="comment"># 此时引用了enclosing作用域中的pass_line，那么pass_line变量就被添加到了__closure__属性中</span></span><br><span class="line">        print(result)</span><br><span class="line">    <span class="keyword">return</span> inner_func</span><br><span class="line"></span><br><span class="line">f = func(<span class="number">90</span>)  <span class="comment"># 语句1 func()返回了一个函数对象inner_func</span></span><br><span class="line">f(<span class="number">80</span>)  <span class="comment"># 语句2 此时f即inner_func</span></span><br><span class="line"></span><br><span class="line">f2 = func(<span class="number">60</span>)</span><br><span class="line">f2(<span class="number">80</span>)</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="string">运行结果：</span></span><br><span class="line"><span class="literal">no</span></span><br><span class="line"><span class="literal">yes</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="4-经典错误代码"><a href="#4-经典错误代码" class="headerlink" title="4.经典错误代码"></a>4.经典错误代码</h2><blockquote>
-<p>参考<span class="exturl" data-url="aHR0cHM6Ly93d3cuY25ibG9ncy5jb20vSm9obkFCQy9wLzQwNzY4NTUuaHRtbA==" title="https://www.cnblogs.com/JohnABC/p/4076855.html">&gt;&gt;传送门 - 闭包经典错误代码&lt;&lt;<i class="fa fa-external-link"></i></span></p>
-</blockquote>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">foo</span><span class="params">()</span>:</span></span><br><span class="line">    a = <span class="number">1</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">bar</span><span class="params">()</span>:</span></span><br><span class="line">        a = a + <span class="number">1</span></span><br><span class="line">        <span class="keyword">return</span> a</span><br><span class="line">    <span class="keyword">return</span> bar</span><br><span class="line"></span><br><span class="line">c = foo()</span><br><span class="line">c()</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">会报错如下：</span><br><span class="line">local variable &apos;a&apos; referenced before assignment</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>这是因为在执行代码 c = foo()时，python会导入全部的闭包函数体bar()来分析其的局部变量，<br>python规则指定所有在赋值语句左面的变量都是局部变量，<br>则在闭包bar()中，变量a在赋值符号”=”的左面，被python认为是bar()中的局部变量。<br>再接下来执行print c()时，程序运行至a = a + 1时，因为先前已经把a归为bar()中的局部变量，<br>所以python会在bar()中去找在赋值语句右面的a的值，结果找不到，就会报错。解决的方法很简单:</p>
-</blockquote>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">foo</span><span class="params">()</span>:</span></span><br><span class="line">    a = [<span class="number">1</span>]</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">bar</span><span class="params">()</span>:</span></span><br><span class="line">        a[<span class="number">0</span>] = a[<span class="number">0</span>] + <span class="number">1</span></span><br><span class="line">        <span class="keyword">return</span> a[<span class="number">0</span>]</span><br><span class="line">    <span class="keyword">return</span> bar</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>只要将a设定为一个容器就可以了。这样使用起来多少有点不爽，<br>所以在python3以后，在a = a + 1 之前，使用语句nonloacal a就可以了，该语句显式的指定a不是闭包的局部变量。</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>Python</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-        <tag>闭包</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Python - 浅拷贝和深拷贝解析</title>
-    <url>/Python-Copy-Deepcopy.html</url>
-    <content><![CDATA[<h2 id="1-浅拷贝和深拷贝的区别"><a href="#1-浅拷贝和深拷贝的区别" class="headerlink" title="1.浅拷贝和深拷贝的区别"></a>1.浅拷贝和深拷贝的区别</h2><blockquote>
-<p>浅拷贝(copy)：仅拷贝对象，但不拷贝此对象内的子对象。<br>深拷贝(deepcopy)：完全拷贝对象，包括其内部的子对象。</p>
-</blockquote>
-<h2 id="2-举例理解"><a href="#2-举例理解" class="headerlink" title="2.举例理解"></a>2.举例理解</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># -*- coding:utf-8 -*-</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> copy</span><br><span class="line"></span><br><span class="line">a = &#123;<span class="number">0</span>:<span class="number">1</span>, <span class="number">1</span>:[<span class="number">1</span>,<span class="number">2</span>]&#125;</span><br><span class="line"></span><br><span class="line">a1 = copy.copy(a)  <span class="comment"># 浅拷贝</span></span><br><span class="line">a2 = copy.deepcopy(a)  <span class="comment"># 深拷贝</span></span><br><span class="line"></span><br><span class="line">a[<span class="number">1</span>].append(<span class="number">3</span>)</span><br><span class="line">print(a, <span class="string">'%x'</span> % id(a), <span class="string">'%x'</span> % id(a[<span class="number">1</span>]))  <span class="comment"># 使用16进制格式化输出id值</span></span><br><span class="line">print(a1, <span class="string">'%x'</span> % id(a1), <span class="string">'%x'</span> % id(a1[<span class="number">1</span>]))</span><br><span class="line">print(a2, <span class="string">'%x'</span> % id(a2), <span class="string">'%x'</span> % id(a2[<span class="number">1</span>]))</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">输出结果：</span><br><span class="line">&#123;0: 1, 1: [1, 2, 3]&#125; 220a8caf2d0 220aa969e08</span><br><span class="line">&#123;0: 1, 1: [1, 2, 3]&#125; 220a8caf318 220aa969e08</span><br><span class="line">&#123;0: 1, 1: [1, 2]&#125; 220aa937c18 220aa969ec8</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>从输出结果进行分析：<br>1.a、a1、a2三者的id值不同。说明不论深浅拷贝都能得到新的对象。<br>2.a1[1]和a[1]的id值相同，a2[1]和a[1]的id值不同。说明浅拷贝不能拷贝子对象，执行浅拷贝得到的对象a1的子对象和原对象a的子对象使用的是相同的一块内存，但是执行深拷贝得到的对象a2却和原对象a完全独立。这也是为什么当a[1].append(3)后，a1[1]也跟着变了，而a2[1]却没变。</p>
-</blockquote>
-<hr>
-<h2 id="3-a-copy-和copy-copy-a-的区别"><a href="#3-a-copy-和copy-copy-a-的区别" class="headerlink" title="3.a.copy()和copy.copy(a)的区别"></a>3.a.copy()和copy.copy(a)的区别</h2><blockquote>
-<p>虽然两者都是浅拷贝，但是copy.copy()能够拷贝的对象更多，即某些对象本身是没有copy属性的，比如元组(tuple)。<br>如果将上例中的a值替换为a = (1, [1,2])，那么执行a1 = a.copy()时是会报错的：</p>
-</blockquote>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># -*- coding:utf-8 -*-</span></span><br><span class="line"></span><br><span class="line">a = (<span class="number">1</span>, [<span class="number">1</span>,<span class="number">2</span>])</span><br><span class="line">a1 = a.copy()</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">AttributeError: &apos;tuple&apos; object has no attribute &apos;copy&apos;</span><br></pre></td></tr></table></figure>
-
-<h2 id="4-手写字典深拷贝"><a href="#4-手写字典深拷贝" class="headerlink" title="4.手写字典深拷贝"></a>4.手写字典深拷贝</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">deep_copy</span><span class="params">(x)</span>:</span></span><br><span class="line">    <span class="string">'''仅适用于子对象是字典的情况'''</span></span><br><span class="line">    x1 = &#123;&#125;</span><br><span class="line">    <span class="keyword">for</span> k, v <span class="keyword">in</span> x.items():</span><br><span class="line">        <span class="keyword">if</span> isinstance(v, dict):  <span class="comment"># 当子对象是字典类型时递归执行</span></span><br><span class="line">            x1[k] = deep_copy(v)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            x1[k] = v</span><br><span class="line">    <span class="keyword">return</span> x1</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>如果子对象是数组或者元组的话，只要在赋值前价格数据类型判断，然后根据不同的类型赋值给不同的变量即可兼容。</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>Python</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-        <tag>浅拷贝和深拷贝</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Python - 装饰器</title>
-    <url>/Python-Decorator.html</url>
-    <content><![CDATA[<h2 id="1-装饰器的概念"><a href="#1-装饰器的概念" class="headerlink" title="1.装饰器的概念"></a>1.装饰器的概念</h2><blockquote>
-<p>装饰器(decorator):<br>装饰器是一种闭包的使用，要理解装饰器的原理必须先理解python闭包的概念。</p>
-</blockquote>
-<blockquote>
-<p>关于闭包的知识可以参考<a href="/Python-Closure.html">&gt;&gt;传送门 - Python闭包&lt;&lt;</a>。</p>
-</blockquote>
-<h2 id="2-举例理解"><a href="#2-举例理解" class="headerlink" title="2.举例理解"></a>2.举例理解</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">deco</span><span class="params">(func)</span>:</span></span><br><span class="line">    print(<span class="string">"deco"</span>)</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">inner_deco</span><span class="params">(*args)</span>:</span>  <span class="comment"># 调用的enclosing作用域中的对象，inner_deco函数就是个闭包</span></span><br><span class="line">        print(<span class="string">"inner_deco"</span>)</span><br><span class="line">        <span class="keyword">for</span> a <span class="keyword">in</span> args:</span><br><span class="line">            <span class="keyword">if</span> <span class="keyword">not</span> isinstance(a, int): <span class="comment"># 参数检查语句</span></span><br><span class="line">                <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">        <span class="keyword">return</span> func(*args)  <span class="comment"># 调用了enclosing作用域的func，所以func会被加入到inner_deco的__closure__属性中</span></span><br><span class="line">    <span class="keyword">return</span> inner_deco</span><br><span class="line"></span><br><span class="line"><span class="meta">@deco  # 语法糖，就相当于func_sum = deco(func_sum)，此时func_sum就指向了inner_deco。可以理解为func_sum被deco装饰后变成了inner_deco</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">func_sum</span><span class="params">(*args)</span>:</span></span><br><span class="line">    print(<span class="string">"func_sum"</span>)</span><br><span class="line">    <span class="keyword">return</span> sum(args)</span><br><span class="line"></span><br><span class="line"><span class="meta">@deco</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">func_min</span><span class="params">(*args)</span>:</span></span><br><span class="line">    print(<span class="string">"func_min"</span>)</span><br><span class="line">    <span class="keyword">return</span> min(args)</span><br><span class="line"></span><br><span class="line"><span class="comment"># func_sum = deco(func_sum)</span></span><br><span class="line">print(func_sum(<span class="number">1</span>,<span class="number">2</span>,<span class="string">'3'</span>))</span><br><span class="line"></span><br><span class="line">print(func_min(<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>))</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">运行结果：</span><br><span class="line">deco</span><br><span class="line">deco</span><br><span class="line">inner_deco</span><br><span class="line">0</span><br><span class="line">inner_deco</span><br><span class="line">func_min</span><br><span class="line">4</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>@deco只是一种语法糖写法<br>之所以打印结果中没有输出：”func_sum”，是因为在执行参数检查语句时return 0了。</p>
-</blockquote>
-<h2 id="3-知识点"><a href="#3-知识点" class="headerlink" title="3.知识点"></a>3.知识点</h2><h3 id="3-1-装饰器在何时生效？"><a href="#3-1-装饰器在何时生效？" class="headerlink" title="3.1 装饰器在何时生效？"></a>3.1 装饰器在何时生效？</h3><blockquote>
-<p>在main函数之前，import时就生效了。因为@deco就相当于func_sum = deco(func_sum)，是写在最外面的。<br>如果把上述例子中最后的两个print语句注释掉的话，执行结果将会是：</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">deco</span><br><span class="line">deco</span><br></pre></td></tr></table></figure>
-
-<h3 id="3-2-装饰器能不能返回别的函数？"><a href="#3-2-装饰器能不能返回别的函数？" class="headerlink" title="3.2 装饰器能不能返回别的函数？"></a>3.2 装饰器能不能返回别的函数？</h3><blockquote>
-<p>当然可以，这样就可以修改函数的功能了。<br>即被装饰的函数的功能取决于inner_deco返回的是哪个函数。</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>Python</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-        <tag>装饰器</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Python - 数组切片、更新、排序</title>
-    <url>/Python-List-Slice.html</url>
-    <content><![CDATA[<h2 id="1-数组切片"><a href="#1-数组切片" class="headerlink" title="1.数组切片"></a>1.数组切片</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">l = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>]</span><br><span class="line"></span><br><span class="line">l[:]  <span class="comment"># 所有元素 </span></span><br><span class="line"><span class="comment"># [1, 2, 3, 4, 5, 6, 7, 8, 9]</span></span><br><span class="line"></span><br><span class="line">l[<span class="number">0</span>]  <span class="comment"># 第一个元素</span></span><br><span class="line"><span class="comment"># 1</span></span><br><span class="line"></span><br><span class="line">l[<span class="number">1</span>:<span class="number">3</span>]  <span class="comment"># 第2~4个元素，不包括第4个</span></span><br><span class="line"><span class="comment"># [2, 3]</span></span><br><span class="line"></span><br><span class="line">l[<span class="number">3</span>:]  <span class="comment"># 第4~最后一个元素</span></span><br><span class="line"><span class="comment"># [4, 5, 6, 7, 8, 9]</span></span><br><span class="line"></span><br><span class="line">l[:<span class="number">3</span>]  <span class="comment"># 第1~4个元素，不包括第4个</span></span><br><span class="line"><span class="comment"># [1, 2, 3]</span></span><br><span class="line"></span><br><span class="line">l[:<span class="number">-1</span>]  <span class="comment"># 第1~最后一个元素，不包括最后一个</span></span><br><span class="line"><span class="comment"># [1, 2, 3, 4, 5, 6, 7, 8]</span></span><br><span class="line"></span><br><span class="line">l[<span class="number">2</span>:<span class="number">-1</span>:<span class="number">2</span>]  <span class="comment"># 从第3~最后一个元素中每隔2个步长取一个，不包括最后一个元素</span></span><br><span class="line"><span class="comment"># [3, 5, 7]</span></span><br><span class="line"></span><br><span class="line">l[::<span class="number">3</span>]  <span class="comment"># 每隔3个步长取一个元素</span></span><br><span class="line"><span class="comment"># [1, 4, 7]</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="2-数组更新"><a href="#2-数组更新" class="headerlink" title="2.数组更新"></a>2.数组更新</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">l = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>]</span><br><span class="line"></span><br><span class="line">l.append(<span class="number">0</span>)  <span class="comment"># 列表最后追加一个元素0</span></span><br><span class="line"><span class="comment"># [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]</span></span><br><span class="line"></span><br><span class="line">l.extend([<span class="number">0</span>, <span class="number">0</span>])  <span class="comment"># 列表后面追加另一个列表</span></span><br><span class="line"><span class="comment"># [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 0]</span></span><br><span class="line"></span><br><span class="line">l.insert(<span class="number">1</span>, <span class="string">'0'</span>)  <span class="comment"># 在第1个元素的位置插入字符串'0'</span></span><br><span class="line"><span class="comment"># [1, '0', 2, 3, 4, 5, 6, 7, 8, 9]</span></span><br><span class="line"></span><br><span class="line">l[<span class="number">1</span>:<span class="number">3</span>] = [<span class="number">0</span>]  <span class="comment"># 用0替换第2~4个元素，不包括第4个</span></span><br><span class="line"><span class="comment"># [1, 0, 4, 5, 6, 7, 8, 9]</span></span><br><span class="line"></span><br><span class="line">l[<span class="number">-2</span>:] = [<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>]  <span class="comment"># 将最后两个元素替换为四个0</span></span><br><span class="line"><span class="comment"># [1, 2, 3, 4, 5, 6, 7, 0, 0, 0, 0]</span></span><br><span class="line"></span><br><span class="line">l.pop()  <span class="comment"># 弹出最后一个元素,返回该元素的值</span></span><br><span class="line"><span class="comment"># [1, 2, 3, 4, 5, 6, 7, 8]</span></span><br><span class="line"></span><br><span class="line">l.pop(<span class="number">0</span>)  <span class="comment"># 弹出第一个元素，返回该元素的值</span></span><br><span class="line"><span class="comment"># [2, 3, 4, 5, 6, 7, 8, 9]</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">del</span> l[<span class="number">0</span>]  <span class="comment"># 删除第一个元素</span></span><br><span class="line"><span class="comment"># [2, 3, 4, 5, 6, 7, 8, 9]</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="3-数组排序"><a href="#3-数组排序" class="headerlink" title="3.数组排序"></a>3.数组排序</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">l = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">-9</span>]</span><br><span class="line"></span><br><span class="line">l.reverse()  <span class="comment"># l反向</span></span><br><span class="line"><span class="comment"># [-9, 8, 7, 6, 5, 4, 3, 2, 1]</span></span><br><span class="line"></span><br><span class="line">list(reversed(l))  <span class="comment"># l反向,与l.reverse()的区别：后者直接作用于l，返回None，前者返回一个迭代器</span></span><br><span class="line"></span><br><span class="line">l.sort()  <span class="comment"># 对l进行排序, 默认从小到大，升序</span></span><br><span class="line"><span class="comment"># [-9, 1, 2, 3, 4, 5, 6, 7, 8]</span></span><br><span class="line"></span><br><span class="line">sorted(l)  <span class="comment"># 升序排序，与l.sort()的区别：后者直接作用于l，返回None，前者返回一个新的列表</span></span><br><span class="line"><span class="comment"># [-9, 1, 2, 3, 4, 5, 6, 7, 8]</span></span><br><span class="line"></span><br><span class="line">l.sort(reverse=<span class="literal">True</span>)  <span class="comment"># 对l进行从大到小排序，降序，可与key参数搭配灵活使用</span></span><br><span class="line"><span class="comment"># [8, 7, 6, 5, 4, 3, 2, 1, -9]</span></span><br><span class="line"></span><br><span class="line">l.sort(key=<span class="keyword">lambda</span> x: abs(x))  <span class="comment"># 按指定的方法进行排序，一般与lambda临时函数配合使用，也可以使用自定义方法如：</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">my_f</span><span class="params">(x)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> abs(x) <span class="comment"># 取绝对值</span></span><br><span class="line">l.sort(key=my_f) <span class="comment"># 按自定义方法进行排序</span></span><br><span class="line"></span><br><span class="line">l = [(<span class="number">1</span>,<span class="number">2</span>), (<span class="number">-4</span>,<span class="number">3</span>), (<span class="number">6</span>,<span class="number">0</span>)]</span><br><span class="line"></span><br><span class="line">l.sort(key=<span class="keyword">lambda</span> x: x[<span class="number">1</span>])  <span class="comment"># 按子元组的第二个元素大小升序排列</span></span><br><span class="line"><span class="comment"># [(6,0), (1,2), (-4,3)]</span></span><br><span class="line"></span><br><span class="line">l.sort(key=<span class="keyword">lambda</span> x: abs(x[<span class="number">0</span>]), reverse=<span class="literal">True</span>)  <span class="comment"># 按第一个元素的绝对值大小降序排列</span></span><br><span class="line"><span class="comment"># [(6,0), (-4,3), (1,2)]</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="4-其他数组操作"><a href="#4-其他数组操作" class="headerlink" title="4.其他数组操作"></a>4.其他数组操作</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">[<span class="number">1</span>, <span class="number">2</span>] * <span class="number">4</span>  <span class="comment"># [1,2]重复4次</span></span><br><span class="line"><span class="comment"># [1, 2, 1, 2, 1, 2, 1, 2]</span></span><br><span class="line"></span><br><span class="line">l = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">5</span>, <span class="number">8</span>, <span class="number">8</span>]</span><br><span class="line"></span><br><span class="line">l.count(<span class="number">8</span>)  <span class="comment"># 统计8出现的次数</span></span><br><span class="line"><span class="comment"># 2</span></span><br><span class="line"></span><br><span class="line">l.index(<span class="number">5</span>)  <span class="comment"># 找到5第一次出现的位置索引值(列表中没有5的话会报错ValueError)</span></span><br><span class="line"><span class="comment"># 4</span></span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>Python</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-        <tag>数组</tag>
-        <tag>数组切片</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Python - 函数作用域</title>
-    <url>/Python-Function-Scope.html</url>
-    <content><![CDATA[<h2 id="1-函数作用域"><a href="#1-函数作用域" class="headerlink" title="1.函数作用域"></a>1.函数作用域</h2><blockquote>
-<p>L：local 函数内部作用域；</p>
-<p>E：enclosing 函数内部与它的内嵌函数之间；</p>
-<p>G：global 全局作用域，在同一个.py文件最外层；</p>
-<p>B：build-in 解释器内置作用域。</p>
-</blockquote>
-<h2 id="2-对象查找顺序"><a href="#2-对象查找顺序" class="headerlink" title="2.对象查找顺序"></a>2.对象查找顺序</h2><blockquote>
-<p>L &gt; E &gt; G &gt; B</p>
-</blockquote>
-<h2 id="3-举例解释"><a href="#3-举例解释" class="headerlink" title="3.举例解释"></a>3.举例解释</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># -*- conding: utf-8 -*-</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># G</span></span><br><span class="line">pass_line = <span class="number">60</span> </span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">func</span><span class="params">(score)</span>:</span></span><br><span class="line">    <span class="comment"># E</span></span><br><span class="line">    pass_line = <span class="number">90</span> </span><br><span class="line">    result = <span class="string">"yes"</span> <span class="keyword">if</span> score &gt;= pass_line <span class="keyword">else</span> <span class="string">"no"</span></span><br><span class="line">    print(result)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">inner_func</span><span class="params">()</span>:</span></span><br><span class="line">        <span class="comment"># L</span></span><br><span class="line">        <span class="comment"># score = 81</span></span><br><span class="line">        print(score)</span><br><span class="line"></span><br><span class="line">    inner_func()</span><br><span class="line"></span><br><span class="line">    print(max(<span class="number">1</span>,<span class="number">2</span>))  <span class="comment"># B</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">func(<span class="number">80</span>)</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>Python</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-        <tag>函数作用域</tag>
       </tags>
   </entry>
   <entry>
@@ -486,6 +274,170 @@
         <tag>Python</tag>
         <tag>Celery</tag>
         <tag>调用任务</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python - 闭包</title>
+    <url>/Python-Closure.html</url>
+    <content><![CDATA[<h2 id="1-闭包的概念"><a href="#1-闭包的概念" class="headerlink" title="1.闭包的概念"></a>1.闭包的概念</h2><blockquote>
+<p>闭包(closure):<br>内部函数中对enclosing作用域中的变量进行引用，这个内部函数就称为闭包。</p>
+</blockquote>
+<blockquote>
+<p>关于enclosing作用域相关的知识可以参考<a href="/Python-Function-Scope.html">&gt;&gt;传送门 - Python函数作用域&lt;&lt;</a>。</p>
+</blockquote>
+<h2 id="2-举例解释"><a href="#2-举例解释" class="headerlink" title="2.举例解释"></a>2.举例解释</h2><blockquote>
+<p>首先要理解python中的函数也是一个对象，它是有属性和返回值的，而在函数执行完后其内部变量会被解释器回收。</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># G</span></span><br><span class="line">pass_line = <span class="number">60</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">func</span><span class="params">(score)</span>:</span></span><br><span class="line">    <span class="comment"># E</span></span><br><span class="line">    print(<span class="string">"%x"</span> % id(score)) <span class="comment"># 以16进制打印score的id值</span></span><br><span class="line">    pass_line = <span class="number">90</span></span><br><span class="line">    result = <span class="string">"yes"</span> <span class="keyword">if</span> score &gt;= pass_line <span class="keyword">else</span> <span class="string">"no"</span></span><br><span class="line">    print(result)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">inner_func</span><span class="params">()</span>:</span>  <span class="comment"># score在E作用域中，inner_func就是个闭包, 有__closure__属性</span></span><br><span class="line">        <span class="comment"># L</span></span><br><span class="line">        print(score)</span><br><span class="line">    print(inner_func.__closure__)</span><br><span class="line">    <span class="keyword">return</span> inner_func</span><br><span class="line"></span><br><span class="line">f = func(<span class="number">80</span>) <span class="comment"># 语句1 func()返回了一个函数对象inner_func</span></span><br><span class="line">f() <span class="comment"># 语句2 此时f即inner_func</span></span><br><span class="line">print(f.__closure__)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">运行结果：</span><br><span class="line">6e7e6ac0</span><br><span class="line">no</span><br><span class="line">(&lt;cell at 0x000001FC0B9AB6A8: int object at 0x000000006E7E6AC0&gt;,)</span><br><span class="line">80</span><br><span class="line">(&lt;cell at 0x0000019CDFBDB6A8: int object at 0x000000006E7E6AC0&gt;,)</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>两个本来语句1运行完之后，func内部的变量都已经被回收了，那么这个 80为什么还可以被语句2打印出来呢？<br>注意下这个现象f.__closure__这个元组的第一个元素的id和score变量的id值相同。<br>说明如果内部函数中对enclosing作用域中的变量进行引用之后，这个变量就会被添加到inner_func的__closure__属性这个元组中，这样因为有了这个添加到元组的引用，score变量就不会被回收了，再调用f函数时，就会在它的__closure__属性中查找score变量，这样就自然而然的可以引用了。</p>
+</blockquote>
+<p>理解了这个例子就可以搞懂Python的闭包了。</p>
+<hr>
+<h2 id="3-一个简单的应用"><a href="#3-一个简单的应用" class="headerlink" title="3.一个简单的应用"></a>3.一个简单的应用</h2><blockquote>
+<p>下面的代码就是应用闭包达到了自定pass_line的目的</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">func</span><span class="params">(pass_line)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">inner_func</span><span class="params">(score)</span>:</span>  <span class="comment"># score在E作用域中，inner_func就是个闭包, 有__closure__属性</span></span><br><span class="line">        result = <span class="string">"yes"</span> <span class="keyword">if</span> score &gt;= pass_line <span class="keyword">else</span> <span class="string">"no"</span>  <span class="comment"># 此时引用了enclosing作用域中的pass_line，那么pass_line变量就被添加到了__closure__属性中</span></span><br><span class="line">        print(result)</span><br><span class="line">    <span class="keyword">return</span> inner_func</span><br><span class="line"></span><br><span class="line">f = func(<span class="number">90</span>)  <span class="comment"># 语句1 func()返回了一个函数对象inner_func</span></span><br><span class="line">f(<span class="number">80</span>)  <span class="comment"># 语句2 此时f即inner_func</span></span><br><span class="line"></span><br><span class="line">f2 = func(<span class="number">60</span>)</span><br><span class="line">f2(<span class="number">80</span>)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="string">运行结果：</span></span><br><span class="line"><span class="literal">no</span></span><br><span class="line"><span class="literal">yes</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="4-经典错误代码"><a href="#4-经典错误代码" class="headerlink" title="4.经典错误代码"></a>4.经典错误代码</h2><blockquote>
+<p>参考<span class="exturl" data-url="aHR0cHM6Ly93d3cuY25ibG9ncy5jb20vSm9obkFCQy9wLzQwNzY4NTUuaHRtbA==" title="https://www.cnblogs.com/JohnABC/p/4076855.html">&gt;&gt;传送门 - 闭包经典错误代码&lt;&lt;<i class="fa fa-external-link"></i></span></p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">foo</span><span class="params">()</span>:</span></span><br><span class="line">    a = <span class="number">1</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">bar</span><span class="params">()</span>:</span></span><br><span class="line">        a = a + <span class="number">1</span></span><br><span class="line">        <span class="keyword">return</span> a</span><br><span class="line">    <span class="keyword">return</span> bar</span><br><span class="line"></span><br><span class="line">c = foo()</span><br><span class="line">c()</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">会报错如下：</span><br><span class="line">local variable &apos;a&apos; referenced before assignment</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>这是因为在执行代码 c = foo()时，python会导入全部的闭包函数体bar()来分析其的局部变量，<br>python规则指定所有在赋值语句左面的变量都是局部变量，<br>则在闭包bar()中，变量a在赋值符号”=”的左面，被python认为是bar()中的局部变量。<br>再接下来执行print c()时，程序运行至a = a + 1时，因为先前已经把a归为bar()中的局部变量，<br>所以python会在bar()中去找在赋值语句右面的a的值，结果找不到，就会报错。解决的方法很简单:</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">foo</span><span class="params">()</span>:</span></span><br><span class="line">    a = [<span class="number">1</span>]</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">bar</span><span class="params">()</span>:</span></span><br><span class="line">        a[<span class="number">0</span>] = a[<span class="number">0</span>] + <span class="number">1</span></span><br><span class="line">        <span class="keyword">return</span> a[<span class="number">0</span>]</span><br><span class="line">    <span class="keyword">return</span> bar</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>只要将a设定为一个容器就可以了。这样使用起来多少有点不爽，<br>所以在python3以后，在a = a + 1 之前，使用语句nonloacal a就可以了，该语句显式的指定a不是闭包的局部变量。</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>闭包</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python - 装饰器</title>
+    <url>/Python-Decorator.html</url>
+    <content><![CDATA[<h2 id="1-装饰器的概念"><a href="#1-装饰器的概念" class="headerlink" title="1.装饰器的概念"></a>1.装饰器的概念</h2><blockquote>
+<p>装饰器(decorator):<br>装饰器是一种闭包的使用，要理解装饰器的原理必须先理解python闭包的概念。</p>
+</blockquote>
+<blockquote>
+<p>关于闭包的知识可以参考<a href="/Python-Closure.html">&gt;&gt;传送门 - Python闭包&lt;&lt;</a>。</p>
+</blockquote>
+<h2 id="2-举例理解"><a href="#2-举例理解" class="headerlink" title="2.举例理解"></a>2.举例理解</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">deco</span><span class="params">(func)</span>:</span></span><br><span class="line">    print(<span class="string">"deco"</span>)</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">inner_deco</span><span class="params">(*args)</span>:</span>  <span class="comment"># 调用的enclosing作用域中的对象，inner_deco函数就是个闭包</span></span><br><span class="line">        print(<span class="string">"inner_deco"</span>)</span><br><span class="line">        <span class="keyword">for</span> a <span class="keyword">in</span> args:</span><br><span class="line">            <span class="keyword">if</span> <span class="keyword">not</span> isinstance(a, int): <span class="comment"># 参数检查语句</span></span><br><span class="line">                <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">        <span class="keyword">return</span> func(*args)  <span class="comment"># 调用了enclosing作用域的func，所以func会被加入到inner_deco的__closure__属性中</span></span><br><span class="line">    <span class="keyword">return</span> inner_deco</span><br><span class="line"></span><br><span class="line"><span class="meta">@deco  # 语法糖，就相当于func_sum = deco(func_sum)，此时func_sum就指向了inner_deco。可以理解为func_sum被deco装饰后变成了inner_deco</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">func_sum</span><span class="params">(*args)</span>:</span></span><br><span class="line">    print(<span class="string">"func_sum"</span>)</span><br><span class="line">    <span class="keyword">return</span> sum(args)</span><br><span class="line"></span><br><span class="line"><span class="meta">@deco</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">func_min</span><span class="params">(*args)</span>:</span></span><br><span class="line">    print(<span class="string">"func_min"</span>)</span><br><span class="line">    <span class="keyword">return</span> min(args)</span><br><span class="line"></span><br><span class="line"><span class="comment"># func_sum = deco(func_sum)</span></span><br><span class="line">print(func_sum(<span class="number">1</span>,<span class="number">2</span>,<span class="string">'3'</span>))</span><br><span class="line"></span><br><span class="line">print(func_min(<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>))</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">运行结果：</span><br><span class="line">deco</span><br><span class="line">deco</span><br><span class="line">inner_deco</span><br><span class="line">0</span><br><span class="line">inner_deco</span><br><span class="line">func_min</span><br><span class="line">4</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>@deco只是一种语法糖写法<br>之所以打印结果中没有输出：”func_sum”，是因为在执行参数检查语句时return 0了。</p>
+</blockquote>
+<h2 id="3-知识点"><a href="#3-知识点" class="headerlink" title="3.知识点"></a>3.知识点</h2><h3 id="3-1-装饰器在何时生效？"><a href="#3-1-装饰器在何时生效？" class="headerlink" title="3.1 装饰器在何时生效？"></a>3.1 装饰器在何时生效？</h3><blockquote>
+<p>在main函数之前，import时就生效了。因为@deco就相当于func_sum = deco(func_sum)，是写在最外面的。<br>如果把上述例子中最后的两个print语句注释掉的话，执行结果将会是：</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">deco</span><br><span class="line">deco</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-2-装饰器能不能返回别的函数？"><a href="#3-2-装饰器能不能返回别的函数？" class="headerlink" title="3.2 装饰器能不能返回别的函数？"></a>3.2 装饰器能不能返回别的函数？</h3><blockquote>
+<p>当然可以，这样就可以修改函数的功能了。<br>即被装饰的函数的功能取决于inner_deco返回的是哪个函数。</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>装饰器</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python - 浅拷贝和深拷贝解析</title>
+    <url>/Python-Copy-Deepcopy.html</url>
+    <content><![CDATA[<h2 id="1-浅拷贝和深拷贝的区别"><a href="#1-浅拷贝和深拷贝的区别" class="headerlink" title="1.浅拷贝和深拷贝的区别"></a>1.浅拷贝和深拷贝的区别</h2><blockquote>
+<p>浅拷贝(copy)：仅拷贝对象，但不拷贝此对象内的子对象。<br>深拷贝(deepcopy)：完全拷贝对象，包括其内部的子对象。</p>
+</blockquote>
+<h2 id="2-举例理解"><a href="#2-举例理解" class="headerlink" title="2.举例理解"></a>2.举例理解</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># -*- coding:utf-8 -*-</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> copy</span><br><span class="line"></span><br><span class="line">a = &#123;<span class="number">0</span>:<span class="number">1</span>, <span class="number">1</span>:[<span class="number">1</span>,<span class="number">2</span>]&#125;</span><br><span class="line"></span><br><span class="line">a1 = copy.copy(a)  <span class="comment"># 浅拷贝</span></span><br><span class="line">a2 = copy.deepcopy(a)  <span class="comment"># 深拷贝</span></span><br><span class="line"></span><br><span class="line">a[<span class="number">1</span>].append(<span class="number">3</span>)</span><br><span class="line">print(a, <span class="string">'%x'</span> % id(a), <span class="string">'%x'</span> % id(a[<span class="number">1</span>]))  <span class="comment"># 使用16进制格式化输出id值</span></span><br><span class="line">print(a1, <span class="string">'%x'</span> % id(a1), <span class="string">'%x'</span> % id(a1[<span class="number">1</span>]))</span><br><span class="line">print(a2, <span class="string">'%x'</span> % id(a2), <span class="string">'%x'</span> % id(a2[<span class="number">1</span>]))</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">输出结果：</span><br><span class="line">&#123;0: 1, 1: [1, 2, 3]&#125; 220a8caf2d0 220aa969e08</span><br><span class="line">&#123;0: 1, 1: [1, 2, 3]&#125; 220a8caf318 220aa969e08</span><br><span class="line">&#123;0: 1, 1: [1, 2]&#125; 220aa937c18 220aa969ec8</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>从输出结果进行分析：<br>1.a、a1、a2三者的id值不同。说明不论深浅拷贝都能得到新的对象。<br>2.a1[1]和a[1]的id值相同，a2[1]和a[1]的id值不同。说明浅拷贝不能拷贝子对象，执行浅拷贝得到的对象a1的子对象和原对象a的子对象使用的是相同的一块内存，但是执行深拷贝得到的对象a2却和原对象a完全独立。这也是为什么当a[1].append(3)后，a1[1]也跟着变了，而a2[1]却没变。</p>
+</blockquote>
+<hr>
+<h2 id="3-a-copy-和copy-copy-a-的区别"><a href="#3-a-copy-和copy-copy-a-的区别" class="headerlink" title="3.a.copy()和copy.copy(a)的区别"></a>3.a.copy()和copy.copy(a)的区别</h2><blockquote>
+<p>虽然两者都是浅拷贝，但是copy.copy()能够拷贝的对象更多，即某些对象本身是没有copy属性的，比如元组(tuple)。<br>如果将上例中的a值替换为a = (1, [1,2])，那么执行a1 = a.copy()时是会报错的：</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># -*- coding:utf-8 -*-</span></span><br><span class="line"></span><br><span class="line">a = (<span class="number">1</span>, [<span class="number">1</span>,<span class="number">2</span>])</span><br><span class="line">a1 = a.copy()</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">AttributeError: &apos;tuple&apos; object has no attribute &apos;copy&apos;</span><br></pre></td></tr></table></figure>
+
+<h2 id="4-手写字典深拷贝"><a href="#4-手写字典深拷贝" class="headerlink" title="4.手写字典深拷贝"></a>4.手写字典深拷贝</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">deep_copy</span><span class="params">(x)</span>:</span></span><br><span class="line">    <span class="string">'''仅适用于子对象是字典的情况'''</span></span><br><span class="line">    x1 = &#123;&#125;</span><br><span class="line">    <span class="keyword">for</span> k, v <span class="keyword">in</span> x.items():</span><br><span class="line">        <span class="keyword">if</span> isinstance(v, dict):  <span class="comment"># 当子对象是字典类型时递归执行</span></span><br><span class="line">            x1[k] = deep_copy(v)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            x1[k] = v</span><br><span class="line">    <span class="keyword">return</span> x1</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>如果子对象是数组或者元组的话，只要在赋值前价格数据类型判断，然后根据不同的类型赋值给不同的变量即可兼容。</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>浅拷贝和深拷贝</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python - 函数作用域</title>
+    <url>/Python-Function-Scope.html</url>
+    <content><![CDATA[<h2 id="1-函数作用域"><a href="#1-函数作用域" class="headerlink" title="1.函数作用域"></a>1.函数作用域</h2><blockquote>
+<p>L：local 函数内部作用域；</p>
+<p>E：enclosing 函数内部与它的内嵌函数之间；</p>
+<p>G：global 全局作用域，在同一个.py文件最外层；</p>
+<p>B：build-in 解释器内置作用域。</p>
+</blockquote>
+<h2 id="2-对象查找顺序"><a href="#2-对象查找顺序" class="headerlink" title="2.对象查找顺序"></a>2.对象查找顺序</h2><blockquote>
+<p>L &gt; E &gt; G &gt; B</p>
+</blockquote>
+<h2 id="3-举例解释"><a href="#3-举例解释" class="headerlink" title="3.举例解释"></a>3.举例解释</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># -*- conding: utf-8 -*-</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># G</span></span><br><span class="line">pass_line = <span class="number">60</span> </span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">func</span><span class="params">(score)</span>:</span></span><br><span class="line">    <span class="comment"># E</span></span><br><span class="line">    pass_line = <span class="number">90</span> </span><br><span class="line">    result = <span class="string">"yes"</span> <span class="keyword">if</span> score &gt;= pass_line <span class="keyword">else</span> <span class="string">"no"</span></span><br><span class="line">    print(result)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">inner_func</span><span class="params">()</span>:</span></span><br><span class="line">        <span class="comment"># L</span></span><br><span class="line">        <span class="comment"># score = 81</span></span><br><span class="line">        print(score)</span><br><span class="line"></span><br><span class="line">    inner_func()</span><br><span class="line"></span><br><span class="line">    print(max(<span class="number">1</span>,<span class="number">2</span>))  <span class="comment"># B</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">func(<span class="number">80</span>)</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>函数作用域</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python - 数组切片、更新、排序</title>
+    <url>/Python-List-Slice.html</url>
+    <content><![CDATA[<h2 id="1-数组切片"><a href="#1-数组切片" class="headerlink" title="1.数组切片"></a>1.数组切片</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">l = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>]</span><br><span class="line"></span><br><span class="line">l[:]  <span class="comment"># 所有元素 </span></span><br><span class="line"><span class="comment"># [1, 2, 3, 4, 5, 6, 7, 8, 9]</span></span><br><span class="line"></span><br><span class="line">l[<span class="number">0</span>]  <span class="comment"># 第一个元素</span></span><br><span class="line"><span class="comment"># 1</span></span><br><span class="line"></span><br><span class="line">l[<span class="number">1</span>:<span class="number">3</span>]  <span class="comment"># 第2~4个元素，不包括第4个</span></span><br><span class="line"><span class="comment"># [2, 3]</span></span><br><span class="line"></span><br><span class="line">l[<span class="number">3</span>:]  <span class="comment"># 第4~最后一个元素</span></span><br><span class="line"><span class="comment"># [4, 5, 6, 7, 8, 9]</span></span><br><span class="line"></span><br><span class="line">l[:<span class="number">3</span>]  <span class="comment"># 第1~4个元素，不包括第4个</span></span><br><span class="line"><span class="comment"># [1, 2, 3]</span></span><br><span class="line"></span><br><span class="line">l[:<span class="number">-1</span>]  <span class="comment"># 第1~最后一个元素，不包括最后一个</span></span><br><span class="line"><span class="comment"># [1, 2, 3, 4, 5, 6, 7, 8]</span></span><br><span class="line"></span><br><span class="line">l[<span class="number">2</span>:<span class="number">-1</span>:<span class="number">2</span>]  <span class="comment"># 从第3~最后一个元素中每隔2个步长取一个，不包括最后一个元素</span></span><br><span class="line"><span class="comment"># [3, 5, 7]</span></span><br><span class="line"></span><br><span class="line">l[::<span class="number">3</span>]  <span class="comment"># 每隔3个步长取一个元素</span></span><br><span class="line"><span class="comment"># [1, 4, 7]</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="2-数组更新"><a href="#2-数组更新" class="headerlink" title="2.数组更新"></a>2.数组更新</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">l = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>]</span><br><span class="line"></span><br><span class="line">l.append(<span class="number">0</span>)  <span class="comment"># 列表最后追加一个元素0</span></span><br><span class="line"><span class="comment"># [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]</span></span><br><span class="line"></span><br><span class="line">l.extend([<span class="number">0</span>, <span class="number">0</span>])  <span class="comment"># 列表后面追加另一个列表</span></span><br><span class="line"><span class="comment"># [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 0]</span></span><br><span class="line"></span><br><span class="line">l.insert(<span class="number">1</span>, <span class="string">'0'</span>)  <span class="comment"># 在第1个元素的位置插入字符串'0'</span></span><br><span class="line"><span class="comment"># [1, '0', 2, 3, 4, 5, 6, 7, 8, 9]</span></span><br><span class="line"></span><br><span class="line">l[<span class="number">1</span>:<span class="number">3</span>] = [<span class="number">0</span>]  <span class="comment"># 用0替换第2~4个元素，不包括第4个</span></span><br><span class="line"><span class="comment"># [1, 0, 4, 5, 6, 7, 8, 9]</span></span><br><span class="line"></span><br><span class="line">l[<span class="number">-2</span>:] = [<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>]  <span class="comment"># 将最后两个元素替换为四个0</span></span><br><span class="line"><span class="comment"># [1, 2, 3, 4, 5, 6, 7, 0, 0, 0, 0]</span></span><br><span class="line"></span><br><span class="line">l.pop()  <span class="comment"># 弹出最后一个元素,返回该元素的值</span></span><br><span class="line"><span class="comment"># [1, 2, 3, 4, 5, 6, 7, 8]</span></span><br><span class="line"></span><br><span class="line">l.pop(<span class="number">0</span>)  <span class="comment"># 弹出第一个元素，返回该元素的值</span></span><br><span class="line"><span class="comment"># [2, 3, 4, 5, 6, 7, 8, 9]</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">del</span> l[<span class="number">0</span>]  <span class="comment"># 删除第一个元素</span></span><br><span class="line"><span class="comment"># [2, 3, 4, 5, 6, 7, 8, 9]</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="3-数组排序"><a href="#3-数组排序" class="headerlink" title="3.数组排序"></a>3.数组排序</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">l = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">-9</span>]</span><br><span class="line"></span><br><span class="line">l.reverse()  <span class="comment"># l反向</span></span><br><span class="line"><span class="comment"># [-9, 8, 7, 6, 5, 4, 3, 2, 1]</span></span><br><span class="line"></span><br><span class="line">list(reversed(l))  <span class="comment"># l反向,与l.reverse()的区别：后者直接作用于l，返回None，前者返回一个迭代器</span></span><br><span class="line"></span><br><span class="line">l.sort()  <span class="comment"># 对l进行排序, 默认从小到大，升序</span></span><br><span class="line"><span class="comment"># [-9, 1, 2, 3, 4, 5, 6, 7, 8]</span></span><br><span class="line"></span><br><span class="line">sorted(l)  <span class="comment"># 升序排序，与l.sort()的区别：后者直接作用于l，返回None，前者返回一个新的列表</span></span><br><span class="line"><span class="comment"># [-9, 1, 2, 3, 4, 5, 6, 7, 8]</span></span><br><span class="line"></span><br><span class="line">l.sort(reverse=<span class="literal">True</span>)  <span class="comment"># 对l进行从大到小排序，降序，可与key参数搭配灵活使用</span></span><br><span class="line"><span class="comment"># [8, 7, 6, 5, 4, 3, 2, 1, -9]</span></span><br><span class="line"></span><br><span class="line">l.sort(key=<span class="keyword">lambda</span> x: abs(x))  <span class="comment"># 按指定的方法进行排序，一般与lambda临时函数配合使用，也可以使用自定义方法如：</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">my_f</span><span class="params">(x)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> abs(x) <span class="comment"># 取绝对值</span></span><br><span class="line">l.sort(key=my_f) <span class="comment"># 按自定义方法进行排序</span></span><br><span class="line"></span><br><span class="line">l = [(<span class="number">1</span>,<span class="number">2</span>), (<span class="number">-4</span>,<span class="number">3</span>), (<span class="number">6</span>,<span class="number">0</span>)]</span><br><span class="line"></span><br><span class="line">l.sort(key=<span class="keyword">lambda</span> x: x[<span class="number">1</span>])  <span class="comment"># 按子元组的第二个元素大小升序排列</span></span><br><span class="line"><span class="comment"># [(6,0), (1,2), (-4,3)]</span></span><br><span class="line"></span><br><span class="line">l.sort(key=<span class="keyword">lambda</span> x: abs(x[<span class="number">0</span>]), reverse=<span class="literal">True</span>)  <span class="comment"># 按第一个元素的绝对值大小降序排列</span></span><br><span class="line"><span class="comment"># [(6,0), (-4,3), (1,2)]</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="4-其他数组操作"><a href="#4-其他数组操作" class="headerlink" title="4.其他数组操作"></a>4.其他数组操作</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">[<span class="number">1</span>, <span class="number">2</span>] * <span class="number">4</span>  <span class="comment"># [1,2]重复4次</span></span><br><span class="line"><span class="comment"># [1, 2, 1, 2, 1, 2, 1, 2]</span></span><br><span class="line"></span><br><span class="line">l = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">5</span>, <span class="number">8</span>, <span class="number">8</span>]</span><br><span class="line"></span><br><span class="line">l.count(<span class="number">8</span>)  <span class="comment"># 统计8出现的次数</span></span><br><span class="line"><span class="comment"># 2</span></span><br><span class="line"></span><br><span class="line">l.index(<span class="number">5</span>)  <span class="comment"># 找到5第一次出现的位置索引值(列表中没有5的话会报错ValueError)</span></span><br><span class="line"><span class="comment"># 4</span></span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>数组</tag>
+        <tag>数组切片</tag>
       </tags>
   </entry>
   <entry>
@@ -624,44 +576,36 @@
       </tags>
   </entry>
   <entry>
-    <title>Python - virtualenv虚拟环境配置</title>
-    <url>/Python-Virtualenv.html</url>
-    <content><![CDATA[<h2 id="1-安装"><a href="#1-安装" class="headerlink" title="1.安装"></a>1.安装</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pip install virtualenv</span><br></pre></td></tr></table></figure>
+    <title>Python - 配置iPython直接在命令行调试Odoo(openerp)代码</title>
+    <url>/Python-iPython-Odoo-OE.html</url>
+    <content><![CDATA[<h2 id="0-先看效果"><a href="#0-先看效果" class="headerlink" title="0.先看效果"></a>0.先看效果</h2><p><img src="/images/Python-iPython/ipython_oe_run.png" alt="ipython_oe_run.png"></p>
+<h2 id="1-安装ipython"><a href="#1-安装ipython" class="headerlink" title="1.安装ipython"></a>1.安装ipython</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pip install ipython</span><br></pre></td></tr></table></figure>
 
-<h2 id="2-创建虚拟环境"><a href="#2-创建虚拟环境" class="headerlink" title="2.创建虚拟环境"></a>2.创建虚拟环境</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> git@github.com:RichardRenn/happy.git /var/www/happy <span class="comment"># 克隆项目代码</span></span><br><span class="line"><span class="built_in">cd</span> /var/www/happy <span class="comment"># 进入项目目录</span></span><br><span class="line">virtualenv venv <span class="comment"># 创建虚拟环境目录./venv</span></span><br></pre></td></tr></table></figure>
+<h2 id="2-创建ipython配置文件"><a href="#2-创建ipython配置文件" class="headerlink" title="2.创建ipython配置文件"></a>2.创建ipython配置文件</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ipython profile create apple</span><br></pre></td></tr></table></figure>
 
-<h2 id="3-激活并进入虚拟环境"><a href="#3-激活并进入虚拟环境" class="headerlink" title="3.激活并进入虚拟环境"></a>3.激活并进入虚拟环境</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">source</span> ./venv/bin/activate</span><br></pre></td></tr></table></figure>
+<h3 id="2-1-列出所有配置文件"><a href="#2-1-列出所有配置文件" class="headerlink" title="2.1 *列出所有配置文件"></a>2.1 *列出所有配置文件</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ipython profile list</span><br></pre></td></tr></table></figure>
 
-<blockquote>
-<p>当看到命令行前面显示(venv)标志时即表示已进入虚拟环境</p>
-</blockquote>
-<h2 id="4-安装需求库"><a href="#4-安装需求库" class="headerlink" title="4.安装需求库"></a>4.安装需求库</h2><blockquote>
-<p>同在普通环境下的安装命令是相同的，只不过所有的库都会被安装到虚拟环境目录下</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pip install [module-name]</span><br></pre></td></tr></table></figure>
+<h3 id="2-2-查看配置文件位置"><a href="#2-2-查看配置文件位置" class="headerlink" title="2.2 *查看配置文件位置"></a>2.2 *查看配置文件位置</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ipython profile locate apple</span><br></pre></td></tr></table></figure>
+
+<h2 id="3-创建预加载OE配置文件"><a href="#3-创建预加载OE配置文件" class="headerlink" title="3.创建预加载OE配置文件"></a>3.创建预加载OE配置文件</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim ~/.ipython/profile_apple/startup/00-load-oe.py</span><br></pre></td></tr></table></figure>
 
 <blockquote>
-<p>*也可以从需求库依赖文件安装所需库</p>
+<p>内容如下：</p>
 </blockquote>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pip install -r requirements.txt</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/python</span></span><br><span class="line"><span class="comment"># coding: utf-8</span></span><br><span class="line"><span class="comment"># author: richard</span></span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"><span class="keyword">import</span> configparser</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">OE_CONF_PTH = <span class="string">'~/path/to/openerp_serverrc_2.conf'</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">abs_path</span><span class="params">(path: str)</span>:</span></span><br><span class="line">    <span class="keyword">if</span> path.startswith(<span class="string">'~'</span>):</span><br><span class="line">        <span class="keyword">return</span> os.path.expanduser(path)</span><br><span class="line">    <span class="keyword">return</span> path</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    <span class="comment"># 加载OE配置文件</span></span><br><span class="line">    conf = configparser.ConfigParser()</span><br><span class="line">    conf.read(abs_path(OE_CONF_PTH))</span><br><span class="line">    options = dict(conf.items(<span class="string">'options'</span>))</span><br><span class="line">    db_name = options[<span class="string">'db_name'</span>]</span><br><span class="line">    addons_path = abs_path(options[<span class="string">'addons_path'</span>])</span><br><span class="line">    proj_path = addons_path.split(<span class="string">'/openerp/addons'</span>)[<span class="number">0</span>]</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 加入系统路径</span></span><br><span class="line">    sys.path.extend([proj_path])</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 生成数据库cursor</span></span><br><span class="line">    <span class="keyword">import</span> openerp</span><br><span class="line">    uid = <span class="number">1</span></span><br><span class="line">    db_conn = openerp.sql_db.db_connect(db_name)</span><br><span class="line">    cr = db_conn.cursor()</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 若要启用连接池，需将代码中所有import改为从openerp引入</span></span><br><span class="line">    <span class="comment"># 如 from osv import fields 需改为 from openerp.osv import fields</span></span><br><span class="line">    pool = openerp.pooler.get_pool(db_name)</span><br></pre></td></tr></table></figure>
 
-<blockquote>
-<p>需求库依赖文件可以从任何一个虚拟环境中导出，导出命令如下：</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pip freeze &gt; requirements.txt</span><br></pre></td></tr></table></figure>
+<h2 id="4-启动ipython"><a href="#4-启动ipython" class="headerlink" title="4.启动ipython"></a>4.启动ipython</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ipython --profile=apple</span><br></pre></td></tr></table></figure>
 
-<blockquote>
-<p><em>推荐保持依赖文件为最新状态，并存放在项目代码目录下，可以很方便地在新机器上安装部署项目虚拟环境。</em></p>
-</blockquote>
-<h2 id="5-退出虚拟环境"><a href="#5-退出虚拟环境" class="headerlink" title="5.退出虚拟环境"></a>5.退出虚拟环境</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">deactivate</span><br></pre></td></tr></table></figure>
-
-]]></content>
+<h2 id="5-测试Odoo-OE-代码"><a href="#5-测试Odoo-OE-代码" class="headerlink" title="5.测试Odoo(OE)代码"></a>5.测试Odoo(OE)代码</h2><figure class="highlight ipython"><table><tr><td class="code"><pre><span class="line">Python <span class="number">3.7</span><span class="number">.3</span> (default, Mar <span class="number">27</span> <span class="number">2019</span>, <span class="number">16</span>:<span class="number">54</span>:<span class="number">48</span>)</span><br><span class="line">Type <span class="string">'copyright'</span>, <span class="string">'credits'</span> <span class="keyword">or</span> <span class="string">'license'</span> <span class="keyword">for</span> more information</span><br><span class="line">IPython <span class="number">7.34</span><span class="number">.0</span> -- An enhanced Interactive Python. Type <span class="string">'?'</span> <span class="keyword">for</span> help.</span><br><span class="line"></span><br><span class="line">IPython profile: apple</span><br><span class="line"></span><br><span class="line">In [<span class="number">1</span>]: cr.execute(<span class="string">"""select id from res_users where login=%(login)s limit 1"""</span>, &#123;<span class="string">'login'</span>: <span class="string">'admin'</span>&#125;)</span><br><span class="line"></span><br><span class="line">In [<span class="number">2</span>]: cr.dictfetchone()</span><br><span class="line">Out[<span class="number">2</span>]: &#123;<span class="string">'id'</span>: <span class="number">1</span>&#125;</span><br><span class="line"></span><br><span class="line">In [<span class="number">3</span>]: user_ids = pool.get(<span class="string">'res.users'</span>).search(cr, uid, [(<span class="string">'login'</span>, <span class="string">'='</span>, <span class="string">'admin'</span>)])</span><br><span class="line"></span><br><span class="line">In [<span class="number">4</span>]: user_ids</span><br><span class="line">Out[<span class="number">4</span>]: [<span class="number">1</span>]</span><br></pre></td></tr></table></figure>]]></content>
       <categories>
         <category>Python</category>
       </categories>
       <tags>
         <tag>Python</tag>
-        <tag>virtualenv</tag>
+        <tag>iPython</tag>
+        <tag>odoo</tag>
+        <tag>OE</tag>
+        <tag>openerp</tag>
       </tags>
   </entry>
   <entry>
@@ -877,36 +821,51 @@
       </tags>
   </entry>
   <entry>
-    <title>Python - 配置iPython直接在命令行调试Odoo(openerp)代码</title>
-    <url>/Python-iPython-Odoo-OE.html</url>
-    <content><![CDATA[<h2 id="0-先看效果"><a href="#0-先看效果" class="headerlink" title="0.先看效果"></a>0.先看效果</h2><p><img src="/images/Python-iPython/ipython_oe_run.png" alt="ipython_oe_run.png"></p>
-<h2 id="1-安装ipython"><a href="#1-安装ipython" class="headerlink" title="1.安装ipython"></a>1.安装ipython</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pip install ipython</span><br></pre></td></tr></table></figure>
-
-<h2 id="2-创建ipython配置文件"><a href="#2-创建ipython配置文件" class="headerlink" title="2.创建ipython配置文件"></a>2.创建ipython配置文件</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ipython profile create apple</span><br></pre></td></tr></table></figure>
-
-<h3 id="2-1-列出所有配置文件"><a href="#2-1-列出所有配置文件" class="headerlink" title="2.1 *列出所有配置文件"></a>2.1 *列出所有配置文件</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ipython profile list</span><br></pre></td></tr></table></figure>
-
-<h3 id="2-2-查看配置文件位置"><a href="#2-2-查看配置文件位置" class="headerlink" title="2.2 *查看配置文件位置"></a>2.2 *查看配置文件位置</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ipython profile locate apple</span><br></pre></td></tr></table></figure>
-
-<h2 id="3-创建预加载OE配置文件"><a href="#3-创建预加载OE配置文件" class="headerlink" title="3.创建预加载OE配置文件"></a>3.创建预加载OE配置文件</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim ~/.ipython/profile_apple/startup/00-load-oe.py</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>内容如下：</p>
+    <title>GitHub教程 - Pull Request 工作流程</title>
+    <url>/GitHub-Pull-Request-Workflow.html</url>
+    <content><![CDATA[<h2 id="1-Fork仓库"><a href="#1-Fork仓库" class="headerlink" title="1.Fork仓库"></a>1.Fork仓库</h2><blockquote>
+<p>先在github上将源仓库fork到自己的仓库</p>
 </blockquote>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/python</span></span><br><span class="line"><span class="comment"># coding: utf-8</span></span><br><span class="line"><span class="comment"># author: richard</span></span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"><span class="keyword">import</span> configparser</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">OE_CONF_PTH = <span class="string">'~/path/to/openerp_serverrc_2.conf'</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">abs_path</span><span class="params">(path: str)</span>:</span></span><br><span class="line">    <span class="keyword">if</span> path.startswith(<span class="string">'~'</span>):</span><br><span class="line">        <span class="keyword">return</span> os.path.expanduser(path)</span><br><span class="line">    <span class="keyword">return</span> path</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    <span class="comment"># 加载OE配置文件</span></span><br><span class="line">    conf = configparser.ConfigParser()</span><br><span class="line">    conf.read(abs_path(OE_CONF_PTH))</span><br><span class="line">    options = dict(conf.items(<span class="string">'options'</span>))</span><br><span class="line">    db_name = options[<span class="string">'db_name'</span>]</span><br><span class="line">    addons_path = abs_path(options[<span class="string">'addons_path'</span>])</span><br><span class="line">    proj_path = addons_path.split(<span class="string">'/openerp/addons'</span>)[<span class="number">0</span>]</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 加入系统路径</span></span><br><span class="line">    sys.path.extend([proj_path])</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 生成数据库cursor</span></span><br><span class="line">    <span class="keyword">import</span> openerp</span><br><span class="line">    uid = <span class="number">1</span></span><br><span class="line">    db_conn = openerp.sql_db.db_connect(db_name)</span><br><span class="line">    cr = db_conn.cursor()</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 若要启用连接池，需将代码中所有import改为从openerp引入</span></span><br><span class="line">    <span class="comment"># 如 from osv import fields 需改为 from openerp.osv import fields</span></span><br><span class="line">    pool = openerp.pooler.get_pool(db_name)</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">源仓库：git@github.com:southflower/slark.git</span><br><span class="line">fork后：git@github.com:RichardRenn/slark.git</span><br></pre></td></tr></table></figure>
 
-<h2 id="4-启动ipython"><a href="#4-启动ipython" class="headerlink" title="4.启动ipython"></a>4.启动ipython</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ipython --profile=apple</span><br></pre></td></tr></table></figure>
+<h2 id="2-检出代码"><a href="#2-检出代码" class="headerlink" title="2.检出代码"></a>2.检出代码</h2><blockquote>
+<p>在本地检出fork后的仓库代码</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~/workspace/sourcecode/richardrenn</span><br><span class="line">git <span class="built_in">clone</span> git@github.com:RichardRenn/slark.git ./slark</span><br></pre></td></tr></table></figure>
 
-<h2 id="5-测试Odoo-OE-代码"><a href="#5-测试Odoo-OE-代码" class="headerlink" title="5.测试Odoo(OE)代码"></a>5.测试Odoo(OE)代码</h2><figure class="highlight ipython"><table><tr><td class="code"><pre><span class="line">Python <span class="number">3.7</span><span class="number">.3</span> (default, Mar <span class="number">27</span> <span class="number">2019</span>, <span class="number">16</span>:<span class="number">54</span>:<span class="number">48</span>)</span><br><span class="line">Type <span class="string">'copyright'</span>, <span class="string">'credits'</span> <span class="keyword">or</span> <span class="string">'license'</span> <span class="keyword">for</span> more information</span><br><span class="line">IPython <span class="number">7.34</span><span class="number">.0</span> -- An enhanced Interactive Python. Type <span class="string">'?'</span> <span class="keyword">for</span> help.</span><br><span class="line"></span><br><span class="line">IPython profile: apple</span><br><span class="line"></span><br><span class="line">In [<span class="number">1</span>]: cr.execute(<span class="string">"""select id from res_users where login=%(login)s limit 1"""</span>, &#123;<span class="string">'login'</span>: <span class="string">'admin'</span>&#125;)</span><br><span class="line"></span><br><span class="line">In [<span class="number">2</span>]: cr.dictfetchone()</span><br><span class="line">Out[<span class="number">2</span>]: &#123;<span class="string">'id'</span>: <span class="number">1</span>&#125;</span><br><span class="line"></span><br><span class="line">In [<span class="number">3</span>]: user_ids = pool.get(<span class="string">'res.users'</span>).search(cr, uid, [(<span class="string">'login'</span>, <span class="string">'='</span>, <span class="string">'admin'</span>)])</span><br><span class="line"></span><br><span class="line">In [<span class="number">4</span>]: user_ids</span><br><span class="line">Out[<span class="number">4</span>]: [<span class="number">1</span>]</span><br></pre></td></tr></table></figure>]]></content>
+<h2 id="3-关联上游源仓库"><a href="#3-关联上游源仓库" class="headerlink" title="3.关联上游源仓库"></a>3.关联上游源仓库</h2><blockquote>
+<p>进入代码目录，加入上游源仓库关联</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> ./slark</span><br><span class="line">git remote add upstream git@github.com:southflower/slark.git</span><br></pre></td></tr></table></figure>
+
+<h2 id="4-更新代码"><a href="#4-更新代码" class="headerlink" title="4.更新代码"></a>4.更新代码</h2><blockquote>
+<p>更新源仓库代码到本地仓库</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git fetch upstream</span><br><span class="line">git merge upstream/master</span><br></pre></td></tr></table></figure>
+
+<h2 id="5-提交代码"><a href="#5-提交代码" class="headerlink" title="5.提交代码"></a>5.提交代码</h2><blockquote>
+<p>在本地仓库中，修改代码后提交到自己的远端仓库</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git add .</span><br><span class="line">git commit -m <span class="string">"anything"</span></span><br><span class="line">git push origin master</span><br></pre></td></tr></table></figure>
+
+<h2 id="6-提交PR"><a href="#6-提交PR" class="headerlink" title="6.提交PR"></a>6.提交PR</h2><blockquote>
+<p>在github网页上提交PR<br>在自己的仓库界面点击”New Pull Request”</p>
+</blockquote>
+<p><img src="/images/GitHub-Pull-Request-Workflow/pull-request.png" alt="pull-request"></p>
+<h2 id="7-PR合入"><a href="#7-PR合入" class="headerlink" title="7.PR合入"></a>7.PR合入</h2><blockquote>
+<p>然后待源仓库的作者将你的PR合入即可</p>
+</blockquote>
+<hr>
+<ul>
+<li>带分支的工作方式可以参考<a href="/GitHub-Branch-Workflow.html">&gt;&gt;传送门 - 分支工作流程&lt;&lt;</a></li>
+</ul>
+]]></content>
       <categories>
-        <category>Python</category>
+        <category>GitHub教程</category>
       </categories>
       <tags>
-        <tag>Python</tag>
-        <tag>iPython</tag>
-        <tag>odoo</tag>
-        <tag>OE</tag>
-        <tag>openerp</tag>
+        <tag>Git</tag>
+        <tag>GitHub</tag>
       </tags>
   </entry>
   <entry>
@@ -961,6 +920,47 @@
       <tags>
         <tag>Linux</tag>
         <tag>ssh</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python - virtualenv虚拟环境配置</title>
+    <url>/Python-Virtualenv.html</url>
+    <content><![CDATA[<h2 id="1-安装"><a href="#1-安装" class="headerlink" title="1.安装"></a>1.安装</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pip install virtualenv</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-创建虚拟环境"><a href="#2-创建虚拟环境" class="headerlink" title="2.创建虚拟环境"></a>2.创建虚拟环境</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> git@github.com:RichardRenn/happy.git /var/www/happy <span class="comment"># 克隆项目代码</span></span><br><span class="line"><span class="built_in">cd</span> /var/www/happy <span class="comment"># 进入项目目录</span></span><br><span class="line">virtualenv venv <span class="comment"># 创建虚拟环境目录./venv</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="3-激活并进入虚拟环境"><a href="#3-激活并进入虚拟环境" class="headerlink" title="3.激活并进入虚拟环境"></a>3.激活并进入虚拟环境</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">source</span> ./venv/bin/activate</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>当看到命令行前面显示(venv)标志时即表示已进入虚拟环境</p>
+</blockquote>
+<h2 id="4-安装需求库"><a href="#4-安装需求库" class="headerlink" title="4.安装需求库"></a>4.安装需求库</h2><blockquote>
+<p>同在普通环境下的安装命令是相同的，只不过所有的库都会被安装到虚拟环境目录下</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pip install [module-name]</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>*也可以从需求库依赖文件安装所需库</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pip install -r requirements.txt</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>需求库依赖文件可以从任何一个虚拟环境中导出，导出命令如下：</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pip freeze &gt; requirements.txt</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><em>推荐保持依赖文件为最新状态，并存放在项目代码目录下，可以很方便地在新机器上安装部署项目虚拟环境。</em></p>
+</blockquote>
+<h2 id="5-退出虚拟环境"><a href="#5-退出虚拟环境" class="headerlink" title="5.退出虚拟环境"></a>5.退出虚拟环境</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">deactivate</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>virtualenv</tag>
       </tags>
   </entry>
   <entry>
