@@ -1,109 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>GitHub教程 - Git安装配置</title>
-    <url>/Git-Configuration.html</url>
-    <content><![CDATA[<h2 id="1-环境变量"><a href="#1-环境变量" class="headerlink" title="*1.环境变量"></a>*1.环境变量</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim ~/.bashrc</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>在后面添加以下内容,以解决某些包(如perl、git)安装时的warning</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">export</span> LC_ALL=<span class="string">&quot;C&quot;</span></span><br><span class="line"><span class="built_in">export</span> LANGUAGE=<span class="string">&quot;zh_CN:zh&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>当然也可以直接在命令终端中export临时设置环境变量</p>
-<h2 id="2-安装"><a href="#2-安装" class="headerlink" title="2.安装"></a>2.安装</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">apt-get install git <span class="comment"># 这是Ubuntu下的命令</span></span><br><span class="line">yum install git <span class="comment"># 这是CentOS下的命令</span></span><br><span class="line">brew install git <span class="comment"># 这是MAC下的命令</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="3-生成ssh密钥对"><a href="#3-生成ssh密钥对" class="headerlink" title="3.生成ssh密钥对"></a>3.生成ssh密钥对</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -b 4096 -C <span class="string">&quot;your_email@example.com&quot;</span></span><br></pre></td></tr></table></figure>
-<p>如果不想设置密码的话直接三次回车即可，和git生成密钥的命令相同。</p>
-<blockquote>
-<p>生成的密钥对位置在 ~&#x2F;.ssh，查看下公钥，后面要用到。</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cat</span> ~/.ssh/id_rsa.pub</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>内容类似下面这样</p>
-</blockquote>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQC+am2s/r1n+xsipi/4H2ll8p3McdhQCLBwJGNbkaxpeWKtdbiUbqAWjHS436eNt/OF13VsyWLs5lb6J2I3J6GlCcEGMGOFc4gzLTP9e/TmXeyFlBMZkuSJTbsXvL9Q/tff/8Tgt4aVwR3OWlwfvPdtoyR0tGhDDQn8a0gzs04mPyMWjK6akt/zGCQ70Eo6stVMGCyMAL/PrHwdZ/puXjtw0T9HSs/ON/Jub+h3oKfgJVhpJNbIDR2r08LoEA0roTplI4aSR+JgnSKsXhIvTAUm+VRmWgz3oPYcNkaGkvBvA1gfk/baB6qxv0hkjPwtY5GIRkCU6cIcjG3U1LR6pnH+8Z0RbN9YaFFNRRf4rMnZ3n0jhYXCq7dzBoofLWRVlAqTlybF7xz9JNVQxiC+o5skBHJ/Eb7Ggtejc6TVW+FJaNUy5+yWqfhq57kC4zq+5HhAY9ToKZpYLKjJa7oG0eHAeOAgSd2jdDEvALegap4nrMHVLP8sOQlNFBMPjy1r0cW/Afp32gCtPOpQRuIkQdOnWUkzjObGTLaVffanhYnX470UNsvgQ+IyikhS5tiKPqkT317v6yFV4doeZgfNYtcgpLVZcVxkItTLS1h75d4h4MD2JVRk2nBGSLp5j2WIji4Tiy++LblV1Y5Y2wRcfefdXCIMT3jMNAcyhuCaNfaD/Q== your_email@example.com</span><br></pre></td></tr></table></figure>
-
-<h2 id="4-公钥添加到GitHub"><a href="#4-公钥添加到GitHub" class="headerlink" title="4.公钥添加到GitHub"></a>4.公钥添加到GitHub</h2><p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3NldHRpbmdzL3NzaC9uZXc=">&gt;&gt;传送门 - 添加你自己的公钥&lt;&lt;<i class="fa fa-external-link-alt"></i></span></p>
-<blockquote>
-<p>将上一步的公钥拷贝下来，粘贴至GitHub网页以下位置</p>
-</blockquote>
-<p><img src="/images/Git-Configuration/paste-pub-key.png" alt="paste-pub-key"></p>
-<h2 id="5-配置用户名和邮箱"><a href="#5-配置用户名和邮箱" class="headerlink" title="5.配置用户名和邮箱"></a>5.配置用户名和邮箱</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global user.name <span class="string">&quot;your_name&quot;</span></span><br><span class="line">git config --global user.email <span class="string">&quot;your_email@example.com&quot;</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="6-克隆代码"><a href="#6-克隆代码" class="headerlink" title="6.克隆代码"></a>6.克隆代码</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> git@github.com:user_name/project_name.git /path/to/your/sourcecode</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>GitHub教程</category>
-      </categories>
-      <tags>
-        <tag>Git</tag>
-        <tag>GitHub</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>GitHub教程 - 分支工作流程</title>
-    <url>/GitHub-Branch-Workflow.html</url>
-    <content><![CDATA[<h2 id="1-更新代码"><a href="#1-更新代码" class="headerlink" title="1.更新代码"></a>1.更新代码</h2><blockquote>
-<p>进入代码目录，更新代码</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~/workspace/sourcecode/richardrenn/slark</span><br><span class="line">git pull origin master</span><br><span class="line">*git pull upstream master</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>*查看所有远端库情况</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git remote -v</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">origin        git@github.com:RichardRenn/slark.git (fetch)</span><br><span class="line">origin        git@github.com:RichardRenn/slark.git (push)</span><br><span class="line">upstream        git@github.com:southflower/slark.git (fetch)</span><br><span class="line">upstream        git@github.com:southflower/slark.git (push)</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>*查看所有分支情况，可看到当前的分支是origin&#x2F;master</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git branch -a</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">* master</span><br><span class="line">  remotes/origin/HEAD -&gt; origin/master</span><br><span class="line">  remotes/origin/master</span><br><span class="line">  remotes/origin/release</span><br><span class="line">  remotes/upstream/master</span><br><span class="line">  remotes/upstream/release</span><br></pre></td></tr></table></figure>
-
-<h2 id="2-新建分支"><a href="#2-新建分支" class="headerlink" title="2.新建分支"></a>2.新建分支</h2><blockquote>
-<p>本地新建分支，并切换到新建的分支</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git checkout -b dev</span><br></pre></td></tr></table></figure>
-
-<h2 id="3-推送分支"><a href="#3-推送分支" class="headerlink" title="3.推送分支"></a>3.推送分支</h2><blockquote>
-<p>推送新分支到远端库和上游库，冒号前的是本地分支名，冒号后的是远程分支名</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git push origin dev:dev</span><br><span class="line">git push upstream dev:dev</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>此时再敲git branch -a 就可以看到已经在远端库和上游库都建好了分支</p>
-</blockquote>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">* dev</span><br><span class="line">  master</span><br><span class="line">  remotes/origin/HEAD -&gt; origin/master</span><br><span class="line">  remotes/origin/dev</span><br><span class="line">  remotes/origin/master</span><br><span class="line">  remotes/origin/release</span><br><span class="line">  remotes/upstream/dev</span><br><span class="line">  remotes/upstream/master</span><br><span class="line">  remotes/upstream/release</span><br></pre></td></tr></table></figure>
-
-<h2 id="4-提交修改"><a href="#4-提交修改" class="headerlink" title="4.提交修改"></a>4.提交修改</h2><blockquote>
-<p>在本地的dev分支修改文件并提交推送到远端库</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git add [file]</span><br><span class="line">git commit -m <span class="string">&quot;something&quot;</span></span><br><span class="line">git push origin dev</span><br><span class="line">*git push upstream dev   <span class="comment"># 这一步直接推送到上游库的dev分支，可以省一次PR</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="5-提交PR"><a href="#5-提交PR" class="headerlink" title="5.提交PR"></a>5.提交PR</h2><blockquote>
-<p>在网页通过PR的方式将dev代码推送到上游库的dev分支</p>
-</blockquote>
-<h2 id="6-分支合入"><a href="#6-分支合入" class="headerlink" title="6.分支合入"></a>6.分支合入</h2><blockquote>
-<p>等dev调试稳定后再通过PR的方式将上游库的dev分支merge到其master分支，即可上线</p>
-</blockquote>
-<hr>
-<ul>
-<li>PR操作可以参考<a href="/GitHub-Pull-Request-Workflow.html">&gt;&gt;传送门 - Pull Request 工作流程&lt;&lt;</a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>GitHub教程</category>
-      </categories>
-      <tags>
-        <tag>Git</tag>
-        <tag>GitHub</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>GitHub - 存储大文件</title>
     <url>/GitHub-Large-File-Storage.html</url>
     <content><![CDATA[<h2 id="问题的产生"><a href="#问题的产生" class="headerlink" title="问题的产生"></a>问题的产生</h2><blockquote>
@@ -188,6 +85,48 @@
 <ul>
 <li>带分支的工作方式可以参考<a href="/GitHub-Branch-Workflow.html">&gt;&gt;传送门 - 分支工作流程&lt;&lt;</a></li>
 </ul>
+]]></content>
+      <categories>
+        <category>GitHub教程</category>
+      </categories>
+      <tags>
+        <tag>Git</tag>
+        <tag>GitHub</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>GitHub教程 - Git安装配置</title>
+    <url>/Git-Configuration.html</url>
+    <content><![CDATA[<h2 id="1-环境变量"><a href="#1-环境变量" class="headerlink" title="*1.环境变量"></a>*1.环境变量</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim ~/.bashrc</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>在后面添加以下内容,以解决某些包(如perl、git)安装时的warning</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">export</span> LC_ALL=<span class="string">&quot;C&quot;</span></span><br><span class="line"><span class="built_in">export</span> LANGUAGE=<span class="string">&quot;zh_CN:zh&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>当然也可以直接在命令终端中export临时设置环境变量</p>
+<h2 id="2-安装"><a href="#2-安装" class="headerlink" title="2.安装"></a>2.安装</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">apt-get install git <span class="comment"># 这是Ubuntu下的命令</span></span><br><span class="line">yum install git <span class="comment"># 这是CentOS下的命令</span></span><br><span class="line">brew install git <span class="comment"># 这是MAC下的命令</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="3-生成ssh密钥对"><a href="#3-生成ssh密钥对" class="headerlink" title="3.生成ssh密钥对"></a>3.生成ssh密钥对</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -b 4096 -C <span class="string">&quot;your_email@example.com&quot;</span></span><br></pre></td></tr></table></figure>
+<p>如果不想设置密码的话直接三次回车即可，和git生成密钥的命令相同。</p>
+<blockquote>
+<p>生成的密钥对位置在 ~&#x2F;.ssh，查看下公钥，后面要用到。</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cat</span> ~/.ssh/id_rsa.pub</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>内容类似下面这样</p>
+</blockquote>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQC+am2s/r1n+xsipi/4H2ll8p3McdhQCLBwJGNbkaxpeWKtdbiUbqAWjHS436eNt/OF13VsyWLs5lb6J2I3J6GlCcEGMGOFc4gzLTP9e/TmXeyFlBMZkuSJTbsXvL9Q/tff/8Tgt4aVwR3OWlwfvPdtoyR0tGhDDQn8a0gzs04mPyMWjK6akt/zGCQ70Eo6stVMGCyMAL/PrHwdZ/puXjtw0T9HSs/ON/Jub+h3oKfgJVhpJNbIDR2r08LoEA0roTplI4aSR+JgnSKsXhIvTAUm+VRmWgz3oPYcNkaGkvBvA1gfk/baB6qxv0hkjPwtY5GIRkCU6cIcjG3U1LR6pnH+8Z0RbN9YaFFNRRf4rMnZ3n0jhYXCq7dzBoofLWRVlAqTlybF7xz9JNVQxiC+o5skBHJ/Eb7Ggtejc6TVW+FJaNUy5+yWqfhq57kC4zq+5HhAY9ToKZpYLKjJa7oG0eHAeOAgSd2jdDEvALegap4nrMHVLP8sOQlNFBMPjy1r0cW/Afp32gCtPOpQRuIkQdOnWUkzjObGTLaVffanhYnX470UNsvgQ+IyikhS5tiKPqkT317v6yFV4doeZgfNYtcgpLVZcVxkItTLS1h75d4h4MD2JVRk2nBGSLp5j2WIji4Tiy++LblV1Y5Y2wRcfefdXCIMT3jMNAcyhuCaNfaD/Q== your_email@example.com</span><br></pre></td></tr></table></figure>
+
+<h2 id="4-公钥添加到GitHub"><a href="#4-公钥添加到GitHub" class="headerlink" title="4.公钥添加到GitHub"></a>4.公钥添加到GitHub</h2><p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3NldHRpbmdzL3NzaC9uZXc=">&gt;&gt;传送门 - 添加你自己的公钥&lt;&lt;<i class="fa fa-external-link-alt"></i></span></p>
+<blockquote>
+<p>将上一步的公钥拷贝下来，粘贴至GitHub网页以下位置</p>
+</blockquote>
+<p><img src="/images/Git-Configuration/paste-pub-key.png" alt="paste-pub-key"></p>
+<h2 id="5-配置用户名和邮箱"><a href="#5-配置用户名和邮箱" class="headerlink" title="5.配置用户名和邮箱"></a>5.配置用户名和邮箱</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global user.name <span class="string">&quot;your_name&quot;</span></span><br><span class="line">git config --global user.email <span class="string">&quot;your_email@example.com&quot;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="6-克隆代码"><a href="#6-克隆代码" class="headerlink" title="6.克隆代码"></a>6.克隆代码</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> git@github.com:user_name/project_name.git /path/to/your/sourcecode</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
         <category>GitHub教程</category>
@@ -306,74 +245,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Python - Celery - 调用任务</title>
-    <url>/Python-Celery-Calling-Tasks.html</url>
-    <content><![CDATA[<h2 id="前提"><a href="#前提" class="headerlink" title="前提"></a>前提</h2><blockquote>
-<p>有3个任务：add作加法运算, mul作乘法运算, xsum为求和运算</p>
-</blockquote>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">@app.task(<span class="params">bind=<span class="literal">True</span>, base=BaseTask</span>)</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">add</span>(<span class="params">self, a, b</span>):</span><br><span class="line">    <span class="keyword">return</span> a + b</span><br><span class="line"></span><br><span class="line"><span class="meta">@app.task(<span class="params">bind=<span class="literal">True</span>, base=BaseTask</span>)</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">mul</span>(<span class="params">self, a, b</span>):</span><br><span class="line">    <span class="keyword">return</span> a * b</span><br><span class="line"></span><br><span class="line"><span class="meta">@app.task(<span class="params">bind=<span class="literal">True</span>, base=BaseTask</span>)</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">xsum</span>(<span class="params">self, *args</span>):</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">sum</span>(args)</span><br></pre></td></tr></table></figure>
-
-<h2 id="1-立即执行任务"><a href="#1-立即执行任务" class="headerlink" title="1.立即执行任务"></a>1.立即执行任务</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">add.apply_async()</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>或者简写为：</p>
-</blockquote>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">add.delay()</span><br></pre></td></tr></table></figure>
-
-<h2 id="2-延时任务"><a href="#2-延时任务" class="headerlink" title="2.延时任务"></a>2.延时任务</h2><blockquote>
-<p>使用<code>countdown</code>参数使任务在60秒后执行：</p>
-</blockquote>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">add.apply_async(countdown=<span class="number">60</span>)</span><br></pre></td></tr></table></figure>
-
-<h2 id="3-定时任务"><a href="#3-定时任务" class="headerlink" title="3.定时任务"></a>3.定时任务</h2><blockquote>
-<p>使用<code>eta</code>参数使任务在晚上9点整执行：</p>
-</blockquote>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> datetime</span><br><span class="line">exec_at = datetime.datetime(<span class="number">2019</span>, <span class="number">7</span>, <span class="number">28</span>, <span class="number">21</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>)</span><br><span class="line">add.apply_async(eta=exec_at)</span><br></pre></td></tr></table></figure>
-
-<h2 id="4-任务分组"><a href="#4-任务分组" class="headerlink" title="4.任务分组"></a>4.任务分组</h2><blockquote>
-<p>使用<code>group</code>生成一组任务并发执行</p>
-</blockquote>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">tasks = group(add.si(x,x) <span class="keyword">for</span> x <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">10</span>))</span><br><span class="line">tasks.apply_async()</span><br><span class="line"></span><br><span class="line"><span class="comment"># get方法可获取任务的返回值:</span></span><br><span class="line">res = tasks()</span><br><span class="line">res.get(timeout=<span class="number">1</span>)  <span class="comment"># [0, 2, 4, 6, 8, 10, 12, 14, 16, 18]</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="5-任务分块"><a href="#5-任务分块" class="headerlink" title="5.任务分块"></a>5.任务分块</h2><blockquote>
-<p>使用<code>chord</code>将1000个任务分成100个一块，共10组</p>
-</blockquote>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">tasks = add.chunks(((x, x) <span class="keyword">for</span> x <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1000</span>)), <span class="number">100</span>).group()  <span class="comment"># 转化为group</span></span><br><span class="line"><span class="comment"># 每间隔60秒执行一组</span></span><br><span class="line">tasks.skew(step=<span class="number">60</span>)</span><br><span class="line">tasks.apply_async()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 注意使用了skew后eta参数会失效，想要定时效果可以转化为countdown如：</span></span><br><span class="line">task.apply_async(countdown=(exec_at - now()).seconds)</span><br></pre></td></tr></table></figure>
-
-<h2 id="6-链式顺序执行"><a href="#6-链式顺序执行" class="headerlink" title="6.链式顺序执行"></a>6.链式顺序执行</h2><blockquote>
-<p>任务签名<code>signature</code>：<br>subtask&#x3D;signature，可以简写为<code>s</code>，如add.s()，当需要对任务做一定处理后执行时使用。<br><code>s</code>和<code>si</code>的区别：<br><code>s</code>相当于signature()，而<code>si</code>相当于signature(immutable&#x3D;True)。 <code>s</code>会把上个任务的结果传给下个任务，而<code>si</code>不传递结果。</p>
-</blockquote>
-<blockquote>
-<p>使用<code>chain</code>按顺序执行一队任务：</p>
-</blockquote>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 前一个任务的结果作为后一个任务的第一个参数</span></span><br><span class="line">chain(add.s(<span class="number">1</span>,<span class="number">1</span>), add.s(<span class="number">2</span>), add.s(<span class="number">3</span>))()  </span><br><span class="line"></span><br><span class="line"> <span class="comment"># 不传递结果，仅仅按顺序执行</span></span><br><span class="line">chain(add.si(<span class="number">1</span>,<span class="number">1</span>), add.si(<span class="number">2</span>,<span class="number">2</span>), add.si(<span class="number">3</span>,<span class="number">3</span>))()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 也可以使用 | 链接任务，效果是一样的，如:</span></span><br><span class="line">all_task = (add.s(<span class="number">1</span>,<span class="number">1</span>) | add.s(<span class="number">2</span>) | add.s(<span class="number">3</span>))</span><br><span class="line">all_task = (add.si(<span class="number">1</span>,<span class="number">1</span>) | add.si(<span class="number">2</span>，<span class="number">2</span>) | add.si(<span class="number">3</span>，<span class="number">2</span>))</span><br><span class="line">all_task.delay()</span><br><span class="line"></span><br><span class="line"><span class="comment"># chain还支持部分传参，如：</span></span><br><span class="line">c = (add.s(<span class="number">2</span>) | mul.s(<span class="number">8</span>))</span><br><span class="line">res = c(<span class="number">1</span>)  <span class="comment"># (1+2)*8</span></span><br><span class="line">res.get()  <span class="comment"># 24</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 搭配列表生成式实现更灵活,如</span></span><br><span class="line">task_list = [add.si(x,x) <span class="keyword">for</span> x <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">3</span>)]</span><br><span class="line">chain(*task_list)()  <span class="comment"># 不要忘了加上最后的括号才可执行任务</span></span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>另一种调用方法:</p>
-</blockquote>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">c =   (add.s(<span class="number">4</span>, <span class="number">16</span>) | mul.s(<span class="number">2</span>) | (add.s(<span class="number">4</span>) | mul.s(<span class="number">8</span>))) <span class="comment"># ((4 + 16) * 2 + 4) * 8</span></span><br><span class="line">res = c.apply_async()  <span class="comment"># 或者直接c()</span></span><br><span class="line">res.get()  <span class="comment"># .get()方法可以获取链式任务的最终返回值352</span></span><br></pre></td></tr></table></figure>
-
-
-<h2 id="7-任务分割"><a href="#7-任务分割" class="headerlink" title="7.任务分割"></a>7.任务分割</h2><blockquote>
-<p>使用<code>chord</code>将任务分为<code>header</code>和<code>body</code>两部分，<code>header</code>任务执行完再执行<code>body</code>,其中<code>header</code>的返回结果会作为参数传递给<code>body</code>，如：</p>
-</blockquote>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">res = chord(header=[add.s(<span class="number">1</span>,<span class="number">2</span>),mul.s(<span class="number">3</span>,<span class="number">4</span>)],body=add.s())()  <span class="comment"># 任务(1+2)+(3*4)</span></span><br><span class="line">res.get()  <span class="comment"># </span></span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>当一个<code>group</code>和另一个<code>task</code>组成<code>chain</code>时，会自动升级转化为<code>chord</code>，如：</p>
-</blockquote>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">c = (group(add.s(i, i) <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">10</span>)) | xsum.s())  <span class="comment"># (0+0)+(1+1)+(2+2)+...+(9+9)</span></span><br><span class="line">res = c()</span><br><span class="line">res.get()  <span class="comment"># 90</span></span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>Python</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-        <tag>Celery</tag>
-        <tag>调用任务</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Python - 闭包</title>
     <url>/Python-Closure.html</url>
     <content><![CDATA[<h2 id="1-闭包的概念"><a href="#1-闭包的概念" class="headerlink" title="1.闭包的概念"></a>1.闭包的概念</h2><blockquote>
@@ -461,6 +332,96 @@
       </tags>
   </entry>
   <entry>
+    <title>Python - Celery - 调用任务</title>
+    <url>/Python-Celery-Calling-Tasks.html</url>
+    <content><![CDATA[<h2 id="前提"><a href="#前提" class="headerlink" title="前提"></a>前提</h2><blockquote>
+<p>有3个任务：add作加法运算, mul作乘法运算, xsum为求和运算</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">@app.task(<span class="params">bind=<span class="literal">True</span>, base=BaseTask</span>)</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">add</span>(<span class="params">self, a, b</span>):</span><br><span class="line">    <span class="keyword">return</span> a + b</span><br><span class="line"></span><br><span class="line"><span class="meta">@app.task(<span class="params">bind=<span class="literal">True</span>, base=BaseTask</span>)</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">mul</span>(<span class="params">self, a, b</span>):</span><br><span class="line">    <span class="keyword">return</span> a * b</span><br><span class="line"></span><br><span class="line"><span class="meta">@app.task(<span class="params">bind=<span class="literal">True</span>, base=BaseTask</span>)</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">xsum</span>(<span class="params">self, *args</span>):</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">sum</span>(args)</span><br></pre></td></tr></table></figure>
+
+<h2 id="1-立即执行任务"><a href="#1-立即执行任务" class="headerlink" title="1.立即执行任务"></a>1.立即执行任务</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">add.apply_async()</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>或者简写为：</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">add.delay()</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-延时任务"><a href="#2-延时任务" class="headerlink" title="2.延时任务"></a>2.延时任务</h2><blockquote>
+<p>使用<code>countdown</code>参数使任务在60秒后执行：</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">add.apply_async(countdown=<span class="number">60</span>)</span><br></pre></td></tr></table></figure>
+
+<h2 id="3-定时任务"><a href="#3-定时任务" class="headerlink" title="3.定时任务"></a>3.定时任务</h2><blockquote>
+<p>使用<code>eta</code>参数使任务在晚上9点整执行：</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> datetime</span><br><span class="line">exec_at = datetime.datetime(<span class="number">2019</span>, <span class="number">7</span>, <span class="number">28</span>, <span class="number">21</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>)</span><br><span class="line">add.apply_async(eta=exec_at)</span><br></pre></td></tr></table></figure>
+
+<h2 id="4-任务分组"><a href="#4-任务分组" class="headerlink" title="4.任务分组"></a>4.任务分组</h2><blockquote>
+<p>使用<code>group</code>生成一组任务并发执行</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">tasks = group(add.si(x,x) <span class="keyword">for</span> x <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">10</span>))</span><br><span class="line">tasks.apply_async()</span><br><span class="line"></span><br><span class="line"><span class="comment"># get方法可获取任务的返回值:</span></span><br><span class="line">res = tasks()</span><br><span class="line">res.get(timeout=<span class="number">1</span>)  <span class="comment"># [0, 2, 4, 6, 8, 10, 12, 14, 16, 18]</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="5-任务分块"><a href="#5-任务分块" class="headerlink" title="5.任务分块"></a>5.任务分块</h2><blockquote>
+<p>使用<code>chord</code>将1000个任务分成100个一块，共10组</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">tasks = add.chunks(((x, x) <span class="keyword">for</span> x <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1000</span>)), <span class="number">100</span>).group()  <span class="comment"># 转化为group</span></span><br><span class="line"><span class="comment"># 每间隔60秒执行一组</span></span><br><span class="line">tasks.skew(step=<span class="number">60</span>)</span><br><span class="line">tasks.apply_async()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 注意使用了skew后eta参数会失效，想要定时效果可以转化为countdown如：</span></span><br><span class="line">task.apply_async(countdown=(exec_at - now()).seconds)</span><br></pre></td></tr></table></figure>
+
+<h2 id="6-链式顺序执行"><a href="#6-链式顺序执行" class="headerlink" title="6.链式顺序执行"></a>6.链式顺序执行</h2><blockquote>
+<p>任务签名<code>signature</code>：<br>subtask&#x3D;signature，可以简写为<code>s</code>，如add.s()，当需要对任务做一定处理后执行时使用。<br><code>s</code>和<code>si</code>的区别：<br><code>s</code>相当于signature()，而<code>si</code>相当于signature(immutable&#x3D;True)。 <code>s</code>会把上个任务的结果传给下个任务，而<code>si</code>不传递结果。</p>
+</blockquote>
+<blockquote>
+<p>使用<code>chain</code>按顺序执行一队任务：</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 前一个任务的结果作为后一个任务的第一个参数</span></span><br><span class="line">chain(add.s(<span class="number">1</span>,<span class="number">1</span>), add.s(<span class="number">2</span>), add.s(<span class="number">3</span>))()  </span><br><span class="line"></span><br><span class="line"> <span class="comment"># 不传递结果，仅仅按顺序执行</span></span><br><span class="line">chain(add.si(<span class="number">1</span>,<span class="number">1</span>), add.si(<span class="number">2</span>,<span class="number">2</span>), add.si(<span class="number">3</span>,<span class="number">3</span>))()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 也可以使用 | 链接任务，效果是一样的，如:</span></span><br><span class="line">all_task = (add.s(<span class="number">1</span>,<span class="number">1</span>) | add.s(<span class="number">2</span>) | add.s(<span class="number">3</span>))</span><br><span class="line">all_task = (add.si(<span class="number">1</span>,<span class="number">1</span>) | add.si(<span class="number">2</span>，<span class="number">2</span>) | add.si(<span class="number">3</span>，<span class="number">2</span>))</span><br><span class="line">all_task.delay()</span><br><span class="line"></span><br><span class="line"><span class="comment"># chain还支持部分传参，如：</span></span><br><span class="line">c = (add.s(<span class="number">2</span>) | mul.s(<span class="number">8</span>))</span><br><span class="line">res = c(<span class="number">1</span>)  <span class="comment"># (1+2)*8</span></span><br><span class="line">res.get()  <span class="comment"># 24</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 搭配列表生成式实现更灵活,如</span></span><br><span class="line">task_list = [add.si(x,x) <span class="keyword">for</span> x <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">3</span>)]</span><br><span class="line">chain(*task_list)()  <span class="comment"># 不要忘了加上最后的括号才可执行任务</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>另一种调用方法:</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">c =   (add.s(<span class="number">4</span>, <span class="number">16</span>) | mul.s(<span class="number">2</span>) | (add.s(<span class="number">4</span>) | mul.s(<span class="number">8</span>))) <span class="comment"># ((4 + 16) * 2 + 4) * 8</span></span><br><span class="line">res = c.apply_async()  <span class="comment"># 或者直接c()</span></span><br><span class="line">res.get()  <span class="comment"># .get()方法可以获取链式任务的最终返回值352</span></span><br></pre></td></tr></table></figure>
+
+
+<h2 id="7-任务分割"><a href="#7-任务分割" class="headerlink" title="7.任务分割"></a>7.任务分割</h2><blockquote>
+<p>使用<code>chord</code>将任务分为<code>header</code>和<code>body</code>两部分，<code>header</code>任务执行完再执行<code>body</code>,其中<code>header</code>的返回结果会作为参数传递给<code>body</code>，如：</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">res = chord(header=[add.s(<span class="number">1</span>,<span class="number">2</span>),mul.s(<span class="number">3</span>,<span class="number">4</span>)],body=add.s())()  <span class="comment"># 任务(1+2)+(3*4)</span></span><br><span class="line">res.get()  <span class="comment"># </span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>当一个<code>group</code>和另一个<code>task</code>组成<code>chain</code>时，会自动升级转化为<code>chord</code>，如：</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">c = (group(add.s(i, i) <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">10</span>)) | xsum.s())  <span class="comment"># (0+0)+(1+1)+(2+2)+...+(9+9)</span></span><br><span class="line">res = c()</span><br><span class="line">res.get()  <span class="comment"># 90</span></span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>Celery</tag>
+        <tag>调用任务</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python - 函数作用域</title>
+    <url>/Python-Function-Scope.html</url>
+    <content><![CDATA[<h2 id="1-函数作用域"><a href="#1-函数作用域" class="headerlink" title="1.函数作用域"></a>1.函数作用域</h2><blockquote>
+<p>L：local 函数内部作用域；</p>
+<p>E：enclosing 函数内部与它的内嵌函数之间；</p>
+<p>G：global 全局作用域，在同一个.py文件最外层；</p>
+<p>B：build-in 解释器内置作用域。</p>
+</blockquote>
+<h2 id="2-对象查找顺序"><a href="#2-对象查找顺序" class="headerlink" title="2.对象查找顺序"></a>2.对象查找顺序</h2><blockquote>
+<p>L &gt; E &gt; G &gt; B</p>
+</blockquote>
+<h2 id="3-举例解释"><a href="#3-举例解释" class="headerlink" title="3.举例解释"></a>3.举例解释</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># -*- conding: utf-8 -*-</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># G</span></span><br><span class="line">pass_line = <span class="number">60</span> </span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">func</span>(<span class="params">score</span>):</span><br><span class="line">    <span class="comment"># E</span></span><br><span class="line">    pass_line = <span class="number">90</span> </span><br><span class="line">    result = <span class="string">&quot;yes&quot;</span> <span class="keyword">if</span> score &gt;= pass_line <span class="keyword">else</span> <span class="string">&quot;no&quot;</span></span><br><span class="line">    <span class="built_in">print</span>(result)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">inner_func</span>():</span><br><span class="line">        <span class="comment"># L</span></span><br><span class="line">        <span class="comment"># score = 81</span></span><br><span class="line">        <span class="built_in">print</span>(score)</span><br><span class="line"></span><br><span class="line">    inner_func()</span><br><span class="line"></span><br><span class="line">    <span class="built_in">print</span>(<span class="built_in">max</span>(<span class="number">1</span>,<span class="number">2</span>))  <span class="comment"># B</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">func(<span class="number">80</span>)</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>函数作用域</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Python - 装饰器</title>
     <url>/Python-Decorator.html</url>
     <content><![CDATA[<h2 id="1-装饰器的概念"><a href="#1-装饰器的概念" class="headerlink" title="1.装饰器的概念"></a>1.装饰器的概念</h2><blockquote>
@@ -514,25 +475,22 @@
       </tags>
   </entry>
   <entry>
-    <title>Python - 函数作用域</title>
-    <url>/Python-Function-Scope.html</url>
-    <content><![CDATA[<h2 id="1-函数作用域"><a href="#1-函数作用域" class="headerlink" title="1.函数作用域"></a>1.函数作用域</h2><blockquote>
-<p>L：local 函数内部作用域；</p>
-<p>E：enclosing 函数内部与它的内嵌函数之间；</p>
-<p>G：global 全局作用域，在同一个.py文件最外层；</p>
-<p>B：build-in 解释器内置作用域。</p>
+    <title>Python - OpenCV - 截取视频某个时间点的一帧</title>
+    <url>/Python-OpenCV-Snapshot.html</url>
+    <content><![CDATA[<h2 id="1-起因"><a href="#1-起因" class="headerlink" title="1.起因"></a>1.起因</h2><blockquote>
+<p>最近在做一个短视频类的小程序，需要从用户上传的视频中截取封面图。因为有些用户喜欢用“名不副实”的封面来吸引人点进去，所以拟截取视频播放1秒时的一帧图片作为封面。</p>
 </blockquote>
-<h2 id="2-对象查找顺序"><a href="#2-对象查找顺序" class="headerlink" title="2.对象查找顺序"></a>2.对象查找顺序</h2><blockquote>
-<p>L &gt; E &gt; G &gt; B</p>
-</blockquote>
-<h2 id="3-举例解释"><a href="#3-举例解释" class="headerlink" title="3.举例解释"></a>3.举例解释</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># -*- conding: utf-8 -*-</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># G</span></span><br><span class="line">pass_line = <span class="number">60</span> </span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">func</span>(<span class="params">score</span>):</span><br><span class="line">    <span class="comment"># E</span></span><br><span class="line">    pass_line = <span class="number">90</span> </span><br><span class="line">    result = <span class="string">&quot;yes&quot;</span> <span class="keyword">if</span> score &gt;= pass_line <span class="keyword">else</span> <span class="string">&quot;no&quot;</span></span><br><span class="line">    <span class="built_in">print</span>(result)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">inner_func</span>():</span><br><span class="line">        <span class="comment"># L</span></span><br><span class="line">        <span class="comment"># score = 81</span></span><br><span class="line">        <span class="built_in">print</span>(score)</span><br><span class="line"></span><br><span class="line">    inner_func()</span><br><span class="line"></span><br><span class="line">    <span class="built_in">print</span>(<span class="built_in">max</span>(<span class="number">1</span>,<span class="number">2</span>))  <span class="comment"># B</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">func(<span class="number">80</span>)</span><br></pre></td></tr></table></figure>
+<h2 id="2-安装OpenCV库"><a href="#2-安装OpenCV库" class="headerlink" title="2.安装OpenCV库"></a>2.安装<code>OpenCV</code>库</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pip install opencv-python</span><br></pre></td></tr></table></figure>
+
+<h2 id="3-截取1秒时的一帧"><a href="#3-截取1秒时的一帧" class="headerlink" title="3.截取1秒时的一帧"></a>3.截取1秒时的一帧</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line"></span><br><span class="line">video_path = <span class="string">&quot;/home/richard/oss_tmp/a.mp4&quot;</span></span><br><span class="line">cover_path = <span class="string">&quot;/home/richard/oss_tmp/a_cover.jpg&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    vc = cv2.VideoCapture(video_path)  <span class="comment"># 读取视频</span></span><br><span class="line">    video_width = <span class="built_in">int</span>(vc.get(cv2.CAP_PROP_FRAME_WIDTH))  <span class="comment"># 视频宽度</span></span><br><span class="line">    video_height = <span class="built_in">int</span>(vc.get(cv2.CAP_PROP_FRAME_HEIGHT))  <span class="comment"># 视频高度</span></span><br><span class="line">    vc.<span class="built_in">set</span>(cv2.CAP_PROP_POS_MSEC, <span class="number">1000</span>)  <span class="comment"># 设置读取位置，1000毫秒</span></span><br><span class="line">    rval, frame = vc.read()  <span class="comment"># 读取当前帧，rval用于判断读取是否成功</span></span><br><span class="line">    <span class="keyword">if</span> rval:</span><br><span class="line">        cv2.imwrite(cover_path, frame)  <span class="comment"># 将当前帧作为图片保存到 cover_path</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;读取失败&quot;</span>)</span><br><span class="line"><span class="keyword">except</span> Exception <span class="keyword">as</span> e:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">f&quot;获取视频封面图失败: <span class="subst">&#123;e&#125;</span>&quot;</span>)</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
         <category>Python</category>
       </categories>
       <tags>
         <tag>Python</tag>
-        <tag>函数作用域</tag>
+        <tag>OpenCV</tag>
+        <tag>视频截图</tag>
       </tags>
   </entry>
   <entry>
@@ -568,25 +526,6 @@
         <tag>OpenCV</tag>
         <tag>Pillow</tag>
         <tag>图片处理</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Python - OpenCV - 截取视频某个时间点的一帧</title>
-    <url>/Python-OpenCV-Snapshot.html</url>
-    <content><![CDATA[<h2 id="1-起因"><a href="#1-起因" class="headerlink" title="1.起因"></a>1.起因</h2><blockquote>
-<p>最近在做一个短视频类的小程序，需要从用户上传的视频中截取封面图。因为有些用户喜欢用“名不副实”的封面来吸引人点进去，所以拟截取视频播放1秒时的一帧图片作为封面。</p>
-</blockquote>
-<h2 id="2-安装OpenCV库"><a href="#2-安装OpenCV库" class="headerlink" title="2.安装OpenCV库"></a>2.安装<code>OpenCV</code>库</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pip install opencv-python</span><br></pre></td></tr></table></figure>
-
-<h2 id="3-截取1秒时的一帧"><a href="#3-截取1秒时的一帧" class="headerlink" title="3.截取1秒时的一帧"></a>3.截取1秒时的一帧</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line"></span><br><span class="line">video_path = <span class="string">&quot;/home/richard/oss_tmp/a.mp4&quot;</span></span><br><span class="line">cover_path = <span class="string">&quot;/home/richard/oss_tmp/a_cover.jpg&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    vc = cv2.VideoCapture(video_path)  <span class="comment"># 读取视频</span></span><br><span class="line">    video_width = <span class="built_in">int</span>(vc.get(cv2.CAP_PROP_FRAME_WIDTH))  <span class="comment"># 视频宽度</span></span><br><span class="line">    video_height = <span class="built_in">int</span>(vc.get(cv2.CAP_PROP_FRAME_HEIGHT))  <span class="comment"># 视频高度</span></span><br><span class="line">    vc.<span class="built_in">set</span>(cv2.CAP_PROP_POS_MSEC, <span class="number">1000</span>)  <span class="comment"># 设置读取位置，1000毫秒</span></span><br><span class="line">    rval, frame = vc.read()  <span class="comment"># 读取当前帧，rval用于判断读取是否成功</span></span><br><span class="line">    <span class="keyword">if</span> rval:</span><br><span class="line">        cv2.imwrite(cover_path, frame)  <span class="comment"># 将当前帧作为图片保存到 cover_path</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;读取失败&quot;</span>)</span><br><span class="line"><span class="keyword">except</span> Exception <span class="keyword">as</span> e:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">f&quot;获取视频封面图失败: <span class="subst">&#123;e&#125;</span>&quot;</span>)</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>Python</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-        <tag>OpenCV</tag>
-        <tag>视频截图</tag>
       </tags>
   </entry>
   <entry>
@@ -755,18 +694,6 @@
       </tags>
   </entry>
   <entry>
-    <title>服务器配置 - Nginx+Gunicorn+Supervisor+Flask</title>
-    <url>/Server-Configuration.html</url>
-    <content><![CDATA[<h2 id="1-为服务器添加ssh公钥验证"><a href="#1-为服务器添加ssh公钥验证" class="headerlink" title="1.为服务器添加ssh公钥验证"></a>1.<a href="/Server-SSH-Key.html">为服务器添加ssh公钥验证</a></h2><h2 id="2-Git安装配置"><a href="#2-Git安装配置" class="headerlink" title="2.Git安装配置"></a>2.<a href="/Git-Configuration.html">Git安装配置</a></h2><h2 id="3-Redis安装配置"><a href="#3-Redis安装配置" class="headerlink" title="3.Redis安装配置"></a>3.<a href="/Server-Redis-Configuration.html">Redis安装配置</a></h2><h2 id="4-Nginx安装配置"><a href="#4-Nginx安装配置" class="headerlink" title="4.Nginx安装配置"></a>4.<a href="/Server-Nginx-Configuration.html">Nginx安装配置</a></h2><h2 id="5-配置Python虚拟环境"><a href="#5-配置Python虚拟环境" class="headerlink" title="5.配置Python虚拟环境"></a>5.<a href="/Python-Virtualenv.html">配置Python虚拟环境</a></h2><h2 id="6-Gunicorn安装配置"><a href="#6-Gunicorn安装配置" class="headerlink" title="6.Gunicorn安装配置"></a>6.<a href="/Server-Gunicorn-Configuration.html">Gunicorn安装配置</a></h2><h2 id="7-Supervisor安装配置"><a href="#7-Supervisor安装配置" class="headerlink" title="7.Supervisor安装配置"></a>7.<a href="/Server-Supervisor-Configuration.html">Supervisor安装配置</a></h2>]]></content>
-      <categories>
-        <category>服务器搭建</category>
-      </categories>
-      <tags>
-        <tag>Linux</tag>
-        <tag>服务器</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Python - 配置iPython直接在命令行调试Odoo(openerp)代码</title>
     <url>/Python-iPython-Odoo-OE.html</url>
     <content><![CDATA[<h2 id="0-先看效果"><a href="#0-先看效果" class="headerlink" title="0.先看效果"></a>0.先看效果</h2><p><img src="/images/Python-iPython/ipython_oe_run.png" alt="ipython_oe_run.png"></p>
@@ -797,6 +724,18 @@
         <tag>Odoo</tag>
         <tag>OE</tag>
         <tag>OpenERP</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>服务器配置 - Nginx+Gunicorn+Supervisor+Flask</title>
+    <url>/Server-Configuration.html</url>
+    <content><![CDATA[<h2 id="1-为服务器添加ssh公钥验证"><a href="#1-为服务器添加ssh公钥验证" class="headerlink" title="1.为服务器添加ssh公钥验证"></a>1.<a href="/Server-SSH-Key.html">为服务器添加ssh公钥验证</a></h2><h2 id="2-Git安装配置"><a href="#2-Git安装配置" class="headerlink" title="2.Git安装配置"></a>2.<a href="/Git-Configuration.html">Git安装配置</a></h2><h2 id="3-Redis安装配置"><a href="#3-Redis安装配置" class="headerlink" title="3.Redis安装配置"></a>3.<a href="/Server-Redis-Configuration.html">Redis安装配置</a></h2><h2 id="4-Nginx安装配置"><a href="#4-Nginx安装配置" class="headerlink" title="4.Nginx安装配置"></a>4.<a href="/Server-Nginx-Configuration.html">Nginx安装配置</a></h2><h2 id="5-配置Python虚拟环境"><a href="#5-配置Python虚拟环境" class="headerlink" title="5.配置Python虚拟环境"></a>5.<a href="/Python-Virtualenv.html">配置Python虚拟环境</a></h2><h2 id="6-Gunicorn安装配置"><a href="#6-Gunicorn安装配置" class="headerlink" title="6.Gunicorn安装配置"></a>6.<a href="/Server-Gunicorn-Configuration.html">Gunicorn安装配置</a></h2><h2 id="7-Supervisor安装配置"><a href="#7-Supervisor安装配置" class="headerlink" title="7.Supervisor安装配置"></a>7.<a href="/Server-Supervisor-Configuration.html">Supervisor安装配置</a></h2>]]></content>
+      <categories>
+        <category>服务器搭建</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+        <tag>服务器</tag>
       </tags>
   </entry>
   <entry>
@@ -1114,5 +1053,66 @@
     <title>Hello World</title>
     <url>/hello-world.html</url>
     <content><![CDATA[<h2 id="博客访问地址-Coding"><a href="#博客访问地址-Coding" class="headerlink" title="博客访问地址 - Coding"></a><span class="exturl" data-url="aHR0cHM6Ly9yaWNoYXJkcmVubi5jb2RpbmcubWUv">博客访问地址 - Coding<i class="fa fa-external-link-alt"></i></span></h2><h2 id="博客访问地址-Github"><a href="#博客访问地址-Github" class="headerlink" title="博客访问地址 - Github"></a><a href="https://richardrenn.github.io/">博客访问地址 - Github</a></h2><h2 id="博客访问地址-Gitee"><a href="#博客访问地址-Gitee" class="headerlink" title="博客访问地址 - Gitee"></a><span class="exturl" data-url="aHR0cHM6Ly9yaWNoYXJkcmVubi5naXRlZS5pby8=">博客访问地址 - Gitee<i class="fa fa-external-link-alt"></i></span></h2>]]></content>
+  </entry>
+  <entry>
+    <title>GitHub教程 - 分支工作流程</title>
+    <url>/GitHub-Branch-Workflow.html</url>
+    <content><![CDATA[<h2 id="1-更新代码"><a href="#1-更新代码" class="headerlink" title="1.更新代码"></a>1.更新代码</h2><blockquote>
+<p>进入代码目录，更新代码</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~/workspace/sourcecode/richardrenn/slark</span><br><span class="line">git pull origin master</span><br><span class="line">*git pull upstream master</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>*查看所有远端库情况</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git remote -v</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">origin        git@github.com:RichardRenn/slark.git (fetch)</span><br><span class="line">origin        git@github.com:RichardRenn/slark.git (push)</span><br><span class="line">upstream        git@github.com:southflower/slark.git (fetch)</span><br><span class="line">upstream        git@github.com:southflower/slark.git (push)</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>*查看所有分支情况，可看到当前的分支是origin&#x2F;master</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git branch -a</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">* master</span><br><span class="line">  remotes/origin/HEAD -&gt; origin/master</span><br><span class="line">  remotes/origin/master</span><br><span class="line">  remotes/origin/release</span><br><span class="line">  remotes/upstream/master</span><br><span class="line">  remotes/upstream/release</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-新建分支"><a href="#2-新建分支" class="headerlink" title="2.新建分支"></a>2.新建分支</h2><blockquote>
+<p>本地新建分支，并切换到新建的分支</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git checkout -b dev</span><br></pre></td></tr></table></figure>
+
+<h2 id="3-推送分支"><a href="#3-推送分支" class="headerlink" title="3.推送分支"></a>3.推送分支</h2><blockquote>
+<p>推送新分支到远端库和上游库，冒号前的是本地分支名，冒号后的是远程分支名</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git push origin dev:dev</span><br><span class="line">git push upstream dev:dev</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>此时再敲git branch -a 就可以看到已经在远端库和上游库都建好了分支</p>
+</blockquote>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">* dev</span><br><span class="line">  master</span><br><span class="line">  remotes/origin/HEAD -&gt; origin/master</span><br><span class="line">  remotes/origin/dev</span><br><span class="line">  remotes/origin/master</span><br><span class="line">  remotes/origin/release</span><br><span class="line">  remotes/upstream/dev</span><br><span class="line">  remotes/upstream/master</span><br><span class="line">  remotes/upstream/release</span><br></pre></td></tr></table></figure>
+
+<h2 id="4-提交修改"><a href="#4-提交修改" class="headerlink" title="4.提交修改"></a>4.提交修改</h2><blockquote>
+<p>在本地的dev分支修改文件并提交推送到远端库</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git add [file]</span><br><span class="line">git commit -m <span class="string">&quot;something&quot;</span></span><br><span class="line">git push origin dev</span><br><span class="line">*git push upstream dev   <span class="comment"># 这一步直接推送到上游库的dev分支，可以省一次PR</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="5-提交PR"><a href="#5-提交PR" class="headerlink" title="5.提交PR"></a>5.提交PR</h2><blockquote>
+<p>在网页通过PR的方式将dev代码推送到上游库的dev分支</p>
+</blockquote>
+<h2 id="6-分支合入"><a href="#6-分支合入" class="headerlink" title="6.分支合入"></a>6.分支合入</h2><blockquote>
+<p>等dev调试稳定后再通过PR的方式将上游库的dev分支merge到其master分支，即可上线</p>
+</blockquote>
+<hr>
+<ul>
+<li>PR操作可以参考<a href="/GitHub-Pull-Request-Workflow.html">&gt;&gt;传送门 - Pull Request 工作流程&lt;&lt;</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>GitHub教程</category>
+      </categories>
+      <tags>
+        <tag>Git</tag>
+        <tag>GitHub</tag>
+      </tags>
   </entry>
 </search>
