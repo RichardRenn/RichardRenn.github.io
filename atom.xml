@@ -6,7 +6,7 @@
   <link href="https://richardrenn.github.io/atom.xml" rel="self"/>
   
   <link href="https://richardrenn.github.io/"/>
-  <updated>2024-04-26T14:45:36.965Z</updated>
+  <updated>2024-04-27T14:33:05.628Z</updated>
   <id>https://richardrenn.github.io/</id>
   
   <author>
@@ -17,19 +17,23 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Python - 如何在Python中使用PG的COPY命令将SQL结果直接输出到客户端文件</title>
+    <title>Python - 如何使用PG的COPY命令将SQL结果直接输出到客户端文件</title>
     <link href="https://richardrenn.github.io/Python-Psycopg2-Copy-Odoo-OE.html"/>
     <id>https://richardrenn.github.io/Python-Psycopg2-Copy-Odoo-OE.html</id>
-    <published>2022-09-09T12:32:05.000Z</published>
-    <updated>2024-04-26T14:45:36.965Z</updated>
+    <published>2022-09-10T12:32:05.000Z</published>
+    <updated>2024-04-27T14:33:05.628Z</updated>
     
     
-    <summary type="html">介绍如何在Python中使用PG的COPY命令将SQL结果直接输出到客户端文件。</summary>
+    <summary type="html">介绍如何使用PG的COPY命令将SQL结果直接输出到客户端文件。</summary>
     
     
     
     <category term="Python" scheme="https://richardrenn.github.io/categories/Python/"/>
     
+    
+    <category term="PostgreSQL" scheme="https://richardrenn.github.io/tags/PostgreSQL/"/>
+    
+    <category term="PG" scheme="https://richardrenn.github.io/tags/PG/"/>
     
     <category term="Python" scheme="https://richardrenn.github.io/tags/Python/"/>
     
@@ -44,11 +48,11 @@
   </entry>
   
   <entry>
-    <title>PostgreSQL - 经纬度计算距离ACOS函数超范围ERROR: input is out of range</title>
+    <title>PostgreSQL - 经纬度计算距离ACOS函数ERROR: input is out of range</title>
     <link href="https://richardrenn.github.io/PostgreSQL-Lng-Lat-ACOS-ERROR-Input-Is-Out-Of-Range.html"/>
     <id>https://richardrenn.github.io/PostgreSQL-Lng-Lat-ACOS-ERROR-Input-Is-Out-Of-Range.html</id>
     <published>2022-07-07T12:28:59.000Z</published>
-    <updated>2022-07-20T08:26:30.887Z</updated>
+    <updated>2024-04-27T14:39:11.795Z</updated>
     
     
     <summary type="html">记录在PostgreSQL中使用经纬度计算距离时碰到的ACOS函数参数超出范围(ERROR: input is out of range)的排查过程和解决方案。</summary>
@@ -66,12 +70,6 @@
     
     <category term="经纬度" scheme="https://richardrenn.github.io/tags/%E7%BB%8F%E7%BA%AC%E5%BA%A6/"/>
     
-    <category term="ERROR" scheme="https://richardrenn.github.io/tags/ERROR/"/>
-    
-    <category term="input" scheme="https://richardrenn.github.io/tags/input/"/>
-    
-    <category term="out of range" scheme="https://richardrenn.github.io/tags/out-of-range/"/>
-    
   </entry>
   
   <entry>
@@ -79,7 +77,7 @@
     <link href="https://richardrenn.github.io/Python-iPython-Odoo-OE.html"/>
     <id>https://richardrenn.github.io/Python-iPython-Odoo-OE.html</id>
     <published>2021-04-08T12:41:01.000Z</published>
-    <updated>2022-11-09T03:34:11.114Z</updated>
+    <updated>2024-04-27T08:11:40.900Z</updated>
     
     
     <summary type="html">介绍如何配置iPython实现在命令行直接调试Odoo(OE)代码。</summary>
@@ -106,7 +104,7 @@
     <link href="https://richardrenn.github.io/Python-OpenCV-Image-PIL-Image.html"/>
     <id>https://richardrenn.github.io/Python-OpenCV-Image-PIL-Image.html</id>
     <published>2019-08-15T13:27:43.000Z</published>
-    <updated>2021-04-01T08:00:16.016Z</updated>
+    <updated>2024-04-27T08:13:24.483Z</updated>
     
     
     <summary type="html">图片处理过程中涉及OpenCV图片和PIL.Image对象的互相转化。</summary>
@@ -131,7 +129,7 @@
     <link href="https://richardrenn.github.io/Python-Celery-Calling-Tasks.html"/>
     <id>https://richardrenn.github.io/Python-Celery-Calling-Tasks.html</id>
     <published>2019-07-28T08:35:54.000Z</published>
-    <updated>2021-04-01T08:00:16.015Z</updated>
+    <updated>2024-04-27T08:09:47.522Z</updated>
     
     
     <summary type="html">Celery任务可以根据不同场景很灵活的调用：延迟执行、定时执行、分组并发执行、链式顺序执行、任务分块、任务分割等等。</summary>
@@ -154,7 +152,7 @@
     <link href="https://richardrenn.github.io/Python-OpenCV-Snapshot.html"/>
     <id>https://richardrenn.github.io/Python-OpenCV-Snapshot.html</id>
     <published>2019-07-16T14:47:20.000Z</published>
-    <updated>2021-04-01T08:00:16.016Z</updated>
+    <updated>2024-04-27T13:12:01.429Z</updated>
     
     
     <summary type="html">OpenCV 库的简单使用，截取视频1秒时的一帧图片，并保存到本地。</summary>
@@ -177,7 +175,7 @@
     <link href="https://richardrenn.github.io/GitHub-Large-File-Storage.html"/>
     <id>https://richardrenn.github.io/GitHub-Large-File-Storage.html</id>
     <published>2019-05-11T15:25:37.000Z</published>
-    <updated>2021-04-01T08:00:16.014Z</updated>
+    <updated>2024-04-27T08:05:48.990Z</updated>
     
     
     <summary type="html">GitHub限制单个文件不能超过100M。本文将介绍如何使用Git大文件存储扩展LFS（Large File Storage）来管理超过100M大小的大文件。</summary>
@@ -198,7 +196,7 @@
     <link href="https://richardrenn.github.io/Python-Super.html"/>
     <id>https://richardrenn.github.io/Python-Super.html</id>
     <published>2019-04-18T14:29:39.000Z</published>
-    <updated>2021-04-01T08:00:16.016Z</updated>
+    <updated>2024-04-27T14:33:35.668Z</updated>
     
     
     <summary type="html">解析Python多继承中Super()函数的方法解析顺序(MRO)，并举例理解它所使用的C3算法的工作原理。</summary>
@@ -210,7 +208,9 @@
     
     <category term="Python" scheme="https://richardrenn.github.io/tags/Python/"/>
     
-    <category term="Super()继承顺序" scheme="https://richardrenn.github.io/tags/Super-%E7%BB%A7%E6%89%BF%E9%A1%BA%E5%BA%8F/"/>
+    <category term="Super()" scheme="https://richardrenn.github.io/tags/Super/"/>
+    
+    <category term="继承顺序" scheme="https://richardrenn.github.io/tags/%E7%BB%A7%E6%89%BF%E9%A1%BA%E5%BA%8F/"/>
     
     <category term="MRO" scheme="https://richardrenn.github.io/tags/MRO/"/>
     
@@ -223,7 +223,7 @@
     <link href="https://richardrenn.github.io/Python-List-Slice.html"/>
     <id>https://richardrenn.github.io/Python-List-Slice.html</id>
     <published>2019-04-10T12:57:45.000Z</published>
-    <updated>2021-04-01T08:00:16.015Z</updated>
+    <updated>2024-04-27T14:39:45.984Z</updated>
     
     
     <summary type="html">梳理Python数组list相关的知识点，包括数组切片、数组更新、数组排序等。</summary>
@@ -237,8 +237,6 @@
     
     <category term="数组" scheme="https://richardrenn.github.io/tags/%E6%95%B0%E7%BB%84/"/>
     
-    <category term="数组切片" scheme="https://richardrenn.github.io/tags/%E6%95%B0%E7%BB%84%E5%88%87%E7%89%87/"/>
-    
   </entry>
   
   <entry>
@@ -246,7 +244,7 @@
     <link href="https://richardrenn.github.io/Python-Copy-Deepcopy.html"/>
     <id>https://richardrenn.github.io/Python-Copy-Deepcopy.html</id>
     <published>2019-03-03T15:09:23.000Z</published>
-    <updated>2021-04-01T08:00:16.015Z</updated>
+    <updated>2024-04-27T08:10:31.057Z</updated>
     
     
     <summary type="html">举例解析Python浅拷贝和深拷贝的区别。并手动实现字典的深拷贝。</summary>
@@ -267,7 +265,7 @@
     <link href="https://richardrenn.github.io/Python-Decorator.html"/>
     <id>https://richardrenn.github.io/Python-Decorator.html</id>
     <published>2019-02-20T16:35:47.000Z</published>
-    <updated>2021-04-01T08:00:16.015Z</updated>
+    <updated>2024-04-27T08:10:43.435Z</updated>
     
     
     <summary type="html">举例理解Python装饰器的原理，以及相关的知识点。</summary>
@@ -288,7 +286,7 @@
     <link href="https://richardrenn.github.io/Python-Closure.html"/>
     <id>https://richardrenn.github.io/Python-Closure.html</id>
     <published>2019-01-28T16:35:04.000Z</published>
-    <updated>2021-04-01T08:00:16.015Z</updated>
+    <updated>2024-04-27T08:10:03.046Z</updated>
     
     
     <summary type="html">使用闭包可以很方便的实现代码的封装和复用。本文将举例理解Python闭包的原理，并做一个闭包的简单应用。</summary>
@@ -309,7 +307,7 @@
     <link href="https://richardrenn.github.io/Python-Function-Scope.html"/>
     <id>https://richardrenn.github.io/Python-Function-Scope.html</id>
     <published>2019-01-10T16:34:21.000Z</published>
-    <updated>2021-04-01T08:00:16.015Z</updated>
+    <updated>2024-04-27T08:10:54.013Z</updated>
     
     
     <summary type="html">举例介绍Python的函数作用域，以及对象的查找顺序。</summary>
@@ -330,7 +328,7 @@
     <link href="https://richardrenn.github.io/Linux-Msconfig.html"/>
     <id>https://richardrenn.github.io/Linux-Msconfig.html</id>
     <published>2018-12-26T09:25:35.000Z</published>
-    <updated>2021-04-01T08:00:16.015Z</updated>
+    <updated>2024-04-27T08:09:23.831Z</updated>
     
     
     <summary type="html">介绍Linux系统的开机启动项目录，即rc.d目录的功能，以及如何利用此目录进行自定义开机启动项。</summary>
@@ -349,14 +347,14 @@
     <link href="https://richardrenn.github.io/Server-Redis-Multi-Instance.html"/>
     <id>https://richardrenn.github.io/Server-Redis-Multi-Instance.html</id>
     <published>2018-12-12T08:35:50.000Z</published>
-    <updated>2021-04-01T08:00:16.017Z</updated>
+    <updated>2024-04-27T14:35:21.448Z</updated>
     
     
     <summary type="html">项目部署过程中有时候会因机器不足或为了提高资源利用率，不得不在同一台机器上启动多个Redis实例的情况。本文将介绍如何在一台机器上配置启动多个Redis实例，并将多实例均设置为开机启动。</summary>
     
     
     
-    <category term="服务器搭建" scheme="https://richardrenn.github.io/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA/"/>
+    <category term="Redis" scheme="https://richardrenn.github.io/categories/Redis/"/>
     
     
     <category term="Linux" scheme="https://richardrenn.github.io/tags/Linux/"/>
@@ -372,14 +370,14 @@
     <link href="https://richardrenn.github.io/Server-Supervisor-Configuration.html"/>
     <id>https://richardrenn.github.io/Server-Supervisor-Configuration.html</id>
     <published>2018-12-02T16:19:22.000Z</published>
-    <updated>2021-04-01T08:00:16.017Z</updated>
+    <updated>2024-04-27T14:35:05.238Z</updated>
     
     
     <summary type="html">Supervisor是用Python开发的进程管理工具，工作于Linux/Unix系统。可以很方便的监听、启动、停止、重启一个或多个进程。并支持自动重启被意外杀死的进程。本文将介绍Supervisor的安装、配置及使用。</summary>
     
     
     
-    <category term="Python" scheme="https://richardrenn.github.io/categories/Python/"/>
+    <category term="Supervisor" scheme="https://richardrenn.github.io/categories/Supervisor/"/>
     
     
     <category term="Linux" scheme="https://richardrenn.github.io/tags/Linux/"/>
@@ -397,7 +395,7 @@
     <link href="https://richardrenn.github.io/Server-Gunicorn-Configuration.html"/>
     <id>https://richardrenn.github.io/Server-Gunicorn-Configuration.html</id>
     <published>2018-12-01T15:52:38.000Z</published>
-    <updated>2021-04-01T08:00:16.016Z</updated>
+    <updated>2024-04-27T14:36:33.214Z</updated>
     
     
     <summary type="html">Gunicorn是一个高性能的Python WSGI UNIX HTTP服务器，使用简单，资源消耗低，兼容flask、django等Web框架。本文将介绍Gunicorn的安装、配置及使用。</summary>
@@ -405,6 +403,8 @@
     
     
     <category term="Python" scheme="https://richardrenn.github.io/categories/Python/"/>
+    
+    <category term="Gunicorn" scheme="https://richardrenn.github.io/categories/Python/Gunicorn/"/>
     
     
     <category term="Linux" scheme="https://richardrenn.github.io/tags/Linux/"/>
@@ -422,7 +422,7 @@
     <link href="https://richardrenn.github.io/Python-Virtualenv.html"/>
     <id>https://richardrenn.github.io/Python-Virtualenv.html</id>
     <published>2018-11-25T15:00:54.000Z</published>
-    <updated>2021-04-01T08:00:16.016Z</updated>
+    <updated>2024-04-27T08:15:02.203Z</updated>
     
     
     <summary type="html">当在同一台机器上开发多个Python项目，而不同项目要求的Python库版本又不同时，就没办法公用一个Python环境了。Python的virtualenv可以很好地解决这种情况下的矛盾，可以保证每个应用都有自己独立的一套“隔离的”虚拟环境。本文将介绍如何配置Python虚拟环境。</summary>
@@ -443,14 +443,14 @@
     <link href="https://richardrenn.github.io/Server-Nginx-Configuration.html"/>
     <id>https://richardrenn.github.io/Server-Nginx-Configuration.html</id>
     <published>2018-11-17T11:58:56.000Z</published>
-    <updated>2021-04-01T08:00:16.016Z</updated>
+    <updated>2024-04-27T14:36:18.915Z</updated>
     
     
     <summary type="html">Nginx是一款高性能的Web和反向代理服务器，也可作为IMAP/POP3/SMTP代理服务器，尤其擅长处理多连接高并发的业务。本文将介绍Nginx服务器的安装配置和常用命令。</summary>
     
     
     
-    <category term="服务器搭建" scheme="https://richardrenn.github.io/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA/"/>
+    <category term="Nginx" scheme="https://richardrenn.github.io/categories/Nginx/"/>
     
     
     <category term="Linux" scheme="https://richardrenn.github.io/tags/Linux/"/>
@@ -466,14 +466,14 @@
     <link href="https://richardrenn.github.io/Server-Redis-Configuration.html"/>
     <id>https://richardrenn.github.io/Server-Redis-Configuration.html</id>
     <published>2018-11-11T11:39:11.000Z</published>
-    <updated>2021-04-01T08:00:16.016Z</updated>
+    <updated>2024-04-27T14:35:28.332Z</updated>
     
     
     <summary type="html">Redis(REmote DIctionary Server)是一个开源的可基于内存亦可持久化的Key-Value数据库。本文将介绍Redis服务器的安装配置和常用命令。</summary>
     
     
     
-    <category term="服务器搭建" scheme="https://richardrenn.github.io/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA/"/>
+    <category term="Redis" scheme="https://richardrenn.github.io/categories/Redis/"/>
     
     
     <category term="Linux" scheme="https://richardrenn.github.io/tags/Linux/"/>
@@ -481,6 +481,134 @@
     <category term="服务器" scheme="https://richardrenn.github.io/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
     
     <category term="Redis" scheme="https://richardrenn.github.io/tags/Redis/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>服务器配置 - Nginx+Gunicorn+Supervisor+Flask</title>
+    <link href="https://richardrenn.github.io/Server-Configuration.html"/>
+    <id>https://richardrenn.github.io/Server-Configuration.html</id>
+    <published>2018-11-10T08:47:24.000Z</published>
+    <updated>2024-04-27T14:36:14.663Z</updated>
+    
+    
+    <summary type="html">介绍如何使用Nginx+Gunicorn+Supervisor+Flask来搭建RESTFul-API服务器。</summary>
+    
+    
+    
+    <category term="服务器" scheme="https://richardrenn.github.io/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    
+    
+    <category term="Linux" scheme="https://richardrenn.github.io/tags/Linux/"/>
+    
+    <category term="服务器" scheme="https://richardrenn.github.io/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>服务器搭建 - 为服务器添加ssh公钥验证</title>
+    <link href="https://richardrenn.github.io/Server-SSH-Key.html"/>
+    <id>https://richardrenn.github.io/Server-SSH-Key.html</id>
+    <published>2018-11-04T09:51:00.000Z</published>
+    <updated>2024-04-27T14:36:58.891Z</updated>
+    
+    
+    <summary type="html">使用ssh密钥对登陆，可以避免每次登陆都要输入密码，便捷的同时也提高了安全性。本文将介绍如何为服务器添加ssh公钥验证。</summary>
+    
+    
+    
+    <category term="服务器" scheme="https://richardrenn.github.io/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    
+    <category term="SSH" scheme="https://richardrenn.github.io/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/SSH/"/>
+    
+    
+    <category term="Linux" scheme="https://richardrenn.github.io/tags/Linux/"/>
+    
+    <category term="ssh" scheme="https://richardrenn.github.io/tags/ssh/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>GitHub教程 - 分支工作流程</title>
+    <link href="https://richardrenn.github.io/GitHub-Branch-Workflow.html"/>
+    <id>https://richardrenn.github.io/GitHub-Branch-Workflow.html</id>
+    <published>2018-10-17T15:28:03.000Z</published>
+    <updated>2024-04-27T08:05:27.513Z</updated>
+    
+    
+    <summary type="html">善用Git的分支特性可以使开发工作更清晰高效。本文将介绍分支机制的工作流程。</summary>
+    
+    
+    
+    <category term="GitHub教程" scheme="https://richardrenn.github.io/categories/GitHub%E6%95%99%E7%A8%8B/"/>
+    
+    
+    <category term="Git" scheme="https://richardrenn.github.io/tags/Git/"/>
+    
+    <category term="GitHub" scheme="https://richardrenn.github.io/tags/GitHub/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>GitHub教程 - Pull Request 工作流程</title>
+    <link href="https://richardrenn.github.io/GitHub-Pull-Request-Workflow.html"/>
+    <id>https://richardrenn.github.io/GitHub-Pull-Request-Workflow.html</id>
+    <published>2018-10-16T12:27:28.000Z</published>
+    <updated>2024-04-27T08:06:05.987Z</updated>
+    
+    
+    <summary type="html">GitHub的PR机制一般用于多人协同完成项目开发的工作，可以使开发更便捷。本文将介绍Pull-Request工作流程。</summary>
+    
+    
+    
+    <category term="GitHub教程" scheme="https://richardrenn.github.io/categories/GitHub%E6%95%99%E7%A8%8B/"/>
+    
+    
+    <category term="Git" scheme="https://richardrenn.github.io/tags/Git/"/>
+    
+    <category term="GitHub" scheme="https://richardrenn.github.io/tags/GitHub/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>GitHub教程 - Git安装配置</title>
+    <link href="https://richardrenn.github.io/Git-Configuration.html"/>
+    <id>https://richardrenn.github.io/Git-Configuration.html</id>
+    <published>2018-10-15T11:09:54.000Z</published>
+    <updated>2024-04-27T13:14:44.370Z</updated>
+    
+    
+    <summary type="html">Git是一个开源的分布式版本控制系统，常用于不同版本的项目管理。本文将介绍Git的安装配置。</summary>
+    
+    
+    
+    <category term="GitHub教程" scheme="https://richardrenn.github.io/categories/GitHub%E6%95%99%E7%A8%8B/"/>
+    
+    
+    <category term="Git" scheme="https://richardrenn.github.io/tags/Git/"/>
+    
+    <category term="GitHub" scheme="https://richardrenn.github.io/tags/GitHub/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="https://richardrenn.github.io/hello-world.html"/>
+    <id>https://richardrenn.github.io/hello-world.html</id>
+    <published>2018-08-17T08:20:20.000Z</published>
+    <updated>2024-04-27T08:08:53.539Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;200-博客访问地址-Github&quot;&gt;&lt;a href=&quot;#200-博客访问地址-Github&quot; class=&quot;headerlink&quot; title=&quot;[200]博客访问地址 - Github&quot;&gt;&lt;/a&gt;[200]&lt;a</summary>
+        
+      
+    
+    
+    
     
   </entry>
   

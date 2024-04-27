@@ -5,10 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
 <meta name="generator" content="Hexo 7.2.0">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon.ico">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon.ico">
-  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
+  <link rel="mask-icon" href="/images/favicon/favicon.ico" color="#222">
   <meta name="msvalidate.01" content="E276A7D8FEEC21171EC1DB92CA01B81D">
 
 <link rel="stylesheet" href="/css/main.css">
@@ -18,7 +18,7 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"richardrenn.github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":1,"onmobile":true},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+    var CONFIG = {"hostname":"richardrenn.github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":1,"onmobile":true},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
   <meta name="description" content="图片处理过程中涉及OpenCV图片和PIL.Image对象的互相转化。">
@@ -30,7 +30,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://richardrenn.github.io/images/Python-OpenCV-Image-PIL-Image/target_image.jpg">
 <meta property="article:published_time" content="2019-08-15T13:27:43.000Z">
-<meta property="article:modified_time" content="2021-04-01T08:00:16.016Z">
+<meta property="article:modified_time" content="2024-04-27T08:13:24.483Z">
 <meta property="article:author" content="任令仓">
 <meta property="article:tag" content="Python">
 <meta property="article:tag" content="OpenCV">
@@ -132,27 +132,32 @@
   <ul id="menu" class="main-menu menu">
         <li class="menu-item menu-item-home">
 
-    <a href="/" rel="section"><i class="home fa-fw"></i>首页</a>
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
 
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/tags/" rel="section"><i class="tags fa-fw"></i>标签</a>
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">34</span></a>
 
   </li>
         <li class="menu-item menu-item-categories">
 
-    <a href="/categories/" rel="section"><i class="th fa-fw"></i>分类</a>
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">10</span></a>
 
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="archive fa-fw"></i>归档</a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>文章<span class="badge">26</span></a>
 
   </li>
         <li class="menu-item menu-item-about">
 
-    <a href="/about/" rel="section"><i class="user fa-fw"></i>关于</a>
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于我</a>
+
+  </li>
+        <li class="menu-item menu-item-rss">
+
+    <a href="/atom.xml" rel="section"><i class="fa fa-rss fa-fw"></i>RSS</a>
 
   </li>
       <li class="menu-item menu-item-search">
@@ -194,6 +199,9 @@
     <i class="fa fa-arrow-up"></i>
     <span>0%</span>
   </div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+  <span class="exturl github-corner" data-url="aHR0cHM6Ly9naXRodWIuY29tL1JpY2hhcmRSZW5u" title="Follow me on GitHub" aria-label="Follow me on GitHub"><svg width="80" height="80" viewbox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></span>
 
 
     <main class="main">
@@ -211,9 +219,9 @@
     <link itemprop="mainEntityOfPage" href="https://richardrenn.github.io/Python-OpenCV-Image-PIL-Image.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/images/avatar.png">
       <meta itemprop="name" content="任令仓">
-      <meta itemprop="description" content="任令仓的技术博客">
+      <meta itemprop="description" content="任令仓 - 技术博客">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -238,13 +246,13 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-04-01 16:00:16" itemprop="dateModified" datetime="2021-04-01T16:00:16+08:00">2021-04-01</time>
+                <time title="修改时间：2024-04-27 16:13:24" itemprop="dateModified" datetime="2024-04-27T16:13:24+08:00">2024-04-27</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
               </span>
-              <span class="post-meta-item-text">分类于</span>
+              <span class="post-meta-item-text">分类</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/Python/" itemprop="url" rel="index"><span itemprop="name">Python</span></a>
                 </span>
@@ -271,20 +279,18 @@
     </a>
   </span>
   
-  <br>
+  
             <span class="post-meta-item" title="本文字数">
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
               </span>
-                <span class="post-meta-item-text">本文字数：</span>
               <span>2.5k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>2 分钟</span>
+              <span>4 分钟</span>
             </span>
             <div class="post-description">图片处理过程中涉及OpenCV图片和PIL.Image对象的互相转化。</div>
 
@@ -297,24 +303,24 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h2 id="1-起因"><a href="#1-起因" class="headerlink" title="1.起因"></a>1.起因</h2><blockquote>
+        <h2 id="0-起因"><a href="#0-起因" class="headerlink" title="0. 起因"></a>0. 起因</h2><blockquote>
 <p>因项目需要对视频封面图片作以下处理：宽高比不为一的图片处理成两端模糊填充的正方形，使得呈现如下效果:</p>
 </blockquote>
 <!-- ![source_image.png](/images/Python-OpenCV-Image-PIL-Image/source_image.png) -->
-<p><img src="/images/Python-OpenCV-Image-PIL-Image/target_image.jpg" alt="target_image.jpg"></p>
-<h2 id="2-思路"><a href="#2-思路" class="headerlink" title="2.思路"></a>2.思路</h2><ul>
+<p><img data-src="/images/Python-OpenCV-Image-PIL-Image/target_image.jpg" alt="target_image.jpg"></p>
+<h2 id="1-思路"><a href="#1-思路" class="headerlink" title="1. 思路"></a>1. 思路</h2><ul>
 <li>使用PIL库对图片作裁减和放大处理;</li>
 <li>上一步得到的图片转化到OpenCV图像做高斯模糊处理(因为PIL模块的图片模糊滤镜强度不够);</li>
 <li>上一步处理好的图片转化为PIL.Image,将原图居中合成进来;</li>
 <li>处理好的图片保存到本地或者转化为内存中的文件对象作其它操作: 上传下载等.</li>
 </ul>
-<h2 id="3-代码实现"><a href="#3-代码实现" class="headerlink" title="3.代码实现"></a>3.代码实现</h2><blockquote>
+<h2 id="2-代码实现"><a href="#2-代码实现" class="headerlink" title="2. 代码实现"></a>2. 代码实现</h2><blockquote>
 <p>涉及到的代码库 Pillow&#x3D;&#x3D;4.3.0, opencv-python&#x3D;&#x3D;4.1.0.25, numpy&#x3D;&#x3D;1.16.0</p>
 </blockquote>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">from</span> io <span class="keyword">import</span> BytesIO</span><br><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> Image</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">crop_img_on_ratio</span>(<span class="params">img, ratio</span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;按比例裁减图片&quot;&quot;&quot;</span></span><br><span class="line">    ratio_w, ratio_h = ratio</span><br><span class="line">    img_w, img_h = img.size</span><br><span class="line">    <span class="keyword">if</span> img_h/img_w &gt;= ratio_h/ratio_w:</span><br><span class="line">        h = <span class="built_in">int</span>(img_w*ratio_h/ratio_w)</span><br><span class="line">        box = (<span class="number">0</span>, <span class="built_in">int</span>((img_h-h)/<span class="number">2</span>), img_w, <span class="built_in">int</span>((img_h+h)/<span class="number">2</span>))</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        w = <span class="built_in">int</span>(img_h*ratio_w/ratio_h)</span><br><span class="line">        box = (<span class="built_in">int</span>((img_w-w)/<span class="number">2</span>), <span class="number">0</span>, <span class="built_in">int</span>((img_w+w)/<span class="number">2</span>), img_h)</span><br><span class="line">    <span class="keyword">return</span> img.crop(box)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">mix_img_icon</span>(<span class="params">img, icon</span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;图片图标合成，居中&quot;&quot;&quot;</span></span><br><span class="line">    img_w, img_h = img.size</span><br><span class="line">    icon_w, icon_h = icon.size</span><br><span class="line">    box = (<span class="built_in">int</span>((img_w-icon_w)/<span class="number">2</span>), <span class="built_in">int</span>((img_h-icon_h)/<span class="number">2</span>))</span><br><span class="line">    <span class="keyword">if</span> icon.<span class="built_in">format</span> == <span class="string">&#x27;PNG&#x27;</span>:</span><br><span class="line">        img.paste(icon, box=box, mask=icon)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        img.paste(icon, box=box)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">get_blur_image</span>(<span class="params">img</span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;宽高比不为1的图片处理成两端模糊填充的正方形&quot;&quot;&quot;</span></span><br><span class="line">    w, h = img.size  <span class="comment"># 获取图片宽高</span></span><br><span class="line">    a = <span class="built_in">max</span>(w, h)  <span class="comment"># 获取正方形边长</span></span><br><span class="line">    crop_img = crop_img_on_ratio(img, (<span class="number">1</span>, <span class="number">1</span>))  <span class="comment"># 裁减为正方形</span></span><br><span class="line">    scale_img = crop_img.resize((a, a), resample=Image.ANTIALIAS)  <span class="comment"># 等比放大</span></span><br><span class="line">    cv_img = cv2.cvtColor(np.asarray(scale_img), cv2.COLOR_RGB2BGR)  <span class="comment"># 转化为 opencv image</span></span><br><span class="line">    cv_gb_img = cv2.GaussianBlur(cv_img, (<span class="number">0</span>, <span class="number">0</span>), <span class="number">7</span>)  <span class="comment"># opencv 高斯模糊</span></span><br><span class="line">    gb_img = Image.fromarray(cv2.cvtColor(cv_gb_img, cv2.COLOR_BGR2RGB))  <span class="comment"># 转化为PIL.Image</span></span><br><span class="line">    mix_img_icon(gb_img, img)  <span class="comment"># 将原图合成进来</span></span><br><span class="line">    <span class="keyword">return</span> gb_img</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&quot;__main__&quot;</span>:</span><br><span class="line">    <span class="comment"># 从本地读取图片</span></span><br><span class="line">    source_img = Image.<span class="built_in">open</span>(<span class="string">&#x27;/path/to/source_image.jpg&#x27;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 从url读取图片</span></span><br><span class="line">    source_img = Image.<span class="built_in">open</span>(BytesIO(requests.get(<span class="string">&#x27;http://url/for/source_image.jpg&#x27;</span>).content))</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># 获取模糊后的图片</span></span><br><span class="line">    blur_img = get_blur_image(source_img)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 图片保存到本地</span></span><br><span class="line">    gb_img.save(<span class="string">&#x27;/path/to/target_image.jpg&#x27;</span>, <span class="string">&quot;JPEG&quot;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 图片保存为内存中的类文件对象</span></span><br><span class="line">    img_file = BytesIO()</span><br><span class="line">    image.save(img_file, <span class="string">&quot;JPEG&quot;</span>)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 <hr>
-<h2 id="4-引申"><a href="#4-引申" class="headerlink" title="4.引申"></a>4.引申</h2><blockquote>
+<h2 id="3-引申"><a href="#3-引申" class="headerlink" title="3. 引申"></a>3. 引申</h2><blockquote>
 <p>PIL模块可以对图片作很多滤镜操作达到不同效果:</p>
 </blockquote>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> ImageFilter</span><br><span class="line"></span><br><span class="line">target_img = source_img.<span class="built_in">filter</span>(ImageFilter.BLUR)  <span class="comment"># 模糊</span></span><br><span class="line">target_img = source_img.<span class="built_in">filter</span>(ImageFilter.CONTOUR)  <span class="comment"># 轮廓</span></span><br><span class="line">target_img = source_img.<span class="built_in">filter</span>(ImageFilter.EDGE_ENHANCE)  <span class="comment"># 边界加强</span></span><br><span class="line">target_img = source_img.<span class="built_in">filter</span>(ImageFilter.EDGE_ENHANCE_MORE)  <span class="comment"># 边界加强(阀值更大)</span></span><br><span class="line">target_img = source_img.<span class="built_in">filter</span>(ImageFilter.EMBOSS)  <span class="comment"># 模糊滤镜</span></span><br><span class="line">target_img = source_img.<span class="built_in">filter</span>(ImageFilter.FIND_EDGES)  <span class="comment"># 边界</span></span><br><span class="line">target_img = source_img.<span class="built_in">filter</span>(ImageFilter.SMOOTH)  <span class="comment"># 平滑</span></span><br><span class="line">target_img = source_img.<span class="built_in">filter</span>(ImageFilter.SMOOTH_MORE)  <span class="comment"># 平滑(阀值更大)</span></span><br><span class="line">target_img = source_img.<span class="built_in">filter</span>(ImageFilter.SHARPEN)  <span class="comment"># 锐化</span></span><br></pre></td></tr></table></figure>
@@ -324,13 +330,51 @@
     
     
     
+        <div class="reward-container">
+  <div></div>
+  <button onclick="var qr = document.getElementById('qr'); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    打赏
+  </button>
+  <div id="qr" style="display: none;">
+      
+      <div style="display: inline-block;">
+        <img src="/images/wechatpay.png" alt="任令仓 微信支付">
+        <p>微信支付</p>
+      </div>
+      
+      <div style="display: inline-block;">
+        <img src="/images/alipay.jpeg" alt="任令仓 支付宝">
+        <p>支付宝</p>
+      </div>
+
+  </div>
+</div>
+
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>任令仓
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://richardrenn.github.io/Python-OpenCV-Image-PIL-Image.html" title="Python - 图片处理 - OpenCV图片与PIL.Image对象互相转化">https://richardrenn.github.io/Python-OpenCV-Image-PIL-Image.html</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC8="><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
 
       <footer class="post-footer">
+          
           <div class="post-tags">
-              <a href="/tags/Python/" rel="tag"># Python</a>
-              <a href="/tags/OpenCV/" rel="tag"># OpenCV</a>
-              <a href="/tags/Pillow/" rel="tag"># Pillow</a>
-              <a href="/tags/%E5%9B%BE%E7%89%87%E5%A4%84%E7%90%86/" rel="tag"># 图片处理</a>
+              <a href="/tags/Python/" rel="tag"><i class="fa fa-tag"></i> Python</a>
+              <a href="/tags/OpenCV/" rel="tag"><i class="fa fa-tag"></i> OpenCV</a>
+              <a href="/tags/Pillow/" rel="tag"><i class="fa fa-tag"></i> Pillow</a>
+              <a href="/tags/%E5%9B%BE%E7%89%87%E5%A4%84%E7%90%86/" rel="tag"><i class="fa fa-tag"></i> 图片处理</a>
           </div>
 
         
@@ -339,12 +383,12 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/Python-Celery-Calling-Tasks.html" rel="prev" title="Python - Celery - 调用任务">
-      <i class="fa fa-chevron-left"></i> Python - Celery - 调用任务
+    <a href="/Python-iPython-Odoo-OE.html" rel="prev" title="Python - 配置iPython直接在命令行调试Odoo(openerp)代码">
+      <i class="fa fa-chevron-left"></i> Python - 配置iPython直接在命令行调试Odoo(openerp)代码
     </a></div>
       <div class="post-nav-item">
-    <a href="/Python-iPython-Odoo-OE.html" rel="next" title="Python - 配置iPython直接在命令行调试Odoo(openerp)代码">
-      Python - 配置iPython直接在命令行调试Odoo(openerp)代码 <i class="fa fa-chevron-right"></i>
+    <a href="/Python-Celery-Calling-Tasks.html" rel="next" title="Python - Celery - 调用任务">
+      Python - Celery - 调用任务 <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -405,44 +449,22 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E8%B5%B7%E5%9B%A0"><span class="nav-number">1.</span> <span class="nav-text">1.起因</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E6%80%9D%E8%B7%AF"><span class="nav-number">2.</span> <span class="nav-text">2.思路</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0"><span class="nav-number">3.</span> <span class="nav-text">3.代码实现</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-%E5%BC%95%E7%94%B3"><span class="nav-number">4.</span> <span class="nav-text">4.引申</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#0-%E8%B5%B7%E5%9B%A0"><span class="nav-text">0. 起因</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E6%80%9D%E8%B7%AF"><span class="nav-text">1. 思路</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0"><span class="nav-text">2. 代码实现</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-%E5%BC%95%E7%94%B3"><span class="nav-text">3. 引申</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
       <div class="site-overview-wrap sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="任令仓" src="/images/avatar.png">
   <p class="site-author-name" itemprop="name">任令仓</p>
-  <div class="site-description" itemprop="description">任令仓的技术博客</div>
-</div>
-<div class="site-state-wrap motion-element">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-          <a href="/archives/">
-        
-          <span class="site-state-item-count">26</span>
-          <span class="site-state-item-name">日志</span>
-        </a>
-      </div>
-      <div class="site-state-item site-state-categories">
-            <a href="/categories/">
-          
-        <span class="site-state-item-count">5</span>
-        <span class="site-state-item-name">分类</span></a>
-      </div>
-      <div class="site-state-item site-state-tags">
-            <a href="/tags/">
-          
-        <span class="site-state-item-count">37</span>
-        <span class="site-state-item-name">标签</span></a>
-      </div>
-  </nav>
+  <div class="site-description" itemprop="description">任令仓 - 技术博客</div>
 </div>
   <div class="links-of-author motion-element">
       <span class="links-of-author-item">
-        <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL1JpY2hhcmRSZW5u" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;RichardRenn"><i class="github fa-fw"></i>GitHub</span>
+        <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL1JpY2hhcmRSZW5u" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;RichardRenn"><i class="fab fa-github fa-fw"></i>GitHub</span>
       </span>
       <span class="links-of-author-item">
-        <span class="exturl" data-url="bWFpbHRvOnJlbmxpbmdjYW5nQG91dGxvb2suY29t" title="E-Mail → mailto:renlingcang@outlook.com"><i class="envelope fa-fw"></i>E-Mail</span>
+        <span class="exturl" data-url="bWFpbHRvOnJlbmxpbmdjYW5nQG91dGxvb2suY29t" title="E-Mail → mailto:renlingcang@outlook.com"><i class="fa fa-envelope fa-fw"></i>E-Mail</span>
       </span>
   </div>
 
@@ -472,20 +494,7 @@
     <i class="fa fa-gem"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">任令仓</span>
-    <span class="post-meta-divider">|</span>
-    <span class="post-meta-item-icon">
-      <i class="fa fa-chart-area"></i>
-    </span>
-    <span title="站点总字数">33k</span>
-    <span class="post-meta-divider">|</span>
-    <span class="post-meta-item-icon">
-      <i class="fa fa-coffee"></i>
-    </span>
-    <span title="站点阅读时长">30 分钟</span>
 </div>
-  <div class="addthis_inline_share_toolbox">
-    <script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5bc5a129b1484905" async="async"></script>
-  </div>
 
         
 
@@ -494,97 +503,6 @@
 
 
 
-<script>
-  (function() {
-    function leancloudSelector(url) {
-      url = encodeURI(url);
-      return document.getElementById(url).querySelector('.leancloud-visitors-count');
-    }
-
-    function addCount(Counter) {
-      var visitors = document.querySelector('.leancloud_visitors');
-      var url = decodeURI(visitors.id);
-      var title = visitors.dataset.flagTitle;
-
-      Counter('get', '/classes/Counter?where=' + encodeURIComponent(JSON.stringify({ url })))
-        .then(response => response.json())
-        .then(({ results }) => {
-          if (results.length > 0) {
-            var counter = results[0];
-            leancloudSelector(url).innerText = counter.time + 1;
-            Counter('put', '/classes/Counter/' + counter.objectId, { time: { '__op': 'Increment', 'amount': 1 } })
-              .catch(error => {
-                console.error('Failed to save visitor count', error);
-              });
-          } else {
-              Counter('post', '/classes/Counter', { title, url, time: 1 })
-                .then(response => response.json())
-                .then(() => {
-                  leancloudSelector(url).innerText = 1;
-                })
-                .catch(error => {
-                  console.error('Failed to create', error);
-                });
-          }
-        })
-        .catch(error => {
-          console.error('LeanCloud Counter Error', error);
-        });
-    }
-
-    function showTime(Counter) {
-      var visitors = document.querySelectorAll('.leancloud_visitors');
-      var entries = [...visitors].map(element => {
-        return decodeURI(element.id);
-      });
-
-      Counter('get', '/classes/Counter?where=' + encodeURIComponent(JSON.stringify({ url: { '$in': entries } })))
-        .then(response => response.json())
-        .then(({ results }) => {
-          for (let url of entries) {
-            let target = results.find(item => item.url === url);
-            leancloudSelector(url).innerText = target ? target.time : 0;
-          }
-        })
-        .catch(error => {
-          console.error('LeanCloud Counter Error', error);
-        });
-    }
-
-    let { app_id, app_key, server_url } = {"enable":true,"app_id":"VYFq7LtBNsKYEd7sJyUNff7G-gzGzoHsz","app_key":"nQjBuIKE7oTE2sqxD2T23dgw","server_url":null,"security":false};
-    function fetchData(api_server) {
-      var Counter = (method, url, data) => {
-        return fetch(`${api_server}/1.1${url}`, {
-          method,
-          headers: {
-            'X-LC-Id'     : app_id,
-            'X-LC-Key'    : app_key,
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(data)
-        });
-      };
-      if (CONFIG.page.isPost) {
-        if (CONFIG.hostname !== location.hostname) return;
-        addCount(Counter);
-      } else if (document.querySelectorAll('.post-title-link').length >= 1) {
-        showTime(Counter);
-      }
-    }
-
-    let api_server = app_id.slice(-9) !== '-MdYXbMMI' ? server_url : `https://${app_id.slice(0, 8).toLowerCase()}.api.lncldglobal.com`;
-
-    if (api_server) {
-      fetchData(api_server);
-    } else {
-      fetch('https://app-router.leancloud.cn/2/route?appId=' + app_id)
-        .then(response => response.json())
-        .then(({ api_server }) => {
-          fetchData('https://' + api_server);
-        });
-    }
-  })();
-</script>
 
 
       </div>
@@ -593,6 +511,7 @@
 
   
   <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
   <script src="/lib/velocity/velocity.min.js"></script>
   <script src="/lib/velocity/velocity.ui.min.js"></script>
 
@@ -605,6 +524,8 @@
 
 
 <script src="/js/next-boot.js"></script>
+
+<script src="/js/bookmark.js"></script>
 
 
 
@@ -674,10 +595,10 @@ NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
       appId      : 'VYFq7LtBNsKYEd7sJyUNff7G-gzGzoHsz',
       appKey     : 'nQjBuIKE7oTE2sqxD2T23dgw',
       placeholder: "想对我说点什么？（匿名）",
-      avatar     : 'hide',
+      avatar     : 'identicon',
       meta       : guest,
       pageSize   : '10' || 10,
-      visitor    : false,
+      visitor    : true,
       lang       : '' || 'zh-cn',
       path       : location.pathname,
       recordIP   : false,
@@ -687,5 +608,5 @@ NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
 });
 </script>
 
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/koharu.model.json"},"display":{"superSample":1,"width":150,"height":300,"position":"right","hOffset":-15,"vOffset":-80},"mobile":{"show":false,"scale":0.5},"react":{"opacityDefault":0.9,"opacityOnHover":0.1}});</script></body>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"scale":0.8,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/koharu.model.json"},"display":{"superSample":1.5,"width":150,"height":300,"position":"right","hOffset":0,"vOffset":-80},"mobile":{"show":false,"scale":0.5},"react":{"opacityDefault":0.9,"opacityOnHover":0.1}});</script></body>
 </html>

@@ -5,10 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
 <meta name="generator" content="Hexo 7.2.0">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon.ico">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon.ico">
-  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
+  <link rel="mask-icon" href="/images/favicon/favicon.ico" color="#222">
   <meta name="msvalidate.01" content="E276A7D8FEEC21171EC1DB92CA01B81D">
 
 <link rel="stylesheet" href="/css/main.css">
@@ -18,7 +18,7 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"richardrenn.github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":1,"onmobile":true},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+    var CONFIG = {"hostname":"richardrenn.github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":1,"onmobile":true},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
   <meta name="description" content="解析Python多继承中Super()函数的方法解析顺序(MRO)，并举例理解它所使用的C3算法的工作原理。">
@@ -30,10 +30,11 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://richardrenn.github.io/images/Python-Super/Topological-Sorting.png">
 <meta property="article:published_time" content="2019-04-18T14:29:39.000Z">
-<meta property="article:modified_time" content="2021-04-01T08:00:16.016Z">
+<meta property="article:modified_time" content="2024-04-27T14:33:35.668Z">
 <meta property="article:author" content="任令仓">
 <meta property="article:tag" content="Python">
-<meta property="article:tag" content="Super()继承顺序">
+<meta property="article:tag" content="Super()">
+<meta property="article:tag" content="继承顺序">
 <meta property="article:tag" content="MRO">
 <meta property="article:tag" content="C3算法">
 <meta name="twitter:card" content="summary">
@@ -132,27 +133,32 @@
   <ul id="menu" class="main-menu menu">
         <li class="menu-item menu-item-home">
 
-    <a href="/" rel="section"><i class="home fa-fw"></i>首页</a>
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
 
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/tags/" rel="section"><i class="tags fa-fw"></i>标签</a>
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">34</span></a>
 
   </li>
         <li class="menu-item menu-item-categories">
 
-    <a href="/categories/" rel="section"><i class="th fa-fw"></i>分类</a>
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">10</span></a>
 
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="archive fa-fw"></i>归档</a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>文章<span class="badge">26</span></a>
 
   </li>
         <li class="menu-item menu-item-about">
 
-    <a href="/about/" rel="section"><i class="user fa-fw"></i>关于</a>
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于我</a>
+
+  </li>
+        <li class="menu-item menu-item-rss">
+
+    <a href="/atom.xml" rel="section"><i class="fa fa-rss fa-fw"></i>RSS</a>
 
   </li>
       <li class="menu-item menu-item-search">
@@ -194,6 +200,9 @@
     <i class="fa fa-arrow-up"></i>
     <span>0%</span>
   </div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+  <span class="exturl github-corner" data-url="aHR0cHM6Ly9naXRodWIuY29tL1JpY2hhcmRSZW5u" title="Follow me on GitHub" aria-label="Follow me on GitHub"><svg width="80" height="80" viewbox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></span>
 
 
     <main class="main">
@@ -211,9 +220,9 @@
     <link itemprop="mainEntityOfPage" href="https://richardrenn.github.io/Python-Super.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/images/avatar.png">
       <meta itemprop="name" content="任令仓">
-      <meta itemprop="description" content="任令仓的技术博客">
+      <meta itemprop="description" content="任令仓 - 技术博客">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -238,13 +247,13 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-04-01 16:00:16" itemprop="dateModified" datetime="2021-04-01T16:00:16+08:00">2021-04-01</time>
+                <time title="修改时间：2024-04-27 22:33:35" itemprop="dateModified" datetime="2024-04-27T22:33:35+08:00">2024-04-27</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
               </span>
-              <span class="post-meta-item-text">分类于</span>
+              <span class="post-meta-item-text">分类</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/Python/" itemprop="url" rel="index"><span itemprop="name">Python</span></a>
                 </span>
@@ -271,20 +280,18 @@
     </a>
   </span>
   
-  <br>
+  
             <span class="post-meta-item" title="本文字数">
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
               </span>
-                <span class="post-meta-item-text">本文字数：</span>
               <span>2.2k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>2 分钟</span>
+              <span>4 分钟</span>
             </span>
             <div class="post-description">解析Python多继承中Super()函数的方法解析顺序(MRO)，并举例理解它所使用的C3算法的工作原理。</div>
 
@@ -297,7 +304,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h2 id="1-拓扑排序算法"><a href="#1-拓扑排序算法" class="headerlink" title="1.拓扑排序算法"></a>1.拓扑排序算法</h2><p>在解析MRO之前，需要先理解<strong>拓扑排序</strong>（Topological Sorting）算法</p>
+        <h2 id="1-拓扑排序算法"><a href="#1-拓扑排序算法" class="headerlink" title="1. 拓扑排序算法"></a>1. 拓扑排序算法</h2><p>在解析MRO之前，需要先理解<strong>拓扑排序</strong>（Topological Sorting）算法</p>
 <blockquote>
 <p>在图论中，当有向无环图（Directed Acyclic Graph,简称DAG）的所有顶点组成一个线性序列，且该序列满足以下条件：<br>1.每个顶点出现且只出现一次；<br>2.若存在一条从顶点 A 到顶点 B 的路径，那么在序列中顶点 A 出现在顶点 B 的前面。<br>则称该序列是此DAG的一个拓扑排序。</p>
 </blockquote>
@@ -306,14 +313,14 @@
 <p>1.选择一个入度为0（即只有出边没有入边）的顶点并输出；<br>2.删除此顶点及所有出边。<br>循环执行上面两步直到不存在入度为0的顶点为止，顶点输出的顺序即为拓扑排序。</p>
 </blockquote>
 <p>用图比较容易理解：</p>
-<p><img src="/images/Python-Super/Topological-Sorting.png" alt="Topological-Sorting"></p>
+<p><img data-src="/images/Python-Super/Topological-Sorting.png" alt="Topological-Sorting"></p>
 <blockquote>
 <p>拓扑排序得到的序列为：5 → 4 → 2 → 3 → 1</p>
 </blockquote>
 <blockquote>
 <p><em>注意：在某些情况下拓扑排序可有多个结果</em></p>
 </blockquote>
-<h2 id="2-MRO-C3算法的工作原理"><a href="#2-MRO-C3算法的工作原理" class="headerlink" title="2.MRO - C3算法的工作原理"></a>2.MRO - C3算法的工作原理</h2><blockquote>
+<h2 id="2-MRO-C3算法的工作原理"><a href="#2-MRO-C3算法的工作原理" class="headerlink" title="2. MRO - C3算法的工作原理"></a>2. MRO - C3算法的工作原理</h2><blockquote>
 <p>Python的Super()函数的方法解析顺序（Method Resolution Order, 简称MRO）使用的<strong>C3算法</strong>，可以理解为在拓扑排序算法的基础上考虑了基类出现的先后顺序。</p>
 </blockquote>
 <blockquote>
@@ -334,12 +341,12 @@
 </blockquote>
 <p>到此为止，基本可以理解MRO的排序算法的运算过程了。</p>
 <hr>
-<h2 id="3-如何直接查看某个类的继承顺序？"><a href="#3-如何直接查看某个类的继承顺序？" class="headerlink" title="3.如何直接查看某个类的继承顺序？"></a>3.如何直接查看某个类的继承顺序？</h2><p>每个类都有对应的__mro__属性和mro()方法：</p>
+<h2 id="3-如何直接查看某个类的继承顺序？"><a href="#3-如何直接查看某个类的继承顺序？" class="headerlink" title="3. 如何直接查看某个类的继承顺序？"></a>3. 如何直接查看某个类的继承顺序？</h2><p>每个类都有对应的__mro__属性和mro()方法：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">E.__mro__</span><br><span class="line">E.mro()</span><br></pre></td></tr></table></figure>
 
 <figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">(&lt;class &#x27;__main__.E&#x27;&gt;, &lt;class &#x27;__main__.D&#x27;&gt;, &lt;class &#x27;__main__.B&#x27;&gt;, &lt;class &#x27;__main__.C&#x27;&gt;, &lt;class &#x27;__main__.A&#x27;&gt;, &lt;class &#x27;object&#x27;&gt;)</span><br><span class="line">[&lt;class &#x27;__main__.E&#x27;&gt;, &lt;class &#x27;__main__.D&#x27;&gt;, &lt;class &#x27;__main__.B&#x27;&gt;, &lt;class &#x27;__main__.C&#x27;&gt;, &lt;class &#x27;__main__.A&#x27;&gt;, &lt;class &#x27;object&#x27;&gt;]</span><br></pre></td></tr></table></figure>
 
-<h2 id="4-什么是深度优先算法？"><a href="#4-什么是深度优先算法？" class="headerlink" title="4.什么是深度优先算法？"></a>4.什么是深度优先算法？</h2><blockquote>
+<h2 id="4-什么是深度优先算法？"><a href="#4-什么是深度优先算法？" class="headerlink" title="4. 什么是深度优先算法？"></a>4. 什么是深度优先算法？</h2><blockquote>
 <p>这是Python2.3之前的版本所使用的搜索算法，也是所有Python2.x版本中默认的经典类的搜索算法。</p>
 </blockquote>
 <p>试看以下代码在2.2版本中的搜索结果：</p>
@@ -359,7 +366,7 @@
 <p><em>Python3.x版本所有类默认为新式类，不必显式的声明。</em><br><em>另：经典类中所有的特性都是可读可写的, 新式类中的特性只读的, 只能通过添加特性达到目的。</em></p>
 </blockquote>
 <hr>
-<h2 id="5-引申：介绍下广度优先算法"><a href="#5-引申：介绍下广度优先算法" class="headerlink" title="5.引申：介绍下广度优先算法"></a>5.引申：介绍下广度优先算法</h2><blockquote>
+<h2 id="5-引申：广度优先算法"><a href="#5-引申：广度优先算法" class="headerlink" title="5. 引申：广度优先算法"></a>5. 引申：广度优先算法</h2><blockquote>
 <p>广度优先算法是优先查找距离最近的节点，即横向查找。<br>则上面的代码排序结果为：D → B → C → A<br>而使用第二部分的代码，排序结果为：E → D → C → B → A → object</p>
 </blockquote>
 
@@ -368,13 +375,52 @@
     
     
     
+        <div class="reward-container">
+  <div></div>
+  <button onclick="var qr = document.getElementById('qr'); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    打赏
+  </button>
+  <div id="qr" style="display: none;">
+      
+      <div style="display: inline-block;">
+        <img src="/images/wechatpay.png" alt="任令仓 微信支付">
+        <p>微信支付</p>
+      </div>
+      
+      <div style="display: inline-block;">
+        <img src="/images/alipay.jpeg" alt="任令仓 支付宝">
+        <p>支付宝</p>
+      </div>
+
+  </div>
+</div>
+
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>任令仓
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://richardrenn.github.io/Python-Super.html" title="Python - Super()继承顺序 - MRO顺序C3算法解析">https://richardrenn.github.io/Python-Super.html</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC8="><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
 
       <footer class="post-footer">
+          
           <div class="post-tags">
-              <a href="/tags/Python/" rel="tag"># Python</a>
-              <a href="/tags/Super-%E7%BB%A7%E6%89%BF%E9%A1%BA%E5%BA%8F/" rel="tag"># Super()继承顺序</a>
-              <a href="/tags/MRO/" rel="tag"># MRO</a>
-              <a href="/tags/C3%E7%AE%97%E6%B3%95/" rel="tag"># C3算法</a>
+              <a href="/tags/Python/" rel="tag"><i class="fa fa-tag"></i> Python</a>
+              <a href="/tags/Super/" rel="tag"><i class="fa fa-tag"></i> Super()</a>
+              <a href="/tags/%E7%BB%A7%E6%89%BF%E9%A1%BA%E5%BA%8F/" rel="tag"><i class="fa fa-tag"></i> 继承顺序</a>
+              <a href="/tags/MRO/" rel="tag"><i class="fa fa-tag"></i> MRO</a>
+              <a href="/tags/C3%E7%AE%97%E6%B3%95/" rel="tag"><i class="fa fa-tag"></i> C3算法</a>
           </div>
 
         
@@ -383,12 +429,12 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/Python-List-Slice.html" rel="prev" title="Python - 数组切片、更新、排序">
-      <i class="fa fa-chevron-left"></i> Python - 数组切片、更新、排序
+    <a href="/GitHub-Large-File-Storage.html" rel="prev" title="GitHub - 存储大文件">
+      <i class="fa fa-chevron-left"></i> GitHub - 存储大文件
     </a></div>
       <div class="post-nav-item">
-    <a href="/GitHub-Large-File-Storage.html" rel="next" title="GitHub - 存储大文件">
-      GitHub - 存储大文件 <i class="fa fa-chevron-right"></i>
+    <a href="/Python-List-Slice.html" rel="next" title="Python - 数组切片、更新、排序">
+      Python - 数组切片、更新、排序 <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -449,44 +495,22 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E6%8B%93%E6%89%91%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95"><span class="nav-number">1.</span> <span class="nav-text">1.拓扑排序算法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-MRO-C3%E7%AE%97%E6%B3%95%E7%9A%84%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86"><span class="nav-number">2.</span> <span class="nav-text">2.MRO - C3算法的工作原理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-%E5%A6%82%E4%BD%95%E7%9B%B4%E6%8E%A5%E6%9F%A5%E7%9C%8B%E6%9F%90%E4%B8%AA%E7%B1%BB%E7%9A%84%E7%BB%A7%E6%89%BF%E9%A1%BA%E5%BA%8F%EF%BC%9F"><span class="nav-number">3.</span> <span class="nav-text">3.如何直接查看某个类的继承顺序？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-%E4%BB%80%E4%B9%88%E6%98%AF%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%85%88%E7%AE%97%E6%B3%95%EF%BC%9F"><span class="nav-number">4.</span> <span class="nav-text">4.什么是深度优先算法？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-%E5%BC%95%E7%94%B3%EF%BC%9A%E4%BB%8B%E7%BB%8D%E4%B8%8B%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E7%AE%97%E6%B3%95"><span class="nav-number">5.</span> <span class="nav-text">5.引申：介绍下广度优先算法</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E6%8B%93%E6%89%91%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95"><span class="nav-text">1. 拓扑排序算法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-MRO-C3%E7%AE%97%E6%B3%95%E7%9A%84%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86"><span class="nav-text">2. MRO - C3算法的工作原理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-%E5%A6%82%E4%BD%95%E7%9B%B4%E6%8E%A5%E6%9F%A5%E7%9C%8B%E6%9F%90%E4%B8%AA%E7%B1%BB%E7%9A%84%E7%BB%A7%E6%89%BF%E9%A1%BA%E5%BA%8F%EF%BC%9F"><span class="nav-text">3. 如何直接查看某个类的继承顺序？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-%E4%BB%80%E4%B9%88%E6%98%AF%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%85%88%E7%AE%97%E6%B3%95%EF%BC%9F"><span class="nav-text">4. 什么是深度优先算法？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-%E5%BC%95%E7%94%B3%EF%BC%9A%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E7%AE%97%E6%B3%95"><span class="nav-text">5. 引申：广度优先算法</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
       <div class="site-overview-wrap sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="任令仓" src="/images/avatar.png">
   <p class="site-author-name" itemprop="name">任令仓</p>
-  <div class="site-description" itemprop="description">任令仓的技术博客</div>
-</div>
-<div class="site-state-wrap motion-element">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-          <a href="/archives/">
-        
-          <span class="site-state-item-count">26</span>
-          <span class="site-state-item-name">日志</span>
-        </a>
-      </div>
-      <div class="site-state-item site-state-categories">
-            <a href="/categories/">
-          
-        <span class="site-state-item-count">5</span>
-        <span class="site-state-item-name">分类</span></a>
-      </div>
-      <div class="site-state-item site-state-tags">
-            <a href="/tags/">
-          
-        <span class="site-state-item-count">37</span>
-        <span class="site-state-item-name">标签</span></a>
-      </div>
-  </nav>
+  <div class="site-description" itemprop="description">任令仓 - 技术博客</div>
 </div>
   <div class="links-of-author motion-element">
       <span class="links-of-author-item">
-        <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL1JpY2hhcmRSZW5u" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;RichardRenn"><i class="github fa-fw"></i>GitHub</span>
+        <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL1JpY2hhcmRSZW5u" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;RichardRenn"><i class="fab fa-github fa-fw"></i>GitHub</span>
       </span>
       <span class="links-of-author-item">
-        <span class="exturl" data-url="bWFpbHRvOnJlbmxpbmdjYW5nQG91dGxvb2suY29t" title="E-Mail → mailto:renlingcang@outlook.com"><i class="envelope fa-fw"></i>E-Mail</span>
+        <span class="exturl" data-url="bWFpbHRvOnJlbmxpbmdjYW5nQG91dGxvb2suY29t" title="E-Mail → mailto:renlingcang@outlook.com"><i class="fa fa-envelope fa-fw"></i>E-Mail</span>
       </span>
   </div>
 
@@ -516,20 +540,7 @@
     <i class="fa fa-gem"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">任令仓</span>
-    <span class="post-meta-divider">|</span>
-    <span class="post-meta-item-icon">
-      <i class="fa fa-chart-area"></i>
-    </span>
-    <span title="站点总字数">33k</span>
-    <span class="post-meta-divider">|</span>
-    <span class="post-meta-item-icon">
-      <i class="fa fa-coffee"></i>
-    </span>
-    <span title="站点阅读时长">30 分钟</span>
 </div>
-  <div class="addthis_inline_share_toolbox">
-    <script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5bc5a129b1484905" async="async"></script>
-  </div>
 
         
 
@@ -538,97 +549,6 @@
 
 
 
-<script>
-  (function() {
-    function leancloudSelector(url) {
-      url = encodeURI(url);
-      return document.getElementById(url).querySelector('.leancloud-visitors-count');
-    }
-
-    function addCount(Counter) {
-      var visitors = document.querySelector('.leancloud_visitors');
-      var url = decodeURI(visitors.id);
-      var title = visitors.dataset.flagTitle;
-
-      Counter('get', '/classes/Counter?where=' + encodeURIComponent(JSON.stringify({ url })))
-        .then(response => response.json())
-        .then(({ results }) => {
-          if (results.length > 0) {
-            var counter = results[0];
-            leancloudSelector(url).innerText = counter.time + 1;
-            Counter('put', '/classes/Counter/' + counter.objectId, { time: { '__op': 'Increment', 'amount': 1 } })
-              .catch(error => {
-                console.error('Failed to save visitor count', error);
-              });
-          } else {
-              Counter('post', '/classes/Counter', { title, url, time: 1 })
-                .then(response => response.json())
-                .then(() => {
-                  leancloudSelector(url).innerText = 1;
-                })
-                .catch(error => {
-                  console.error('Failed to create', error);
-                });
-          }
-        })
-        .catch(error => {
-          console.error('LeanCloud Counter Error', error);
-        });
-    }
-
-    function showTime(Counter) {
-      var visitors = document.querySelectorAll('.leancloud_visitors');
-      var entries = [...visitors].map(element => {
-        return decodeURI(element.id);
-      });
-
-      Counter('get', '/classes/Counter?where=' + encodeURIComponent(JSON.stringify({ url: { '$in': entries } })))
-        .then(response => response.json())
-        .then(({ results }) => {
-          for (let url of entries) {
-            let target = results.find(item => item.url === url);
-            leancloudSelector(url).innerText = target ? target.time : 0;
-          }
-        })
-        .catch(error => {
-          console.error('LeanCloud Counter Error', error);
-        });
-    }
-
-    let { app_id, app_key, server_url } = {"enable":true,"app_id":"VYFq7LtBNsKYEd7sJyUNff7G-gzGzoHsz","app_key":"nQjBuIKE7oTE2sqxD2T23dgw","server_url":null,"security":false};
-    function fetchData(api_server) {
-      var Counter = (method, url, data) => {
-        return fetch(`${api_server}/1.1${url}`, {
-          method,
-          headers: {
-            'X-LC-Id'     : app_id,
-            'X-LC-Key'    : app_key,
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(data)
-        });
-      };
-      if (CONFIG.page.isPost) {
-        if (CONFIG.hostname !== location.hostname) return;
-        addCount(Counter);
-      } else if (document.querySelectorAll('.post-title-link').length >= 1) {
-        showTime(Counter);
-      }
-    }
-
-    let api_server = app_id.slice(-9) !== '-MdYXbMMI' ? server_url : `https://${app_id.slice(0, 8).toLowerCase()}.api.lncldglobal.com`;
-
-    if (api_server) {
-      fetchData(api_server);
-    } else {
-      fetch('https://app-router.leancloud.cn/2/route?appId=' + app_id)
-        .then(response => response.json())
-        .then(({ api_server }) => {
-          fetchData('https://' + api_server);
-        });
-    }
-  })();
-</script>
 
 
       </div>
@@ -637,6 +557,7 @@
 
   
   <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
   <script src="/lib/velocity/velocity.min.js"></script>
   <script src="/lib/velocity/velocity.ui.min.js"></script>
 
@@ -649,6 +570,8 @@
 
 
 <script src="/js/next-boot.js"></script>
+
+<script src="/js/bookmark.js"></script>
 
 
 
@@ -718,10 +641,10 @@ NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
       appId      : 'VYFq7LtBNsKYEd7sJyUNff7G-gzGzoHsz',
       appKey     : 'nQjBuIKE7oTE2sqxD2T23dgw',
       placeholder: "想对我说点什么？（匿名）",
-      avatar     : 'hide',
+      avatar     : 'identicon',
       meta       : guest,
       pageSize   : '10' || 10,
-      visitor    : false,
+      visitor    : true,
       lang       : '' || 'zh-cn',
       path       : location.pathname,
       recordIP   : false,
@@ -731,5 +654,5 @@ NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
 });
 </script>
 
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/koharu.model.json"},"display":{"superSample":1,"width":150,"height":300,"position":"right","hOffset":-15,"vOffset":-80},"mobile":{"show":false,"scale":0.5},"react":{"opacityDefault":0.9,"opacityOnHover":0.1}});</script></body>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"scale":0.8,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/koharu.model.json"},"display":{"superSample":1.5,"width":150,"height":300,"position":"right","hOffset":0,"vOffset":-80},"mobile":{"show":false,"scale":0.5},"react":{"opacityDefault":0.9,"opacityOnHover":0.1}});</script></body>
 </html>
