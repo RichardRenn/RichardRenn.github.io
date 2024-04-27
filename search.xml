@@ -104,54 +104,6 @@
       </tags>
   </entry>
   <entry>
-    <title>GitHub教程 - Pull Request 工作流程</title>
-    <url>/GitHub-Pull-Request-Workflow.html</url>
-    <content><![CDATA[<h2 id="1-Fork仓库"><a href="#1-Fork仓库" class="headerlink" title="1. Fork仓库"></a>1. Fork仓库</h2><blockquote>
-<p>先在github上将源仓库fork到自己的仓库</p>
-</blockquote>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">源仓库：git@github.com:southflower/slark.git</span><br><span class="line">fork后：git@github.com:RichardRenn/slark.git</span><br></pre></td></tr></table></figure>
-
-<h2 id="2-检出代码"><a href="#2-检出代码" class="headerlink" title="2. 检出代码"></a>2. 检出代码</h2><blockquote>
-<p>在本地检出fork后的仓库代码</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~/workspace/sourcecode/richardrenn</span><br><span class="line">git <span class="built_in">clone</span> git@github.com:RichardRenn/slark.git ./slark</span><br></pre></td></tr></table></figure>
-
-<h2 id="3-关联上游源仓库"><a href="#3-关联上游源仓库" class="headerlink" title="3. 关联上游源仓库"></a>3. 关联上游源仓库</h2><blockquote>
-<p>进入代码目录，加入上游源仓库关联</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> ./slark</span><br><span class="line">git remote add upstream git@github.com:southflower/slark.git</span><br></pre></td></tr></table></figure>
-
-<h2 id="4-更新代码"><a href="#4-更新代码" class="headerlink" title="4. 更新代码"></a>4. 更新代码</h2><blockquote>
-<p>更新源仓库代码到本地仓库</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git fetch upstream</span><br><span class="line">git merge upstream/master</span><br></pre></td></tr></table></figure>
-
-<h2 id="5-提交代码"><a href="#5-提交代码" class="headerlink" title="5. 提交代码"></a>5. 提交代码</h2><blockquote>
-<p>在本地仓库中，修改代码后提交到自己的远端仓库</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git add .</span><br><span class="line">git commit -m <span class="string">&quot;anything&quot;</span></span><br><span class="line">git push origin master</span><br></pre></td></tr></table></figure>
-
-<h2 id="6-提交PR"><a href="#6-提交PR" class="headerlink" title="6. 提交PR"></a>6. 提交PR</h2><blockquote>
-<p>在github网页上提交PR<br>在自己的仓库界面点击”New Pull Request”</p>
-</blockquote>
-<p><img data-src="/images/GitHub-Pull-Request-Workflow/pull-request.png" alt="pull-request"></p>
-<h2 id="7-PR合入"><a href="#7-PR合入" class="headerlink" title="7. PR合入"></a>7. PR合入</h2><blockquote>
-<p>然后待源仓库的作者将你的PR合入即可</p>
-</blockquote>
-<hr>
-<ul>
-<li>带分支的工作方式可以参考<a href="/GitHub-Branch-Workflow.html">&gt;&gt;传送门 - 分支工作流程&lt;&lt;</a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>GitHub教程</category>
-      </categories>
-      <tags>
-        <tag>Git</tag>
-        <tag>GitHub</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>GitHub - 存储大文件</title>
     <url>/GitHub-Large-File-Storage.html</url>
     <content><![CDATA[<h2 id="0-问题的产生"><a href="#0-问题的产生" class="headerlink" title="0. 问题的产生"></a>0. 问题的产生</h2><blockquote>
@@ -252,6 +204,54 @@
       </categories>
       <tags>
         <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>GitHub教程 - Pull Request 工作流程</title>
+    <url>/GitHub-Pull-Request-Workflow.html</url>
+    <content><![CDATA[<h2 id="1-Fork仓库"><a href="#1-Fork仓库" class="headerlink" title="1. Fork仓库"></a>1. Fork仓库</h2><blockquote>
+<p>先在github上将源仓库fork到自己的仓库</p>
+</blockquote>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">源仓库：git@github.com:southflower/slark.git</span><br><span class="line">fork后：git@github.com:RichardRenn/slark.git</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-检出代码"><a href="#2-检出代码" class="headerlink" title="2. 检出代码"></a>2. 检出代码</h2><blockquote>
+<p>在本地检出fork后的仓库代码</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~/workspace/sourcecode/richardrenn</span><br><span class="line">git <span class="built_in">clone</span> git@github.com:RichardRenn/slark.git ./slark</span><br></pre></td></tr></table></figure>
+
+<h2 id="3-关联上游源仓库"><a href="#3-关联上游源仓库" class="headerlink" title="3. 关联上游源仓库"></a>3. 关联上游源仓库</h2><blockquote>
+<p>进入代码目录，加入上游源仓库关联</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> ./slark</span><br><span class="line">git remote add upstream git@github.com:southflower/slark.git</span><br></pre></td></tr></table></figure>
+
+<h2 id="4-更新代码"><a href="#4-更新代码" class="headerlink" title="4. 更新代码"></a>4. 更新代码</h2><blockquote>
+<p>更新源仓库代码到本地仓库</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git fetch upstream</span><br><span class="line">git merge upstream/master</span><br></pre></td></tr></table></figure>
+
+<h2 id="5-提交代码"><a href="#5-提交代码" class="headerlink" title="5. 提交代码"></a>5. 提交代码</h2><blockquote>
+<p>在本地仓库中，修改代码后提交到自己的远端仓库</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git add .</span><br><span class="line">git commit -m <span class="string">&quot;anything&quot;</span></span><br><span class="line">git push origin master</span><br></pre></td></tr></table></figure>
+
+<h2 id="6-提交PR"><a href="#6-提交PR" class="headerlink" title="6. 提交PR"></a>6. 提交PR</h2><blockquote>
+<p>在github网页上提交PR<br>在自己的仓库界面点击”New Pull Request”</p>
+</blockquote>
+<p><img data-src="/images/GitHub-Pull-Request-Workflow/pull-request.png" alt="pull-request"></p>
+<h2 id="7-PR合入"><a href="#7-PR合入" class="headerlink" title="7. PR合入"></a>7. PR合入</h2><blockquote>
+<p>然后待源仓库的作者将你的PR合入即可</p>
+</blockquote>
+<hr>
+<ul>
+<li>带分支的工作方式可以参考<a href="/GitHub-Branch-Workflow.html">&gt;&gt;传送门 - 分支工作流程&lt;&lt;</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>GitHub教程</category>
+      </categories>
+      <tags>
+        <tag>Git</tag>
+        <tag>GitHub</tag>
       </tags>
   </entry>
   <entry>
@@ -491,22 +491,25 @@
       </tags>
   </entry>
   <entry>
-    <title>Python - 数组切片、更新、排序</title>
-    <url>/Python-List-Slice.html</url>
-    <content><![CDATA[<h2 id="1-数组切片"><a href="#1-数组切片" class="headerlink" title="1. 数组切片"></a>1. 数组切片</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">l = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>]</span><br><span class="line"></span><br><span class="line">l[:]  <span class="comment"># 所有元素 </span></span><br><span class="line"><span class="comment"># [1, 2, 3, 4, 5, 6, 7, 8, 9]</span></span><br><span class="line"></span><br><span class="line">l[<span class="number">0</span>]  <span class="comment"># 第一个元素</span></span><br><span class="line"><span class="comment"># 1</span></span><br><span class="line"></span><br><span class="line">l[<span class="number">1</span>:<span class="number">3</span>]  <span class="comment"># 第2~4个元素，不包括第4个</span></span><br><span class="line"><span class="comment"># [2, 3]</span></span><br><span class="line"></span><br><span class="line">l[<span class="number">3</span>:]  <span class="comment"># 第4~最后一个元素</span></span><br><span class="line"><span class="comment"># [4, 5, 6, 7, 8, 9]</span></span><br><span class="line"></span><br><span class="line">l[:<span class="number">3</span>]  <span class="comment"># 第1~4个元素，不包括第4个</span></span><br><span class="line"><span class="comment"># [1, 2, 3]</span></span><br><span class="line"></span><br><span class="line">l[:-<span class="number">1</span>]  <span class="comment"># 第1~最后一个元素，不包括最后一个</span></span><br><span class="line"><span class="comment"># [1, 2, 3, 4, 5, 6, 7, 8]</span></span><br><span class="line"></span><br><span class="line">l[<span class="number">2</span>:-<span class="number">1</span>:<span class="number">2</span>]  <span class="comment"># 从第3~最后一个元素中每隔2个步长取一个，不包括最后一个元素</span></span><br><span class="line"><span class="comment"># [3, 5, 7]</span></span><br><span class="line"></span><br><span class="line">l[::<span class="number">3</span>]  <span class="comment"># 每隔3个步长取一个元素</span></span><br><span class="line"><span class="comment"># [1, 4, 7]</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="2-数组更新"><a href="#2-数组更新" class="headerlink" title="2. 数组更新"></a>2. 数组更新</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">l = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>]</span><br><span class="line"></span><br><span class="line">l.append(<span class="number">0</span>)  <span class="comment"># 列表最后追加一个元素0</span></span><br><span class="line"><span class="comment"># [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]</span></span><br><span class="line"></span><br><span class="line">l.extend([<span class="number">0</span>, <span class="number">0</span>])  <span class="comment"># 列表后面追加另一个列表</span></span><br><span class="line"><span class="comment"># [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 0]</span></span><br><span class="line"></span><br><span class="line">l.insert(<span class="number">1</span>, <span class="string">&#x27;0&#x27;</span>)  <span class="comment"># 在第1个元素的位置插入字符串&#x27;0&#x27;</span></span><br><span class="line"><span class="comment"># [1, &#x27;0&#x27;, 2, 3, 4, 5, 6, 7, 8, 9]</span></span><br><span class="line"></span><br><span class="line">l[<span class="number">1</span>:<span class="number">3</span>] = [<span class="number">0</span>]  <span class="comment"># 用0替换第2~4个元素，不包括第4个</span></span><br><span class="line"><span class="comment"># [1, 0, 4, 5, 6, 7, 8, 9]</span></span><br><span class="line"></span><br><span class="line">l[-<span class="number">2</span>:] = [<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>]  <span class="comment"># 将最后两个元素替换为四个0</span></span><br><span class="line"><span class="comment"># [1, 2, 3, 4, 5, 6, 7, 0, 0, 0, 0]</span></span><br><span class="line"></span><br><span class="line">l.pop()  <span class="comment"># 弹出最后一个元素,返回该元素的值</span></span><br><span class="line"><span class="comment"># [1, 2, 3, 4, 5, 6, 7, 8]</span></span><br><span class="line"></span><br><span class="line">l.pop(<span class="number">0</span>)  <span class="comment"># 弹出第一个元素，返回该元素的值</span></span><br><span class="line"><span class="comment"># [2, 3, 4, 5, 6, 7, 8, 9]</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">del</span> l[<span class="number">0</span>]  <span class="comment"># 删除第一个元素</span></span><br><span class="line"><span class="comment"># [2, 3, 4, 5, 6, 7, 8, 9]</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="3-数组排序"><a href="#3-数组排序" class="headerlink" title="3. 数组排序"></a>3. 数组排序</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">l = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, -<span class="number">9</span>]</span><br><span class="line"></span><br><span class="line">l.reverse()  <span class="comment"># l反向</span></span><br><span class="line"><span class="comment"># [-9, 8, 7, 6, 5, 4, 3, 2, 1]</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">list</span>(<span class="built_in">reversed</span>(l))  <span class="comment"># l反向,与l.reverse()的区别：后者直接作用于l，返回None，前者返回一个迭代器</span></span><br><span class="line"></span><br><span class="line">l.sort()  <span class="comment"># 对l进行排序, 默认从小到大，升序</span></span><br><span class="line"><span class="comment"># [-9, 1, 2, 3, 4, 5, 6, 7, 8]</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">sorted</span>(l)  <span class="comment"># 升序排序，与l.sort()的区别：后者直接作用于l，返回None，前者返回一个新的列表</span></span><br><span class="line"><span class="comment"># [-9, 1, 2, 3, 4, 5, 6, 7, 8]</span></span><br><span class="line"></span><br><span class="line">l.sort(reverse=<span class="literal">True</span>)  <span class="comment"># 对l进行从大到小排序，降序，可与key参数搭配灵活使用</span></span><br><span class="line"><span class="comment"># [8, 7, 6, 5, 4, 3, 2, 1, -9]</span></span><br><span class="line"></span><br><span class="line">l.sort(key=<span class="keyword">lambda</span> x: <span class="built_in">abs</span>(x))  <span class="comment"># 按指定的方法进行排序，一般与lambda临时函数配合使用，也可以使用自定义方法如：</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">my_f</span>(<span class="params">x</span>):</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">abs</span>(x) <span class="comment"># 取绝对值</span></span><br><span class="line">l.sort(key=my_f) <span class="comment"># 按自定义方法进行排序</span></span><br><span class="line"></span><br><span class="line">l = [(<span class="number">1</span>,<span class="number">2</span>), (-<span class="number">4</span>,<span class="number">3</span>), (<span class="number">6</span>,<span class="number">0</span>)]</span><br><span class="line"></span><br><span class="line">l.sort(key=<span class="keyword">lambda</span> x: x[<span class="number">1</span>])  <span class="comment"># 按子元组的第二个元素大小升序排列</span></span><br><span class="line"><span class="comment"># [(6,0), (1,2), (-4,3)]</span></span><br><span class="line"></span><br><span class="line">l.sort(key=<span class="keyword">lambda</span> x: <span class="built_in">abs</span>(x[<span class="number">0</span>]), reverse=<span class="literal">True</span>)  <span class="comment"># 按第一个元素的绝对值大小降序排列</span></span><br><span class="line"><span class="comment"># [(6,0), (-4,3), (1,2)]</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="4-其他数组操作"><a href="#4-其他数组操作" class="headerlink" title="4. 其他数组操作"></a>4. 其他数组操作</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">[<span class="number">1</span>, <span class="number">2</span>] * <span class="number">4</span>  <span class="comment"># [1,2]重复4次</span></span><br><span class="line"><span class="comment"># [1, 2, 1, 2, 1, 2, 1, 2]</span></span><br><span class="line"></span><br><span class="line">l = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">5</span>, <span class="number">8</span>, <span class="number">8</span>]</span><br><span class="line"></span><br><span class="line">l.count(<span class="number">8</span>)  <span class="comment"># 统计8出现的次数</span></span><br><span class="line"><span class="comment"># 2</span></span><br><span class="line"></span><br><span class="line">l.index(<span class="number">5</span>)  <span class="comment"># 找到5第一次出现的位置索引值(列表中没有5的话会报错ValueError)</span></span><br><span class="line"><span class="comment"># 4</span></span><br></pre></td></tr></table></figure>
+    <title>Python - 函数作用域</title>
+    <url>/Python-Function-Scope.html</url>
+    <content><![CDATA[<h2 id="1-函数作用域"><a href="#1-函数作用域" class="headerlink" title="1. 函数作用域"></a>1. 函数作用域</h2><blockquote>
+<p>L：local 函数内部作用域；</p>
+<p>E：enclosing 函数内部与它的内嵌函数之间；</p>
+<p>G：global 全局作用域，在同一个.py文件最外层；</p>
+<p>B：build-in 解释器内置作用域。</p>
+</blockquote>
+<h2 id="2-对象查找顺序"><a href="#2-对象查找顺序" class="headerlink" title="2. 对象查找顺序"></a>2. 对象查找顺序</h2><blockquote>
+<p>L &gt; E &gt; G &gt; B</p>
+</blockquote>
+<h2 id="3-举例解释"><a href="#3-举例解释" class="headerlink" title="3. 举例解释"></a>3. 举例解释</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># -*- conding: utf-8 -*-</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># G</span></span><br><span class="line">pass_line = <span class="number">60</span> </span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">func</span>(<span class="params">score</span>):</span><br><span class="line">    <span class="comment"># E</span></span><br><span class="line">    pass_line = <span class="number">90</span> </span><br><span class="line">    result = <span class="string">&quot;yes&quot;</span> <span class="keyword">if</span> score &gt;= pass_line <span class="keyword">else</span> <span class="string">&quot;no&quot;</span></span><br><span class="line">    <span class="built_in">print</span>(result)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">inner_func</span>():</span><br><span class="line">        <span class="comment"># L</span></span><br><span class="line">        <span class="comment"># score = 81</span></span><br><span class="line">        <span class="built_in">print</span>(score)</span><br><span class="line"></span><br><span class="line">    inner_func()</span><br><span class="line"></span><br><span class="line">    <span class="built_in">print</span>(<span class="built_in">max</span>(<span class="number">1</span>,<span class="number">2</span>))  <span class="comment"># B</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">func(<span class="number">80</span>)</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
         <category>Python</category>
       </categories>
       <tags>
         <tag>Python</tag>
-        <tag>数组</tag>
+        <tag>函数作用域</tag>
       </tags>
   </entry>
   <entry>
@@ -542,6 +545,25 @@
         <tag>OpenCV</tag>
         <tag>Pillow</tag>
         <tag>图片处理</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python - 数组切片、更新、排序</title>
+    <url>/Python-List-Slice.html</url>
+    <content><![CDATA[<h2 id="1-数组切片"><a href="#1-数组切片" class="headerlink" title="1. 数组切片"></a>1. 数组切片</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">l = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>]</span><br><span class="line"></span><br><span class="line">l[:]  <span class="comment"># 所有元素 </span></span><br><span class="line"><span class="comment"># [1, 2, 3, 4, 5, 6, 7, 8, 9]</span></span><br><span class="line"></span><br><span class="line">l[<span class="number">0</span>]  <span class="comment"># 第一个元素</span></span><br><span class="line"><span class="comment"># 1</span></span><br><span class="line"></span><br><span class="line">l[<span class="number">1</span>:<span class="number">3</span>]  <span class="comment"># 第2~4个元素，不包括第4个</span></span><br><span class="line"><span class="comment"># [2, 3]</span></span><br><span class="line"></span><br><span class="line">l[<span class="number">3</span>:]  <span class="comment"># 第4~最后一个元素</span></span><br><span class="line"><span class="comment"># [4, 5, 6, 7, 8, 9]</span></span><br><span class="line"></span><br><span class="line">l[:<span class="number">3</span>]  <span class="comment"># 第1~4个元素，不包括第4个</span></span><br><span class="line"><span class="comment"># [1, 2, 3]</span></span><br><span class="line"></span><br><span class="line">l[:-<span class="number">1</span>]  <span class="comment"># 第1~最后一个元素，不包括最后一个</span></span><br><span class="line"><span class="comment"># [1, 2, 3, 4, 5, 6, 7, 8]</span></span><br><span class="line"></span><br><span class="line">l[<span class="number">2</span>:-<span class="number">1</span>:<span class="number">2</span>]  <span class="comment"># 从第3~最后一个元素中每隔2个步长取一个，不包括最后一个元素</span></span><br><span class="line"><span class="comment"># [3, 5, 7]</span></span><br><span class="line"></span><br><span class="line">l[::<span class="number">3</span>]  <span class="comment"># 每隔3个步长取一个元素</span></span><br><span class="line"><span class="comment"># [1, 4, 7]</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="2-数组更新"><a href="#2-数组更新" class="headerlink" title="2. 数组更新"></a>2. 数组更新</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">l = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>]</span><br><span class="line"></span><br><span class="line">l.append(<span class="number">0</span>)  <span class="comment"># 列表最后追加一个元素0</span></span><br><span class="line"><span class="comment"># [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]</span></span><br><span class="line"></span><br><span class="line">l.extend([<span class="number">0</span>, <span class="number">0</span>])  <span class="comment"># 列表后面追加另一个列表</span></span><br><span class="line"><span class="comment"># [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 0]</span></span><br><span class="line"></span><br><span class="line">l.insert(<span class="number">1</span>, <span class="string">&#x27;0&#x27;</span>)  <span class="comment"># 在第1个元素的位置插入字符串&#x27;0&#x27;</span></span><br><span class="line"><span class="comment"># [1, &#x27;0&#x27;, 2, 3, 4, 5, 6, 7, 8, 9]</span></span><br><span class="line"></span><br><span class="line">l[<span class="number">1</span>:<span class="number">3</span>] = [<span class="number">0</span>]  <span class="comment"># 用0替换第2~4个元素，不包括第4个</span></span><br><span class="line"><span class="comment"># [1, 0, 4, 5, 6, 7, 8, 9]</span></span><br><span class="line"></span><br><span class="line">l[-<span class="number">2</span>:] = [<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>]  <span class="comment"># 将最后两个元素替换为四个0</span></span><br><span class="line"><span class="comment"># [1, 2, 3, 4, 5, 6, 7, 0, 0, 0, 0]</span></span><br><span class="line"></span><br><span class="line">l.pop()  <span class="comment"># 弹出最后一个元素,返回该元素的值</span></span><br><span class="line"><span class="comment"># [1, 2, 3, 4, 5, 6, 7, 8]</span></span><br><span class="line"></span><br><span class="line">l.pop(<span class="number">0</span>)  <span class="comment"># 弹出第一个元素，返回该元素的值</span></span><br><span class="line"><span class="comment"># [2, 3, 4, 5, 6, 7, 8, 9]</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">del</span> l[<span class="number">0</span>]  <span class="comment"># 删除第一个元素</span></span><br><span class="line"><span class="comment"># [2, 3, 4, 5, 6, 7, 8, 9]</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="3-数组排序"><a href="#3-数组排序" class="headerlink" title="3. 数组排序"></a>3. 数组排序</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">l = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, -<span class="number">9</span>]</span><br><span class="line"></span><br><span class="line">l.reverse()  <span class="comment"># l反向</span></span><br><span class="line"><span class="comment"># [-9, 8, 7, 6, 5, 4, 3, 2, 1]</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">list</span>(<span class="built_in">reversed</span>(l))  <span class="comment"># l反向,与l.reverse()的区别：后者直接作用于l，返回None，前者返回一个迭代器</span></span><br><span class="line"></span><br><span class="line">l.sort()  <span class="comment"># 对l进行排序, 默认从小到大，升序</span></span><br><span class="line"><span class="comment"># [-9, 1, 2, 3, 4, 5, 6, 7, 8]</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">sorted</span>(l)  <span class="comment"># 升序排序，与l.sort()的区别：后者直接作用于l，返回None，前者返回一个新的列表</span></span><br><span class="line"><span class="comment"># [-9, 1, 2, 3, 4, 5, 6, 7, 8]</span></span><br><span class="line"></span><br><span class="line">l.sort(reverse=<span class="literal">True</span>)  <span class="comment"># 对l进行从大到小排序，降序，可与key参数搭配灵活使用</span></span><br><span class="line"><span class="comment"># [8, 7, 6, 5, 4, 3, 2, 1, -9]</span></span><br><span class="line"></span><br><span class="line">l.sort(key=<span class="keyword">lambda</span> x: <span class="built_in">abs</span>(x))  <span class="comment"># 按指定的方法进行排序，一般与lambda临时函数配合使用，也可以使用自定义方法如：</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">my_f</span>(<span class="params">x</span>):</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">abs</span>(x) <span class="comment"># 取绝对值</span></span><br><span class="line">l.sort(key=my_f) <span class="comment"># 按自定义方法进行排序</span></span><br><span class="line"></span><br><span class="line">l = [(<span class="number">1</span>,<span class="number">2</span>), (-<span class="number">4</span>,<span class="number">3</span>), (<span class="number">6</span>,<span class="number">0</span>)]</span><br><span class="line"></span><br><span class="line">l.sort(key=<span class="keyword">lambda</span> x: x[<span class="number">1</span>])  <span class="comment"># 按子元组的第二个元素大小升序排列</span></span><br><span class="line"><span class="comment"># [(6,0), (1,2), (-4,3)]</span></span><br><span class="line"></span><br><span class="line">l.sort(key=<span class="keyword">lambda</span> x: <span class="built_in">abs</span>(x[<span class="number">0</span>]), reverse=<span class="literal">True</span>)  <span class="comment"># 按第一个元素的绝对值大小降序排列</span></span><br><span class="line"><span class="comment"># [(6,0), (-4,3), (1,2)]</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="4-其他数组操作"><a href="#4-其他数组操作" class="headerlink" title="4. 其他数组操作"></a>4. 其他数组操作</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">[<span class="number">1</span>, <span class="number">2</span>] * <span class="number">4</span>  <span class="comment"># [1,2]重复4次</span></span><br><span class="line"><span class="comment"># [1, 2, 1, 2, 1, 2, 1, 2]</span></span><br><span class="line"></span><br><span class="line">l = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">5</span>, <span class="number">8</span>, <span class="number">8</span>]</span><br><span class="line"></span><br><span class="line">l.count(<span class="number">8</span>)  <span class="comment"># 统计8出现的次数</span></span><br><span class="line"><span class="comment"># 2</span></span><br><span class="line"></span><br><span class="line">l.index(<span class="number">5</span>)  <span class="comment"># 找到5第一次出现的位置索引值(列表中没有5的话会报错ValueError)</span></span><br><span class="line"><span class="comment"># 4</span></span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>数组</tag>
       </tags>
   </entry>
   <entry>
@@ -699,6 +721,39 @@
       </tags>
   </entry>
   <entry>
+    <title>Python - 配置iPython直接在命令行调试Odoo(openerp)代码</title>
+    <url>/Python-iPython-Odoo-OE.html</url>
+    <content><![CDATA[<h2 id="0-先看效果"><a href="#0-先看效果" class="headerlink" title="0. 先看效果"></a>0. 先看效果</h2><p><img data-src="/images/Python-iPython/ipython_oe_run.png" alt="ipython_oe_run.png"></p>
+<h2 id="1-安装ipython"><a href="#1-安装ipython" class="headerlink" title="1. 安装ipython"></a>1. 安装ipython</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pip install ipython</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-创建ipython配置文件"><a href="#2-创建ipython配置文件" class="headerlink" title="2. 创建ipython配置文件"></a>2. 创建ipython配置文件</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ipython profile create apple</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-1-列出所有配置文件"><a href="#2-1-列出所有配置文件" class="headerlink" title="2.1 *列出所有配置文件"></a>2.1 *列出所有配置文件</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ipython profile list</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-2-查看配置文件位置"><a href="#2-2-查看配置文件位置" class="headerlink" title="2.2 *查看配置文件位置"></a>2.2 *查看配置文件位置</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ipython profile locate apple</span><br></pre></td></tr></table></figure>
+
+<h2 id="3-创建预加载OE配置文件"><a href="#3-创建预加载OE配置文件" class="headerlink" title="3. 创建预加载OE配置文件"></a>3. 创建预加载OE配置文件</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim ~/.ipython/profile_apple/startup/00-load-oe.py</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>内容如下：</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">#!/usr/bin/python</span></span><br><span class="line"><span class="comment"># coding: utf-8</span></span><br><span class="line"><span class="comment"># author: richard</span></span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"><span class="keyword">import</span> configparser</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">OE_CONF_PTH = <span class="string">&#x27;/path/to/app-server-local.conf&#x27;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">abs_path</span>(<span class="params">path</span>):</span><br><span class="line">    <span class="keyword">if</span> path.startswith(<span class="string">&#x27;~&#x27;</span>):</span><br><span class="line">        <span class="keyword">return</span> os.path.expanduser(path)</span><br><span class="line">    <span class="keyword">return</span> path</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    <span class="comment"># 加载OE配置文件</span></span><br><span class="line">    conf = configparser.ConfigParser()</span><br><span class="line">    conf.read(abs_path(OE_CONF_PTH))</span><br><span class="line">    options = <span class="built_in">dict</span>(conf.items(<span class="string">&#x27;options&#x27;</span>))</span><br><span class="line">    db_name = options[<span class="string">&#x27;db_name&#x27;</span>]</span><br><span class="line">    addons_path = abs_path(options[<span class="string">&#x27;addons_path&#x27;</span>])</span><br><span class="line">    proj_path = addons_path.split(<span class="string">&#x27;/openerp/addons&#x27;</span>)[<span class="number">0</span>]</span><br><span class="line">    openerp_path = addons_path.split(<span class="string">&#x27;/addons&#x27;</span>)[<span class="number">0</span>]</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 加入系统路径</span></span><br><span class="line">    sys.path.extend([proj_path, openerp_path])</span><br><span class="line"></span><br><span class="line">    <span class="comment"># OE解析配置</span></span><br><span class="line">    <span class="keyword">import</span> openerp</span><br><span class="line">    openerp.tools.config.parse_config([<span class="string">&#x27;-c&#x27;</span>,abs_path(OE_CONF_PTH)])</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 生成数据库cursor</span></span><br><span class="line">    uid = <span class="number">1</span></span><br><span class="line">    db_conn = openerp.sql_db.db_connect(db_name)</span><br><span class="line">    cr = db_conn.cursor()</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 若要启用连接池，需将代码中所有import改为从openerp引入</span></span><br><span class="line">    <span class="comment"># 如 from osv import fields 需改为 from openerp.osv import fields</span></span><br><span class="line">    pool = openerp.pooler.get_pool(db_name)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 其他预导入的包和方法</span></span><br><span class="line">    <span class="keyword">import</span> redis</span><br><span class="line">    <span class="keyword">import</span> json</span><br><span class="line">    <span class="keyword">import</span> datetime</span><br><span class="line">    <span class="keyword">from</span> openerp.tools <span class="keyword">import</span> gen_signature</span><br><span class="line"></span><br><span class="line">    redis_pool = openerp.redis_pool.redis_pool</span><br><span class="line">    redis_ins = redis.Redis(connection_pool=redis_pool)</span><br></pre></td></tr></table></figure>
+
+<h2 id="4-启动ipython"><a href="#4-启动ipython" class="headerlink" title="4. 启动ipython"></a>4. 启动ipython</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ipython --profile=apple</span><br></pre></td></tr></table></figure>
+
+<h2 id="5-执行效果"><a href="#5-执行效果" class="headerlink" title="5. 执行效果"></a>5. 执行效果</h2><figure class="highlight ipython"><table><tr><td class="code"><pre><span class="line">Python <span class="number">3.7</span><span class="number">.3</span> (default, Mar <span class="number">27</span> <span class="number">2019</span>, <span class="number">16</span>:<span class="number">54</span>:<span class="number">48</span>)</span><br><span class="line"><span class="type">Type</span> <span class="string">&#x27;copyright&#x27;</span>, <span class="string">&#x27;credits&#x27;</span> <span class="keyword">or</span> <span class="string">&#x27;license&#x27;</span> <span class="keyword">for</span> more information</span><br><span class="line">IPython <span class="number">7.34</span><span class="number">.0</span> -- An enhanced Interactive Python. <span class="type">Type</span> <span class="string">&#x27;?&#x27;</span> <span class="keyword">for</span> <span class="built_in">help</span>.</span><br><span class="line"></span><br><span class="line">IPython profile: apple</span><br><span class="line"></span><br><span class="line">In [<span class="number">1</span>]: cr.execute(<span class="string">&quot;&quot;&quot;select id from res_users where login=%(login)s limit 1&quot;&quot;&quot;</span>, &#123;<span class="string">&#x27;login&#x27;</span>: <span class="string">&#x27;admin&#x27;</span>&#125;)</span><br><span class="line"></span><br><span class="line">In [<span class="number">2</span>]: cr.dictfetchone()</span><br><span class="line">Out[<span class="number">2</span>]: &#123;<span class="string">&#x27;id&#x27;</span>: <span class="number">1</span>&#125;</span><br><span class="line"></span><br><span class="line">In [<span class="number">3</span>]: user_ids = pool.get(<span class="string">&#x27;res.users&#x27;</span>).search(cr, uid, [(<span class="string">&#x27;login&#x27;</span>, <span class="string">&#x27;=&#x27;</span>, <span class="string">&#x27;admin&#x27;</span>)])</span><br><span class="line"></span><br><span class="line">In [<span class="number">4</span>]: user_ids</span><br><span class="line">Out[<span class="number">4</span>]: [<span class="number">1</span>]</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>iPython</tag>
+        <tag>Odoo</tag>
+        <tag>OE</tag>
+        <tag>OpenERP</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Python - virtualenv虚拟环境配置</title>
     <url>/Python-Virtualenv.html</url>
     <content><![CDATA[<h2 id="1-安装"><a href="#1-安装" class="headerlink" title="1. 安装"></a>1. 安装</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pip install virtualenv</span><br></pre></td></tr></table></figure>
@@ -736,61 +791,6 @@
       <tags>
         <tag>Python</tag>
         <tag>virtualenv</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Python - 配置iPython直接在命令行调试Odoo(openerp)代码</title>
-    <url>/Python-iPython-Odoo-OE.html</url>
-    <content><![CDATA[<h2 id="0-先看效果"><a href="#0-先看效果" class="headerlink" title="0. 先看效果"></a>0. 先看效果</h2><p><img data-src="/images/Python-iPython/ipython_oe_run.png" alt="ipython_oe_run.png"></p>
-<h2 id="1-安装ipython"><a href="#1-安装ipython" class="headerlink" title="1. 安装ipython"></a>1. 安装ipython</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pip install ipython</span><br></pre></td></tr></table></figure>
-
-<h2 id="2-创建ipython配置文件"><a href="#2-创建ipython配置文件" class="headerlink" title="2. 创建ipython配置文件"></a>2. 创建ipython配置文件</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ipython profile create apple</span><br></pre></td></tr></table></figure>
-
-<h3 id="2-1-列出所有配置文件"><a href="#2-1-列出所有配置文件" class="headerlink" title="2.1 *列出所有配置文件"></a>2.1 *列出所有配置文件</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ipython profile list</span><br></pre></td></tr></table></figure>
-
-<h3 id="2-2-查看配置文件位置"><a href="#2-2-查看配置文件位置" class="headerlink" title="2.2 *查看配置文件位置"></a>2.2 *查看配置文件位置</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ipython profile locate apple</span><br></pre></td></tr></table></figure>
-
-<h2 id="3-创建预加载OE配置文件"><a href="#3-创建预加载OE配置文件" class="headerlink" title="3. 创建预加载OE配置文件"></a>3. 创建预加载OE配置文件</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim ~/.ipython/profile_apple/startup/00-load-oe.py</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>内容如下：</p>
-</blockquote>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">#!/usr/bin/python</span></span><br><span class="line"><span class="comment"># coding: utf-8</span></span><br><span class="line"><span class="comment"># author: richard</span></span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"><span class="keyword">import</span> configparser</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">OE_CONF_PTH = <span class="string">&#x27;/path/to/app-server-local.conf&#x27;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">abs_path</span>(<span class="params">path</span>):</span><br><span class="line">    <span class="keyword">if</span> path.startswith(<span class="string">&#x27;~&#x27;</span>):</span><br><span class="line">        <span class="keyword">return</span> os.path.expanduser(path)</span><br><span class="line">    <span class="keyword">return</span> path</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    <span class="comment"># 加载OE配置文件</span></span><br><span class="line">    conf = configparser.ConfigParser()</span><br><span class="line">    conf.read(abs_path(OE_CONF_PTH))</span><br><span class="line">    options = <span class="built_in">dict</span>(conf.items(<span class="string">&#x27;options&#x27;</span>))</span><br><span class="line">    db_name = options[<span class="string">&#x27;db_name&#x27;</span>]</span><br><span class="line">    addons_path = abs_path(options[<span class="string">&#x27;addons_path&#x27;</span>])</span><br><span class="line">    proj_path = addons_path.split(<span class="string">&#x27;/openerp/addons&#x27;</span>)[<span class="number">0</span>]</span><br><span class="line">    openerp_path = addons_path.split(<span class="string">&#x27;/addons&#x27;</span>)[<span class="number">0</span>]</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 加入系统路径</span></span><br><span class="line">    sys.path.extend([proj_path, openerp_path])</span><br><span class="line"></span><br><span class="line">    <span class="comment"># OE解析配置</span></span><br><span class="line">    <span class="keyword">import</span> openerp</span><br><span class="line">    openerp.tools.config.parse_config([<span class="string">&#x27;-c&#x27;</span>,abs_path(OE_CONF_PTH)])</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 生成数据库cursor</span></span><br><span class="line">    uid = <span class="number">1</span></span><br><span class="line">    db_conn = openerp.sql_db.db_connect(db_name)</span><br><span class="line">    cr = db_conn.cursor()</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 若要启用连接池，需将代码中所有import改为从openerp引入</span></span><br><span class="line">    <span class="comment"># 如 from osv import fields 需改为 from openerp.osv import fields</span></span><br><span class="line">    pool = openerp.pooler.get_pool(db_name)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 其他预导入的包和方法</span></span><br><span class="line">    <span class="keyword">import</span> redis</span><br><span class="line">    <span class="keyword">import</span> json</span><br><span class="line">    <span class="keyword">import</span> datetime</span><br><span class="line">    <span class="keyword">from</span> openerp.tools <span class="keyword">import</span> gen_signature</span><br><span class="line"></span><br><span class="line">    redis_pool = openerp.redis_pool.redis_pool</span><br><span class="line">    redis_ins = redis.Redis(connection_pool=redis_pool)</span><br></pre></td></tr></table></figure>
-
-<h2 id="4-启动ipython"><a href="#4-启动ipython" class="headerlink" title="4. 启动ipython"></a>4. 启动ipython</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ipython --profile=apple</span><br></pre></td></tr></table></figure>
-
-<h2 id="5-执行效果"><a href="#5-执行效果" class="headerlink" title="5. 执行效果"></a>5. 执行效果</h2><figure class="highlight ipython"><table><tr><td class="code"><pre><span class="line">Python <span class="number">3.7</span><span class="number">.3</span> (default, Mar <span class="number">27</span> <span class="number">2019</span>, <span class="number">16</span>:<span class="number">54</span>:<span class="number">48</span>)</span><br><span class="line"><span class="type">Type</span> <span class="string">&#x27;copyright&#x27;</span>, <span class="string">&#x27;credits&#x27;</span> <span class="keyword">or</span> <span class="string">&#x27;license&#x27;</span> <span class="keyword">for</span> more information</span><br><span class="line">IPython <span class="number">7.34</span><span class="number">.0</span> -- An enhanced Interactive Python. <span class="type">Type</span> <span class="string">&#x27;?&#x27;</span> <span class="keyword">for</span> <span class="built_in">help</span>.</span><br><span class="line"></span><br><span class="line">IPython profile: apple</span><br><span class="line"></span><br><span class="line">In [<span class="number">1</span>]: cr.execute(<span class="string">&quot;&quot;&quot;select id from res_users where login=%(login)s limit 1&quot;&quot;&quot;</span>, &#123;<span class="string">&#x27;login&#x27;</span>: <span class="string">&#x27;admin&#x27;</span>&#125;)</span><br><span class="line"></span><br><span class="line">In [<span class="number">2</span>]: cr.dictfetchone()</span><br><span class="line">Out[<span class="number">2</span>]: &#123;<span class="string">&#x27;id&#x27;</span>: <span class="number">1</span>&#125;</span><br><span class="line"></span><br><span class="line">In [<span class="number">3</span>]: user_ids = pool.get(<span class="string">&#x27;res.users&#x27;</span>).search(cr, uid, [(<span class="string">&#x27;login&#x27;</span>, <span class="string">&#x27;=&#x27;</span>, <span class="string">&#x27;admin&#x27;</span>)])</span><br><span class="line"></span><br><span class="line">In [<span class="number">4</span>]: user_ids</span><br><span class="line">Out[<span class="number">4</span>]: [<span class="number">1</span>]</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>Python</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-        <tag>iPython</tag>
-        <tag>Odoo</tag>
-        <tag>OE</tag>
-        <tag>OpenERP</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Python - 函数作用域</title>
-    <url>/Python-Function-Scope.html</url>
-    <content><![CDATA[<h2 id="1-函数作用域"><a href="#1-函数作用域" class="headerlink" title="1. 函数作用域"></a>1. 函数作用域</h2><blockquote>
-<p>L：local 函数内部作用域；</p>
-<p>E：enclosing 函数内部与它的内嵌函数之间；</p>
-<p>G：global 全局作用域，在同一个.py文件最外层；</p>
-<p>B：build-in 解释器内置作用域。</p>
-</blockquote>
-<h2 id="2-对象查找顺序"><a href="#2-对象查找顺序" class="headerlink" title="2. 对象查找顺序"></a>2. 对象查找顺序</h2><blockquote>
-<p>L &gt; E &gt; G &gt; B</p>
-</blockquote>
-<h2 id="3-举例解释"><a href="#3-举例解释" class="headerlink" title="3. 举例解释"></a>3. 举例解释</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># -*- conding: utf-8 -*-</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># G</span></span><br><span class="line">pass_line = <span class="number">60</span> </span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">func</span>(<span class="params">score</span>):</span><br><span class="line">    <span class="comment"># E</span></span><br><span class="line">    pass_line = <span class="number">90</span> </span><br><span class="line">    result = <span class="string">&quot;yes&quot;</span> <span class="keyword">if</span> score &gt;= pass_line <span class="keyword">else</span> <span class="string">&quot;no&quot;</span></span><br><span class="line">    <span class="built_in">print</span>(result)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">inner_func</span>():</span><br><span class="line">        <span class="comment"># L</span></span><br><span class="line">        <span class="comment"># score = 81</span></span><br><span class="line">        <span class="built_in">print</span>(score)</span><br><span class="line"></span><br><span class="line">    inner_func()</span><br><span class="line"></span><br><span class="line">    <span class="built_in">print</span>(<span class="built_in">max</span>(<span class="number">1</span>,<span class="number">2</span>))  <span class="comment"># B</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">func(<span class="number">80</span>)</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>Python</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-        <tag>函数作用域</tag>
       </tags>
   </entry>
   <entry>
@@ -883,6 +883,57 @@
       </tags>
   </entry>
   <entry>
+    <title>服务器配置 - Nginx安装配置</title>
+    <url>/Server-Nginx-Configuration.html</url>
+    <content><![CDATA[<h2 id="1-安装"><a href="#1-安装" class="headerlink" title="1. 安装"></a>1. 安装</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">apt-get install nginx</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-增加代理配置"><a href="#2-增加代理配置" class="headerlink" title="2. 增加代理配置"></a>2. 增加代理配置</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /etc/nginx/sites-available</span><br><span class="line">vim your_site_name</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>普通http配置参考：</p>
+</blockquote>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line"># http server</span><br><span class="line">server &#123;</span><br><span class="line">       listen 80;</span><br><span class="line">       server_name your.site.name.cn;</span><br><span class="line">       # ssl on;</span><br><span class="line">       access_log /var/log/nginx/syour_site_name.access.log;</span><br><span class="line">       error_log /var/log/nginx/your_site_name.error.log;</span><br><span class="line">	location / &#123;</span><br><span class="line">		proxy_pass http://127.0.0.1:8011;</span><br><span class="line">		proxy_set_header Host $host;</span><br><span class="line">                proxy_set_header X-Real-IP $remote_addr;</span><br><span class="line">		proxy_set_header X-Forward_For $proxy_add_x_forwarded_for;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>安全https配置参考：</p>
+</blockquote>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line"># HTTPS server</span><br><span class="line">server &#123;</span><br><span class="line">        listen 443;</span><br><span class="line">        listen [::]:443 ipv6only=on;</span><br><span class="line">        server_name your.site.name.cn;</span><br><span class="line">        ssl on;</span><br><span class="line">        access_log /var/log/nginx/your_site_name.access.log;</span><br><span class="line">        error_log /var/log/nginx/your_site_name.error.log;</span><br><span class="line">        ssl_certificate /path/to/your/https/cert/your_site_name.pem;</span><br><span class="line">        ssl_certificate_key /path/to/your/https/cert/your_site_name.key;</span><br><span class="line">        ssl_session_timeout 5m;</span><br><span class="line"></span><br><span class="line">        location / &#123;</span><br><span class="line">                proxy_pass http://127.0.0.1:8012;</span><br><span class="line">                proxy_set_header Host $host;</span><br><span class="line">                proxy_set_header X-Real-IP $remote_addr;</span><br><span class="line">                proxy_set_header X-Forward_For $proxy_add_x_forwarded_for;</span><br><span class="line">        &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>将文件链接至sites-enabled目录下。</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">ln</span> -s /etc/nginx/sites-available/your_site_name /etc/nginx/sites-enabled/your_site_name</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>*这是因为sites-available目录下存放的只是备选配置，sites-enabled目录下才是真正有效的代理设置。</p>
+</blockquote>
+<h2 id="3-Nginx配置"><a href="#3-Nginx配置" class="headerlink" title="3. Nginx配置"></a>3. Nginx配置</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim /etc/nginx/nginx.conf</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>修改下前几行内容:</p>
+</blockquote>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">user www-data;</span><br><span class="line">worker_processes 4; # worker数</span><br><span class="line">worker_rlimit_nofile 60000; </span><br><span class="line">pid /run/nginx.pid;</span><br><span class="line"></span><br><span class="line">events &#123;</span><br><span class="line">        worker_connections 65535; # 最大同时连接数</span><br><span class="line">        multi_accept on; # 开启接受同时连接选项</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="4-重载配置"><a href="#4-重载配置" class="headerlink" title="4. 重载配置"></a>4. 重载配置</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">/usr/sbin/nginx -s reload</span><br></pre></td></tr></table></figure>
+
+<p>这一步做完Nginx已经可以正常工作了。</p>
+<hr>
+<h2 id="5-常用命令"><a href="#5-常用命令" class="headerlink" title="5. 常用命令"></a>5. 常用命令</h2><h4 id="5-1-启动"><a href="#5-1-启动" class="headerlink" title="5.1 启动"></a>5.1 启动</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">/usr/sbin/nginx</span><br></pre></td></tr></table></figure>
+
+<h4 id="5-2-停止"><a href="#5-2-停止" class="headerlink" title="5.2 停止"></a>5.2 停止</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">/usr/sbin/nginx -s stop</span><br></pre></td></tr></table></figure>
+
+<h4 id="5-3-验证配置文件是否正确"><a href="#5-3-验证配置文件是否正确" class="headerlink" title="5.3 验证配置文件是否正确"></a>5.3 验证配置文件是否正确</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">/usr/sbin/nginx -t</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>Nginx</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+        <tag>服务器</tag>
+        <tag>Nginx</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>服务器配置 - Redis单机多实例配置</title>
     <url>/Server-Redis-Multi-Instance.html</url>
     <content><![CDATA[<h2 id="1-拷贝配置文件"><a href="#1-拷贝配置文件" class="headerlink" title="1. 拷贝配置文件"></a>1. 拷贝配置文件</h2><blockquote>
@@ -959,6 +1010,59 @@
     <content><![CDATA[<h2 id="200-博客访问地址-Github"><a href="#200-博客访问地址-Github" class="headerlink" title="[200]博客访问地址 - Github"></a>[200]<a href="https://richardrenn.github.io/">博客访问地址 - Github</a></h2><h2 id="404-博客访问地址-Coding"><a href="#404-博客访问地址-Coding" class="headerlink" title="[404]博客访问地址 - Coding"></a>[404]<span class="exturl" data-url="aHR0cHM6Ly9yaWNoYXJkcmVubi5jb2RpbmcubWUv">博客访问地址 - Coding<i class="fa fa-external-link-alt"></i></span></h2><h2 id="404-博客访问地址-Gitee"><a href="#404-博客访问地址-Gitee" class="headerlink" title="[404]博客访问地址 - Gitee"></a>[404]<span class="exturl" data-url="aHR0cHM6Ly9yaWNoYXJkcmVubi5naXRlZS5pby8=">博客访问地址 - Gitee<i class="fa fa-external-link-alt"></i></span></h2>]]></content>
   </entry>
   <entry>
+    <title>服务器搭建 - 为服务器添加ssh公钥验证</title>
+    <url>/Server-SSH-Key.html</url>
+    <content><![CDATA[<h2 id="1-生成密钥对"><a href="#1-生成密钥对" class="headerlink" title="1. 生成密钥对"></a>1. 生成密钥对</h2><blockquote>
+<p>在本地运行如下命令：</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -b 4096 -C <span class="string">&quot;your_email@example.com&quot;</span></span><br></pre></td></tr></table></figure>
+<p>如果不想设置密码的话直接三次回车即可，和git生成密钥的命令相同。</p>
+<blockquote>
+<p>生成的密钥对位置在 ~&#x2F;.ssh，查看下公钥，下一步要用到。</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cat</span> ~/.ssh/id_rsa.pub</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>内容类似下面这样</p>
+</blockquote>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQC+am2s/r1n+xsipi/4H2ll8p3McdhQCLBwJGNbkaxpeWKtdbiUbqAWeNt/OF13VsyWLs5lb6J2I3J6GlCcEGMGOFc4gzLTP9e/TmXeyFlBMZkuSJTbsXvL9Q/tff/8Tgt4aVAeOAgSd2jdDEvALegap4nrMHVLP8sOQlNFBMPjy1r0cW/Afp32gCtPOpQRuIkQdOnWUkzjObGanhYnX470UNsvgQ+IyikhS5tiKPqkT317v6yFV4doeZgfNYtcgpLVZcVxkItTLS1h75d4h4MD2JVRk2nBGSLp5j2WIji4Tiy++LblV1Y5Y2wRcfefdXCIMT3jMNAcyhuCaNfaD/Q== your_email@example.com</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-添加到服务器"><a href="#2-添加到服务器" class="headerlink" title="2. 添加到服务器"></a>2. 添加到服务器</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh root@server_ip <span class="comment"># 登陆服务器</span></span><br><span class="line"><span class="built_in">mkdir</span> .ssh <span class="comment"># 创建.ssh目录</span></span><br><span class="line">vim .ssh/authorized_keys <span class="comment"># 创建已验证的密钥记录文件</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>在vim编辑器中按i键，把上一步的公钥拷贝进来，多个公钥的话换行隔开即可。<br>然后按ESC键退出编辑模式，输入:wq回车即可保存文件。<br>这样以后输入ssh root@ip命令就可以不用输入密码直接进去了。</p>
+</blockquote>
+<span id="more"></span>
+
+<h2 id="3-更快捷地登陆"><a href="#3-更快捷地登陆" class="headerlink" title="3. 更快捷地登陆"></a>3. 更快捷地登陆</h2><p>完成上面的配置后，还可以通过对本地ssh进行配置以进一步简化登陆操作。</p>
+<blockquote>
+<p>在本地打开~&#x2F;.ssh&#x2F;config 文件</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim ~/.ssh/config</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>添加如下配置内容:</p>
+</blockquote>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">Host happy</span><br><span class="line">Hostname 139.xxx.xxx.xxx</span><br><span class="line">User root</span><br><span class="line">IdentityFile ~/.ssh/id_rsa</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>以后在本地直接输入以下命令就可登陆远程服务器</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh happy</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>多个服务器配置只需换行隔开即可。</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>服务器</category>
+        <category>SSH</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+        <tag>ssh</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Python - Supervisor安装配置</title>
     <url>/Server-Supervisor-Configuration.html</url>
     <content><![CDATA[<h2 id="1-安装"><a href="#1-安装" class="headerlink" title="1. 安装"></a>1. 安装</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pip install supervisor</span><br></pre></td></tr></table></figure>
@@ -1017,110 +1121,6 @@
         <tag>Python</tag>
         <tag>服务器</tag>
         <tag>Supervisor</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>服务器搭建 - 为服务器添加ssh公钥验证</title>
-    <url>/Server-SSH-Key.html</url>
-    <content><![CDATA[<h2 id="1-生成密钥对"><a href="#1-生成密钥对" class="headerlink" title="1. 生成密钥对"></a>1. 生成密钥对</h2><blockquote>
-<p>在本地运行如下命令：</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -b 4096 -C <span class="string">&quot;your_email@example.com&quot;</span></span><br></pre></td></tr></table></figure>
-<p>如果不想设置密码的话直接三次回车即可，和git生成密钥的命令相同。</p>
-<blockquote>
-<p>生成的密钥对位置在 ~&#x2F;.ssh，查看下公钥，下一步要用到。</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cat</span> ~/.ssh/id_rsa.pub</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>内容类似下面这样</p>
-</blockquote>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQC+am2s/r1n+xsipi/4H2ll8p3McdhQCLBwJGNbkaxpeWKtdbiUbqAWeNt/OF13VsyWLs5lb6J2I3J6GlCcEGMGOFc4gzLTP9e/TmXeyFlBMZkuSJTbsXvL9Q/tff/8Tgt4aVAeOAgSd2jdDEvALegap4nrMHVLP8sOQlNFBMPjy1r0cW/Afp32gCtPOpQRuIkQdOnWUkzjObGanhYnX470UNsvgQ+IyikhS5tiKPqkT317v6yFV4doeZgfNYtcgpLVZcVxkItTLS1h75d4h4MD2JVRk2nBGSLp5j2WIji4Tiy++LblV1Y5Y2wRcfefdXCIMT3jMNAcyhuCaNfaD/Q== your_email@example.com</span><br></pre></td></tr></table></figure>
-
-<h2 id="2-添加到服务器"><a href="#2-添加到服务器" class="headerlink" title="2. 添加到服务器"></a>2. 添加到服务器</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh root@server_ip <span class="comment"># 登陆服务器</span></span><br><span class="line"><span class="built_in">mkdir</span> .ssh <span class="comment"># 创建.ssh目录</span></span><br><span class="line">vim .ssh/authorized_keys <span class="comment"># 创建已验证的密钥记录文件</span></span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>在vim编辑器中按i键，把上一步的公钥拷贝进来，多个公钥的话换行隔开即可。<br>然后按ESC键退出编辑模式，输入:wq回车即可保存文件。<br>这样以后输入ssh root@ip命令就可以不用输入密码直接进去了。</p>
-</blockquote>
-<span id="more"></span>
-
-<h2 id="3-更快捷地登陆"><a href="#3-更快捷地登陆" class="headerlink" title="3. 更快捷地登陆"></a>3. 更快捷地登陆</h2><p>完成上面的配置后，还可以通过对本地ssh进行配置以进一步简化登陆操作。</p>
-<blockquote>
-<p>在本地打开~&#x2F;.ssh&#x2F;config 文件</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim ~/.ssh/config</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>添加如下配置内容:</p>
-</blockquote>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">Host happy</span><br><span class="line">Hostname 139.xxx.xxx.xxx</span><br><span class="line">User root</span><br><span class="line">IdentityFile ~/.ssh/id_rsa</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>以后在本地直接输入以下命令就可登陆远程服务器</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh happy</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>多个服务器配置只需换行隔开即可。</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>服务器</category>
-        <category>SSH</category>
-      </categories>
-      <tags>
-        <tag>Linux</tag>
-        <tag>ssh</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>服务器配置 - Nginx安装配置</title>
-    <url>/Server-Nginx-Configuration.html</url>
-    <content><![CDATA[<h2 id="1-安装"><a href="#1-安装" class="headerlink" title="1. 安装"></a>1. 安装</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">apt-get install nginx</span><br></pre></td></tr></table></figure>
-
-<h2 id="2-增加代理配置"><a href="#2-增加代理配置" class="headerlink" title="2. 增加代理配置"></a>2. 增加代理配置</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /etc/nginx/sites-available</span><br><span class="line">vim your_site_name</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>普通http配置参考：</p>
-</blockquote>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line"># http server</span><br><span class="line">server &#123;</span><br><span class="line">       listen 80;</span><br><span class="line">       server_name your.site.name.cn;</span><br><span class="line">       # ssl on;</span><br><span class="line">       access_log /var/log/nginx/syour_site_name.access.log;</span><br><span class="line">       error_log /var/log/nginx/your_site_name.error.log;</span><br><span class="line">	location / &#123;</span><br><span class="line">		proxy_pass http://127.0.0.1:8011;</span><br><span class="line">		proxy_set_header Host $host;</span><br><span class="line">                proxy_set_header X-Real-IP $remote_addr;</span><br><span class="line">		proxy_set_header X-Forward_For $proxy_add_x_forwarded_for;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>安全https配置参考：</p>
-</blockquote>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line"># HTTPS server</span><br><span class="line">server &#123;</span><br><span class="line">        listen 443;</span><br><span class="line">        listen [::]:443 ipv6only=on;</span><br><span class="line">        server_name your.site.name.cn;</span><br><span class="line">        ssl on;</span><br><span class="line">        access_log /var/log/nginx/your_site_name.access.log;</span><br><span class="line">        error_log /var/log/nginx/your_site_name.error.log;</span><br><span class="line">        ssl_certificate /path/to/your/https/cert/your_site_name.pem;</span><br><span class="line">        ssl_certificate_key /path/to/your/https/cert/your_site_name.key;</span><br><span class="line">        ssl_session_timeout 5m;</span><br><span class="line"></span><br><span class="line">        location / &#123;</span><br><span class="line">                proxy_pass http://127.0.0.1:8012;</span><br><span class="line">                proxy_set_header Host $host;</span><br><span class="line">                proxy_set_header X-Real-IP $remote_addr;</span><br><span class="line">                proxy_set_header X-Forward_For $proxy_add_x_forwarded_for;</span><br><span class="line">        &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>将文件链接至sites-enabled目录下。</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">ln</span> -s /etc/nginx/sites-available/your_site_name /etc/nginx/sites-enabled/your_site_name</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>*这是因为sites-available目录下存放的只是备选配置，sites-enabled目录下才是真正有效的代理设置。</p>
-</blockquote>
-<h2 id="3-Nginx配置"><a href="#3-Nginx配置" class="headerlink" title="3. Nginx配置"></a>3. Nginx配置</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim /etc/nginx/nginx.conf</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>修改下前几行内容:</p>
-</blockquote>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">user www-data;</span><br><span class="line">worker_processes 4; # worker数</span><br><span class="line">worker_rlimit_nofile 60000; </span><br><span class="line">pid /run/nginx.pid;</span><br><span class="line"></span><br><span class="line">events &#123;</span><br><span class="line">        worker_connections 65535; # 最大同时连接数</span><br><span class="line">        multi_accept on; # 开启接受同时连接选项</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="4-重载配置"><a href="#4-重载配置" class="headerlink" title="4. 重载配置"></a>4. 重载配置</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">/usr/sbin/nginx -s reload</span><br></pre></td></tr></table></figure>
-
-<p>这一步做完Nginx已经可以正常工作了。</p>
-<hr>
-<h2 id="5-常用命令"><a href="#5-常用命令" class="headerlink" title="5. 常用命令"></a>5. 常用命令</h2><h4 id="5-1-启动"><a href="#5-1-启动" class="headerlink" title="5.1 启动"></a>5.1 启动</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">/usr/sbin/nginx</span><br></pre></td></tr></table></figure>
-
-<h4 id="5-2-停止"><a href="#5-2-停止" class="headerlink" title="5.2 停止"></a>5.2 停止</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">/usr/sbin/nginx -s stop</span><br></pre></td></tr></table></figure>
-
-<h4 id="5-3-验证配置文件是否正确"><a href="#5-3-验证配置文件是否正确" class="headerlink" title="5.3 验证配置文件是否正确"></a>5.3 验证配置文件是否正确</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">/usr/sbin/nginx -t</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>Nginx</category>
-      </categories>
-      <tags>
-        <tag>Linux</tag>
-        <tag>服务器</tag>
-        <tag>Nginx</tag>
       </tags>
   </entry>
 </search>
