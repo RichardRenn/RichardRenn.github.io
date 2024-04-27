@@ -104,52 +104,6 @@
       </tags>
   </entry>
   <entry>
-    <title>GitHub - 存储大文件</title>
-    <url>/GitHub-Large-File-Storage.html</url>
-    <content><![CDATA[<h2 id="0-问题的产生"><a href="#0-问题的产生" class="headerlink" title="0. 问题的产生"></a>0. 问题的产生</h2><blockquote>
-<p>我在GitHub上有一个仓库用来存放收集到的各种技术类书籍的电子版，但是众所周知GitHub默认情况下是不支持存储超过100M的单个文件的（其实超过50M时就会有Warning）。<br>当我push比较大的PDF版的书籍（比如<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL1JpY2hhcmRSZW5uL0Jvb2tzL2Jsb2IvbWFzdGVyL0phdmFTY3JpcHQvSmF2YVNjcmlwdC1ET00lRTclQkMlOTYlRTclQTglOEIlRTglODklQkElRTYlOUMlQUYtJUU0JUI4JUFEJUU2JTk2JTg3JUU3JUFDJUFDMiVFNyU4OSU4OC5wZGY=">JavaScript-DOM编程艺术-中文第2版.pdf<i class="fa fa-external-link-alt"></i></span>）时就会抛Error：</p>
-</blockquote>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">remote: error: File xxx is 109.19 MB; this exceeds GitHub&#x27;s file size limit of 100.00 MB</span><br></pre></td></tr></table></figure>
-
-<p><img data-src="/images/GitHub-Large-File-Storage/error-file-size-limit.png" alt="error-file-size-limit"></p>
-<blockquote>
-<p>下面是使用Git大文件存储扩展LFS来使GitHub支持大文件的版本管理的步骤：</p>
-</blockquote>
-<h2 id="1-安装lfs"><a href="#1-安装lfs" class="headerlink" title="1. 安装lfs"></a>1. 安装lfs</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git lfs install</span><br></pre></td></tr></table></figure>
-
-<h2 id="2-添加想要被托管的大文件"><a href="#2-添加想要被托管的大文件" class="headerlink" title="2. 添加想要被托管的大文件"></a>2. 添加想要被托管的大文件</h2><blockquote>
-<p>也可以直接添加一类文件，比如我的PDF文件</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git lfs track <span class="string">&quot;*.pdf&quot;</span></span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>同时把仓库根目录下的.gitattributes也加入到git管理下</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git add .gitattributes</span><br></pre></td></tr></table></figure>
-
-<h2 id="3-正常提交"><a href="#3-正常提交" class="headerlink" title="3. 正常提交"></a>3. 正常提交</h2><blockquote>
-<p>和正常的git提交命令一样</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git add file.pdf</span><br><span class="line">git commit -m <span class="string">&quot;Add new JS book&quot;</span></span><br><span class="line">git push origin master</span><br></pre></td></tr></table></figure>
-
-<p><img data-src="/images/GitHub-Large-File-Storage/git-push-successfully.png" alt="git-push-successfully"></p>
-<blockquote>
-<p>以上就是全部的步骤，下面是福利~</p>
-</blockquote>
-<hr>
-<h2 id="福利-书架"><a href="#福利-书架" class="headerlink" title="福利 - 书架"></a>福利 - 书架</h2><blockquote>
-<p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL1JpY2hhcmRSZW5uL0Jvb2tz">&gt;&gt;传送门 - 我的书架&lt;&lt;<i class="fa fa-external-link-alt"></i></span><br>有需要的同学可以下载下来，哦，最好是挑对自己有用书籍下载单个文件，因为整个仓库可能会有几十个G。</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>GitHub教程</category>
-      </categories>
-      <tags>
-        <tag>Git</tag>
-        <tag>GitHub</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>GitHub教程 - Pull Request 工作流程</title>
     <url>/GitHub-Pull-Request-Workflow.html</url>
     <content><![CDATA[<h2 id="1-Fork仓库"><a href="#1-Fork仓库" class="headerlink" title="1. Fork仓库"></a>1. Fork仓库</h2><blockquote>
@@ -188,6 +142,52 @@
 <ul>
 <li>带分支的工作方式可以参考<a href="/GitHub-Branch-Workflow.html">&gt;&gt;传送门 - 分支工作流程&lt;&lt;</a></li>
 </ul>
+]]></content>
+      <categories>
+        <category>GitHub教程</category>
+      </categories>
+      <tags>
+        <tag>Git</tag>
+        <tag>GitHub</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>GitHub - 存储大文件</title>
+    <url>/GitHub-Large-File-Storage.html</url>
+    <content><![CDATA[<h2 id="0-问题的产生"><a href="#0-问题的产生" class="headerlink" title="0. 问题的产生"></a>0. 问题的产生</h2><blockquote>
+<p>我在GitHub上有一个仓库用来存放收集到的各种技术类书籍的电子版，但是众所周知GitHub默认情况下是不支持存储超过100M的单个文件的（其实超过50M时就会有Warning）。<br>当我push比较大的PDF版的书籍（比如<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL1JpY2hhcmRSZW5uL0Jvb2tzL2Jsb2IvbWFzdGVyL0phdmFTY3JpcHQvSmF2YVNjcmlwdC1ET00lRTclQkMlOTYlRTclQTglOEIlRTglODklQkElRTYlOUMlQUYtJUU0JUI4JUFEJUU2JTk2JTg3JUU3JUFDJUFDMiVFNyU4OSU4OC5wZGY=">JavaScript-DOM编程艺术-中文第2版.pdf<i class="fa fa-external-link-alt"></i></span>）时就会抛Error：</p>
+</blockquote>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">remote: error: File xxx is 109.19 MB; this exceeds GitHub&#x27;s file size limit of 100.00 MB</span><br></pre></td></tr></table></figure>
+
+<p><img data-src="/images/GitHub-Large-File-Storage/error-file-size-limit.png" alt="error-file-size-limit"></p>
+<blockquote>
+<p>下面是使用Git大文件存储扩展LFS来使GitHub支持大文件的版本管理的步骤：</p>
+</blockquote>
+<h2 id="1-安装lfs"><a href="#1-安装lfs" class="headerlink" title="1. 安装lfs"></a>1. 安装lfs</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git lfs install</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-添加想要被托管的大文件"><a href="#2-添加想要被托管的大文件" class="headerlink" title="2. 添加想要被托管的大文件"></a>2. 添加想要被托管的大文件</h2><blockquote>
+<p>也可以直接添加一类文件，比如我的PDF文件</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git lfs track <span class="string">&quot;*.pdf&quot;</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>同时把仓库根目录下的.gitattributes也加入到git管理下</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git add .gitattributes</span><br></pre></td></tr></table></figure>
+
+<h2 id="3-正常提交"><a href="#3-正常提交" class="headerlink" title="3. 正常提交"></a>3. 正常提交</h2><blockquote>
+<p>和正常的git提交命令一样</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git add file.pdf</span><br><span class="line">git commit -m <span class="string">&quot;Add new JS book&quot;</span></span><br><span class="line">git push origin master</span><br></pre></td></tr></table></figure>
+
+<p><img data-src="/images/GitHub-Large-File-Storage/git-push-successfully.png" alt="git-push-successfully"></p>
+<blockquote>
+<p>以上就是全部的步骤，下面是福利~</p>
+</blockquote>
+<hr>
+<h2 id="福利-书架"><a href="#福利-书架" class="headerlink" title="福利 - 书架"></a>福利 - 书架</h2><blockquote>
+<p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL1JpY2hhcmRSZW5uL0Jvb2tz">&gt;&gt;传送门 - 我的书架&lt;&lt;<i class="fa fa-external-link-alt"></i></span><br>有需要的同学可以下载下来，哦，最好是挑对自己有用书籍下载单个文件，因为整个仓库可能会有几十个G。</p>
+</blockquote>
 ]]></content>
       <categories>
         <category>GitHub教程</category>
@@ -491,28 +491,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Python - 函数作用域</title>
-    <url>/Python-Function-Scope.html</url>
-    <content><![CDATA[<h2 id="1-函数作用域"><a href="#1-函数作用域" class="headerlink" title="1. 函数作用域"></a>1. 函数作用域</h2><blockquote>
-<p>L：local 函数内部作用域；</p>
-<p>E：enclosing 函数内部与它的内嵌函数之间；</p>
-<p>G：global 全局作用域，在同一个.py文件最外层；</p>
-<p>B：build-in 解释器内置作用域。</p>
-</blockquote>
-<h2 id="2-对象查找顺序"><a href="#2-对象查找顺序" class="headerlink" title="2. 对象查找顺序"></a>2. 对象查找顺序</h2><blockquote>
-<p>L &gt; E &gt; G &gt; B</p>
-</blockquote>
-<h2 id="3-举例解释"><a href="#3-举例解释" class="headerlink" title="3. 举例解释"></a>3. 举例解释</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># -*- conding: utf-8 -*-</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># G</span></span><br><span class="line">pass_line = <span class="number">60</span> </span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">func</span>(<span class="params">score</span>):</span><br><span class="line">    <span class="comment"># E</span></span><br><span class="line">    pass_line = <span class="number">90</span> </span><br><span class="line">    result = <span class="string">&quot;yes&quot;</span> <span class="keyword">if</span> score &gt;= pass_line <span class="keyword">else</span> <span class="string">&quot;no&quot;</span></span><br><span class="line">    <span class="built_in">print</span>(result)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">inner_func</span>():</span><br><span class="line">        <span class="comment"># L</span></span><br><span class="line">        <span class="comment"># score = 81</span></span><br><span class="line">        <span class="built_in">print</span>(score)</span><br><span class="line"></span><br><span class="line">    inner_func()</span><br><span class="line"></span><br><span class="line">    <span class="built_in">print</span>(<span class="built_in">max</span>(<span class="number">1</span>,<span class="number">2</span>))  <span class="comment"># B</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">func(<span class="number">80</span>)</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>Python</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-        <tag>函数作用域</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Python - 数组切片、更新、排序</title>
     <url>/Python-List-Slice.html</url>
     <content><![CDATA[<h2 id="1-数组切片"><a href="#1-数组切片" class="headerlink" title="1. 数组切片"></a>1. 数组切片</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">l = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>]</span><br><span class="line"></span><br><span class="line">l[:]  <span class="comment"># 所有元素 </span></span><br><span class="line"><span class="comment"># [1, 2, 3, 4, 5, 6, 7, 8, 9]</span></span><br><span class="line"></span><br><span class="line">l[<span class="number">0</span>]  <span class="comment"># 第一个元素</span></span><br><span class="line"><span class="comment"># 1</span></span><br><span class="line"></span><br><span class="line">l[<span class="number">1</span>:<span class="number">3</span>]  <span class="comment"># 第2~4个元素，不包括第4个</span></span><br><span class="line"><span class="comment"># [2, 3]</span></span><br><span class="line"></span><br><span class="line">l[<span class="number">3</span>:]  <span class="comment"># 第4~最后一个元素</span></span><br><span class="line"><span class="comment"># [4, 5, 6, 7, 8, 9]</span></span><br><span class="line"></span><br><span class="line">l[:<span class="number">3</span>]  <span class="comment"># 第1~4个元素，不包括第4个</span></span><br><span class="line"><span class="comment"># [1, 2, 3]</span></span><br><span class="line"></span><br><span class="line">l[:-<span class="number">1</span>]  <span class="comment"># 第1~最后一个元素，不包括最后一个</span></span><br><span class="line"><span class="comment"># [1, 2, 3, 4, 5, 6, 7, 8]</span></span><br><span class="line"></span><br><span class="line">l[<span class="number">2</span>:-<span class="number">1</span>:<span class="number">2</span>]  <span class="comment"># 从第3~最后一个元素中每隔2个步长取一个，不包括最后一个元素</span></span><br><span class="line"><span class="comment"># [3, 5, 7]</span></span><br><span class="line"></span><br><span class="line">l[::<span class="number">3</span>]  <span class="comment"># 每隔3个步长取一个元素</span></span><br><span class="line"><span class="comment"># [1, 4, 7]</span></span><br></pre></td></tr></table></figure>
@@ -794,6 +772,28 @@
       </tags>
   </entry>
   <entry>
+    <title>Python - 函数作用域</title>
+    <url>/Python-Function-Scope.html</url>
+    <content><![CDATA[<h2 id="1-函数作用域"><a href="#1-函数作用域" class="headerlink" title="1. 函数作用域"></a>1. 函数作用域</h2><blockquote>
+<p>L：local 函数内部作用域；</p>
+<p>E：enclosing 函数内部与它的内嵌函数之间；</p>
+<p>G：global 全局作用域，在同一个.py文件最外层；</p>
+<p>B：build-in 解释器内置作用域。</p>
+</blockquote>
+<h2 id="2-对象查找顺序"><a href="#2-对象查找顺序" class="headerlink" title="2. 对象查找顺序"></a>2. 对象查找顺序</h2><blockquote>
+<p>L &gt; E &gt; G &gt; B</p>
+</blockquote>
+<h2 id="3-举例解释"><a href="#3-举例解释" class="headerlink" title="3. 举例解释"></a>3. 举例解释</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># -*- conding: utf-8 -*-</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># G</span></span><br><span class="line">pass_line = <span class="number">60</span> </span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">func</span>(<span class="params">score</span>):</span><br><span class="line">    <span class="comment"># E</span></span><br><span class="line">    pass_line = <span class="number">90</span> </span><br><span class="line">    result = <span class="string">&quot;yes&quot;</span> <span class="keyword">if</span> score &gt;= pass_line <span class="keyword">else</span> <span class="string">&quot;no&quot;</span></span><br><span class="line">    <span class="built_in">print</span>(result)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">inner_func</span>():</span><br><span class="line">        <span class="comment"># L</span></span><br><span class="line">        <span class="comment"># score = 81</span></span><br><span class="line">        <span class="built_in">print</span>(score)</span><br><span class="line"></span><br><span class="line">    inner_func()</span><br><span class="line"></span><br><span class="line">    <span class="built_in">print</span>(<span class="built_in">max</span>(<span class="number">1</span>,<span class="number">2</span>))  <span class="comment"># B</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">func(<span class="number">80</span>)</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>函数作用域</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>服务器配置 - Nginx+Gunicorn+Supervisor+Flask</title>
     <url>/Server-Configuration.html</url>
     <content><![CDATA[<h2 id="1-为服务器添加ssh公钥验证"><a href="#1-为服务器添加ssh公钥验证" class="headerlink" title="1. 为服务器添加ssh公钥验证"></a>1. <a href="/Server-SSH-Key.html">为服务器添加ssh公钥验证</a></h2><h2 id="2-Git安装配置"><a href="#2-Git安装配置" class="headerlink" title="2. Git安装配置"></a>2. <a href="/Git-Configuration.html">Git安装配置</a></h2><h2 id="3-Redis安装配置"><a href="#3-Redis安装配置" class="headerlink" title="3. Redis安装配置"></a>3. <a href="/Server-Redis-Configuration.html">Redis安装配置</a></h2><h2 id="4-Nginx安装配置"><a href="#4-Nginx安装配置" class="headerlink" title="4. Nginx安装配置"></a>4. <a href="/Server-Nginx-Configuration.html">Nginx安装配置</a></h2><h2 id="5-配置Python虚拟环境"><a href="#5-配置Python虚拟环境" class="headerlink" title="5. 配置Python虚拟环境"></a>5. <a href="/Python-Virtualenv.html">配置Python虚拟环境</a></h2><h2 id="6-Gunicorn安装配置"><a href="#6-Gunicorn安装配置" class="headerlink" title="6. Gunicorn安装配置"></a>6. <a href="/Server-Gunicorn-Configuration.html">Gunicorn安装配置</a></h2><h2 id="7-Supervisor安装配置"><a href="#7-Supervisor安装配置" class="headerlink" title="7. Supervisor安装配置"></a>7. <a href="/Server-Supervisor-Configuration.html">Supervisor安装配置</a></h2>]]></content>
@@ -845,57 +845,6 @@
       </tags>
   </entry>
   <entry>
-    <title>服务器配置 - Nginx安装配置</title>
-    <url>/Server-Nginx-Configuration.html</url>
-    <content><![CDATA[<h2 id="1-安装"><a href="#1-安装" class="headerlink" title="1. 安装"></a>1. 安装</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">apt-get install nginx</span><br></pre></td></tr></table></figure>
-
-<h2 id="2-增加代理配置"><a href="#2-增加代理配置" class="headerlink" title="2. 增加代理配置"></a>2. 增加代理配置</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /etc/nginx/sites-available</span><br><span class="line">vim your_site_name</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>普通http配置参考：</p>
-</blockquote>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line"># http server</span><br><span class="line">server &#123;</span><br><span class="line">       listen 80;</span><br><span class="line">       server_name your.site.name.cn;</span><br><span class="line">       # ssl on;</span><br><span class="line">       access_log /var/log/nginx/syour_site_name.access.log;</span><br><span class="line">       error_log /var/log/nginx/your_site_name.error.log;</span><br><span class="line">	location / &#123;</span><br><span class="line">		proxy_pass http://127.0.0.1:8011;</span><br><span class="line">		proxy_set_header Host $host;</span><br><span class="line">                proxy_set_header X-Real-IP $remote_addr;</span><br><span class="line">		proxy_set_header X-Forward_For $proxy_add_x_forwarded_for;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>安全https配置参考：</p>
-</blockquote>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line"># HTTPS server</span><br><span class="line">server &#123;</span><br><span class="line">        listen 443;</span><br><span class="line">        listen [::]:443 ipv6only=on;</span><br><span class="line">        server_name your.site.name.cn;</span><br><span class="line">        ssl on;</span><br><span class="line">        access_log /var/log/nginx/your_site_name.access.log;</span><br><span class="line">        error_log /var/log/nginx/your_site_name.error.log;</span><br><span class="line">        ssl_certificate /path/to/your/https/cert/your_site_name.pem;</span><br><span class="line">        ssl_certificate_key /path/to/your/https/cert/your_site_name.key;</span><br><span class="line">        ssl_session_timeout 5m;</span><br><span class="line"></span><br><span class="line">        location / &#123;</span><br><span class="line">                proxy_pass http://127.0.0.1:8012;</span><br><span class="line">                proxy_set_header Host $host;</span><br><span class="line">                proxy_set_header X-Real-IP $remote_addr;</span><br><span class="line">                proxy_set_header X-Forward_For $proxy_add_x_forwarded_for;</span><br><span class="line">        &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>将文件链接至sites-enabled目录下。</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">ln</span> -s /etc/nginx/sites-available/your_site_name /etc/nginx/sites-enabled/your_site_name</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>*这是因为sites-available目录下存放的只是备选配置，sites-enabled目录下才是真正有效的代理设置。</p>
-</blockquote>
-<h2 id="3-Nginx配置"><a href="#3-Nginx配置" class="headerlink" title="3. Nginx配置"></a>3. Nginx配置</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim /etc/nginx/nginx.conf</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>修改下前几行内容:</p>
-</blockquote>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">user www-data;</span><br><span class="line">worker_processes 4; # worker数</span><br><span class="line">worker_rlimit_nofile 60000; </span><br><span class="line">pid /run/nginx.pid;</span><br><span class="line"></span><br><span class="line">events &#123;</span><br><span class="line">        worker_connections 65535; # 最大同时连接数</span><br><span class="line">        multi_accept on; # 开启接受同时连接选项</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="4-重载配置"><a href="#4-重载配置" class="headerlink" title="4. 重载配置"></a>4. 重载配置</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">/usr/sbin/nginx -s reload</span><br></pre></td></tr></table></figure>
-
-<p>这一步做完Nginx已经可以正常工作了。</p>
-<hr>
-<h2 id="5-常用命令"><a href="#5-常用命令" class="headerlink" title="5. 常用命令"></a>5. 常用命令</h2><h4 id="5-1-启动"><a href="#5-1-启动" class="headerlink" title="5.1 启动"></a>5.1 启动</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">/usr/sbin/nginx</span><br></pre></td></tr></table></figure>
-
-<h4 id="5-2-停止"><a href="#5-2-停止" class="headerlink" title="5.2 停止"></a>5.2 停止</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">/usr/sbin/nginx -s stop</span><br></pre></td></tr></table></figure>
-
-<h4 id="5-3-验证配置文件是否正确"><a href="#5-3-验证配置文件是否正确" class="headerlink" title="5.3 验证配置文件是否正确"></a>5.3 验证配置文件是否正确</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">/usr/sbin/nginx -t</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>Nginx</category>
-      </categories>
-      <tags>
-        <tag>Linux</tag>
-        <tag>服务器</tag>
-        <tag>Nginx</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>服务器配置 - Redis安装配置</title>
     <url>/Server-Redis-Configuration.html</url>
     <content><![CDATA[<h2 id="1-安装"><a href="#1-安装" class="headerlink" title="1. 安装"></a>1. 安装</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">apt-get install redis-server</span><br></pre></td></tr></table></figure>
@@ -931,120 +880,6 @@
         <tag>Linux</tag>
         <tag>服务器</tag>
         <tag>Redis</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>服务器搭建 - 为服务器添加ssh公钥验证</title>
-    <url>/Server-SSH-Key.html</url>
-    <content><![CDATA[<h2 id="1-生成密钥对"><a href="#1-生成密钥对" class="headerlink" title="1. 生成密钥对"></a>1. 生成密钥对</h2><blockquote>
-<p>在本地运行如下命令：</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -b 4096 -C <span class="string">&quot;your_email@example.com&quot;</span></span><br></pre></td></tr></table></figure>
-<p>如果不想设置密码的话直接三次回车即可，和git生成密钥的命令相同。</p>
-<blockquote>
-<p>生成的密钥对位置在 ~&#x2F;.ssh，查看下公钥，下一步要用到。</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cat</span> ~/.ssh/id_rsa.pub</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>内容类似下面这样</p>
-</blockquote>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQC+am2s/r1n+xsipi/4H2ll8p3McdhQCLBwJGNbkaxpeWKtdbiUbqAWeNt/OF13VsyWLs5lb6J2I3J6GlCcEGMGOFc4gzLTP9e/TmXeyFlBMZkuSJTbsXvL9Q/tff/8Tgt4aVAeOAgSd2jdDEvALegap4nrMHVLP8sOQlNFBMPjy1r0cW/Afp32gCtPOpQRuIkQdOnWUkzjObGanhYnX470UNsvgQ+IyikhS5tiKPqkT317v6yFV4doeZgfNYtcgpLVZcVxkItTLS1h75d4h4MD2JVRk2nBGSLp5j2WIji4Tiy++LblV1Y5Y2wRcfefdXCIMT3jMNAcyhuCaNfaD/Q== your_email@example.com</span><br></pre></td></tr></table></figure>
-
-<h2 id="2-添加到服务器"><a href="#2-添加到服务器" class="headerlink" title="2. 添加到服务器"></a>2. 添加到服务器</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh root@server_ip <span class="comment"># 登陆服务器</span></span><br><span class="line"><span class="built_in">mkdir</span> .ssh <span class="comment"># 创建.ssh目录</span></span><br><span class="line">vim .ssh/authorized_keys <span class="comment"># 创建已验证的密钥记录文件</span></span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>在vim编辑器中按i键，把上一步的公钥拷贝进来，多个公钥的话换行隔开即可。<br>然后按ESC键退出编辑模式，输入:wq回车即可保存文件。<br>这样以后输入ssh root@ip命令就可以不用输入密码直接进去了。</p>
-</blockquote>
-<span id="more"></span>
-
-<h2 id="3-更快捷地登陆"><a href="#3-更快捷地登陆" class="headerlink" title="3. 更快捷地登陆"></a>3. 更快捷地登陆</h2><p>完成上面的配置后，还可以通过对本地ssh进行配置以进一步简化登陆操作。</p>
-<blockquote>
-<p>在本地打开~&#x2F;.ssh&#x2F;config 文件</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim ~/.ssh/config</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>添加如下配置内容:</p>
-</blockquote>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">Host happy</span><br><span class="line">Hostname 139.xxx.xxx.xxx</span><br><span class="line">User root</span><br><span class="line">IdentityFile ~/.ssh/id_rsa</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>以后在本地直接输入以下命令就可登陆远程服务器</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh happy</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>多个服务器配置只需换行隔开即可。</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>服务器</category>
-        <category>SSH</category>
-      </categories>
-      <tags>
-        <tag>Linux</tag>
-        <tag>ssh</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Python - Supervisor安装配置</title>
-    <url>/Server-Supervisor-Configuration.html</url>
-    <content><![CDATA[<h2 id="1-安装"><a href="#1-安装" class="headerlink" title="1. 安装"></a>1. 安装</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pip install supervisor</span><br></pre></td></tr></table></figure>
-
-<h2 id="2-初始化启动配置文件"><a href="#2-初始化启动配置文件" class="headerlink" title="2. 初始化启动配置文件"></a>2. 初始化启动配置文件</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">echo_supervisord_conf &gt; /etc/supervisord.conf</span><br><span class="line">vim /etc/supervisord.conf</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>最后面加上下面这两行内容，这样就可以从&#x2F;etc&#x2F;supervisor目录下自动加载所有的conf文件了。</p>
-</blockquote>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">[include]</span><br><span class="line">files = /etc/supervisor/*.conf</span><br></pre></td></tr></table></figure>
-
-<h2 id="3-新建项目配置文件"><a href="#3-新建项目配置文件" class="headerlink" title="3. 新建项目配置文件"></a>3. 新建项目配置文件</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> /var/log/supervisor</span><br><span class="line"><span class="built_in">mkdir</span> /etc/supervisor</span><br><span class="line">vim /etc/supervisor/happydev.conf</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>内容如下：</p>
-</blockquote>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">[program:happydev]</span><br><span class="line">directory = /var/www/happydev ;</span><br><span class="line">command = /var/www/happydev/venv/bin/gunicorn -w4 -b127.0.0.1:8003 --timeout 120  happy:app ;</span><br><span class="line">autostart = true ;</span><br><span class="line">startsecs = 5 ;</span><br><span class="line">autorestart = true ;</span><br><span class="line">startretries = 3 ;</span><br><span class="line">user = root ;</span><br><span class="line">redirect_stderr = true ;</span><br><span class="line">stdout_logfile_maxbytes = 100MB ;</span><br><span class="line">stdout_logfile_backups = 10 ;</span><br><span class="line">stdout_logfile = /var/log/supervisor/happydev.log ;</span><br><span class="line">environment = HAPPY_CONFIG_FILE=&quot;/var/www/happydev/happy/config/staging.py&quot;,HAPPY_PATH=&quot;/var/www/happydev&quot; ;</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>这里管理的进程是使用gunicorn启动的Flask项目，关于gunicorn的使用可以参考<a href="/Server-Gunicorn-Configuration.html">&gt;&gt;传送门 - Gunicorn安装配置&lt;&lt;</a>。</p>
-</blockquote>
-<h2 id="4-启动suprervisord"><a href="#4-启动suprervisord" class="headerlink" title="4. 启动suprervisord"></a>4. 启动suprervisord</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">supervisord -c /etc/supervisord.conf</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>到这一步supervisor已经正常工作了。</p>
-</blockquote>
-<hr>
-<h2 id="5-常用命令"><a href="#5-常用命令" class="headerlink" title="5. 常用命令"></a>5. 常用命令</h2><h4 id="5-1-停止supervisor主进程"><a href="#5-1-停止supervisor主进程" class="headerlink" title="5.1 停止supervisor主进程"></a>5.1 停止supervisor主进程</h4><blockquote>
-<p>查看supervisord进程号(pid)：</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ps aux | grep supervisord</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>关闭进程：</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">kill</span> [pid]</span><br></pre></td></tr></table></figure>
-
-<h4 id="5-2-启动单个项目进程"><a href="#5-2-启动单个项目进程" class="headerlink" title="5.2 启动单个项目进程"></a>5.2 启动单个项目进程</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">supervisorctl start happydev</span><br></pre></td></tr></table></figure>
-
-<h4 id="5-3-停止单个项目进程"><a href="#5-3-停止单个项目进程" class="headerlink" title="5.3 停止单个项目进程"></a>5.3 停止单个项目进程</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">supervisorctl stop happydev</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>注意：使用此命令停止的进程不会被自动重启机制重新启动</p>
-</blockquote>
-<h4 id="5-4-重启单个项目进程"><a href="#5-4-重启单个项目进程" class="headerlink" title="5.4 重启单个项目进程"></a>5.4 重启单个项目进程</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">supervisorctl restart happydev</span><br></pre></td></tr></table></figure>
-
-<h4 id="5-5-重新加载单个项目"><a href="#5-5-重新加载单个项目" class="headerlink" title="5.5 重新加载单个项目"></a>5.5 重新加载单个项目</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">supervisorctl remove happydev <span class="comment"># 移除happydev项目</span></span><br><span class="line">supervisorctl reread <span class="comment"># 重新读取所有配置文件</span></span><br><span class="line">supervisorctl add happydev <span class="comment"># 添加happydev项目</span></span><br></pre></td></tr></table></figure>
-
-<h4 id="5-6-查看所有项目进程的运行状态"><a href="#5-6-查看所有项目进程的运行状态" class="headerlink" title="5.6 查看所有项目进程的运行状态"></a>5.6 查看所有项目进程的运行状态</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">supervisorctl status</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>Supervisor</category>
-      </categories>
-      <tags>
-        <tag>Linux</tag>
-        <tag>Python</tag>
-        <tag>服务器</tag>
-        <tag>Supervisor</tag>
       </tags>
   </entry>
   <entry>
@@ -1122,5 +957,170 @@
     <title>Hello World</title>
     <url>/hello-world.html</url>
     <content><![CDATA[<h2 id="200-博客访问地址-Github"><a href="#200-博客访问地址-Github" class="headerlink" title="[200]博客访问地址 - Github"></a>[200]<a href="https://richardrenn.github.io/">博客访问地址 - Github</a></h2><h2 id="404-博客访问地址-Coding"><a href="#404-博客访问地址-Coding" class="headerlink" title="[404]博客访问地址 - Coding"></a>[404]<span class="exturl" data-url="aHR0cHM6Ly9yaWNoYXJkcmVubi5jb2RpbmcubWUv">博客访问地址 - Coding<i class="fa fa-external-link-alt"></i></span></h2><h2 id="404-博客访问地址-Gitee"><a href="#404-博客访问地址-Gitee" class="headerlink" title="[404]博客访问地址 - Gitee"></a>[404]<span class="exturl" data-url="aHR0cHM6Ly9yaWNoYXJkcmVubi5naXRlZS5pby8=">博客访问地址 - Gitee<i class="fa fa-external-link-alt"></i></span></h2>]]></content>
+  </entry>
+  <entry>
+    <title>Python - Supervisor安装配置</title>
+    <url>/Server-Supervisor-Configuration.html</url>
+    <content><![CDATA[<h2 id="1-安装"><a href="#1-安装" class="headerlink" title="1. 安装"></a>1. 安装</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pip install supervisor</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-初始化启动配置文件"><a href="#2-初始化启动配置文件" class="headerlink" title="2. 初始化启动配置文件"></a>2. 初始化启动配置文件</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">echo_supervisord_conf &gt; /etc/supervisord.conf</span><br><span class="line">vim /etc/supervisord.conf</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>最后面加上下面这两行内容，这样就可以从&#x2F;etc&#x2F;supervisor目录下自动加载所有的conf文件了。</p>
+</blockquote>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">[include]</span><br><span class="line">files = /etc/supervisor/*.conf</span><br></pre></td></tr></table></figure>
+
+<h2 id="3-新建项目配置文件"><a href="#3-新建项目配置文件" class="headerlink" title="3. 新建项目配置文件"></a>3. 新建项目配置文件</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> /var/log/supervisor</span><br><span class="line"><span class="built_in">mkdir</span> /etc/supervisor</span><br><span class="line">vim /etc/supervisor/happydev.conf</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>内容如下：</p>
+</blockquote>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">[program:happydev]</span><br><span class="line">directory = /var/www/happydev ;</span><br><span class="line">command = /var/www/happydev/venv/bin/gunicorn -w4 -b127.0.0.1:8003 --timeout 120  happy:app ;</span><br><span class="line">autostart = true ;</span><br><span class="line">startsecs = 5 ;</span><br><span class="line">autorestart = true ;</span><br><span class="line">startretries = 3 ;</span><br><span class="line">user = root ;</span><br><span class="line">redirect_stderr = true ;</span><br><span class="line">stdout_logfile_maxbytes = 100MB ;</span><br><span class="line">stdout_logfile_backups = 10 ;</span><br><span class="line">stdout_logfile = /var/log/supervisor/happydev.log ;</span><br><span class="line">environment = HAPPY_CONFIG_FILE=&quot;/var/www/happydev/happy/config/staging.py&quot;,HAPPY_PATH=&quot;/var/www/happydev&quot; ;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>这里管理的进程是使用gunicorn启动的Flask项目，关于gunicorn的使用可以参考<a href="/Server-Gunicorn-Configuration.html">&gt;&gt;传送门 - Gunicorn安装配置&lt;&lt;</a>。</p>
+</blockquote>
+<h2 id="4-启动suprervisord"><a href="#4-启动suprervisord" class="headerlink" title="4. 启动suprervisord"></a>4. 启动suprervisord</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">supervisord -c /etc/supervisord.conf</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>到这一步supervisor已经正常工作了。</p>
+</blockquote>
+<hr>
+<h2 id="5-常用命令"><a href="#5-常用命令" class="headerlink" title="5. 常用命令"></a>5. 常用命令</h2><h4 id="5-1-停止supervisor主进程"><a href="#5-1-停止supervisor主进程" class="headerlink" title="5.1 停止supervisor主进程"></a>5.1 停止supervisor主进程</h4><blockquote>
+<p>查看supervisord进程号(pid)：</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ps aux | grep supervisord</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>关闭进程：</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">kill</span> [pid]</span><br></pre></td></tr></table></figure>
+
+<h4 id="5-2-启动单个项目进程"><a href="#5-2-启动单个项目进程" class="headerlink" title="5.2 启动单个项目进程"></a>5.2 启动单个项目进程</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">supervisorctl start happydev</span><br></pre></td></tr></table></figure>
+
+<h4 id="5-3-停止单个项目进程"><a href="#5-3-停止单个项目进程" class="headerlink" title="5.3 停止单个项目进程"></a>5.3 停止单个项目进程</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">supervisorctl stop happydev</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>注意：使用此命令停止的进程不会被自动重启机制重新启动</p>
+</blockquote>
+<h4 id="5-4-重启单个项目进程"><a href="#5-4-重启单个项目进程" class="headerlink" title="5.4 重启单个项目进程"></a>5.4 重启单个项目进程</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">supervisorctl restart happydev</span><br></pre></td></tr></table></figure>
+
+<h4 id="5-5-重新加载单个项目"><a href="#5-5-重新加载单个项目" class="headerlink" title="5.5 重新加载单个项目"></a>5.5 重新加载单个项目</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">supervisorctl remove happydev <span class="comment"># 移除happydev项目</span></span><br><span class="line">supervisorctl reread <span class="comment"># 重新读取所有配置文件</span></span><br><span class="line">supervisorctl add happydev <span class="comment"># 添加happydev项目</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="5-6-查看所有项目进程的运行状态"><a href="#5-6-查看所有项目进程的运行状态" class="headerlink" title="5.6 查看所有项目进程的运行状态"></a>5.6 查看所有项目进程的运行状态</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">supervisorctl status</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>Supervisor</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+        <tag>Python</tag>
+        <tag>服务器</tag>
+        <tag>Supervisor</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>服务器搭建 - 为服务器添加ssh公钥验证</title>
+    <url>/Server-SSH-Key.html</url>
+    <content><![CDATA[<h2 id="1-生成密钥对"><a href="#1-生成密钥对" class="headerlink" title="1. 生成密钥对"></a>1. 生成密钥对</h2><blockquote>
+<p>在本地运行如下命令：</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -b 4096 -C <span class="string">&quot;your_email@example.com&quot;</span></span><br></pre></td></tr></table></figure>
+<p>如果不想设置密码的话直接三次回车即可，和git生成密钥的命令相同。</p>
+<blockquote>
+<p>生成的密钥对位置在 ~&#x2F;.ssh，查看下公钥，下一步要用到。</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cat</span> ~/.ssh/id_rsa.pub</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>内容类似下面这样</p>
+</blockquote>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQC+am2s/r1n+xsipi/4H2ll8p3McdhQCLBwJGNbkaxpeWKtdbiUbqAWeNt/OF13VsyWLs5lb6J2I3J6GlCcEGMGOFc4gzLTP9e/TmXeyFlBMZkuSJTbsXvL9Q/tff/8Tgt4aVAeOAgSd2jdDEvALegap4nrMHVLP8sOQlNFBMPjy1r0cW/Afp32gCtPOpQRuIkQdOnWUkzjObGanhYnX470UNsvgQ+IyikhS5tiKPqkT317v6yFV4doeZgfNYtcgpLVZcVxkItTLS1h75d4h4MD2JVRk2nBGSLp5j2WIji4Tiy++LblV1Y5Y2wRcfefdXCIMT3jMNAcyhuCaNfaD/Q== your_email@example.com</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-添加到服务器"><a href="#2-添加到服务器" class="headerlink" title="2. 添加到服务器"></a>2. 添加到服务器</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh root@server_ip <span class="comment"># 登陆服务器</span></span><br><span class="line"><span class="built_in">mkdir</span> .ssh <span class="comment"># 创建.ssh目录</span></span><br><span class="line">vim .ssh/authorized_keys <span class="comment"># 创建已验证的密钥记录文件</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>在vim编辑器中按i键，把上一步的公钥拷贝进来，多个公钥的话换行隔开即可。<br>然后按ESC键退出编辑模式，输入:wq回车即可保存文件。<br>这样以后输入ssh root@ip命令就可以不用输入密码直接进去了。</p>
+</blockquote>
+<span id="more"></span>
+
+<h2 id="3-更快捷地登陆"><a href="#3-更快捷地登陆" class="headerlink" title="3. 更快捷地登陆"></a>3. 更快捷地登陆</h2><p>完成上面的配置后，还可以通过对本地ssh进行配置以进一步简化登陆操作。</p>
+<blockquote>
+<p>在本地打开~&#x2F;.ssh&#x2F;config 文件</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim ~/.ssh/config</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>添加如下配置内容:</p>
+</blockquote>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">Host happy</span><br><span class="line">Hostname 139.xxx.xxx.xxx</span><br><span class="line">User root</span><br><span class="line">IdentityFile ~/.ssh/id_rsa</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>以后在本地直接输入以下命令就可登陆远程服务器</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh happy</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>多个服务器配置只需换行隔开即可。</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>服务器</category>
+        <category>SSH</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+        <tag>ssh</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>服务器配置 - Nginx安装配置</title>
+    <url>/Server-Nginx-Configuration.html</url>
+    <content><![CDATA[<h2 id="1-安装"><a href="#1-安装" class="headerlink" title="1. 安装"></a>1. 安装</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">apt-get install nginx</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-增加代理配置"><a href="#2-增加代理配置" class="headerlink" title="2. 增加代理配置"></a>2. 增加代理配置</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /etc/nginx/sites-available</span><br><span class="line">vim your_site_name</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>普通http配置参考：</p>
+</blockquote>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line"># http server</span><br><span class="line">server &#123;</span><br><span class="line">       listen 80;</span><br><span class="line">       server_name your.site.name.cn;</span><br><span class="line">       # ssl on;</span><br><span class="line">       access_log /var/log/nginx/syour_site_name.access.log;</span><br><span class="line">       error_log /var/log/nginx/your_site_name.error.log;</span><br><span class="line">	location / &#123;</span><br><span class="line">		proxy_pass http://127.0.0.1:8011;</span><br><span class="line">		proxy_set_header Host $host;</span><br><span class="line">                proxy_set_header X-Real-IP $remote_addr;</span><br><span class="line">		proxy_set_header X-Forward_For $proxy_add_x_forwarded_for;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>安全https配置参考：</p>
+</blockquote>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line"># HTTPS server</span><br><span class="line">server &#123;</span><br><span class="line">        listen 443;</span><br><span class="line">        listen [::]:443 ipv6only=on;</span><br><span class="line">        server_name your.site.name.cn;</span><br><span class="line">        ssl on;</span><br><span class="line">        access_log /var/log/nginx/your_site_name.access.log;</span><br><span class="line">        error_log /var/log/nginx/your_site_name.error.log;</span><br><span class="line">        ssl_certificate /path/to/your/https/cert/your_site_name.pem;</span><br><span class="line">        ssl_certificate_key /path/to/your/https/cert/your_site_name.key;</span><br><span class="line">        ssl_session_timeout 5m;</span><br><span class="line"></span><br><span class="line">        location / &#123;</span><br><span class="line">                proxy_pass http://127.0.0.1:8012;</span><br><span class="line">                proxy_set_header Host $host;</span><br><span class="line">                proxy_set_header X-Real-IP $remote_addr;</span><br><span class="line">                proxy_set_header X-Forward_For $proxy_add_x_forwarded_for;</span><br><span class="line">        &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>将文件链接至sites-enabled目录下。</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">ln</span> -s /etc/nginx/sites-available/your_site_name /etc/nginx/sites-enabled/your_site_name</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>*这是因为sites-available目录下存放的只是备选配置，sites-enabled目录下才是真正有效的代理设置。</p>
+</blockquote>
+<h2 id="3-Nginx配置"><a href="#3-Nginx配置" class="headerlink" title="3. Nginx配置"></a>3. Nginx配置</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim /etc/nginx/nginx.conf</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>修改下前几行内容:</p>
+</blockquote>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">user www-data;</span><br><span class="line">worker_processes 4; # worker数</span><br><span class="line">worker_rlimit_nofile 60000; </span><br><span class="line">pid /run/nginx.pid;</span><br><span class="line"></span><br><span class="line">events &#123;</span><br><span class="line">        worker_connections 65535; # 最大同时连接数</span><br><span class="line">        multi_accept on; # 开启接受同时连接选项</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="4-重载配置"><a href="#4-重载配置" class="headerlink" title="4. 重载配置"></a>4. 重载配置</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">/usr/sbin/nginx -s reload</span><br></pre></td></tr></table></figure>
+
+<p>这一步做完Nginx已经可以正常工作了。</p>
+<hr>
+<h2 id="5-常用命令"><a href="#5-常用命令" class="headerlink" title="5. 常用命令"></a>5. 常用命令</h2><h4 id="5-1-启动"><a href="#5-1-启动" class="headerlink" title="5.1 启动"></a>5.1 启动</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">/usr/sbin/nginx</span><br></pre></td></tr></table></figure>
+
+<h4 id="5-2-停止"><a href="#5-2-停止" class="headerlink" title="5.2 停止"></a>5.2 停止</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">/usr/sbin/nginx -s stop</span><br></pre></td></tr></table></figure>
+
+<h4 id="5-3-验证配置文件是否正确"><a href="#5-3-验证配置文件是否正确" class="headerlink" title="5.3 验证配置文件是否正确"></a>5.3 验证配置文件是否正确</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">/usr/sbin/nginx -t</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>Nginx</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+        <tag>服务器</tag>
+        <tag>Nginx</tag>
+      </tags>
   </entry>
 </search>

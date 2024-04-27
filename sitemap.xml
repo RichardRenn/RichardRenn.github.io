@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://richardrenn.github.io/about/index.html</loc>
+    
+    <lastmod>2024-04-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://richardrenn.github.io/Python-List-Slice.html</loc>
     
     <lastmod>2024-04-27</lastmod>
@@ -236,15 +245,6 @@
   </url>
   
   <url>
-    <loc>https://richardrenn.github.io/about/index.html</loc>
-    
-    <lastmod>2022-06-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://richardrenn.github.io/tags/index.html</loc>
     
     <lastmod>2021-04-01</lastmod>
@@ -363,13 +363,6 @@
   </url>
   
   <url>
-    <loc>https://richardrenn.github.io/tags/%E5%87%BD%E6%95%B0%E4%BD%9C%E7%94%A8%E5%9F%9F/</loc>
-    <lastmod>2024-04-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://richardrenn.github.io/tags/%E6%95%B0%E7%BB%84/</loc>
     <lastmod>2024-04-27</lastmod>
     <changefreq>weekly</changefreq>
@@ -468,6 +461,13 @@
   </url>
   
   <url>
+    <loc>https://richardrenn.github.io/tags/%E5%87%BD%E6%95%B0%E4%BD%9C%E7%94%A8%E5%9F%9F/</loc>
+    <lastmod>2024-04-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://richardrenn.github.io/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/</loc>
     <lastmod>2024-04-27</lastmod>
     <changefreq>weekly</changefreq>
@@ -482,14 +482,14 @@
   </url>
   
   <url>
-    <loc>https://richardrenn.github.io/tags/Nginx/</loc>
+    <loc>https://richardrenn.github.io/tags/Redis/</loc>
     <lastmod>2024-04-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://richardrenn.github.io/tags/Redis/</loc>
+    <loc>https://richardrenn.github.io/tags/Supervisor/</loc>
     <lastmod>2024-04-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -503,7 +503,7 @@
   </url>
   
   <url>
-    <loc>https://richardrenn.github.io/tags/Supervisor/</loc>
+    <loc>https://richardrenn.github.io/tags/Nginx/</loc>
     <lastmod>2024-04-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -554,13 +554,6 @@
   </url>
   
   <url>
-    <loc>https://richardrenn.github.io/categories/Nginx/</loc>
-    <lastmod>2024-04-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://richardrenn.github.io/categories/Redis/</loc>
     <lastmod>2024-04-27</lastmod>
     <changefreq>weekly</changefreq>
@@ -569,6 +562,13 @@
   
   <url>
     <loc>https://richardrenn.github.io/categories/Supervisor/</loc>
+    <lastmod>2024-04-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://richardrenn.github.io/categories/Nginx/</loc>
     <lastmod>2024-04-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
