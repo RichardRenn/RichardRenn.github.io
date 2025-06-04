@@ -19,7 +19,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha256-dABdfBfUoC8vJUBOwGVdm8L9qlMWaHTIfXt+7GnZCIo=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"richardrenn.github.io","root":"/","images":"/images","scheme":"Mist","darkmode":true,"version":"8.23.0","exturl":true,"sidebar":{"position":"right","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":true,"style":"mac"},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js" defer></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"richardrenn.github.io","root":"/","images":"/images","scheme":"Mist","darkmode":true,"version":"8.23.0","exturl":true,"sidebar":{"position":"left","width_expanded":300,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":true,"style":"mac"},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js" defer></script>
 
     <meta name="description" content="Celery任务可以根据不同场景很灵活的调用：延迟执行、定时执行、分组并发执行、链式顺序执行、任务分块、任务分割等等。">
 <meta property="og:type" content="article">
@@ -29,7 +29,7 @@
 <meta property="og:description" content="Celery任务可以根据不同场景很灵活的调用：延迟执行、定时执行、分组并发执行、链式顺序执行、任务分块、任务分割等等。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2019-07-28T08:35:54.000Z">
-<meta property="article:modified_time" content="2025-06-04T08:11:54.383Z">
+<meta property="article:modified_time" content="2025-06-04T15:39:31.948Z">
 <meta property="article:author" content="任令仓">
 <meta property="article:tag" content="Python">
 <meta property="article:tag" content="Celery">
@@ -166,7 +166,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#0-%E5%89%8D%E6%8F%90"><span class="nav-text">0. 前提</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E7%AB%8B%E5%8D%B3%E6%89%A7%E8%A1%8C%E4%BB%BB%E5%8A%A1"><span class="nav-text">1. 立即执行任务</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E5%BB%B6%E6%97%B6%E4%BB%BB%E5%8A%A1"><span class="nav-text">2. 延时任务</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1"><span class="nav-text">3. 定时任务</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-%E4%BB%BB%E5%8A%A1%E5%88%86%E7%BB%84"><span class="nav-text">4. 任务分组</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-%E4%BB%BB%E5%8A%A1%E5%88%86%E5%9D%97"><span class="nav-text">5. 任务分块</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-%E9%93%BE%E5%BC%8F%E9%A1%BA%E5%BA%8F%E6%89%A7%E8%A1%8C"><span class="nav-text">6. 链式顺序执行</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-%E4%BB%BB%E5%8A%A1%E5%88%86%E5%89%B2"><span class="nav-text">7. 任务分割</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E6%8F%90"><span class="nav-number">1.</span> <span class="nav-text">前提</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AB%8B%E5%8D%B3%E6%89%A7%E8%A1%8C%E4%BB%BB%E5%8A%A1"><span class="nav-number">2.</span> <span class="nav-text">立即执行任务</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BB%B6%E6%97%B6%E4%BB%BB%E5%8A%A1"><span class="nav-number">3.</span> <span class="nav-text">延时任务</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1"><span class="nav-number">4.</span> <span class="nav-text">定时任务</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%BB%E5%8A%A1%E5%88%86%E7%BB%84"><span class="nav-number">5.</span> <span class="nav-text">任务分组</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%BB%E5%8A%A1%E5%88%86%E5%9D%97"><span class="nav-number">6.</span> <span class="nav-text">任务分块</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%93%BE%E5%BC%8F%E9%A1%BA%E5%BA%8F%E6%89%A7%E8%A1%8C"><span class="nav-number">7.</span> <span class="nav-text">链式顺序执行</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%BB%E5%8A%A1%E5%88%86%E5%89%B2"><span class="nav-number">8.</span> <span class="nav-text">任务分割</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -263,7 +263,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2025-06-04 16:11:54" itemprop="dateModified" datetime="2025-06-04T16:11:54+08:00">2025-06-04</time>
+      <time title="修改时间：2025-06-04 23:39:31" itemprop="dateModified" datetime="2025-06-04T23:39:31+08:00">2025-06-04</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -300,39 +300,39 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><h2 id="0-前提"><a href="#0-前提" class="headerlink" title="0. 前提"></a>0. 前提</h2><blockquote>
+    <div class="post-body" itemprop="articleBody"><h2 id="前提"><a href="#前提" class="headerlink" title="前提"></a>前提</h2><blockquote>
 <p>有3个任务：add作加法运算, mul作乘法运算, xsum为求和运算</p>
 </blockquote>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@app.task(<span class="params">bind=<span class="literal">True</span>, base=BaseTask</span>)</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">add</span>(<span class="params">self, a, b</span>):</span><br><span class="line">    <span class="keyword">return</span> a + b</span><br><span class="line"></span><br><span class="line"><span class="meta">@app.task(<span class="params">bind=<span class="literal">True</span>, base=BaseTask</span>)</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">mul</span>(<span class="params">self, a, b</span>):</span><br><span class="line">    <span class="keyword">return</span> a * b</span><br><span class="line"></span><br><span class="line"><span class="meta">@app.task(<span class="params">bind=<span class="literal">True</span>, base=BaseTask</span>)</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">xsum</span>(<span class="params">self, *args</span>):</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">sum</span>(args)</span><br></pre></td></tr></table></figure>
 
-<h2 id="1-立即执行任务"><a href="#1-立即执行任务" class="headerlink" title="1. 立即执行任务"></a>1. 立即执行任务</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">add.apply_async()</span><br></pre></td></tr></table></figure>
+<h2 id="立即执行任务"><a href="#立即执行任务" class="headerlink" title="立即执行任务"></a>立即执行任务</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">add.apply_async()</span><br></pre></td></tr></table></figure>
 
 <blockquote>
 <p>或者简写为：</p>
 </blockquote>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">add.delay()</span><br></pre></td></tr></table></figure>
 
-<h2 id="2-延时任务"><a href="#2-延时任务" class="headerlink" title="2. 延时任务"></a>2. 延时任务</h2><blockquote>
+<h2 id="延时任务"><a href="#延时任务" class="headerlink" title="延时任务"></a>延时任务</h2><blockquote>
 <p>使用<code>countdown</code>参数使任务在60秒后执行：</p>
 </blockquote>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">add.apply_async(countdown=<span class="number">60</span>)</span><br></pre></td></tr></table></figure>
 
-<h2 id="3-定时任务"><a href="#3-定时任务" class="headerlink" title="3. 定时任务"></a>3. 定时任务</h2><blockquote>
+<h2 id="定时任务"><a href="#定时任务" class="headerlink" title="定时任务"></a>定时任务</h2><blockquote>
 <p>使用<code>eta</code>参数使任务在晚上9点整执行：</p>
 </blockquote>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> datetime</span><br><span class="line">exec_at = datetime.datetime(<span class="number">2019</span>, <span class="number">7</span>, <span class="number">28</span>, <span class="number">21</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>)</span><br><span class="line">add.apply_async(eta=exec_at)</span><br></pre></td></tr></table></figure>
 
-<h2 id="4-任务分组"><a href="#4-任务分组" class="headerlink" title="4. 任务分组"></a>4. 任务分组</h2><blockquote>
+<h2 id="任务分组"><a href="#任务分组" class="headerlink" title="任务分组"></a>任务分组</h2><blockquote>
 <p>使用<code>group</code>生成一组任务并发执行</p>
 </blockquote>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">tasks = group(add.si(x,x) <span class="keyword">for</span> x <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">10</span>))</span><br><span class="line">tasks.apply_async()</span><br><span class="line"></span><br><span class="line"><span class="comment"># get方法可获取任务的返回值:</span></span><br><span class="line">res = tasks()</span><br><span class="line">res.get(timeout=<span class="number">1</span>)  <span class="comment"># [0, 2, 4, 6, 8, 10, 12, 14, 16, 18]</span></span><br></pre></td></tr></table></figure>
 
-<h2 id="5-任务分块"><a href="#5-任务分块" class="headerlink" title="5. 任务分块"></a>5. 任务分块</h2><blockquote>
+<h2 id="任务分块"><a href="#任务分块" class="headerlink" title="任务分块"></a>任务分块</h2><blockquote>
 <p>使用<code>chord</code>将1000个任务分成100个一块，共10组</p>
 </blockquote>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">tasks = add.chunks(((x, x) <span class="keyword">for</span> x <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1000</span>)), <span class="number">100</span>).group()  <span class="comment"># 转化为group</span></span><br><span class="line"><span class="comment"># 每间隔60秒执行一组</span></span><br><span class="line">tasks.skew(step=<span class="number">60</span>)</span><br><span class="line">tasks.apply_async()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 注意使用了skew后eta参数会失效，想要定时效果可以转化为countdown如：</span></span><br><span class="line">task.apply_async(countdown=(exec_at - now()).seconds)</span><br></pre></td></tr></table></figure>
 
-<h2 id="6-链式顺序执行"><a href="#6-链式顺序执行" class="headerlink" title="6. 链式顺序执行"></a>6. 链式顺序执行</h2><blockquote>
+<h2 id="链式顺序执行"><a href="#链式顺序执行" class="headerlink" title="链式顺序执行"></a>链式顺序执行</h2><blockquote>
 <p>任务签名<code>signature</code>：<br>subtask&#x3D;signature，可以简写为<code>s</code>，如add.s()，当需要对任务做一定处理后执行时使用。<br><code>s</code>和<code>si</code>的区别：<br><code>s</code>相当于signature()，而<code>si</code>相当于signature(immutable&#x3D;True)。 <code>s</code>会把上个任务的结果传给下个任务，而<code>si</code>不传递结果。</p>
 </blockquote>
 <blockquote>
@@ -346,7 +346,7 @@
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">c =   (add.s(<span class="number">4</span>, <span class="number">16</span>) | mul.s(<span class="number">2</span>) | (add.s(<span class="number">4</span>) | mul.s(<span class="number">8</span>))) <span class="comment"># ((4 + 16) * 2 + 4) * 8</span></span><br><span class="line">res = c.apply_async()  <span class="comment"># 或者直接c()</span></span><br><span class="line">res.get()  <span class="comment"># .get()方法可以获取链式任务的最终返回值352</span></span><br></pre></td></tr></table></figure>
 
 
-<h2 id="7-任务分割"><a href="#7-任务分割" class="headerlink" title="7. 任务分割"></a>7. 任务分割</h2><blockquote>
+<h2 id="任务分割"><a href="#任务分割" class="headerlink" title="任务分割"></a>任务分割</h2><blockquote>
 <p>使用<code>chord</code>将任务分为<code>header</code>和<code>body</code>两部分，<code>header</code>任务执行完再执行<code>body</code>,其中<code>header</code>的返回结果会作为参数传递给<code>body</code>，如：</p>
 </blockquote>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">res = chord(header=[add.s(<span class="number">1</span>,<span class="number">2</span>),mul.s(<span class="number">3</span>,<span class="number">4</span>)],body=add.s())()  <span class="comment"># 任务(1+2)+(3*4)</span></span><br><span class="line">res.get()  <span class="comment"># </span></span><br></pre></td></tr></table></figure>

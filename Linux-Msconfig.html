@@ -19,7 +19,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha256-dABdfBfUoC8vJUBOwGVdm8L9qlMWaHTIfXt+7GnZCIo=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"richardrenn.github.io","root":"/","images":"/images","scheme":"Mist","darkmode":true,"version":"8.23.0","exturl":true,"sidebar":{"position":"right","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":true,"style":"mac"},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js" defer></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"richardrenn.github.io","root":"/","images":"/images","scheme":"Mist","darkmode":true,"version":"8.23.0","exturl":true,"sidebar":{"position":"left","width_expanded":300,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":true,"style":"mac"},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js" defer></script>
 
     <meta name="description" content="介绍Linux系统的开机启动项目录，即rc.d目录的功能，以及如何利用此目录进行自定义开机启动项。">
 <meta property="og:type" content="article">
@@ -29,7 +29,7 @@
 <meta property="og:description" content="介绍Linux系统的开机启动项目录，即rc.d目录的功能，以及如何利用此目录进行自定义开机启动项。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2018-12-26T09:25:35.000Z">
-<meta property="article:modified_time" content="2025-06-04T11:24:05.530Z">
+<meta property="article:modified_time" content="2025-06-04T15:39:31.939Z">
 <meta property="article:author" content="任令仓">
 <meta property="article:tag" content="Linux">
 <meta name="twitter:card" content="summary">
@@ -164,7 +164,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E6%9F%A5%E7%9C%8B%E5%BD%93%E5%89%8D%E5%90%AF%E5%8A%A8%E7%BA%A7%E5%88%AB"><span class="nav-text">1. 查看当前启动级别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E6%9F%A5%E7%9C%8B%E5%8E%9Fredis%E5%90%AF%E5%8A%A8%E5%BA%8F%E5%8F%B7"><span class="nav-text">2. 查看原redis启动序号</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-%E5%B0%86%E5%90%AF%E5%8A%A8%E8%84%9A%E6%9C%AC%E8%BD%AF%E9%93%BE%E6%8E%A5%E5%88%B0%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8%E7%9B%AE%E5%BD%95%E4%B8%8B"><span class="nav-text">3. 将启动脚本软链接到开机启动目录下</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-%E5%8F%96%E6%B6%88%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8"><span class="nav-text">4. 取消开机启动</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-%E5%85%B3%E4%BA%8Erc-local"><span class="nav-text">5. 关于rc.local</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9F%A5%E7%9C%8B%E5%BD%93%E5%89%8D%E5%90%AF%E5%8A%A8%E7%BA%A7%E5%88%AB"><span class="nav-number">1.</span> <span class="nav-text">查看当前启动级别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9F%A5%E7%9C%8B%E5%8E%9Fredis%E5%90%AF%E5%8A%A8%E5%BA%8F%E5%8F%B7"><span class="nav-number">2.</span> <span class="nav-text">查看原redis启动序号</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B0%86%E5%90%AF%E5%8A%A8%E8%84%9A%E6%9C%AC%E8%BD%AF%E9%93%BE%E6%8E%A5%E5%88%B0%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8%E7%9B%AE%E5%BD%95%E4%B8%8B"><span class="nav-number">3.</span> <span class="nav-text">将启动脚本软链接到开机启动目录下</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%96%E6%B6%88%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8"><span class="nav-number">4.</span> <span class="nav-text">取消开机启动</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B3%E4%BA%8Erc-local"><span class="nav-number">5.</span> <span class="nav-text">关于rc.local</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -261,7 +261,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2025-06-04 19:24:05" itemprop="dateModified" datetime="2025-06-04T19:24:05+08:00">2025-06-04</time>
+      <time title="修改时间：2025-06-04 23:39:31" itemprop="dateModified" datetime="2025-06-04T23:39:31+08:00">2025-06-04</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -280,7 +280,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>962</span>
+      <span>952</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -304,12 +304,12 @@
 </blockquote>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/etc/init.d/脚本名 参数</span><br></pre></td></tr></table></figure>
 
-<h2 id="1-查看当前启动级别"><a href="#1-查看当前启动级别" class="headerlink" title="1. 查看当前启动级别"></a>1. 查看当前启动级别</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Runlevel</span><br></pre></td></tr></table></figure>
+<h2 id="查看当前启动级别"><a href="#查看当前启动级别" class="headerlink" title="查看当前启动级别"></a>查看当前启动级别</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Runlevel</span><br></pre></td></tr></table></figure>
 
 <blockquote>
 <p>显示   N  2<br>则当前的级别是2级,那么所有开机启动项就是在&#x2F;etc&#x2F;rc2.d目录下。</p>
 </blockquote>
-<h2 id="2-查看原redis启动序号"><a href="#2-查看原redis启动序号" class="headerlink" title="2. 查看原redis启动序号"></a>2. 查看原redis启动序号</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">ls</span> -l /etc/rc2.d</span><br></pre></td></tr></table></figure>
+<h2 id="查看原redis启动序号"><a href="#查看原redis启动序号" class="headerlink" title="查看原redis启动序号"></a>查看原redis启动序号</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">ls</span> -l /etc/rc2.d</span><br></pre></td></tr></table></figure>
 
 <blockquote>
 <p>这个目录下都是软链接（符号链接），链接到&#x2F;etc&#x2F;init.d目录。<br>显示格式如下：S&#x2F;K + 序号 + 脚本名</p>
@@ -319,7 +319,7 @@
 <blockquote>
 <p>启动序号是20<br>S开头是开机时的脚本启动顺序，按序号从小到大启动。<br>K开头表示是关机时的脚本关闭顺序，按序号从大到小关闭。</p>
 </blockquote>
-<h2 id="3-将启动脚本软链接到开机启动目录下"><a href="#3-将启动脚本软链接到开机启动目录下" class="headerlink" title="3. 将启动脚本软链接到开机启动目录下"></a>3. 将启动脚本软链接到开机启动目录下</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">ln</span> -s /etc/init.d/redis-server-2 /etc/rc2.d/S20redis-server-2</span><br></pre></td></tr></table></figure>
+<h2 id="将启动脚本软链接到开机启动目录下"><a href="#将启动脚本软链接到开机启动目录下" class="headerlink" title="将启动脚本软链接到开机启动目录下"></a>将启动脚本软链接到开机启动目录下</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">ln</span> -s /etc/init.d/redis-server-2 /etc/rc2.d/S20redis-server-2</span><br></pre></td></tr></table></figure>
 
 <blockquote>
 <p>注意：如果两个redis有主从关系的话即需要有先后启动顺序，就需要适当的增大序号，如21</p>
@@ -331,7 +331,7 @@
 </blockquote>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">update-rc.d -f redis-server-2 defaults 20</span><br></pre></td></tr></table></figure>
 
-<h2 id="4-取消开机启动"><a href="#4-取消开机启动" class="headerlink" title="4. 取消开机启动"></a>4. 取消开机启动</h2><blockquote>
+<h2 id="取消开机启动"><a href="#取消开机启动" class="headerlink" title="取消开机启动"></a>取消开机启动</h2><blockquote>
 <p>方法一：使用update-rc.d命令</p>
 </blockquote>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">update-rc.d -f redis-server-slark remove</span><br></pre></td></tr></table></figure>
@@ -341,7 +341,7 @@
 </blockquote>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">rm</span> -f /etc/rc2.d/S20redis-server-slark</span><br></pre></td></tr></table></figure>
 
-<h2 id="5-关于rc-local"><a href="#5-关于rc-local" class="headerlink" title="5. 关于rc.local"></a>5. 关于rc.local</h2><blockquote>
+<h2 id="关于rc-local"><a href="#关于rc-local" class="headerlink" title="关于rc.local"></a>关于rc.local</h2><blockquote>
 <p>rc.local也是开机启动脚本，从ls -l &#x2F;etc&#x2F;rc2.d 命令的输出结果也可以看出，它的启动序号是99。<br>所以rc.local里的内容是在所有更高级别的初始化脚本(rc1.d rc2.d …)运行之后再执行的。</p>
 </blockquote>
 
