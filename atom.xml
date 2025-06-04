@@ -31,11 +31,11 @@
     <category term="Python" scheme="https://richardrenn.github.io/categories/Python/"/>
     
     
-    <category term="Python" scheme="https://richardrenn.github.io/tags/Python/"/>
-    
     <category term="PostgreSQL" scheme="https://richardrenn.github.io/tags/PostgreSQL/"/>
     
     <category term="PG" scheme="https://richardrenn.github.io/tags/PG/"/>
+    
+    <category term="Python" scheme="https://richardrenn.github.io/tags/Python/"/>
     
     <category term="iPython" scheme="https://richardrenn.github.io/tags/iPython/"/>
     
@@ -380,9 +380,9 @@
     <category term="Supervisor" scheme="https://richardrenn.github.io/categories/Supervisor/"/>
     
     
-    <category term="Python" scheme="https://richardrenn.github.io/tags/Python/"/>
-    
     <category term="Linux" scheme="https://richardrenn.github.io/tags/Linux/"/>
+    
+    <category term="Python" scheme="https://richardrenn.github.io/tags/Python/"/>
     
     <category term="服务器" scheme="https://richardrenn.github.io/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
     
@@ -407,9 +407,9 @@
     <category term="Gunicorn" scheme="https://richardrenn.github.io/categories/Python/Gunicorn/"/>
     
     
-    <category term="Python" scheme="https://richardrenn.github.io/tags/Python/"/>
-    
     <category term="Linux" scheme="https://richardrenn.github.io/tags/Linux/"/>
+    
+    <category term="Python" scheme="https://richardrenn.github.io/tags/Python/"/>
     
     <category term="服务器" scheme="https://richardrenn.github.io/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
     
