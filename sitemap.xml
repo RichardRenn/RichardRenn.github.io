@@ -407,6 +407,34 @@
   </url>
   
   <url>
+    <loc>https://richardrenn.github.io/tags/Super/</loc>
+    <lastmod>2025-06-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://richardrenn.github.io/tags/%E7%BB%A7%E6%89%BF%E9%A1%BA%E5%BA%8F/</loc>
+    <lastmod>2025-06-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://richardrenn.github.io/tags/MRO/</loc>
+    <lastmod>2025-06-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://richardrenn.github.io/tags/C3%E7%AE%97%E6%B3%95/</loc>
+    <lastmod>2025-06-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://richardrenn.github.io/tags/%E8%A7%86%E9%A2%91%E6%88%AA%E5%9B%BE/</loc>
     <lastmod>2025-06-06</lastmod>
     <changefreq>weekly</changefreq>
@@ -436,34 +464,6 @@
   
   <url>
     <loc>https://richardrenn.github.io/tags/OpenERP/</loc>
-    <lastmod>2025-06-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://richardrenn.github.io/tags/Super/</loc>
-    <lastmod>2025-06-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://richardrenn.github.io/tags/%E7%BB%A7%E6%89%BF%E9%A1%BA%E5%BA%8F/</loc>
-    <lastmod>2025-06-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://richardrenn.github.io/tags/MRO/</loc>
-    <lastmod>2025-06-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://richardrenn.github.io/tags/C3%E7%AE%97%E6%B3%95/</loc>
     <lastmod>2025-06-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -505,14 +505,14 @@
   </url>
   
   <url>
-    <loc>https://richardrenn.github.io/tags/ssh/</loc>
+    <loc>https://richardrenn.github.io/tags/Supervisor/</loc>
     <lastmod>2025-06-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://richardrenn.github.io/tags/Supervisor/</loc>
+    <loc>https://richardrenn.github.io/tags/ssh/</loc>
     <lastmod>2025-06-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
