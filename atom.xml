@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>灰帽子</title>
-  <icon>https://richardrenn.github.io/icon.png</icon>
+  <icon>https://blog-222ow0l1.maozi.io/icon.png</icon>
   
-  <link href="https://richardrenn.github.io/atom.xml" rel="self"/>
+  <link href="https://blog-222ow0l1.maozi.io/atom.xml" rel="self"/>
   
-  <link href="https://richardrenn.github.io/"/>
+  <link href="https://blog-222ow0l1.maozi.io/"/>
   <updated>2025-06-04T15:39:31.952Z</updated>
-  <id>https://richardrenn.github.io/</id>
+  <id>https://blog-222ow0l1.maozi.io/</id>
   
   <author>
     <name>任令仓</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Python - 如何使用PG的COPY命令将SQL结果直接输出到客户端文件</title>
-    <link href="https://richardrenn.github.io/Python-Psycopg2-Copy-Odoo-OE.html"/>
-    <id>https://richardrenn.github.io/Python-Psycopg2-Copy-Odoo-OE.html</id>
+    <link href="https://blog-222ow0l1.maozi.io/Python-Psycopg2-Copy-Odoo-OE.html"/>
+    <id>https://blog-222ow0l1.maozi.io/Python-Psycopg2-Copy-Odoo-OE.html</id>
     <published>2022-09-10T12:32:05.000Z</published>
     <updated>2025-06-04T15:39:31.952Z</updated>
     
@@ -28,29 +28,29 @@
     
     
     
-    <category term="Python" scheme="https://richardrenn.github.io/categories/Python/"/>
+    <category term="Python" scheme="https://blog-222ow0l1.maozi.io/categories/Python/"/>
     
     
-    <category term="PostgreSQL" scheme="https://richardrenn.github.io/tags/PostgreSQL/"/>
+    <category term="PostgreSQL" scheme="https://blog-222ow0l1.maozi.io/tags/PostgreSQL/"/>
     
-    <category term="PG" scheme="https://richardrenn.github.io/tags/PG/"/>
+    <category term="PG" scheme="https://blog-222ow0l1.maozi.io/tags/PG/"/>
     
-    <category term="Python" scheme="https://richardrenn.github.io/tags/Python/"/>
+    <category term="Python" scheme="https://blog-222ow0l1.maozi.io/tags/Python/"/>
     
-    <category term="iPython" scheme="https://richardrenn.github.io/tags/iPython/"/>
+    <category term="iPython" scheme="https://blog-222ow0l1.maozi.io/tags/iPython/"/>
     
-    <category term="Odoo" scheme="https://richardrenn.github.io/tags/Odoo/"/>
+    <category term="Odoo" scheme="https://blog-222ow0l1.maozi.io/tags/Odoo/"/>
     
-    <category term="OE" scheme="https://richardrenn.github.io/tags/OE/"/>
+    <category term="OE" scheme="https://blog-222ow0l1.maozi.io/tags/OE/"/>
     
-    <category term="OpenERP" scheme="https://richardrenn.github.io/tags/OpenERP/"/>
+    <category term="OpenERP" scheme="https://blog-222ow0l1.maozi.io/tags/OpenERP/"/>
     
   </entry>
   
   <entry>
     <title>PostgreSQL - 经纬度计算距离ACOS函数ERROR: input is out of range</title>
-    <link href="https://richardrenn.github.io/PostgreSQL-Lng-Lat-ACOS-ERROR-Input-Is-Out-Of-Range.html"/>
-    <id>https://richardrenn.github.io/PostgreSQL-Lng-Lat-ACOS-ERROR-Input-Is-Out-Of-Range.html</id>
+    <link href="https://blog-222ow0l1.maozi.io/PostgreSQL-Lng-Lat-ACOS-ERROR-Input-Is-Out-Of-Range.html"/>
+    <id>https://blog-222ow0l1.maozi.io/PostgreSQL-Lng-Lat-ACOS-ERROR-Input-Is-Out-Of-Range.html</id>
     <published>2022-07-07T12:28:59.000Z</published>
     <updated>2025-06-04T15:42:56.684Z</updated>
     
@@ -59,23 +59,23 @@
     
     
     
-    <category term="PostgreSQL" scheme="https://richardrenn.github.io/categories/PostgreSQL/"/>
+    <category term="PostgreSQL" scheme="https://blog-222ow0l1.maozi.io/categories/PostgreSQL/"/>
     
     
-    <category term="PostgreSQL" scheme="https://richardrenn.github.io/tags/PostgreSQL/"/>
+    <category term="PostgreSQL" scheme="https://blog-222ow0l1.maozi.io/tags/PostgreSQL/"/>
     
-    <category term="PG" scheme="https://richardrenn.github.io/tags/PG/"/>
+    <category term="PG" scheme="https://blog-222ow0l1.maozi.io/tags/PG/"/>
     
-    <category term="ACOS" scheme="https://richardrenn.github.io/tags/ACOS/"/>
+    <category term="ACOS" scheme="https://blog-222ow0l1.maozi.io/tags/ACOS/"/>
     
-    <category term="经纬度" scheme="https://richardrenn.github.io/tags/%E7%BB%8F%E7%BA%AC%E5%BA%A6/"/>
+    <category term="经纬度" scheme="https://blog-222ow0l1.maozi.io/tags/%E7%BB%8F%E7%BA%AC%E5%BA%A6/"/>
     
   </entry>
   
   <entry>
     <title>Python - 配置iPython直接在命令行调试Odoo(openerp)代码</title>
-    <link href="https://richardrenn.github.io/Python-iPython-Odoo-OE.html"/>
-    <id>https://richardrenn.github.io/Python-iPython-Odoo-OE.html</id>
+    <link href="https://blog-222ow0l1.maozi.io/Python-iPython-Odoo-OE.html"/>
+    <id>https://blog-222ow0l1.maozi.io/Python-iPython-Odoo-OE.html</id>
     <published>2021-04-08T12:41:01.000Z</published>
     <updated>2025-06-04T15:40:27.962Z</updated>
     
@@ -84,25 +84,25 @@
     
     
     
-    <category term="Python" scheme="https://richardrenn.github.io/categories/Python/"/>
+    <category term="Python" scheme="https://blog-222ow0l1.maozi.io/categories/Python/"/>
     
     
-    <category term="Python" scheme="https://richardrenn.github.io/tags/Python/"/>
+    <category term="Python" scheme="https://blog-222ow0l1.maozi.io/tags/Python/"/>
     
-    <category term="iPython" scheme="https://richardrenn.github.io/tags/iPython/"/>
+    <category term="iPython" scheme="https://blog-222ow0l1.maozi.io/tags/iPython/"/>
     
-    <category term="Odoo" scheme="https://richardrenn.github.io/tags/Odoo/"/>
+    <category term="Odoo" scheme="https://blog-222ow0l1.maozi.io/tags/Odoo/"/>
     
-    <category term="OE" scheme="https://richardrenn.github.io/tags/OE/"/>
+    <category term="OE" scheme="https://blog-222ow0l1.maozi.io/tags/OE/"/>
     
-    <category term="OpenERP" scheme="https://richardrenn.github.io/tags/OpenERP/"/>
+    <category term="OpenERP" scheme="https://blog-222ow0l1.maozi.io/tags/OpenERP/"/>
     
   </entry>
   
   <entry>
     <title>Python - 图片处理 - OpenCV图片与PIL.Image对象互相转化</title>
-    <link href="https://richardrenn.github.io/Python-OpenCV-Image-PIL-Image.html"/>
-    <id>https://richardrenn.github.io/Python-OpenCV-Image-PIL-Image.html</id>
+    <link href="https://blog-222ow0l1.maozi.io/Python-OpenCV-Image-PIL-Image.html"/>
+    <id>https://blog-222ow0l1.maozi.io/Python-OpenCV-Image-PIL-Image.html</id>
     <published>2019-08-15T13:27:43.000Z</published>
     <updated>2025-06-04T15:39:31.897Z</updated>
     
@@ -111,23 +111,23 @@
     
     
     
-    <category term="Python" scheme="https://richardrenn.github.io/categories/Python/"/>
+    <category term="Python" scheme="https://blog-222ow0l1.maozi.io/categories/Python/"/>
     
     
-    <category term="Python" scheme="https://richardrenn.github.io/tags/Python/"/>
+    <category term="Python" scheme="https://blog-222ow0l1.maozi.io/tags/Python/"/>
     
-    <category term="OpenCV" scheme="https://richardrenn.github.io/tags/OpenCV/"/>
+    <category term="OpenCV" scheme="https://blog-222ow0l1.maozi.io/tags/OpenCV/"/>
     
-    <category term="Pillow" scheme="https://richardrenn.github.io/tags/Pillow/"/>
+    <category term="Pillow" scheme="https://blog-222ow0l1.maozi.io/tags/Pillow/"/>
     
-    <category term="图片处理" scheme="https://richardrenn.github.io/tags/%E5%9B%BE%E7%89%87%E5%A4%84%E7%90%86/"/>
+    <category term="图片处理" scheme="https://blog-222ow0l1.maozi.io/tags/%E5%9B%BE%E7%89%87%E5%A4%84%E7%90%86/"/>
     
   </entry>
   
   <entry>
     <title>Python - Celery - 调用任务</title>
-    <link href="https://richardrenn.github.io/Python-Celery-Calling-Tasks.html"/>
-    <id>https://richardrenn.github.io/Python-Celery-Calling-Tasks.html</id>
+    <link href="https://blog-222ow0l1.maozi.io/Python-Celery-Calling-Tasks.html"/>
+    <id>https://blog-222ow0l1.maozi.io/Python-Celery-Calling-Tasks.html</id>
     <published>2019-07-28T08:35:54.000Z</published>
     <updated>2025-06-04T15:39:31.948Z</updated>
     
@@ -136,21 +136,21 @@
     
     
     
-    <category term="Python" scheme="https://richardrenn.github.io/categories/Python/"/>
+    <category term="Python" scheme="https://blog-222ow0l1.maozi.io/categories/Python/"/>
     
     
-    <category term="Python" scheme="https://richardrenn.github.io/tags/Python/"/>
+    <category term="Python" scheme="https://blog-222ow0l1.maozi.io/tags/Python/"/>
     
-    <category term="Celery" scheme="https://richardrenn.github.io/tags/Celery/"/>
+    <category term="Celery" scheme="https://blog-222ow0l1.maozi.io/tags/Celery/"/>
     
-    <category term="调用任务" scheme="https://richardrenn.github.io/tags/%E8%B0%83%E7%94%A8%E4%BB%BB%E5%8A%A1/"/>
+    <category term="调用任务" scheme="https://blog-222ow0l1.maozi.io/tags/%E8%B0%83%E7%94%A8%E4%BB%BB%E5%8A%A1/"/>
     
   </entry>
   
   <entry>
     <title>Python - OpenCV - 截取视频某个时间点的一帧</title>
-    <link href="https://richardrenn.github.io/Python-OpenCV-Snapshot.html"/>
-    <id>https://richardrenn.github.io/Python-OpenCV-Snapshot.html</id>
+    <link href="https://blog-222ow0l1.maozi.io/Python-OpenCV-Snapshot.html"/>
+    <id>https://blog-222ow0l1.maozi.io/Python-OpenCV-Snapshot.html</id>
     <published>2019-07-16T14:47:20.000Z</published>
     <updated>2025-06-04T15:39:31.897Z</updated>
     
@@ -159,21 +159,21 @@
     
     
     
-    <category term="Python" scheme="https://richardrenn.github.io/categories/Python/"/>
+    <category term="Python" scheme="https://blog-222ow0l1.maozi.io/categories/Python/"/>
     
     
-    <category term="Python" scheme="https://richardrenn.github.io/tags/Python/"/>
+    <category term="Python" scheme="https://blog-222ow0l1.maozi.io/tags/Python/"/>
     
-    <category term="OpenCV" scheme="https://richardrenn.github.io/tags/OpenCV/"/>
+    <category term="OpenCV" scheme="https://blog-222ow0l1.maozi.io/tags/OpenCV/"/>
     
-    <category term="视频截图" scheme="https://richardrenn.github.io/tags/%E8%A7%86%E9%A2%91%E6%88%AA%E5%9B%BE/"/>
+    <category term="视频截图" scheme="https://blog-222ow0l1.maozi.io/tags/%E8%A7%86%E9%A2%91%E6%88%AA%E5%9B%BE/"/>
     
   </entry>
   
   <entry>
     <title>GitHub - 存储大文件</title>
-    <link href="https://richardrenn.github.io/GitHub-Large-File-Storage.html"/>
-    <id>https://richardrenn.github.io/GitHub-Large-File-Storage.html</id>
+    <link href="https://blog-222ow0l1.maozi.io/GitHub-Large-File-Storage.html"/>
+    <id>https://blog-222ow0l1.maozi.io/GitHub-Large-File-Storage.html</id>
     <published>2019-05-11T15:25:37.000Z</published>
     <updated>2025-06-04T15:39:31.952Z</updated>
     
@@ -182,19 +182,19 @@
     
     
     
-    <category term="GitHub教程" scheme="https://richardrenn.github.io/categories/GitHub%E6%95%99%E7%A8%8B/"/>
+    <category term="GitHub教程" scheme="https://blog-222ow0l1.maozi.io/categories/GitHub%E6%95%99%E7%A8%8B/"/>
     
     
-    <category term="Git" scheme="https://richardrenn.github.io/tags/Git/"/>
+    <category term="Git" scheme="https://blog-222ow0l1.maozi.io/tags/Git/"/>
     
-    <category term="GitHub" scheme="https://richardrenn.github.io/tags/GitHub/"/>
+    <category term="GitHub" scheme="https://blog-222ow0l1.maozi.io/tags/GitHub/"/>
     
   </entry>
   
   <entry>
     <title>Python - Super()继承顺序 - MRO顺序C3算法解析</title>
-    <link href="https://richardrenn.github.io/Python-Super.html"/>
-    <id>https://richardrenn.github.io/Python-Super.html</id>
+    <link href="https://blog-222ow0l1.maozi.io/Python-Super.html"/>
+    <id>https://blog-222ow0l1.maozi.io/Python-Super.html</id>
     <published>2019-04-18T14:29:39.000Z</published>
     <updated>2025-06-04T15:39:31.956Z</updated>
     
@@ -203,25 +203,25 @@
     
     
     
-    <category term="Python" scheme="https://richardrenn.github.io/categories/Python/"/>
+    <category term="Python" scheme="https://blog-222ow0l1.maozi.io/categories/Python/"/>
     
     
-    <category term="Python" scheme="https://richardrenn.github.io/tags/Python/"/>
+    <category term="Python" scheme="https://blog-222ow0l1.maozi.io/tags/Python/"/>
     
-    <category term="Super()" scheme="https://richardrenn.github.io/tags/Super/"/>
+    <category term="Super()" scheme="https://blog-222ow0l1.maozi.io/tags/Super/"/>
     
-    <category term="继承顺序" scheme="https://richardrenn.github.io/tags/%E7%BB%A7%E6%89%BF%E9%A1%BA%E5%BA%8F/"/>
+    <category term="继承顺序" scheme="https://blog-222ow0l1.maozi.io/tags/%E7%BB%A7%E6%89%BF%E9%A1%BA%E5%BA%8F/"/>
     
-    <category term="MRO" scheme="https://richardrenn.github.io/tags/MRO/"/>
+    <category term="MRO" scheme="https://blog-222ow0l1.maozi.io/tags/MRO/"/>
     
-    <category term="C3算法" scheme="https://richardrenn.github.io/tags/C3%E7%AE%97%E6%B3%95/"/>
+    <category term="C3算法" scheme="https://blog-222ow0l1.maozi.io/tags/C3%E7%AE%97%E6%B3%95/"/>
     
   </entry>
   
   <entry>
     <title>Python - 数组切片、更新、排序</title>
-    <link href="https://richardrenn.github.io/Python-List-Slice.html"/>
-    <id>https://richardrenn.github.io/Python-List-Slice.html</id>
+    <link href="https://blog-222ow0l1.maozi.io/Python-List-Slice.html"/>
+    <id>https://blog-222ow0l1.maozi.io/Python-List-Slice.html</id>
     <published>2019-04-10T12:57:45.000Z</published>
     <updated>2025-06-04T15:39:31.956Z</updated>
     
@@ -230,19 +230,19 @@
     
     
     
-    <category term="Python" scheme="https://richardrenn.github.io/categories/Python/"/>
+    <category term="Python" scheme="https://blog-222ow0l1.maozi.io/categories/Python/"/>
     
     
-    <category term="Python" scheme="https://richardrenn.github.io/tags/Python/"/>
+    <category term="Python" scheme="https://blog-222ow0l1.maozi.io/tags/Python/"/>
     
-    <category term="数组" scheme="https://richardrenn.github.io/tags/%E6%95%B0%E7%BB%84/"/>
+    <category term="数组" scheme="https://blog-222ow0l1.maozi.io/tags/%E6%95%B0%E7%BB%84/"/>
     
   </entry>
   
   <entry>
     <title>Python - 浅拷贝和深拷贝解析</title>
-    <link href="https://richardrenn.github.io/Python-Copy-Deepcopy.html"/>
-    <id>https://richardrenn.github.io/Python-Copy-Deepcopy.html</id>
+    <link href="https://blog-222ow0l1.maozi.io/Python-Copy-Deepcopy.html"/>
+    <id>https://blog-222ow0l1.maozi.io/Python-Copy-Deepcopy.html</id>
     <published>2019-03-03T15:09:23.000Z</published>
     <updated>2025-06-04T15:39:31.948Z</updated>
     
@@ -251,19 +251,19 @@
     
     
     
-    <category term="Python" scheme="https://richardrenn.github.io/categories/Python/"/>
+    <category term="Python" scheme="https://blog-222ow0l1.maozi.io/categories/Python/"/>
     
     
-    <category term="Python" scheme="https://richardrenn.github.io/tags/Python/"/>
+    <category term="Python" scheme="https://blog-222ow0l1.maozi.io/tags/Python/"/>
     
-    <category term="浅拷贝和深拷贝" scheme="https://richardrenn.github.io/tags/%E6%B5%85%E6%8B%B7%E8%B4%9D%E5%92%8C%E6%B7%B1%E6%8B%B7%E8%B4%9D/"/>
+    <category term="浅拷贝和深拷贝" scheme="https://blog-222ow0l1.maozi.io/tags/%E6%B5%85%E6%8B%B7%E8%B4%9D%E5%92%8C%E6%B7%B1%E6%8B%B7%E8%B4%9D/"/>
     
   </entry>
   
   <entry>
     <title>Python - 装饰器</title>
-    <link href="https://richardrenn.github.io/Python-Decorator.html"/>
-    <id>https://richardrenn.github.io/Python-Decorator.html</id>
+    <link href="https://blog-222ow0l1.maozi.io/Python-Decorator.html"/>
+    <id>https://blog-222ow0l1.maozi.io/Python-Decorator.html</id>
     <published>2019-02-20T16:35:47.000Z</published>
     <updated>2025-06-04T15:40:27.962Z</updated>
     
@@ -272,19 +272,19 @@
     
     
     
-    <category term="Python" scheme="https://richardrenn.github.io/categories/Python/"/>
+    <category term="Python" scheme="https://blog-222ow0l1.maozi.io/categories/Python/"/>
     
     
-    <category term="Python" scheme="https://richardrenn.github.io/tags/Python/"/>
+    <category term="Python" scheme="https://blog-222ow0l1.maozi.io/tags/Python/"/>
     
-    <category term="装饰器" scheme="https://richardrenn.github.io/tags/%E8%A3%85%E9%A5%B0%E5%99%A8/"/>
+    <category term="装饰器" scheme="https://blog-222ow0l1.maozi.io/tags/%E8%A3%85%E9%A5%B0%E5%99%A8/"/>
     
   </entry>
   
   <entry>
     <title>Python - 闭包</title>
-    <link href="https://richardrenn.github.io/Python-Closure.html"/>
-    <id>https://richardrenn.github.io/Python-Closure.html</id>
+    <link href="https://blog-222ow0l1.maozi.io/Python-Closure.html"/>
+    <id>https://blog-222ow0l1.maozi.io/Python-Closure.html</id>
     <published>2019-01-28T16:35:04.000Z</published>
     <updated>2025-06-04T15:39:31.897Z</updated>
     
@@ -293,19 +293,19 @@
     
     
     
-    <category term="Python" scheme="https://richardrenn.github.io/categories/Python/"/>
+    <category term="Python" scheme="https://blog-222ow0l1.maozi.io/categories/Python/"/>
     
     
-    <category term="Python" scheme="https://richardrenn.github.io/tags/Python/"/>
+    <category term="Python" scheme="https://blog-222ow0l1.maozi.io/tags/Python/"/>
     
-    <category term="闭包" scheme="https://richardrenn.github.io/tags/%E9%97%AD%E5%8C%85/"/>
+    <category term="闭包" scheme="https://blog-222ow0l1.maozi.io/tags/%E9%97%AD%E5%8C%85/"/>
     
   </entry>
   
   <entry>
     <title>Python - 函数作用域</title>
-    <link href="https://richardrenn.github.io/Python-Function-Scope.html"/>
-    <id>https://richardrenn.github.io/Python-Function-Scope.html</id>
+    <link href="https://blog-222ow0l1.maozi.io/Python-Function-Scope.html"/>
+    <id>https://blog-222ow0l1.maozi.io/Python-Function-Scope.html</id>
     <published>2019-01-10T16:34:21.000Z</published>
     <updated>2025-06-04T15:39:31.956Z</updated>
     
@@ -314,19 +314,19 @@
     
     
     
-    <category term="Python" scheme="https://richardrenn.github.io/categories/Python/"/>
+    <category term="Python" scheme="https://blog-222ow0l1.maozi.io/categories/Python/"/>
     
     
-    <category term="Python" scheme="https://richardrenn.github.io/tags/Python/"/>
+    <category term="Python" scheme="https://blog-222ow0l1.maozi.io/tags/Python/"/>
     
-    <category term="函数作用域" scheme="https://richardrenn.github.io/tags/%E5%87%BD%E6%95%B0%E4%BD%9C%E7%94%A8%E5%9F%9F/"/>
+    <category term="函数作用域" scheme="https://blog-222ow0l1.maozi.io/tags/%E5%87%BD%E6%95%B0%E4%BD%9C%E7%94%A8%E5%9F%9F/"/>
     
   </entry>
   
   <entry>
     <title>Linux开机启动项目录rc.d</title>
-    <link href="https://richardrenn.github.io/Linux-Msconfig.html"/>
-    <id>https://richardrenn.github.io/Linux-Msconfig.html</id>
+    <link href="https://blog-222ow0l1.maozi.io/Linux-Msconfig.html"/>
+    <id>https://blog-222ow0l1.maozi.io/Linux-Msconfig.html</id>
     <published>2018-12-26T09:25:35.000Z</published>
     <updated>2025-06-04T15:39:31.939Z</updated>
     
@@ -335,17 +335,17 @@
     
     
     
-    <category term="Linux" scheme="https://richardrenn.github.io/categories/Linux/"/>
+    <category term="Linux" scheme="https://blog-222ow0l1.maozi.io/categories/Linux/"/>
     
     
-    <category term="Linux" scheme="https://richardrenn.github.io/tags/Linux/"/>
+    <category term="Linux" scheme="https://blog-222ow0l1.maozi.io/tags/Linux/"/>
     
   </entry>
   
   <entry>
     <title>服务器配置 - Redis单机多实例配置</title>
-    <link href="https://richardrenn.github.io/Server-Redis-Multi-Instance.html"/>
-    <id>https://richardrenn.github.io/Server-Redis-Multi-Instance.html</id>
+    <link href="https://blog-222ow0l1.maozi.io/Server-Redis-Multi-Instance.html"/>
+    <id>https://blog-222ow0l1.maozi.io/Server-Redis-Multi-Instance.html</id>
     <published>2018-12-12T08:35:50.000Z</published>
     <updated>2025-06-04T15:41:55.258Z</updated>
     
@@ -354,21 +354,21 @@
     
     
     
-    <category term="Redis" scheme="https://richardrenn.github.io/categories/Redis/"/>
+    <category term="Redis" scheme="https://blog-222ow0l1.maozi.io/categories/Redis/"/>
     
     
-    <category term="Linux" scheme="https://richardrenn.github.io/tags/Linux/"/>
+    <category term="Linux" scheme="https://blog-222ow0l1.maozi.io/tags/Linux/"/>
     
-    <category term="服务器" scheme="https://richardrenn.github.io/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    <category term="服务器" scheme="https://blog-222ow0l1.maozi.io/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
     
-    <category term="Redis" scheme="https://richardrenn.github.io/tags/Redis/"/>
+    <category term="Redis" scheme="https://blog-222ow0l1.maozi.io/tags/Redis/"/>
     
   </entry>
   
   <entry>
     <title>Python - Supervisor安装配置</title>
-    <link href="https://richardrenn.github.io/Server-Supervisor-Configuration.html"/>
-    <id>https://richardrenn.github.io/Server-Supervisor-Configuration.html</id>
+    <link href="https://blog-222ow0l1.maozi.io/Server-Supervisor-Configuration.html"/>
+    <id>https://blog-222ow0l1.maozi.io/Server-Supervisor-Configuration.html</id>
     <published>2018-12-02T16:19:22.000Z</published>
     <updated>2025-06-04T15:40:27.967Z</updated>
     
@@ -377,23 +377,23 @@
     
     
     
-    <category term="Supervisor" scheme="https://richardrenn.github.io/categories/Supervisor/"/>
+    <category term="Supervisor" scheme="https://blog-222ow0l1.maozi.io/categories/Supervisor/"/>
     
     
-    <category term="Linux" scheme="https://richardrenn.github.io/tags/Linux/"/>
+    <category term="Linux" scheme="https://blog-222ow0l1.maozi.io/tags/Linux/"/>
     
-    <category term="Python" scheme="https://richardrenn.github.io/tags/Python/"/>
+    <category term="Python" scheme="https://blog-222ow0l1.maozi.io/tags/Python/"/>
     
-    <category term="服务器" scheme="https://richardrenn.github.io/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    <category term="服务器" scheme="https://blog-222ow0l1.maozi.io/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
     
-    <category term="Supervisor" scheme="https://richardrenn.github.io/tags/Supervisor/"/>
+    <category term="Supervisor" scheme="https://blog-222ow0l1.maozi.io/tags/Supervisor/"/>
     
   </entry>
   
   <entry>
     <title>Python - Gunicorn安装配置</title>
-    <link href="https://richardrenn.github.io/Server-Gunicorn-Configuration.html"/>
-    <id>https://richardrenn.github.io/Server-Gunicorn-Configuration.html</id>
+    <link href="https://blog-222ow0l1.maozi.io/Server-Gunicorn-Configuration.html"/>
+    <id>https://blog-222ow0l1.maozi.io/Server-Gunicorn-Configuration.html</id>
     <published>2018-12-01T15:52:38.000Z</published>
     <updated>2025-06-04T15:39:31.897Z</updated>
     
@@ -402,25 +402,25 @@
     
     
     
-    <category term="Python" scheme="https://richardrenn.github.io/categories/Python/"/>
+    <category term="Python" scheme="https://blog-222ow0l1.maozi.io/categories/Python/"/>
     
-    <category term="Gunicorn" scheme="https://richardrenn.github.io/categories/Python/Gunicorn/"/>
+    <category term="Gunicorn" scheme="https://blog-222ow0l1.maozi.io/categories/Python/Gunicorn/"/>
     
     
-    <category term="Linux" scheme="https://richardrenn.github.io/tags/Linux/"/>
+    <category term="Linux" scheme="https://blog-222ow0l1.maozi.io/tags/Linux/"/>
     
-    <category term="Python" scheme="https://richardrenn.github.io/tags/Python/"/>
+    <category term="Python" scheme="https://blog-222ow0l1.maozi.io/tags/Python/"/>
     
-    <category term="服务器" scheme="https://richardrenn.github.io/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    <category term="服务器" scheme="https://blog-222ow0l1.maozi.io/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
     
-    <category term="Gunicorn" scheme="https://richardrenn.github.io/tags/Gunicorn/"/>
+    <category term="Gunicorn" scheme="https://blog-222ow0l1.maozi.io/tags/Gunicorn/"/>
     
   </entry>
   
   <entry>
     <title>Python - virtualenv虚拟环境配置</title>
-    <link href="https://richardrenn.github.io/Python-Virtualenv.html"/>
-    <id>https://richardrenn.github.io/Python-Virtualenv.html</id>
+    <link href="https://blog-222ow0l1.maozi.io/Python-Virtualenv.html"/>
+    <id>https://blog-222ow0l1.maozi.io/Python-Virtualenv.html</id>
     <published>2018-11-25T15:00:54.000Z</published>
     <updated>2025-06-04T15:39:31.897Z</updated>
     
@@ -429,19 +429,19 @@
     
     
     
-    <category term="Python" scheme="https://richardrenn.github.io/categories/Python/"/>
+    <category term="Python" scheme="https://blog-222ow0l1.maozi.io/categories/Python/"/>
     
     
-    <category term="Python" scheme="https://richardrenn.github.io/tags/Python/"/>
+    <category term="Python" scheme="https://blog-222ow0l1.maozi.io/tags/Python/"/>
     
-    <category term="virtualenv" scheme="https://richardrenn.github.io/tags/virtualenv/"/>
+    <category term="virtualenv" scheme="https://blog-222ow0l1.maozi.io/tags/virtualenv/"/>
     
   </entry>
   
   <entry>
     <title>服务器配置 - Nginx安装配置</title>
-    <link href="https://richardrenn.github.io/Server-Nginx-Configuration.html"/>
-    <id>https://richardrenn.github.io/Server-Nginx-Configuration.html</id>
+    <link href="https://blog-222ow0l1.maozi.io/Server-Nginx-Configuration.html"/>
+    <id>https://blog-222ow0l1.maozi.io/Server-Nginx-Configuration.html</id>
     <published>2018-11-17T11:58:56.000Z</published>
     <updated>2025-06-04T15:41:36.189Z</updated>
     
@@ -450,21 +450,21 @@
     
     
     
-    <category term="Nginx" scheme="https://richardrenn.github.io/categories/Nginx/"/>
+    <category term="Nginx" scheme="https://blog-222ow0l1.maozi.io/categories/Nginx/"/>
     
     
-    <category term="Linux" scheme="https://richardrenn.github.io/tags/Linux/"/>
+    <category term="Linux" scheme="https://blog-222ow0l1.maozi.io/tags/Linux/"/>
     
-    <category term="服务器" scheme="https://richardrenn.github.io/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    <category term="服务器" scheme="https://blog-222ow0l1.maozi.io/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
     
-    <category term="Nginx" scheme="https://richardrenn.github.io/tags/Nginx/"/>
+    <category term="Nginx" scheme="https://blog-222ow0l1.maozi.io/tags/Nginx/"/>
     
   </entry>
   
   <entry>
     <title>服务器配置 - Redis安装配置</title>
-    <link href="https://richardrenn.github.io/Server-Redis-Configuration.html"/>
-    <id>https://richardrenn.github.io/Server-Redis-Configuration.html</id>
+    <link href="https://blog-222ow0l1.maozi.io/Server-Redis-Configuration.html"/>
+    <id>https://blog-222ow0l1.maozi.io/Server-Redis-Configuration.html</id>
     <published>2018-11-11T11:39:11.000Z</published>
     <updated>2025-06-04T15:40:27.962Z</updated>
     
@@ -473,21 +473,21 @@
     
     
     
-    <category term="Redis" scheme="https://richardrenn.github.io/categories/Redis/"/>
+    <category term="Redis" scheme="https://blog-222ow0l1.maozi.io/categories/Redis/"/>
     
     
-    <category term="Linux" scheme="https://richardrenn.github.io/tags/Linux/"/>
+    <category term="Linux" scheme="https://blog-222ow0l1.maozi.io/tags/Linux/"/>
     
-    <category term="服务器" scheme="https://richardrenn.github.io/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    <category term="服务器" scheme="https://blog-222ow0l1.maozi.io/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
     
-    <category term="Redis" scheme="https://richardrenn.github.io/tags/Redis/"/>
+    <category term="Redis" scheme="https://blog-222ow0l1.maozi.io/tags/Redis/"/>
     
   </entry>
   
   <entry>
     <title>服务器配置 - Nginx+Gunicorn+Supervisor+Flask</title>
-    <link href="https://richardrenn.github.io/Server-Configuration.html"/>
-    <id>https://richardrenn.github.io/Server-Configuration.html</id>
+    <link href="https://blog-222ow0l1.maozi.io/Server-Configuration.html"/>
+    <id>https://blog-222ow0l1.maozi.io/Server-Configuration.html</id>
     <published>2018-11-10T08:47:24.000Z</published>
     <updated>2025-06-04T15:39:31.948Z</updated>
     
@@ -496,19 +496,19 @@
     
     
     
-    <category term="服务器" scheme="https://richardrenn.github.io/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    <category term="服务器" scheme="https://blog-222ow0l1.maozi.io/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
     
     
-    <category term="Linux" scheme="https://richardrenn.github.io/tags/Linux/"/>
+    <category term="Linux" scheme="https://blog-222ow0l1.maozi.io/tags/Linux/"/>
     
-    <category term="服务器" scheme="https://richardrenn.github.io/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    <category term="服务器" scheme="https://blog-222ow0l1.maozi.io/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
     
   </entry>
   
   <entry>
     <title>服务器搭建 - 为服务器添加ssh公钥验证</title>
-    <link href="https://richardrenn.github.io/Server-SSH-Key.html"/>
-    <id>https://richardrenn.github.io/Server-SSH-Key.html</id>
+    <link href="https://blog-222ow0l1.maozi.io/Server-SSH-Key.html"/>
+    <id>https://blog-222ow0l1.maozi.io/Server-SSH-Key.html</id>
     <published>2018-11-04T09:51:00.000Z</published>
     <updated>2025-06-04T15:39:31.957Z</updated>
     
@@ -517,21 +517,21 @@
     
     
     
-    <category term="服务器" scheme="https://richardrenn.github.io/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    <category term="服务器" scheme="https://blog-222ow0l1.maozi.io/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
     
-    <category term="SSH" scheme="https://richardrenn.github.io/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/SSH/"/>
+    <category term="SSH" scheme="https://blog-222ow0l1.maozi.io/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/SSH/"/>
     
     
-    <category term="Linux" scheme="https://richardrenn.github.io/tags/Linux/"/>
+    <category term="Linux" scheme="https://blog-222ow0l1.maozi.io/tags/Linux/"/>
     
-    <category term="ssh" scheme="https://richardrenn.github.io/tags/ssh/"/>
+    <category term="ssh" scheme="https://blog-222ow0l1.maozi.io/tags/ssh/"/>
     
   </entry>
   
   <entry>
     <title>GitHub教程 - 分支工作流程</title>
-    <link href="https://richardrenn.github.io/GitHub-Branch-Workflow.html"/>
-    <id>https://richardrenn.github.io/GitHub-Branch-Workflow.html</id>
+    <link href="https://blog-222ow0l1.maozi.io/GitHub-Branch-Workflow.html"/>
+    <id>https://blog-222ow0l1.maozi.io/GitHub-Branch-Workflow.html</id>
     <published>2018-10-17T15:28:03.000Z</published>
     <updated>2025-06-04T15:39:31.897Z</updated>
     
@@ -540,19 +540,19 @@
     
     
     
-    <category term="GitHub教程" scheme="https://richardrenn.github.io/categories/GitHub%E6%95%99%E7%A8%8B/"/>
+    <category term="GitHub教程" scheme="https://blog-222ow0l1.maozi.io/categories/GitHub%E6%95%99%E7%A8%8B/"/>
     
     
-    <category term="Git" scheme="https://richardrenn.github.io/tags/Git/"/>
+    <category term="Git" scheme="https://blog-222ow0l1.maozi.io/tags/Git/"/>
     
-    <category term="GitHub" scheme="https://richardrenn.github.io/tags/GitHub/"/>
+    <category term="GitHub" scheme="https://blog-222ow0l1.maozi.io/tags/GitHub/"/>
     
   </entry>
   
   <entry>
     <title>GitHub教程 - Pull Request 工作流程</title>
-    <link href="https://richardrenn.github.io/GitHub-Pull-Request-Workflow.html"/>
-    <id>https://richardrenn.github.io/GitHub-Pull-Request-Workflow.html</id>
+    <link href="https://blog-222ow0l1.maozi.io/GitHub-Pull-Request-Workflow.html"/>
+    <id>https://blog-222ow0l1.maozi.io/GitHub-Pull-Request-Workflow.html</id>
     <published>2018-10-16T12:27:28.000Z</published>
     <updated>2025-06-04T15:39:31.897Z</updated>
     
@@ -561,19 +561,19 @@
     
     
     
-    <category term="GitHub教程" scheme="https://richardrenn.github.io/categories/GitHub%E6%95%99%E7%A8%8B/"/>
+    <category term="GitHub教程" scheme="https://blog-222ow0l1.maozi.io/categories/GitHub%E6%95%99%E7%A8%8B/"/>
     
     
-    <category term="Git" scheme="https://richardrenn.github.io/tags/Git/"/>
+    <category term="Git" scheme="https://blog-222ow0l1.maozi.io/tags/Git/"/>
     
-    <category term="GitHub" scheme="https://richardrenn.github.io/tags/GitHub/"/>
+    <category term="GitHub" scheme="https://blog-222ow0l1.maozi.io/tags/GitHub/"/>
     
   </entry>
   
   <entry>
     <title>GitHub教程 - Git安装配置</title>
-    <link href="https://richardrenn.github.io/Git-Configuration.html"/>
-    <id>https://richardrenn.github.io/Git-Configuration.html</id>
+    <link href="https://blog-222ow0l1.maozi.io/Git-Configuration.html"/>
+    <id>https://blog-222ow0l1.maozi.io/Git-Configuration.html</id>
     <published>2018-10-15T11:09:54.000Z</published>
     <updated>2025-06-04T15:39:31.897Z</updated>
     
@@ -582,19 +582,19 @@
     
     
     
-    <category term="GitHub教程" scheme="https://richardrenn.github.io/categories/GitHub%E6%95%99%E7%A8%8B/"/>
+    <category term="GitHub教程" scheme="https://blog-222ow0l1.maozi.io/categories/GitHub%E6%95%99%E7%A8%8B/"/>
     
     
-    <category term="Git" scheme="https://richardrenn.github.io/tags/Git/"/>
+    <category term="Git" scheme="https://blog-222ow0l1.maozi.io/tags/Git/"/>
     
-    <category term="GitHub" scheme="https://richardrenn.github.io/tags/GitHub/"/>
+    <category term="GitHub" scheme="https://blog-222ow0l1.maozi.io/tags/GitHub/"/>
     
   </entry>
   
   <entry>
     <title>Hello World</title>
-    <link href="https://richardrenn.github.io/hello-world.html"/>
-    <id>https://richardrenn.github.io/hello-world.html</id>
+    <link href="https://blog-222ow0l1.maozi.io/hello-world.html"/>
+    <id>https://blog-222ow0l1.maozi.io/hello-world.html</id>
     <published>2018-08-17T08:20:20.000Z</published>
     <updated>2025-06-06T09:55:55.176Z</updated>
     
