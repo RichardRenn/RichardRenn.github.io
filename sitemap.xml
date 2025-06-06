@@ -200,7 +200,7 @@
   </url>
   
   <url>
-    <loc>https://blog-222ow0l1.maozi.io/Python-Closure.html</loc>
+    <loc>https://blog-222ow0l1.maozi.io/GitHub-Pull-Request-Workflow.html</loc>
     
     <lastmod>2025-06-04</lastmod>
     
@@ -209,7 +209,7 @@
   </url>
   
   <url>
-    <loc>https://blog-222ow0l1.maozi.io/Python-OpenCV-Image-PIL-Image.html</loc>
+    <loc>https://blog-222ow0l1.maozi.io/Python-Closure.html</loc>
     
     <lastmod>2025-06-04</lastmod>
     
@@ -227,16 +227,7 @@
   </url>
   
   <url>
-    <loc>https://blog-222ow0l1.maozi.io/GitHub-Pull-Request-Workflow.html</loc>
-    
-    <lastmod>2025-06-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog-222ow0l1.maozi.io/Server-Gunicorn-Configuration.html</loc>
+    <loc>https://blog-222ow0l1.maozi.io/Python-OpenCV-Image-PIL-Image.html</loc>
     
     <lastmod>2025-06-04</lastmod>
     
@@ -246,6 +237,15 @@
   
   <url>
     <loc>https://blog-222ow0l1.maozi.io/Python-Virtualenv.html</loc>
+    
+    <lastmod>2025-06-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog-222ow0l1.maozi.io/Server-Gunicorn-Configuration.html</loc>
     
     <lastmod>2025-06-04</lastmod>
     
@@ -302,27 +302,6 @@
   </url>
   
   <url>
-    <loc>https://blog-222ow0l1.maozi.io/tags/Python/</loc>
-    <lastmod>2025-06-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog-222ow0l1.maozi.io/tags/Celery/</loc>
-    <lastmod>2025-06-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog-222ow0l1.maozi.io/tags/%E8%B0%83%E7%94%A8%E4%BB%BB%E5%8A%A1/</loc>
-    <lastmod>2025-06-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://blog-222ow0l1.maozi.io/tags/PostgreSQL/</loc>
     <lastmod>2025-06-06</lastmod>
     <changefreq>weekly</changefreq>
@@ -351,14 +330,28 @@
   </url>
   
   <url>
-    <loc>https://blog-222ow0l1.maozi.io/tags/%E9%97%AD%E5%8C%85/</loc>
+    <loc>https://blog-222ow0l1.maozi.io/tags/Python/</loc>
     <lastmod>2025-06-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://blog-222ow0l1.maozi.io/tags/%E6%B5%85%E6%8B%B7%E8%B4%9D%E5%92%8C%E6%B7%B1%E6%8B%B7%E8%B4%9D/</loc>
+    <loc>https://blog-222ow0l1.maozi.io/tags/Celery/</loc>
+    <lastmod>2025-06-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog-222ow0l1.maozi.io/tags/%E8%B0%83%E7%94%A8%E4%BB%BB%E5%8A%A1/</loc>
+    <lastmod>2025-06-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog-222ow0l1.maozi.io/tags/%E9%97%AD%E5%8C%85/</loc>
     <lastmod>2025-06-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -372,6 +365,13 @@
   </url>
   
   <url>
+    <loc>https://blog-222ow0l1.maozi.io/tags/%E6%B5%85%E6%8B%B7%E8%B4%9D%E5%92%8C%E6%B7%B1%E6%8B%B7%E8%B4%9D/</loc>
+    <lastmod>2025-06-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://blog-222ow0l1.maozi.io/tags/%E5%87%BD%E6%95%B0%E4%BD%9C%E7%94%A8%E5%9F%9F/</loc>
     <lastmod>2025-06-06</lastmod>
     <changefreq>weekly</changefreq>
@@ -379,14 +379,14 @@
   </url>
   
   <url>
-    <loc>https://blog-222ow0l1.maozi.io/tags/%E6%95%B0%E7%BB%84/</loc>
+    <loc>https://blog-222ow0l1.maozi.io/tags/OpenCV/</loc>
     <lastmod>2025-06-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://blog-222ow0l1.maozi.io/tags/OpenCV/</loc>
+    <loc>https://blog-222ow0l1.maozi.io/tags/%E8%A7%86%E9%A2%91%E6%88%AA%E5%9B%BE/</loc>
     <lastmod>2025-06-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -407,7 +407,21 @@
   </url>
   
   <url>
-    <loc>https://blog-222ow0l1.maozi.io/tags/%E8%A7%86%E9%A2%91%E6%88%AA%E5%9B%BE/</loc>
+    <loc>https://blog-222ow0l1.maozi.io/tags/%E6%95%B0%E7%BB%84/</loc>
+    <lastmod>2025-06-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog-222ow0l1.maozi.io/tags/virtualenv/</loc>
+    <lastmod>2025-06-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog-222ow0l1.maozi.io/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/</loc>
     <lastmod>2025-06-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -442,6 +456,41 @@
   </url>
   
   <url>
+    <loc>https://blog-222ow0l1.maozi.io/tags/Nginx/</loc>
+    <lastmod>2025-06-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog-222ow0l1.maozi.io/tags/Gunicorn/</loc>
+    <lastmod>2025-06-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog-222ow0l1.maozi.io/tags/Redis/</loc>
+    <lastmod>2025-06-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog-222ow0l1.maozi.io/tags/Supervisor/</loc>
+    <lastmod>2025-06-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog-222ow0l1.maozi.io/tags/ssh/</loc>
+    <lastmod>2025-06-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://blog-222ow0l1.maozi.io/tags/Super/</loc>
     <lastmod>2025-06-06</lastmod>
     <changefreq>weekly</changefreq>
@@ -469,55 +518,6 @@
     <priority>0.2</priority>
   </url>
   
-  <url>
-    <loc>https://blog-222ow0l1.maozi.io/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/</loc>
-    <lastmod>2025-06-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog-222ow0l1.maozi.io/tags/Gunicorn/</loc>
-    <lastmod>2025-06-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog-222ow0l1.maozi.io/tags/Nginx/</loc>
-    <lastmod>2025-06-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog-222ow0l1.maozi.io/tags/virtualenv/</loc>
-    <lastmod>2025-06-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog-222ow0l1.maozi.io/tags/ssh/</loc>
-    <lastmod>2025-06-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog-222ow0l1.maozi.io/tags/Redis/</loc>
-    <lastmod>2025-06-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog-222ow0l1.maozi.io/tags/Supervisor/</loc>
-    <lastmod>2025-06-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
 
   
   <url>
@@ -535,14 +535,14 @@
   </url>
   
   <url>
-    <loc>https://blog-222ow0l1.maozi.io/categories/Python/</loc>
+    <loc>https://blog-222ow0l1.maozi.io/categories/PostgreSQL/</loc>
     <lastmod>2025-06-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://blog-222ow0l1.maozi.io/categories/PostgreSQL/</loc>
+    <loc>https://blog-222ow0l1.maozi.io/categories/Python/</loc>
     <lastmod>2025-06-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -556,14 +556,14 @@
   </url>
   
   <url>
-    <loc>https://blog-222ow0l1.maozi.io/categories/Python/Gunicorn/</loc>
+    <loc>https://blog-222ow0l1.maozi.io/categories/Nginx/</loc>
     <lastmod>2025-06-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://blog-222ow0l1.maozi.io/categories/Nginx/</loc>
+    <loc>https://blog-222ow0l1.maozi.io/categories/Python/Gunicorn/</loc>
     <lastmod>2025-06-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
