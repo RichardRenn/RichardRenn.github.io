@@ -2,6 +2,24 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog-222ow0l1.maozi.io/about/index.html</loc>
+    
+    <lastmod>2025-06-25</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog-222ow0l1.maozi.io/about/index_copy_without_img.html</loc>
+    
+    <lastmod>2025-06-25</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://blog-222ow0l1.maozi.io/README.html</loc>
     
     <lastmod>2025-06-06</lastmod>
@@ -14,15 +32,6 @@
     <loc>https://blog-222ow0l1.maozi.io/hello-world.html</loc>
     
     <lastmod>2025-06-06</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog-222ow0l1.maozi.io/about/index.html</loc>
-    
-    <lastmod>2025-06-04</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>

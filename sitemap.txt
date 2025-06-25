@@ -1,6 +1,7 @@
+https://blog-222ow0l1.maozi.io/about/index.html
+https://blog-222ow0l1.maozi.io/about/index_copy_without_img.html
 https://blog-222ow0l1.maozi.io/README.html
 https://blog-222ow0l1.maozi.io/hello-world.html
-https://blog-222ow0l1.maozi.io/about/index.html
 https://blog-222ow0l1.maozi.io/PostgreSQL-Lng-Lat-ACOS-ERROR-Input-Is-Out-Of-Range.html
 https://blog-222ow0l1.maozi.io/Server-Redis-Multi-Instance.html
 https://blog-222ow0l1.maozi.io/Server-Nginx-Configuration.html
