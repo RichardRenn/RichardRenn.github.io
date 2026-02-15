@@ -1,3 +1,5 @@
+https://blog-222ow0l1.maozi.io/LocalNotesSupport.html
+https://blog-222ow0l1.maozi.io/LocalNotesPlayerPrivacy.html
 https://blog-222ow0l1.maozi.io/about/index.html
 https://blog-222ow0l1.maozi.io/MyMusicPlayerSupport.html
 https://blog-222ow0l1.maozi.io/MyMusicPlayerPrivacy.html
@@ -68,6 +70,7 @@ https://blog-222ow0l1.maozi.io/tags/Super/
 https://blog-222ow0l1.maozi.io/tags/%E7%BB%A7%E6%89%BF%E9%A1%BA%E5%BA%8F/
 https://blog-222ow0l1.maozi.io/tags/MRO/
 https://blog-222ow0l1.maozi.io/tags/C3%E7%AE%97%E6%B3%95/
+https://blog-222ow0l1.maozi.io/tags/%E6%9C%AC%E5%9C%B0%E7%AC%94%E8%AE%B0/
 https://blog-222ow0l1.maozi.io/categories/GitHub%E6%95%99%E7%A8%8B/
 https://blog-222ow0l1.maozi.io/categories/Linux/
 https://blog-222ow0l1.maozi.io/categories/%E6%9C%AC%E5%9C%B0%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8/
@@ -79,3 +82,4 @@ https://blog-222ow0l1.maozi.io/categories/Nginx/
 https://blog-222ow0l1.maozi.io/categories/Redis/
 https://blog-222ow0l1.maozi.io/categories/Supervisor/
 https://blog-222ow0l1.maozi.io/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/SSH/
+https://blog-222ow0l1.maozi.io/categories/%E6%9C%AC%E5%9C%B0%E7%AC%94%E8%AE%B0/

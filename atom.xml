@@ -6,7 +6,7 @@
   <link href="https://blog-222ow0l1.maozi.io/atom.xml" rel="self"/>
   
   <link href="https://blog-222ow0l1.maozi.io/"/>
-  <updated>2025-11-18T01:36:01.700Z</updated>
+  <updated>2026-02-15T14:10:30.275Z</updated>
   <id>https://blog-222ow0l1.maozi.io/</id>
   
   <author>
@@ -15,6 +15,44 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>《本地笔记》技术支持</title>
+    <link href="https://blog-222ow0l1.maozi.io/LocalNotesSupport.html"/>
+    <id>https://blog-222ow0l1.maozi.io/LocalNotesSupport.html</id>
+    <published>2026-02-15T14:07:33.000Z</published>
+    <updated>2026-02-15T14:10:30.275Z</updated>
+    
+    
+    <summary type="html">《本地笔记》APP的技术支持页。</summary>
+    
+    
+    
+    <category term="本地笔记" scheme="https://blog-222ow0l1.maozi.io/categories/%E6%9C%AC%E5%9C%B0%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="本地笔记" scheme="https://blog-222ow0l1.maozi.io/tags/%E6%9C%AC%E5%9C%B0%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>《本地笔记》隐私政策</title>
+    <link href="https://blog-222ow0l1.maozi.io/LocalNotesPlayerPrivacy.html"/>
+    <id>https://blog-222ow0l1.maozi.io/LocalNotesPlayerPrivacy.html</id>
+    <published>2026-02-15T14:06:27.000Z</published>
+    <updated>2026-02-15T14:06:49.852Z</updated>
+    
+    
+    <summary type="html">《本地笔记》APP的隐私政策页。</summary>
+    
+    
+    
+    <category term="本地笔记" scheme="https://blog-222ow0l1.maozi.io/categories/%E6%9C%AC%E5%9C%B0%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="本地笔记" scheme="https://blog-222ow0l1.maozi.io/tags/%E6%9C%AC%E5%9C%B0%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>《本地音乐播放器》技术支持</title>
