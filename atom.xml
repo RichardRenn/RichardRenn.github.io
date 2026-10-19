@@ -6,7 +6,7 @@
   <link href="https://blog-222ow0l1.maozi.io/atom.xml" rel="self"/>
   
   <link href="https://blog-222ow0l1.maozi.io/"/>
-  <updated>2026-04-19T15:25:48.419Z</updated>
+  <updated>2026-10-19T14:15:10.702Z</updated>
   <id>https://blog-222ow0l1.maozi.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://blog-222ow0l1.maozi.io/app/iPasteSupport.html"/>
     <id>https://blog-222ow0l1.maozi.io/app/iPasteSupport.html</id>
     <published>2026-04-19T15:20:33.000Z</published>
-    <updated>2026-04-19T15:25:48.419Z</updated>
+    <updated>2026-10-19T14:15:10.702Z</updated>
     
     
     <summary type="html">《iPaste》APP的技术支持页。</summary>
@@ -59,7 +59,26 @@
     <link href="https://blog-222ow0l1.maozi.io/LocalNotesSupport.html"/>
     <id>https://blog-222ow0l1.maozi.io/LocalNotesSupport.html</id>
     <published>2026-02-15T14:07:33.000Z</published>
-    <updated>2026-02-15T14:10:30.275Z</updated>
+    <updated>2026-10-19T14:15:41.266Z</updated>
+    
+    
+    <summary type="html">《本地笔记》APP的技术支持页。</summary>
+    
+    
+    
+    <category term="本地笔记" scheme="https://blog-222ow0l1.maozi.io/categories/%E6%9C%AC%E5%9C%B0%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="本地笔记" scheme="https://blog-222ow0l1.maozi.io/tags/%E6%9C%AC%E5%9C%B0%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>《本地笔记》技术支持</title>
+    <link href="https://blog-222ow0l1.maozi.io/app/LocalNotesSupport.html"/>
+    <id>https://blog-222ow0l1.maozi.io/app/LocalNotesSupport.html</id>
+    <published>2026-02-15T14:07:33.000Z</published>
+    <updated>2026-10-19T14:14:32.365Z</updated>
     
     
     <summary type="html">《本地笔记》APP的技术支持页。</summary>
@@ -93,11 +112,49 @@
   </entry>
   
   <entry>
+    <title>《本地笔记》隐私政策</title>
+    <link href="https://blog-222ow0l1.maozi.io/app/LocalNotesPrivacy.html"/>
+    <id>https://blog-222ow0l1.maozi.io/app/LocalNotesPrivacy.html</id>
+    <published>2026-02-15T14:06:27.000Z</published>
+    <updated>2026-02-15T14:06:49.852Z</updated>
+    
+    
+    <summary type="html">《本地笔记》APP的隐私政策页。</summary>
+    
+    
+    
+    <category term="本地笔记" scheme="https://blog-222ow0l1.maozi.io/categories/%E6%9C%AC%E5%9C%B0%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="本地笔记" scheme="https://blog-222ow0l1.maozi.io/tags/%E6%9C%AC%E5%9C%B0%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
     <title>《本地音乐播放器》技术支持</title>
     <link href="https://blog-222ow0l1.maozi.io/MyMusicPlayerSupport.html"/>
     <id>https://blog-222ow0l1.maozi.io/MyMusicPlayerSupport.html</id>
     <published>2025-11-17T14:42:56.000Z</published>
-    <updated>2025-11-18T01:36:01.700Z</updated>
+    <updated>2026-04-19T15:48:50.429Z</updated>
+    
+    
+    <summary type="html">《本地音乐播放器》APP的技术支持页。</summary>
+    
+    
+    
+    <category term="本地音乐播放器" scheme="https://blog-222ow0l1.maozi.io/categories/%E6%9C%AC%E5%9C%B0%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8/"/>
+    
+    
+    <category term="本地音乐播放器" scheme="https://blog-222ow0l1.maozi.io/tags/%E6%9C%AC%E5%9C%B0%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>《本地音乐播放器》技术支持</title>
+    <link href="https://blog-222ow0l1.maozi.io/app/MyMusicPlayerSupport.html"/>
+    <id>https://blog-222ow0l1.maozi.io/app/MyMusicPlayerSupport.html</id>
+    <published>2025-11-17T14:42:56.000Z</published>
+    <updated>2026-04-19T15:48:50.429Z</updated>
     
     
     <summary type="html">《本地音乐播放器》APP的技术支持页。</summary>
@@ -115,6 +172,25 @@
     <title>《本地音乐播放器》隐私政策</title>
     <link href="https://blog-222ow0l1.maozi.io/MyMusicPlayerPrivacy.html"/>
     <id>https://blog-222ow0l1.maozi.io/MyMusicPlayerPrivacy.html</id>
+    <published>2025-11-17T14:36:53.000Z</published>
+    <updated>2025-11-18T01:35:33.232Z</updated>
+    
+    
+    <summary type="html">《本地音乐播放器》APP的隐私政策页。</summary>
+    
+    
+    
+    <category term="本地音乐播放器" scheme="https://blog-222ow0l1.maozi.io/categories/%E6%9C%AC%E5%9C%B0%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8/"/>
+    
+    
+    <category term="本地音乐播放器" scheme="https://blog-222ow0l1.maozi.io/tags/%E6%9C%AC%E5%9C%B0%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>《本地音乐播放器》隐私政策</title>
+    <link href="https://blog-222ow0l1.maozi.io/app/MyMusicPlayerPrivacy.html"/>
+    <id>https://blog-222ow0l1.maozi.io/app/MyMusicPlayerPrivacy.html</id>
     <published>2025-11-17T14:36:53.000Z</published>
     <updated>2025-11-18T01:35:33.232Z</updated>
     
