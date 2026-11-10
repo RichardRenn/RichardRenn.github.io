@@ -1,12 +1,12 @@
+https://blog-222ow0l1.maozi.io/app/MouseScrollReverserSupport.html
+https://blog-222ow0l1.maozi.io/app/MouseScrollReverserPrivacy.html
 https://blog-222ow0l1.maozi.io/app/LocalMusicSupport.html
 https://blog-222ow0l1.maozi.io/app/LocalMusicPrivacy.html
-https://blog-222ow0l1.maozi.io/LocalNotesSupport.html
 https://blog-222ow0l1.maozi.io/app/iPasteSupport.html
 https://blog-222ow0l1.maozi.io/app/LocalNotesSupport.html
 https://blog-222ow0l1.maozi.io/MyMusicPlayerSupport.html
 https://blog-222ow0l1.maozi.io/app/MyMusicPlayerSupport.html
 https://blog-222ow0l1.maozi.io/app/iPastePrivacy.html
-https://blog-222ow0l1.maozi.io/LocalNotesPrivacy.html
 https://blog-222ow0l1.maozi.io/app/LocalNotesPrivacy.html
 https://blog-222ow0l1.maozi.io/about/index.html
 https://blog-222ow0l1.maozi.io/MyMusicPlayerPrivacy.html
@@ -80,6 +80,7 @@ https://blog-222ow0l1.maozi.io/tags/MRO/
 https://blog-222ow0l1.maozi.io/tags/C3%E7%AE%97%E6%B3%95/
 https://blog-222ow0l1.maozi.io/tags/%E6%9C%AC%E5%9C%B0%E7%AC%94%E8%AE%B0/
 https://blog-222ow0l1.maozi.io/tags/iPaste/
+https://blog-222ow0l1.maozi.io/tags/%E9%BC%A0%E6%A0%87%E6%BB%9A%E5%8A%A8%E5%8F%8D%E5%90%91%E5%99%A8/
 https://blog-222ow0l1.maozi.io/categories/GitHub%E6%95%99%E7%A8%8B/
 https://blog-222ow0l1.maozi.io/categories/Linux/
 https://blog-222ow0l1.maozi.io/categories/%E6%9C%AC%E5%9C%B0%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8/
@@ -93,3 +94,4 @@ https://blog-222ow0l1.maozi.io/categories/Supervisor/
 https://blog-222ow0l1.maozi.io/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/SSH/
 https://blog-222ow0l1.maozi.io/categories/%E6%9C%AC%E5%9C%B0%E7%AC%94%E8%AE%B0/
 https://blog-222ow0l1.maozi.io/categories/iPaste/
+https://blog-222ow0l1.maozi.io/categories/%E9%BC%A0%E6%A0%87%E6%BB%9A%E5%8A%A8%E5%8F%8D%E5%90%91%E5%99%A8/

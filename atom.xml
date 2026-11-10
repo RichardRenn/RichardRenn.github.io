@@ -6,7 +6,7 @@
   <link href="https://blog-222ow0l1.maozi.io/atom.xml" rel="self"/>
   
   <link href="https://blog-222ow0l1.maozi.io/"/>
-  <updated>2026-10-24T07:59:17.027Z</updated>
+  <updated>2026-11-10T15:37:53.949Z</updated>
   <id>https://blog-222ow0l1.maozi.io/</id>
   
   <author>
@@ -15,6 +15,44 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>《鼠标滚动反向器》隐私政策</title>
+    <link href="https://blog-222ow0l1.maozi.io/app/MouseScrollReverserPrivacy.html"/>
+    <id>https://blog-222ow0l1.maozi.io/app/MouseScrollReverserPrivacy.html</id>
+    <published>2026-11-10T15:36:33.000Z</published>
+    <updated>2026-11-10T15:37:53.949Z</updated>
+    
+    
+    <summary type="html">《鼠标滚动反向器》APP的隐私政策页。</summary>
+    
+    
+    
+    <category term="鼠标滚动反向器" scheme="https://blog-222ow0l1.maozi.io/categories/%E9%BC%A0%E6%A0%87%E6%BB%9A%E5%8A%A8%E5%8F%8D%E5%90%91%E5%99%A8/"/>
+    
+    
+    <category term="鼠标滚动反向器" scheme="https://blog-222ow0l1.maozi.io/tags/%E9%BC%A0%E6%A0%87%E6%BB%9A%E5%8A%A8%E5%8F%8D%E5%90%91%E5%99%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>《鼠标滚动反向器》技术支持</title>
+    <link href="https://blog-222ow0l1.maozi.io/app/MouseScrollReverserSupport.html"/>
+    <id>https://blog-222ow0l1.maozi.io/app/MouseScrollReverserSupport.html</id>
+    <published>2026-11-10T15:36:33.000Z</published>
+    <updated>2026-11-10T15:39:34.484Z</updated>
+    
+    
+    <summary type="html">《鼠标滚动反向器》APP的技术支持页。</summary>
+    
+    
+    
+    <category term="鼠标滚动反向器" scheme="https://blog-222ow0l1.maozi.io/categories/%E9%BC%A0%E6%A0%87%E6%BB%9A%E5%8A%A8%E5%8F%8D%E5%90%91%E5%99%A8/"/>
+    
+    
+    <category term="鼠标滚动反向器" scheme="https://blog-222ow0l1.maozi.io/tags/%E9%BC%A0%E6%A0%87%E6%BB%9A%E5%8A%A8%E5%8F%8D%E5%90%91%E5%99%A8/"/>
+    
+  </entry>
   
   <entry>
     <title>《本地音乐播放器》技术支持</title>
@@ -94,25 +132,6 @@
   
   <entry>
     <title>《本地笔记》技术支持</title>
-    <link href="https://blog-222ow0l1.maozi.io/LocalNotesSupport.html"/>
-    <id>https://blog-222ow0l1.maozi.io/LocalNotesSupport.html</id>
-    <published>2026-02-15T14:07:33.000Z</published>
-    <updated>2026-10-19T14:15:41.266Z</updated>
-    
-    
-    <summary type="html">《本地笔记》APP的技术支持页。</summary>
-    
-    
-    
-    <category term="本地笔记" scheme="https://blog-222ow0l1.maozi.io/categories/%E6%9C%AC%E5%9C%B0%E7%AC%94%E8%AE%B0/"/>
-    
-    
-    <category term="本地笔记" scheme="https://blog-222ow0l1.maozi.io/tags/%E6%9C%AC%E5%9C%B0%E7%AC%94%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>《本地笔记》技术支持</title>
     <link href="https://blog-222ow0l1.maozi.io/app/LocalNotesSupport.html"/>
     <id>https://blog-222ow0l1.maozi.io/app/LocalNotesSupport.html</id>
     <published>2026-02-15T14:07:33.000Z</published>
@@ -120,25 +139,6 @@
     
     
     <summary type="html">《本地笔记》APP的技术支持页。</summary>
-    
-    
-    
-    <category term="本地笔记" scheme="https://blog-222ow0l1.maozi.io/categories/%E6%9C%AC%E5%9C%B0%E7%AC%94%E8%AE%B0/"/>
-    
-    
-    <category term="本地笔记" scheme="https://blog-222ow0l1.maozi.io/tags/%E6%9C%AC%E5%9C%B0%E7%AC%94%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>《本地笔记》隐私政策</title>
-    <link href="https://blog-222ow0l1.maozi.io/LocalNotesPrivacy.html"/>
-    <id>https://blog-222ow0l1.maozi.io/LocalNotesPrivacy.html</id>
-    <published>2026-02-15T14:06:27.000Z</published>
-    <updated>2026-02-15T14:06:49.852Z</updated>
-    
-    
-    <summary type="html">《本地笔记》APP的隐私政策页。</summary>
     
     
     
